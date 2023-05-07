@@ -27,6 +27,7 @@ int unboxedNumber = (int)boxedNumber;
 IComparable<int> intAsComparable = number;
 
 var numbers1 = new List<int> { 1, 2, 3, 4, 5 };
+
 //ArrayList stores everything as object,
 //so each of those numbers must be boxed
 var numbers2 = new ArrayList { 1, 2, 3, 4, 5 };
@@ -40,13 +41,12 @@ var variousObjects = new List<object>
     1.5m,
     new DateTime(2024, 6, 1),
     "hello",
-    new Person {Name = "Anna", Age = 61}
+    new Person { Name = "Anna", Age = 61 }
 };
 
 foreach (object someObject in variousObjects)
 {
-    Console.WriteLine(
-        someObject.GetType().Name);
+    Console.WriteLine(someObject.GetType().Name);
 }
 
 //Dipose method and the using statement
@@ -87,7 +87,6 @@ void AddOneToList(ref List<int> numbers)
 {
     numbers = null;
 }
-
 
 //non-destructive mutation
 Person AddOneToPersonsAgeNonDestructive(Person person)
@@ -148,7 +147,7 @@ public class SpecificLineFromTextFileReader : IDisposable
         _streamReader.DiscardBufferedData();
         _streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
 
-        for(var i = 0; i < lineNumber - 1; ++i)
+        for (var i = 0; i < lineNumber - 1; ++i)
         {
             _streamReader.ReadLine();
         }
@@ -161,4 +160,3 @@ public class SpecificLineFromTextFileReader : IDisposable
         _streamReader.Dispose();
     }
 }
-
