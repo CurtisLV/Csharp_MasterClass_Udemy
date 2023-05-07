@@ -59,7 +59,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_Strings", "11_Strings\11
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_TicketsDataAggregator", "11_TicketsDataAggregator\11_TicketsDataAggregator.csproj", "{10B5412C-9012-496D-A3E3-B5F2BD2CFCCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_StringInterningMemoryConsumptionTest", "11_StringInterningMemoryConsumptionTest\11_StringInterningMemoryConsumptionTest.csproj", "{5FABF757-432A-4A7B-9C4D-BC0AEFE580D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_StringInterningMemoryConsumptionTest", "11_StringInterningMemoryConsumptionTest\11_StringInterningMemoryConsumptionTest.csproj", "{5FABF757-432A-4A7B-9C4D-BC0AEFE580D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_NumericTypes", "12_NumericTypes\12_NumericTypes.csproj", "{3A4A7BEA-723E-412C-9D85-F902AB5EBEDC}"
 EndProject
@@ -70,6 +70,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_NumericTypesSuggesterTests", "13_NumericTypesSuggesterTests\13_NumericTypesSuggesterTests.csproj", "{80B8EB89-CC87-4505-A9A6-650BB119817F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_FirstWinFormsApp", "13_FirstWinFormsApp\13_FirstWinFormsApp.csproj", "{EC393344-1ABD-4548-A66A-2087E1C7E3AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99_MySolutions", "99_MySolutions\99_MySolutions.csproj", "{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +215,10 @@ Global
 		{EC393344-1ABD-4548-A66A-2087E1C7E3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC393344-1ABD-4548-A66A-2087E1C7E3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC393344-1ABD-4548-A66A-2087E1C7E3AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
