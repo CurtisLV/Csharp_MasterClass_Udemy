@@ -5,10 +5,7 @@ public class HotelBooking
     public DateTime StartDate;
     public DateTime EndDate;
 
-    public HotelBooking(
-        string guestName, 
-        DateTime startDate, 
-        int lengthOfStayInDays)
+    public HotelBooking(string guestName, DateTime startDate, int lengthOfStayInDays)
     {
         GuestName = guestName;
         StartDate = startDate;
@@ -53,14 +50,13 @@ public class Dog
         _weight = weight;
     }
 
-    public Dog(string name, int weight) : this(name, "mixed-breed", weight)
-    {
-    }
+    public Dog(string name, int weight)
+        : this(name, "mixed-breed", weight) { }
 
     public string Describe()
     {
-        return $"This dog is named {_name}, it's a {_breed}, " +
-        $"and it weighs {_weight} kilograms, so it's a {DescribeSize()} dog.";
+        return $"This dog is named {_name}, it's a {_breed}, "
+            + $"and it weighs {_weight} kilograms, so it's a {DescribeSize()} dog.";
     }
 
     private string DescribeSize()
@@ -109,9 +105,7 @@ public class DailyAccountState
 
     public int SumOfOperations { get; }
 
-    public DailyAccountState(
-        int initialState,
-        int sumOfOperations)
+    public DailyAccountState(int initialState, int sumOfOperations)
     {
         InitialState = initialState;
         SumOfOperations = sumOfOperations;
@@ -120,11 +114,11 @@ public class DailyAccountState
     public int EndOfDayState => InitialState + SumOfOperations;
 
     public string Report =>
-        $"Day: {DateTime.Now.Day}, " +
-        $"month: {DateTime.Now.Month}, " +
-        $"year: {DateTime.Now.Year}, " +
-        $"initial state: {InitialState}, " +
-        $"end of day state: {EndOfDayState}";
+        $"Day: {DateTime.Now.Day}, "
+        + $"month: {DateTime.Now.Month}, "
+        + $"year: {DateTime.Now.Year}, "
+        + $"initial state: {InitialState}, "
+        + $"end of day state: {EndOfDayState}";
 }
 
 //Static classes - NumberToDayOfWeekTranslator
@@ -160,7 +154,8 @@ public static class StringsTransformator
     public static string TransformSeparators(
         string input,
         string originalSeparator,
-        string targetSeparator)
+        string targetSeparator
+    )
     {
         var stringPieces = input.Split(originalSeparator);
         return string.Join(targetSeparator, stringPieces);
