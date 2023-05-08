@@ -84,8 +84,7 @@
     }
 
     //While loop - CalculateSumOfNumbersBetween
-    public static int CalculateSumOfNumbersBetween(
-        int firstNumber, int lastNumber)
+    public static int CalculateSumOfNumbersBetween(int firstNumber, int lastNumber)
     {
         if (lastNumber < firstNumber)
         {
@@ -109,8 +108,7 @@
         do
         {
             result += character;
-        }
-        while (result.Length < targetLength);
+        } while (result.Length < targetLength);
 
         return result;
     }
@@ -139,8 +137,7 @@
     }
 
     //Arrays (2) - IsWordPresentInCollection
-    public static bool IsWordPresentInCollection(
-        string[] words, string wordToBeChecked)
+    public static bool IsWordPresentInCollection(string[] words, string wordToBeChecked)
     {
         for (var i = 0; i < words.Length; ++i)
         {
