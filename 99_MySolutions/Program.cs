@@ -4,4 +4,7 @@ Console.WriteLine("[A]dd a TODO");
 Console.WriteLine("[R]emove a TODO");
 Console.WriteLine("[E]xit");
 
+string userInput = "A";
+Console.WriteLine(userInput);
+
 Console.ReadLine();
