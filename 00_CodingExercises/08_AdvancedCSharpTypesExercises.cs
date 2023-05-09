@@ -21,20 +21,17 @@ public struct Time
     {
         if (hour < 0 || hour > 23)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         if (minute < 0 || minute > 59)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         Hour = hour;
         Minute = minute;
     }
 
-    public override string ToString() =>
-        $"{Hour.ToString("00")}:{Minute.ToString("00")}";
+    public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
 }
 
 //Equals - overriding it in the FullName class
@@ -45,9 +42,9 @@ public class FullNameWithEquals
 
     public override bool Equals(object? obj)
     {
-        return obj is FullNameWithEquals fullName &&
-            fullName.First == First &&
-            fullName.Last == Last;
+        return obj is FullNameWithEquals fullName
+            && fullName.First == First
+            && fullName.Last == Last;
     }
 
     public override string ToString() => $"{First} {Last}";
@@ -63,35 +60,32 @@ public struct TimeWithOperatorsOverloaded
     {
         if (hour < 0 || hour > 23)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         if (minute < 0 || minute > 59)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         Hour = hour;
         Minute = minute;
     }
 
-    public override string ToString() =>
-        $"{Hour.ToString("00")}:{Minute.ToString("00")}";
+    public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
 
     public static bool operator ==(
-        TimeWithOperatorsOverloaded time1, 
-        TimeWithOperatorsOverloaded time2) =>
-        time1.Hour == time2.Hour &&
-        time1.Minute == time2.Minute;
+        TimeWithOperatorsOverloaded time1,
+        TimeWithOperatorsOverloaded time2
+    ) => time1.Hour == time2.Hour && time1.Minute == time2.Minute;
 
     public static bool operator !=(
-        TimeWithOperatorsOverloaded time1, 
-        TimeWithOperatorsOverloaded time2) =>
-        !(time1 == time2);
+        TimeWithOperatorsOverloaded time1,
+        TimeWithOperatorsOverloaded time2
+    ) => !(time1 == time2);
 
     public static TimeWithOperatorsOverloaded operator +(
-        TimeWithOperatorsOverloaded time1, 
-        TimeWithOperatorsOverloaded time2)
+        TimeWithOperatorsOverloaded time1,
+        TimeWithOperatorsOverloaded time2
+    )
     {
         var hour = (time1.Hour + time2.Hour) % 24;
         var minute = (time1.Minute + time2.Minute);
@@ -115,26 +109,23 @@ public struct TimeWithGetHashCodeAndEquals
     {
         if (hour < 0 || hour > 23)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         if (minute < 0 || minute > 59)
         {
-            throw new ArgumentOutOfRangeException(
-                "Hour is out of range of 0-23");
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
         }
         Hour = hour;
         Minute = minute;
     }
 
-    public override string ToString() =>
-        $"{Hour.ToString("00")}:{Minute.ToString("00")}";
+    public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
 
     public override bool Equals(object? obj)
     {
-        return obj is TimeWithGetHashCodeAndEquals time &&
-            time.Hour == Hour &&
-            time.Minute == Minute;
+        return obj is TimeWithGetHashCodeAndEquals time
+            && time.Hour == Hour
+            && time.Minute == Minute;
     }
 
     public override int GetHashCode()
