@@ -10,23 +10,22 @@ public class Pair<T>
         Second = second;
     }
 
-    public void ResetFirst() =>
-        First = default;
+    public void ResetFirst() => First = default;
 
-    public void ResetSecond() =>
-        Second = default;
+    public void ResetSecond() => Second = default;
 }
 
 //Generic methods - SwapTupleItems method
 public static class GenericMethodsSwapTupleItemsExercise
 {
     public static Tuple<TSecond, TFirst> SwapTupleItems<TFirst, TSecond>(
-        Tuple<TFirst, TSecond> tuple) =>
-            new Tuple<TSecond, TFirst>(tuple.Item2, tuple.Item1);
+        Tuple<TFirst, TSecond> tuple
+    ) => new Tuple<TSecond, TFirst>(tuple.Item2, tuple.Item1);
 }
 
 //Type constraints & IComparable - SortedList of FullNames
-public class SortedList<T> where T : IComparable<T>
+public class SortedList<T>
+    where T : IComparable<T>
 {
     public IEnumerable<T> Items { get; }
 
@@ -52,7 +51,8 @@ public class FullName : IComparable<FullName>
         {
             return lastNameComparisonResult;
         }
-        else return FirstName.CompareTo(other.FirstName);
+        else
+            return FirstName.CompareTo(other.FirstName);
     }
 }
 
@@ -67,7 +67,9 @@ public class BasicsOfFuncsAndActionsExercise
     }
 
     public double Method1(int a, bool b) => 0;
+
     public DateTime Method2() => default(DateTime);
+
     public void Method3(string a, string b) { }
 }
 
@@ -89,8 +91,7 @@ public static class DictionariesFindMaxWeightsExercise
 
         foreach (var pet in pets)
         {
-            if (!result.ContainsKey(pet.PetType) ||
-               pet.Weight > result[pet.PetType])
+            if (!result.ContainsKey(pet.PetType) || pet.Weight > result[pet.PetType])
             {
                 result[pet.PetType] = pet.Weight;
             }
@@ -114,4 +115,9 @@ public class Pet
     public override string ToString() => $"{PetType}, {Weight} kilos";
 }
 
-public enum PetType { Dog, Cat, Fish }
+public enum PetType
+{
+    Dog,
+    Cat,
+    Fish
+}
