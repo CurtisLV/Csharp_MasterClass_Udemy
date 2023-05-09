@@ -3,13 +3,7 @@ public class InheritanceAndOverridingAnimalsExercise
 {
     public List<int> GetCountsOfAnimalsLegs()
     {
-        var animals = new List<Animal>
-            {
-                new Lion(),
-                new Tiger(),
-                new Duck(),
-                new Spider()
-            };
+        var animals = new List<Animal> { new Lion(), new Tiger(), new Duck(), new Spider() };
 
         var result = new List<int>();
         foreach (var animal in animals)
@@ -25,13 +19,9 @@ public class Animal
     public virtual int NumberOfLegs { get; } = 4;
 }
 
-public class Tiger : Animal
-{
-}
+public class Tiger : Animal { }
 
-public class Lion : Animal
-{
-}
+public class Lion : Animal { }
 
 public class Duck : Animal
 {
@@ -49,10 +39,10 @@ public class VirtualMethodsStringsProcessorClasses
     public List<string> ProcessAll(List<string> words)
     {
         var stringsProcessors = new List<StringsProcessor>
-                {
-                    new StringsTrimmingProcessor(),
-                    new StringsUppercaseProcessor()
-                };
+        {
+            new StringsTrimmingProcessor(),
+            new StringsUppercaseProcessor()
+        };
 
         List<string> result = words;
         foreach (var stringsProcessor in stringsProcessors)
@@ -65,8 +55,7 @@ public class VirtualMethodsStringsProcessorClasses
 
 public class StringsProcessor
 {
-    public List<string> Process(
-        List<string> strings)
+    public List<string> Process(List<string> strings)
     {
         var result = new List<string>();
         foreach (var text in strings)
@@ -81,14 +70,12 @@ public class StringsProcessor
 
 public class StringsTrimmingProcessor : StringsProcessor
 {
-    protected override string ProcessSingle(string input) =>
-        input.Substring(0, input.Length / 2);
+    protected override string ProcessSingle(string input) => input.Substring(0, input.Length / 2);
 }
 
 public class StringsUppercaseProcessor : StringsProcessor
 {
-    protected override string ProcessSingle(string input) =>
-        input.ToUpper();
+    protected override string ProcessSingle(string input) => input.ToUpper();
 }
 
 //"is" operator and null object -NumericTypesDescriber class
@@ -188,15 +175,14 @@ public static class ListExtensions
 //Interfaces - Applying multiple transformations to a number
 public static class InterfacesApplyingMutipleTransformationsToNumberExercise
 {
-    public static int Transform(
-        int number)
+    public static int Transform(int number)
     {
         var transformations = new List<INumericTransformation>
-            {
-                new By1Incrementer(),
-                new By2Multiplier(),
-                new ToPowerOf2Raiser()
-            };
+        {
+            new By1Incrementer(),
+            new By2Multiplier(),
+            new ToPowerOf2Raiser()
+        };
 
         var result = number;
         foreach (var transformation in transformations)
