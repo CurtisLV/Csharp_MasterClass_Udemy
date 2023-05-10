@@ -5,5 +5,6 @@ Console.WriteLine("[R]emove a TODO");
 Console.WriteLine("[E]xit");
 
 string userChoice = Console.ReadLine();
+Console.WriteLine("User choice: " + userChoice);
 
 Console.ReadKey();
