@@ -1,14 +1,16 @@
-﻿//Events - User and BankAccount 
+﻿//Events - User and BankAccount
 
 public delegate void OnBalanceDecreased(decimal balance);
 
 public class BankAccount
 {
     public decimal Balance { get; private set; }
+
     public BankAccount(decimal initialBalance)
     {
         Balance = initialBalance;
     }
+
     public event OnBalanceDecreased OnBalanceDecreased;
 
     public void DecreaseBalance(decimal price)
@@ -33,7 +35,6 @@ public class User
     }
 }
 
-
 //Events - WeatherDataAggregator
 public record struct WeatherData(int? Temperature, int? Humidity);
 
@@ -42,8 +43,7 @@ public class WeatherDataAggregator
     public IEnumerable<WeatherData> WeatherHistory => _weatherHistory;
     private List<WeatherData> _weatherHistory = new();
 
-    public void GetNotifiedAboutNewData(
-        object? sender, WeatherDataEventArgs eventArgs)
+    public void GetNotifiedAboutNewData(object? sender, WeatherDataEventArgs eventArgs)
     {
         _weatherHistory.Add(eventArgs.WeatherData);
     }
@@ -62,10 +62,7 @@ public class WeatherStation
 
     private void OnWeatherMeasured(int temperature)
     {
-        WeatherMeasured?.Invoke(
-            this,
-            new WeatherDataEventArgs(
-                new WeatherData(temperature, null)));
+        WeatherMeasured?.Invoke(this, new WeatherDataEventArgs(new WeatherData(temperature, null)));
     }
 }
 
@@ -82,10 +79,7 @@ public class WeatherBaloon
 
     private void OnWeatherMeasured(int humidity)
     {
-        WeatherMeasured?.Invoke(
-            this,
-            new WeatherDataEventArgs(
-                new WeatherData(null, humidity)));
+        WeatherMeasured?.Invoke(this, new WeatherDataEventArgs(new WeatherData(null, humidity)));
     }
 }
 
