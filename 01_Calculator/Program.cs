@@ -13,7 +13,7 @@ Console.WriteLine("[S]ubtract numbers");
 Console.WriteLine("[M]ultiply numbers");
 var choice = Console.ReadLine();
 
-if(EqualsCaseInsensitive(choice, "A"))
+if (EqualsCaseInsensitive(choice, "A"))
 {
     var sum = number1 + number2;
     PrintFinalEquation(number1, number2, sum, "+");
@@ -36,11 +36,9 @@ else
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
 
-void PrintFinalEquation(
-    int number1, int number2, int result, string @operator)
+void PrintFinalEquation(int number1, int number2, int result, string @operator)
 {
-    Console.WriteLine(
-        number1 + " " + @operator + " " + number2 + " = " + result);
+    Console.WriteLine(number1 + " " + @operator + " " + number2 + " = " + result);
 }
 
 bool EqualsCaseInsensitive(string left, string right)
