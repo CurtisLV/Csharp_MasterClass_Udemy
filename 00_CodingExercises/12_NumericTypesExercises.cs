@@ -21,8 +21,7 @@ public static class CheckedFibonacciExercise
 //Floating point numbers - The IsAverageEqualTo method
 public static class FloatingPointNumbersExercise
 {
-    public static bool IsAverageEqualTo(
-            this IEnumerable<double> input, double valueToBeChecked)
+    public static bool IsAverageEqualTo(this IEnumerable<double> input, double valueToBeChecked)
     {
         double sum = 0.0;
         int count = 0;
@@ -30,8 +29,7 @@ public static class FloatingPointNumbersExercise
         {
             if (double.IsNaN(number) || double.IsInfinity(number))
             {
-                throw new ArgumentException(
-                    "Input contains NaN or Infinity values.");
+                throw new ArgumentException("Input contains NaN or Infinity values.");
             }
             sum += number;
             count++;
