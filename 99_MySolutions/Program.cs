@@ -10,19 +10,19 @@ Console.WriteLine("User choice: " + userChoice);
 
 if (userChoice == "S")
 {
-    PrintSelectedOption();
+    PrintSelectedOption("See all TODOs");
 }
 else if (userChoice == "A")
 {
-    PrintSelectedOption();
+    PrintSelectedOption("Add a TODO");
 }
 else if (userChoice == "R")
 {
-    PrintSelectedOption();
+    PrintSelectedOption("Remove a TODO");
 }
 else if (userChoice == "E")
 {
-    PrintSelectedOption();
+    PrintSelectedOption("Exit");
 }
 
 // TODO: handle user input
