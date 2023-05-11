@@ -30,5 +30,5 @@ Console.ReadKey();
 
 void PrintSelectedOption(string selectedOption)
 {
-    //
+    Console.WriteLine("Selected option: " + selectedOption);
 }
