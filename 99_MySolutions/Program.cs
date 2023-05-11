@@ -14,11 +14,11 @@ if (userChoice.Length <= 3)
 }
 else if (userChoice.Length < 10)
 {
-    Console.WriteLine("Short answer");
+    Console.WriteLine("Medium answer");
 }
 else
 {
-    Console.WriteLine("Short answer");
+    Console.WriteLine("Long answer");
 }
 
 // TODO: handle user input
