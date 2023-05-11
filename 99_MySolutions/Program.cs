@@ -25,7 +25,6 @@ else if (userChoice == "E")
     PrintSelectedOption("Exit");
 }
 
-// TODO: handle user input
 Console.ReadKey();
 
 void PrintSelectedOption(string selectedOption)
