@@ -8,17 +8,17 @@ Console.WriteLine("[E]xit");
 string userChoice = Console.ReadLine();
 Console.WriteLine("User choice: " + userChoice);
 
-if (userChoice.Length <= 3)
+if (userChoice == "S")
 {
-    Console.WriteLine("Short answer");
+    //
 }
 else if (userChoice.Length < 10)
 {
-    Console.WriteLine("Medium answer");
+    //
 }
 else
 {
-    Console.WriteLine("Long answer");
+    //
 }
 
 // TODO: handle user input
