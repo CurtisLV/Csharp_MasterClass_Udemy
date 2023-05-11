@@ -27,3 +27,8 @@ else if (userChoice == "E")
 
 // TODO: handle user input
 Console.ReadKey();
+
+void PrintSelectedOption(string selectedOption)
+{
+    //
+}
