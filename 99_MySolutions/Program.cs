@@ -10,19 +10,19 @@ Console.WriteLine("User choice: " + userChoice);
 
 if (userChoice == "S")
 {
-    //
+    PrintSelectedOption();
 }
 else if (userChoice == "A")
 {
-    //
+    PrintSelectedOption();
 }
 else if (userChoice == "R")
 {
-    //
+    PrintSelectedOption();
 }
 else if (userChoice == "E")
 {
-    //
+    PrintSelectedOption();
 }
 
 // TODO: handle user input
