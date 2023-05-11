@@ -12,11 +12,15 @@ if (userChoice == "S")
 {
     //
 }
-else if (userChoice.Length < 10)
+else if (userChoice == "A")
 {
     //
 }
-else
+else if (userChoice == "R")
+{
+    //
+}
+else if (userChoice == "E")
 {
     //
 }
