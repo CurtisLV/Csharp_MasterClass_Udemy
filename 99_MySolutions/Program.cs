@@ -10,15 +10,15 @@ Console.WriteLine("User choice: " + userChoice);
 
 if (userChoice.Length <= 3)
 {
-    //
+    Console.WriteLine("Short answer");
 }
 else if (userChoice.Length < 10)
 {
-    //
+    Console.WriteLine("Short answer");
 }
 else
 {
-    //
+    Console.WriteLine("Short answer");
 }
 
 // TODO: handle user input
