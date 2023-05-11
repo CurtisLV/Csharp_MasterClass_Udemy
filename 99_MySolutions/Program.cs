@@ -8,5 +8,18 @@ Console.WriteLine("[E]xit");
 string userChoice = Console.ReadLine();
 Console.WriteLine("User choice: " + userChoice);
 
+if (userChoice.Length <= 3)
+{
+    //
+}
+else if (userChoice.Length < 10)
+{
+    //
+}
+else
+{
+    //
+}
+
 // TODO: handle user input
 Console.ReadKey();
