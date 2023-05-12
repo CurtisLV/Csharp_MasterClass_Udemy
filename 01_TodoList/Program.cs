@@ -60,8 +60,7 @@ void AddTodo()
     {
         Console.WriteLine("Enter the TODO description:");
         description = Console.ReadLine();
-    }
-    while (!IsDescriptionValid(description));
+    } while (!IsDescriptionValid(description));
     todos.Add(description);
 }
 
@@ -107,9 +106,7 @@ bool TryReadIndex(out int index)
         Console.WriteLine("Selected index cannot be empty");
         return false;
     }
-    if (int.TryParse(userInput, out index) &&
-        index >= 1 &&
-        index <= todos.Count)
+    if (int.TryParse(userInput, out index) && index >= 1 && index <= todos.Count)
     {
         return true;
     }
