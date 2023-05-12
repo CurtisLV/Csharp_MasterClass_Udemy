@@ -8,6 +8,8 @@ Console.WriteLine("[E]xit");
 string userChoice = Console.ReadLine();
 Console.WriteLine("User choice: " + userChoice);
 
+var result = Add(10, 5);
+
 //if (userChoice == "S")
 //{
 //    PrintSelectedOption("See all TODOs");
