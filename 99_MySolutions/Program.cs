@@ -31,3 +31,9 @@ Console.WriteLine("User choice: " + userChoice);
 //{
 //    Console.WriteLine($"Selected option: {selectedOption}");
 //}
+
+
+int Add(int a, int b)
+{
+    return a + b;
+}
