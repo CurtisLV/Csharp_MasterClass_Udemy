@@ -8,26 +8,26 @@ Console.WriteLine("[E]xit");
 string userChoice = Console.ReadLine();
 Console.WriteLine("User choice: " + userChoice);
 
-if (userChoice == "S")
-{
-    PrintSelectedOption("See all TODOs");
-}
-else if (userChoice == "A")
-{
-    PrintSelectedOption("Add a TODO");
-}
-else if (userChoice == "R")
-{
-    PrintSelectedOption("Remove a TODO");
-}
-else if (userChoice == "E")
-{
-    PrintSelectedOption("Exit");
-}
+//if (userChoice == "S")
+//{
+//    PrintSelectedOption("See all TODOs");
+//}
+//else if (userChoice == "A")
+//{
+//    PrintSelectedOption("Add a TODO");
+//}
+//else if (userChoice == "R")
+//{
+//    PrintSelectedOption("Remove a TODO");
+//}
+//else if (userChoice == "E")
+//{
+//    PrintSelectedOption("Exit");
+//}
 
-Console.ReadKey();
+//Console.ReadKey();
 
-void PrintSelectedOption(string selectedOption)
-{
-    Console.WriteLine($"Selected option: {selectedOption}");
-}
+//void PrintSelectedOption(string selectedOption)
+//{
+//    Console.WriteLine($"Selected option: {selectedOption}");
+//}
