@@ -10,6 +10,16 @@ Console.WriteLine("User choice: " + userChoice);
 
 var result = Add(10, 5);
 
+bool isLong = IsLong(userChoice);
+bool IsLong(string? input)
+{
+    if (input.Length > 10)
+    {
+        return true;
+    }
+    return false;
+}
+
 //if (userChoice == "S")
 //{
 //    PrintSelectedOption("See all TODOs");
