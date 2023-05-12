@@ -10,6 +10,7 @@ int number; //variable declaration
 number = 5; //variable initialization
 number = 10; //assigning new value to a variable
 Console.WriteLine(number); //10 will be printed
+
 //int lastName = "Smith"; //will not compile, we can't assign string to int
 
 
@@ -22,10 +23,13 @@ string @class = "First"; //we can use a reserved keyword if we precede it with @
 int _number = 10;
 int also_some_number = 5; //valid name, but not in line with C# convention
 int alsoSomeNumber = 5; //C# uses lower camel case
+
 //int 1number = 1; //will not compile, digit cannot be the first character
 string name1 = "Anna"; //digit is fine if it is not the first character
-int age, Age; //they are two different variables, C# is case-sensitive 
-              //int number-one = 10; //will not compile, we can't use '-'
+int age,
+    Age; //they are two different variables, C# is case-sensitive
+
+//int number-one = 10; //will not compile, we can't use '-'
 
 
 //###################
@@ -36,13 +40,12 @@ int resultNoParenthesis = 5 + 2 * 3;
 int resultParenthesis = 5 + (2 * 3);
 var stringAndInt = "abc" + 5;
 
-
-
 //###################
 //Implicitly typed variables
 //###################
 string word1 = "text"; //explicitly typed variable
 var word2 = "text"; //implicitly typed variable
+
 //var invalidVariable; //will not compile; implicitly typed variables must be initialized
 
 
@@ -78,8 +81,6 @@ var is10Modulo3EqualTo1 = 10 % 3 == 1;
 var isEven = number % 2 == 0;
 var isOdd = number % 2 != 0;
 
-
-
 //###################
 //Boolean type.
 //Logical negation, equality,
@@ -87,14 +88,10 @@ var isOdd = number % 2 != 0;
 //###################
 var isLargerThan4AndSmallerThan9 = number > 4 && number < 9;
 var isEqualTo2OrLargerThan6 = number == 2 || number > 6;
-var isEqualTo2OrLargerThan6OrSmallerThan200 =
-    number == 2 || number > 6 || number < 200;
-var isEqualto123OrEvenAndSmallerThan20 =
-    number == 123 || (number % 2 == 0 && number < 20);
+var isEqualTo2OrLargerThan6OrSmallerThan200 = number == 2 || number > 6 || number < 200;
+var isEqualto123OrEvenAndSmallerThan20 = number == 123 || (number % 2 == 0 && number < 20);
 var isLargerThan5OrSmallerThan0 = number > 5 || number < 5; //the second conditin will not be evaluated due to short-circuiting
 var isSmallerThanZeroAndEven = number < 0 && number % 2 == 0; //the second conditin will not be evaluated due to short-circuiting
-
-
 
 //###################
 //if/else statements
@@ -111,8 +108,6 @@ else
 {
     Console.WriteLine("Long answer");
 }
-
-
 
 //###################
 //Scopes
@@ -135,8 +130,6 @@ else
 }
 Console.WriteLine("Your choice is: " + userInput);
 
-
-
 //###################
 //Methods - part 1 - void methods
 //###################
@@ -145,8 +138,6 @@ void PrintSelectedOption(string selectedOption)
 {
     Console.WriteLine("Selected option: " + selectedOption);
 }
-
-
 
 //###################
 //Methods - part 2 - non-void methods
@@ -162,30 +153,23 @@ bool IsLong(string input)
     return input.Length > 10;
 }
 
-
-
 //###################
 //Parsing a string to an int
 //###################
 string numberAsText = "123";
 int parsedToInt = int.Parse(numberAsText); //would not work if input was, for example, "abc"
 
-
-
 //###################
 //String interpolation
 //###################
-int a = 4, b = 2, c = 10;
-Console.WriteLine(
-    "First is: " + a + ", second is: " + b + ", third is: " + c);
+int a = 4,
+    b = 2,
+    c = 10;
+Console.WriteLine("First is: " + a + ", second is: " + b + ", third is: " + c);
 
-Console.WriteLine(
-    $"First is: {a}, second is: {b}, third is: {c}");
+Console.WriteLine($"First is: {a}, second is: {b}, third is: {c}");
 
-Console.WriteLine(
-    $"Sum is: {a + b + c}, second is: {b}, third is: {c}");
-
-
+Console.WriteLine($"Sum is: {a + b + c}, second is: {b}, third is: {c}");
 
 //###################
 //Switch statement
@@ -219,8 +203,6 @@ char ConvertPointsToGrade(int points)
     }
 }
 
-
-
 //###################
 //While loop
 //###################
@@ -240,20 +222,15 @@ while (someText.Length < 15)
 }
 Console.WriteLine("The loop is finished.");
 
-
-
 //###################
 //Do-while loop
 //###################
 string userInputLong;
 do
 {
-    Console.WriteLine(
-        "Enter input longer than 10 letters");
+    Console.WriteLine("Enter input longer than 10 letters");
     userInputLong = Console.ReadLine();
 } while (userInputLong.Length <= 10);
-
-
 
 //###################
 //For loop
@@ -267,8 +244,6 @@ for (int i = 10; i >= 5; --i)
     Console.WriteLine("Loop run " + i);
 }
 Console.WriteLine("The loop is finished");
-
-
 
 //###################
 //Break and continue
@@ -285,8 +260,7 @@ for (int i = 0; i < 100; ++i)
 int userNumber;
 do
 {
-    Console.WriteLine(
-        "Enter a number larger than 10.");
+    Console.WriteLine("Enter a number larger than 10.");
     var input = Console.ReadLine();
     if (input == "stop")
     {
@@ -310,8 +284,6 @@ for (int i = 0; i < 20; i++)
     //Console.WriteLine(i);
 }
 
-
-
 //###################
 //Nested loops
 //###################
@@ -319,12 +291,9 @@ for (int i = 0; i < 4; i++)
 {
     for (int j = 0; j < 3; j++)
     {
-        Console.WriteLine(
-            $"i is {i}, j is {j}");
+        Console.WriteLine($"i is {i}, j is {j}");
     }
 }
-
-
 
 //###################
 //Arrays
@@ -342,8 +311,6 @@ for (int i = 0; i < numbers.Length; i++)
     sumOfNumbers += numbers[i];
 }
 
-
-
 //###################
 //Multi-dimensional arrays
 //###################
@@ -357,8 +324,8 @@ letters[1, 2] = 'F';
 
 var letters2 = new char[,]
 {
-    {'A', 'B','C' },
-    {'D', 'E','F' },
+    { 'A', 'B', 'C' },
+    { 'D', 'E', 'F' },
 };
 
 var height = letters.GetLength(0);
@@ -370,13 +337,9 @@ for (int i = 0; i < height; i++)
     for (int j = 0; j < width; j++)
     {
         Console.WriteLine($"j is {j}");
-        Console.WriteLine(
-            $"element is {letters[i, j]}");
+        Console.WriteLine($"element is {letters[i, j]}");
     }
 }
-
-
-
 
 //###################
 //Foreach loop
@@ -387,16 +350,10 @@ foreach (var word in words)
     Console.WriteLine(word);
 }
 
-
-
-
 //###################
 //Lists
 //###################
-var someWords = new List<string>
-{
-    "one", "two"
-};
+var someWords = new List<string> { "one", "two" };
 someWords.Add("three");
 someWords.AddRange(new[] { "four", "five" });
 someWords.Remove("three");
@@ -405,18 +362,14 @@ var indexOfFive = someWords.IndexOf("five");
 bool containsOne = someWords.Contains("one");
 someWords.Clear();
 
-
-
 //###################
 //Out parameter
 //###################
 var variousNumbers = new int[] { 10, -8, 2, 12, -17 };
 int countOfNonPositiveNumbers;
-var onlyPositive = GetOnlyPositive(
-    numbers, out countOfNonPositiveNumbers);
+var onlyPositive = GetOnlyPositive(numbers, out countOfNonPositiveNumbers);
 
-List<int> GetOnlyPositive(
-    int[] numbers, out int countOfNonPositive)
+List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
 {
     var result = new List<int>();
     countOfNonPositive = 0;
@@ -437,19 +390,15 @@ List<int> GetOnlyPositive(
 //###################
 //Out parameter
 //###################
-bool isParsed = int.TryParse(
-    userInput, out int userInputParsedToInt);
+bool isParsed = int.TryParse(userInput, out int userInputParsedToInt);
 if (isParsed)
 {
-    Console.WriteLine(
-        "Parsed successfully, the result is: " + userInputParsedToInt);
+    Console.WriteLine("Parsed successfully, the result is: " + userInputParsedToInt);
 }
 else
 {
-    Console.WriteLine(
-        $"Could not parse '{userInput}' to int");
+    Console.WriteLine($"Could not parse '{userInput}' to int");
 }
-
 
 Console.WriteLine("Press any key to close");
 Console.ReadKey();
