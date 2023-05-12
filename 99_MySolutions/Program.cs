@@ -11,10 +11,6 @@ Console.WriteLine("User choice: " + userChoice);
 var result = Add(10, 5);
 
 bool isLong = IsLong(userChoice);
-bool IsLong(string? input)
-{
-    return input.Length > 10;
-}
 
 //if (userChoice == "S")
 //{
@@ -44,4 +40,9 @@ bool IsLong(string? input)
 int Add(int a, int b)
 {
     return a + b;
+}
+
+bool IsLong(string input)
+{
+    return input.Length > 10;
 }
