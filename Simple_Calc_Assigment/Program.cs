@@ -36,15 +36,15 @@ else
 
 string Multiply(int num1, int num2)
 {
-    throw new NotImplementedException();
+    return (num1 * num2).ToString();
 }
 
 string Substract(int num1, int num2)
 {
-    throw new NotImplementedException();
+    return (num1 - num2).ToString();
 }
 
 string Add(int num1, int num2)
 {
-    throw new NotImplementedException();
+    return (num1 + num2).ToString();
 }
