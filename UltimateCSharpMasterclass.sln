@@ -71,7 +71,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_NumericTypesSuggesterTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_FirstWinFormsApp", "13_FirstWinFormsApp\13_FirstWinFormsApp.csproj", "{EC393344-1ABD-4548-A66A-2087E1C7E3AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99_MySolutions", "99_MySolutions\99_MySolutions.csproj", "{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "50_TODO", "99_MySolutions\50_TODO.csproj", "{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
