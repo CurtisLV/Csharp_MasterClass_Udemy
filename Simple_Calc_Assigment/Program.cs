@@ -31,3 +31,17 @@ if (funcSelect == "A")
     result = "Invalid option";
 }
 
+string Multiply(int num1, int num2)
+{
+    throw new NotImplementedException();
+}
+
+string Substract(int num1, int num2)
+{
+    throw new NotImplementedException();
+}
+
+string Add(int num1, int num2)
+{
+    throw new NotImplementedException();
+}
