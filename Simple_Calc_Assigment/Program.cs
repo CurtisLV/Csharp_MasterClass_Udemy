@@ -7,3 +7,21 @@ int num1 = int.Parse(userInputFirst);
 Console.WriteLine("Input the second number: ");
 string userInputSecond = Console.ReadLine();
 int num2 = int.Parse(userInputSecond);
+
+Console.WriteLine("What do you want to do with those numbers?");
+Console.WriteLine("[A]dd");
+Console.WriteLine("[S]ubstract");
+Console.WriteLine("[M]ultiply");
+
+string funcSelect = Console.ReadLine().ToUpper();
+
+string result = "";
+
+if (funcSelect == "A")
+{
+    Add(num1, num2)
+} else if (funcSelect == "S")
+{
+    Substract(num1, num2)
+}
+
