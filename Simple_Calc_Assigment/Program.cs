@@ -19,13 +19,13 @@ string result = "";
 
 if (funcSelect == "A")
 {
-    Add(num1, num2)
+   result = Add(num1, num2)
 } else if (funcSelect == "S")
 {
-    Substract(num1, num2)
+    result = Substract(num1, num2)
 } else if (funcSelect == "M")
 {
-    Multiply(num1, num2)
+   result = Multiply(num1, num2)
 } else
 {
     result = "Invalid option";
