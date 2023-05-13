@@ -14,7 +14,10 @@ bool isLong = IsLong(userChoice);
 
 Console.WriteLine("Provide a number.");
 
-int num = Console.ReadLine();
+string userInput = Console.ReadLine();
+
+int num = int.Parse(userInput);
+Console.WriteLine(num);
 
 //if (userChoice == "S")
 //{
