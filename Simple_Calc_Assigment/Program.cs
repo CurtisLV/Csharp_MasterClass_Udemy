@@ -34,7 +34,10 @@ else
     result = "Invalid option";
 }
 
-Console.WriteLine();
+Console.WriteLine(result);
+
+Console.WriteLine("Press any key to close");
+Console.ReadKey();
 
 string Multiply(int num1, int num2)
 {
