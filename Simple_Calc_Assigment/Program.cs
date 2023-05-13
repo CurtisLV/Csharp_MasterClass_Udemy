@@ -34,17 +34,19 @@ else
     result = "Invalid option";
 }
 
+Console.WriteLine();
+
 string Multiply(int num1, int num2)
 {
-    return (num1 * num2).ToString();
+    return $"{num1} * {num2} = {num1 * num2}";
 }
 
 string Substract(int num1, int num2)
 {
-    return (num1 - num2).ToString();
+    return $"{num1} - {num2} = {num1 - num2}";
 }
 
 string Add(int num1, int num2)
 {
-    return (num1 + num2).ToString();
+    return $"{num1} + {num2} = {num1 + num2}";
 }
