@@ -12,6 +12,10 @@ var result = Add(10, 5);
 
 bool isLong = IsLong(userChoice);
 
+Console.WriteLine("Provide a number.");
+
+int num = Console.ReadLine();
+
 //if (userChoice == "S")
 //{
 //    PrintSelectedOption("See all TODOs");
