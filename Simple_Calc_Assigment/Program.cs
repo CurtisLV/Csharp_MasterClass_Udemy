@@ -23,5 +23,11 @@ if (funcSelect == "A")
 } else if (funcSelect == "S")
 {
     Substract(num1, num2)
+} else if (funcSelect == "M")
+{
+    Multiply(num1, num2)
+} else
+{
+    result = "Invalid option";
 }
 
