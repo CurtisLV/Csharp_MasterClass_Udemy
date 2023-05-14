@@ -22,19 +22,19 @@ Console.WriteLine(num);
 switch (userInput)
 {
     case "S":
-        result = PrintSelectedOption("See all TODOs");
+        PrintSelectedOption("See all TODOs");
         break;
     case "A":
-        result = PrintSelectedOption("Add a TODO");
+        PrintSelectedOption("Add a TODO");
         break;
     case "R":
-        result = PrintSelectedOption("Remove a TODO");
+        PrintSelectedOption("Remove a TODO");
         break;
     case "E":
-        result = PrintSelectedOption("Exit");
+        PrintSelectedOption("Exit");
         break;
     default:
-        result = "Invalid option";
+        PrintSelectedOption("Invalid option");
         break;
 }
 
@@ -57,11 +57,10 @@ switch (userInput)
 
 //Console.ReadKey();
 
-//void PrintSelectedOption(string selectedOption)
-//{
-//    Console.WriteLine($"Selected option: {selectedOption}");
-//}
-
+void PrintSelectedOption(string selectedOption)
+{
+    Console.WriteLine($"Selected option: {selectedOption}");
+}
 
 int Add(int a, int b)
 {
