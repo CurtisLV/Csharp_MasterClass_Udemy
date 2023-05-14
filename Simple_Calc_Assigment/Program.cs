@@ -20,12 +20,16 @@ string result = "";
 switch (funcSelect)
 {
     case "A":
+        result = Printer(num1, num2, num1 + num2, "+");
         break;
     case "S":
+        result = Printer(num1, num2, num1 - num2, "-");
         break;
     case "M":
+        result = Printer(num1, num2, num1 * num2, "*");
         break;
     default:
+        result = "Invalid option";
         break;
 }
 
