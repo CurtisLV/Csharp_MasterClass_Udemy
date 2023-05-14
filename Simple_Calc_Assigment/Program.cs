@@ -43,18 +43,3 @@ string Printer(int num1, int num2, int result, string @operator)
 {
     return $"{num1} {@operator} {num2} = {result}";
 }
-
-string Multiply(int num1, int num2)
-{
-    return $"{num1} * {num2} = {num1 * num2}";
-}
-
-string Substract(int num1, int num2)
-{
-    return $"{num1} - {num2} = {num1 - num2}";
-}
-
-string Add(int num1, int num2)
-{
-    return $"{num1} + {num2} = {num1 + num2}";
-}
