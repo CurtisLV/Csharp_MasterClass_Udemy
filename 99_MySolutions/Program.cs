@@ -19,16 +19,19 @@ string userInput = Console.ReadLine();
 int num = int.Parse(userInput);
 Console.WriteLine(num);
 
-switch (funcSelect)
+switch (userInput)
 {
-    case "A":
-        result = Printer(num1, num2, num1 + num2, "+");
-        break;
     case "S":
-        result = Printer(num1, num2, num1 - num2, "-");
+        result = PrintSelectedOption("See all TODOs");
         break;
-    case "M":
-        result = Printer(num1, num2, num1 * num2, "*");
+    case "A":
+        result = PrintSelectedOption("Add a TODO");
+        break;
+    case "R":
+        result = PrintSelectedOption("Remove a TODO");
+        break;
+    case "E":
+        result = PrintSelectedOption("Exit");
         break;
     default:
         result = "Invalid option";
