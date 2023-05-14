@@ -19,7 +19,7 @@ string userInput = Console.ReadLine();
 int num = int.Parse(userInput);
 Console.WriteLine(num);
 
-switch (userInput)
+switch (userInput.ToUpper())
 {
     case "S":
         PrintSelectedOption("See all TODOs");
