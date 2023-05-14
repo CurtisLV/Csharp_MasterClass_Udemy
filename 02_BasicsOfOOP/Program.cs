@@ -10,8 +10,7 @@ var internationalPizzaDay24 = internationalPizzaDay23.AddYears(1);
 var rectangle1 = new Rectangle(5, 10);
 var rectangle2 = new Rectangle(50, 100);
 
-Console.WriteLine(
-    "Count of Rectangle objects is " + Rectangle.CountOfInstances);
+Console.WriteLine("Count of Rectangle objects is " + Rectangle.CountOfInstances);
 
 Console.WriteLine("Width is " + rectangle1.Width);
 Console.WriteLine("Height is " + rectangle1.GetHeight());
@@ -29,6 +28,7 @@ var nameOnly = new MedicalAppointment("Name only");
 
 //Stopwatch type
 Stopwatch stopwatch = Stopwatch.StartNew();
+
 //code to be measured
 stopwatch.Stop();
 Console.WriteLine("Elapsed time in ms: " + stopwatch.ElapsedMilliseconds);
@@ -38,7 +38,9 @@ Console.ReadKey();
 static class Calculator
 {
     public static int Add(int a, int b) => a + b;
+
     public static int Subtract(int a, int b) => a - b;
+
     public static int Multiply(int a, int b) => a * b;
 }
 
@@ -71,6 +73,7 @@ class Rectangle
 
     //achieving a similar behavior as properties give with using methods
     private int _height;
+
     public int GetHeight() => _height;
 
     public void SetHeight(int value)
@@ -99,8 +102,7 @@ class Rectangle
     public int CalculateArea() => Width * _height;
 
     //a get-only, expression-bodied property
-    public string Description => $"A rectangle with width {Width} " +
-        $"and height {_height}";
+    public string Description => $"A rectangle with width {Width} " + $"and height {_height}";
 
     //a static method, not using any state of an instance
     public static string DescribeGenerally() =>
@@ -109,7 +111,6 @@ class Rectangle
     //can be made static
     public string NotUsingAnyState() => "abc";
 }
-
 
 class MedicalAppointment
 {
@@ -130,8 +131,7 @@ class MedicalAppointment
     //{
     //}
 
-    public MedicalAppointment(
-        string patientName = "Unknown", int daysFromNow = 7)
+    public MedicalAppointment(string patientName = "Unknown", int daysFromNow = 7)
     {
         _patientName = patientName;
         _date = DateTime.Now.AddDays(daysFromNow);
@@ -153,10 +153,7 @@ class MedicalAppointment
 
     public void MoveByMonthsAndDays(int monthsToAdd, int daysToAdd)
     {
-        _date = new DateTime(
-            _date.Year,
-            _date.Month + monthsToAdd,
-            _date.Day + daysToAdd);
+        _date = new DateTime(_date.Year, _date.Month + monthsToAdd, _date.Day + daysToAdd);
     }
 }
 
@@ -164,7 +161,6 @@ class MedicalAppointmentPrinter
 {
     public void Print(MedicalAppointment medicalAppointment)
     {
-        Console.WriteLine(
-            "Appointment will take place on " + medicalAppointment.GetDate());
+        Console.WriteLine("Appointment will take place on " + medicalAppointment.GetDate());
     }
 }
