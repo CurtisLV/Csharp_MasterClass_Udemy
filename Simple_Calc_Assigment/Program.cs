@@ -19,11 +19,11 @@ string result = "";
 
 if (funcSelect == "A")
 {
-    result = Printer(num1, num2, (num1 + num2), "+");
+    result = Printer(num1, num2, num1 + num2, "+");
 }
 else if (funcSelect == "S")
 {
-    result = Printer(num1, num2, (num1 - num2), "-");
+    result = Printer(num1, num2, num1 - num2, "-");
 }
 else if (funcSelect == "M")
 {
