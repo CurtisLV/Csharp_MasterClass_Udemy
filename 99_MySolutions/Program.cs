@@ -19,6 +19,22 @@ string userInput = Console.ReadLine();
 int num = int.Parse(userInput);
 Console.WriteLine(num);
 
+switch (funcSelect)
+{
+    case "A":
+        result = Printer(num1, num2, num1 + num2, "+");
+        break;
+    case "S":
+        result = Printer(num1, num2, num1 - num2, "-");
+        break;
+    case "M":
+        result = Printer(num1, num2, num1 * num2, "*");
+        break;
+    default:
+        result = "Invalid option";
+        break;
+}
+
 //if (userChoice == "S")
 //{
 //    PrintSelectedOption("See all TODOs");
