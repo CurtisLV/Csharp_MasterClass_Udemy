@@ -17,6 +17,18 @@ string funcSelect = Console.ReadLine().ToUpper();
 
 string result = "";
 
+switch (funcSelect)
+{
+    case "A":
+        break;
+    case "S":
+        break;
+    case "M":
+        break;
+    default:
+        break;
+}
+
 if (funcSelect == "A")
 {
     result = Printer(num1, num2, num1 + num2, "+");
