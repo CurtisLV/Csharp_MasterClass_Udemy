@@ -1,20 +1,10 @@
-﻿Console.WriteLine("Enter a word!");
-var userInput = Console.ReadLine();
-
-while (userInput.Length < 15)
+﻿do
 {
-    userInput += 'a';
-
-    Console.WriteLine(userInput);
-}
+    Console.WriteLine("Enter a word longer than 5 characters");
+    word = Console.ReadLine();
+} while (word.Length <= 5);
 
 Console.WriteLine("The loop is finished!");
-
-string word;
-do
-{
-    //
-} while (true);
 
 //Console.WriteLine("Hello!");
 //Console.WriteLine("[S]ee all TODOs");
