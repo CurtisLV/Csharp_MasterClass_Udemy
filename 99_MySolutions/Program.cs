@@ -1,9 +1,8 @@
 ﻿var number = 0;
 
-while (number < 10)
+while (true)
 {
-    number++;
-    Console.WriteLine($"Number is: {number}");
+    //
 }
 
 //Console.WriteLine("Hello!");
