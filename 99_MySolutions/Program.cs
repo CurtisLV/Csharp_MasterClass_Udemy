@@ -1,4 +1,12 @@
-﻿//Console.WriteLine("Hello!");
+﻿var number = 0;
+
+while (number < 10)
+{
+    number++;
+    Console.WriteLine($"Number is: {number}");
+}
+
+//Console.WriteLine("Hello!");
 //Console.WriteLine("[S]ee all TODOs");
 //Console.WriteLine("[A]dd a TODO");
 //Console.WriteLine("[R]emove a TODO");
@@ -52,3 +60,6 @@
 //{
 //    return input.Length > 10;
 //}
+
+
+Console.ReadKey();
