@@ -1,6 +1,7 @@
-﻿var number = 0;
+﻿Console.WriteLine("Enter a word!");
+var userInput = Console.ReadLine();
 
-while (true)
+while (userInput.Length < 15)
 {
     //
 }
