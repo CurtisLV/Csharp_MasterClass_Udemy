@@ -1,4 +1,5 @@
-﻿do
+﻿string word;
+do
 {
     Console.WriteLine("Enter a word longer than 5 characters");
     word = Console.ReadLine();
