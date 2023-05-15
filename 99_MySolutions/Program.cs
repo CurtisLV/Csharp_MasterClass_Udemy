@@ -38,25 +38,6 @@ switch (userInput.ToUpper())
         break;
 }
 
-//if (userChoice == "S")
-//{
-//    PrintSelectedOption("See all TODOs");
-//}
-//else if (userChoice == "A")
-//{
-//    PrintSelectedOption("Add a TODO");
-//}
-//else if (userChoice == "R")
-//{
-//    PrintSelectedOption("Remove a TODO");
-//}
-//else if (userChoice == "E")
-//{
-//    PrintSelectedOption("Exit");
-//}
-
-//Console.ReadKey();
-
 void PrintSelectedOption(string selectedOption)
 {
     Console.WriteLine($"Selected option: {selectedOption}");
