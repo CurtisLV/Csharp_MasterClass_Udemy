@@ -9,7 +9,12 @@ while (userInput.Length < 15)
 }
 
 Console.WriteLine("The loop is finished!");
-Console.ReadKey();
+
+string word;
+do
+{
+    //
+} while (true);
 
 //Console.WriteLine("Hello!");
 //Console.WriteLine("[S]ee all TODOs");
