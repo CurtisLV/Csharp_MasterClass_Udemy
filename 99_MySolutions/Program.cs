@@ -12,6 +12,7 @@ do
 
     if (!isParsableToInt)
     {
+        userNumber = 0;
         continue;
     }
 

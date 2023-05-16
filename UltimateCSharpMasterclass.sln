@@ -73,7 +73,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_FirstWinFormsApp", "13_F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "50_TODO", "99_MySolutions\50_TODO.csproj", "{5C267EA7-ABA0-4C3C-9E5E-52F66F8A7077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple_Calc_Assigment", "Simple_Calc_Assigment\Simple_Calc_Assigment.csproj", "{C4AEF7E0-BDAF-4762-9A75-74812AB59C47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "51_Simple_Calc_Assigment", "Simple_Calc_Assigment\51_Simple_Calc_Assigment.csproj", "{C4AEF7E0-BDAF-4762-9A75-74812AB59C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
