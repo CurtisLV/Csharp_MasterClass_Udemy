@@ -1,7 +1,10 @@
-﻿for (int i = 0; i < 5; i++)
+﻿int userNumber;
+do
 {
-    Console.WriteLine("Hello!");
-}
+    Console.WriteLine("Enter number larger than 10");
+    var userInput = Console.ReadLine();
+    userNumber = int.Parse(userInput);
+} while (userNumber <= 10);
 
 Console.WriteLine("The loop is finished!");
 
