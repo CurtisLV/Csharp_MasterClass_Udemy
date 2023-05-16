@@ -3,6 +3,12 @@ do
 {
     Console.WriteLine("Enter number larger than 10");
     var userInput = Console.ReadLine();
+
+    if (userInput == "stop")
+    {
+        break;
+    }
+
     userNumber = int.Parse(userInput);
 } while (userNumber <= 10);
 
