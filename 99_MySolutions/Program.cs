@@ -8,6 +8,12 @@ do
     {
         break;
     }
+    bool isParsableToInt = userInput.All(char.IsDigit);
+
+    if (!isParsableToInt)
+    {
+        continue;
+    }
 
     userNumber = int.Parse(userInput);
 } while (userNumber <= 10);
