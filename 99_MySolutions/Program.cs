@@ -1,4 +1,15 @@
-﻿//int userNumber;
+﻿int[] nums = new int[] { 2, 6, 1, 6, 19 };
+
+var sum = 0;
+for (int i = 0; i < nums.Length; i++)
+{
+    sum += nums[i];
+}
+
+Console.WriteLine(sum);
+Console.WriteLine(nums[^2]);
+
+//int userNumber;
 //do
 //{
 //    Console.WriteLine("Enter number larger than 10");
