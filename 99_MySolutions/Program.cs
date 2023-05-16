@@ -1,9 +1,7 @@
-﻿string word;
-do
+﻿for (int i = 0; i < 5; i++)
 {
-    Console.WriteLine("Enter a word longer than 5 characters");
-    word = Console.ReadLine();
-} while (word.Length <= 5);
+    Console.WriteLine("Hello!");
+}
 
 Console.WriteLine("The loop is finished!");
 
