@@ -1,4 +1,13 @@
-﻿//int userNumber;
+﻿char[,] letters = new char[2, 3];
+
+letters[0, 0] = 'A';
+letters[0, 1] = 'B';
+letters[0, 2] = 'C';
+letters[1, 0] = 'D';
+letters[1, 1] = 'E';
+letters[1, 2] = 'F';
+
+//int userNumber;
 //do
 //{
 //    Console.WriteLine("Enter number larger than 10");
