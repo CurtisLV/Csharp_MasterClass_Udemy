@@ -21,6 +21,13 @@ var letters2 = new char[,]
     { 'D', 'E', 'F' }
 };
 
+var words = new[] { "one", "two", "three", "four" };
+
+foreach (var word in words)
+{
+    Console.WriteLine(word);
+}
+
 //int userNumber;
 //do
 //{
