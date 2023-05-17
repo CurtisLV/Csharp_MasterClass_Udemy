@@ -7,6 +7,12 @@ letters[1, 0] = 'D';
 letters[1, 1] = 'E';
 letters[1, 2] = 'F';
 
+var letters2 = new char[,]
+{
+    { 'A', 'B', 'C' },
+    { 'D', 'E', 'F' }
+};
+
 //int userNumber;
 //do
 //{
