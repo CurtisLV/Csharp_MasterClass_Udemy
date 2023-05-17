@@ -23,11 +23,7 @@ var letters2 = new char[,]
 
 var words = new[] { "one", "two", "three", "four" };
 
-    // create a string array with digits 1,2,3,4 in written form 
-    numbers[i,j]
-
-
-    foreach (var word in words)
+foreach (var word in words)
 {
     Console.WriteLine(word);
 }
