@@ -28,6 +28,10 @@ foreach (var word in words)
     Console.WriteLine(word);
 }
 
+List<string> words2 = new List<string>();
+
+words2.Add("Hello!");
+
 //int userNumber;
 //do
 //{
