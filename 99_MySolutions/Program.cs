@@ -19,7 +19,11 @@ foreach (var w in words)
 
 words.RemoveAt(0);
 
-words.IndexOf("five");
+Console.WriteLine(words.IndexOf("five")); // returns an index
+Console.WriteLine(words.IndexOf("random")); // return -1
+
+Console.WriteLine(words.IndexOf("five")); // returns an index
+Console.WriteLine(words.IndexOf("random")); // return -1
 
 //int userNumber;
 //do
