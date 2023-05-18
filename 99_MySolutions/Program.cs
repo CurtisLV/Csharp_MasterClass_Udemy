@@ -1,4 +1,6 @@
-﻿var words = new List<string> { "one", "two" };
+﻿using System.Text.RegularExpressions;
+
+var words = new List<string> { "one", "two" };
 
 foreach (var w in words)
 {
@@ -14,7 +16,7 @@ words.AddRange(new[] { "six", "seven", "eight" });
 
 foreach (var w in words)
 {
-    if (w == w.ToUpper())
+    if (w == w.ToUpper() && Regex.IsMatch(w, "^[a-zA-Z]+$"))
     {
         //
     }

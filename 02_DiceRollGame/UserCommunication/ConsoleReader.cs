@@ -8,8 +8,7 @@
             do
             {
                 Console.WriteLine(message);
-            }
-            while (!int.TryParse(Console.ReadLine(), out result));
+            } while (!int.TryParse(Console.ReadLine(), out result));
             return result;
         }
     }
