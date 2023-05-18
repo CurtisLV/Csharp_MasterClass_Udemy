@@ -1,38 +1,4 @@
-﻿char[,] letters = new char[2, 3];
-
-letters[0, 0] = 'A';
-letters[0, 1] = 'B';
-letters[0, 2] = 'C';
-letters[1, 0] = 'D';
-letters[1, 1] = 'E';
-letters[1, 2] = 'F';
-
-for (int i = 0; i < letters.GetLength(0); i++)
-{
-    for (int j = 0; j < letters.GetLength(1); j++)
-    {
-        Console.WriteLine(letters[i, j]);
-    }
-}
-
-var letters2 = new char[,]
-{
-    { 'A', 'B', 'C' },
-    { 'D', 'E', 'F' }
-};
-
-var words = new[] { "one", "two", "three", "four" };
-
-foreach (var word in words)
-{
-    Console.WriteLine(word);
-}
-
-List<string> words2 = new List<string>();
-
-words2.Add("Hello!");
-
-//int userNumber;
+﻿//int userNumber;
 //do
 //{
 //    Console.WriteLine("Enter number larger than 10");
