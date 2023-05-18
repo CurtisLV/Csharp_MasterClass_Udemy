@@ -5,7 +5,13 @@ foreach (var w in words)
     Console.WriteLine(w);
 }
 
-words.Add("two");
+words.Add("three");
+words.Remove("two");
+
+foreach (var w in words)
+{
+    Console.WriteLine(w);
+}
 
 //int userNumber;
 //do
