@@ -6,12 +6,17 @@ foreach (var w in words)
 }
 
 words.Add("three");
+words.Add("four");
 words.Remove("two");
 
 foreach (var w in words)
 {
     Console.WriteLine(w);
 }
+
+words.RemoveAt(0);
+
+var moreWords = new[] { "six", "seven", "eight" };
 
 //int userNumber;
 //do
