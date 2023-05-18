@@ -22,8 +22,8 @@ words.RemoveAt(0);
 Console.WriteLine(words.IndexOf("five")); // returns an index
 Console.WriteLine(words.IndexOf("random")); // return -1
 
-Console.WriteLine(words.IndexOf("five")); // returns an index
-Console.WriteLine(words.IndexOf("random")); // return -1
+Console.WriteLine(words.Contains("five")); // returns true
+Console.WriteLine(words.Contains("random")); // return false
 
 //int userNumber;
 //do
