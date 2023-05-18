@@ -1,4 +1,13 @@
-﻿//int userNumber;
+﻿var words = new List<string> { "one", "two" };
+
+foreach (var w in words)
+{
+    Console.WriteLine(w);
+}
+
+words.Add("two");
+
+//int userNumber;
 //do
 //{
 //    Console.WriteLine("Enter number larger than 10");
