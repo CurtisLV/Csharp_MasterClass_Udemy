@@ -15,8 +15,7 @@ namespace DiceRollGame.Game
         public GameResult Play()
         {
             var diceRollResult = _dice.Roll();
-            Console.WriteLine(
-                $"Dice rolled. Guess what number it shows in {InitialTries} tries.");
+            Console.WriteLine($"Dice rolled. Guess what number it shows in {InitialTries} tries.");
 
             var triesLeft = InitialTries;
             while (triesLeft > 0)
@@ -34,9 +33,7 @@ namespace DiceRollGame.Game
 
         public static void PrintResult(GameResult gameResult)
         {
-            string message = gameResult == GameResult.Victory
-                ? "You win!"
-                : "You lose :(";
+            string message = gameResult == GameResult.Victory ? "You win!" : "You lose :(";
 
             Console.WriteLine(message);
         }
