@@ -14,7 +14,10 @@ words.AddRange(new[] { "six", "seven", "eight" });
 
 foreach (var w in words)
 {
-    Console.WriteLine(w);
+    if (w == w.ToUpper())
+    {
+        //
+    }
 }
 
 words.RemoveAt(0);
@@ -24,6 +27,8 @@ Console.WriteLine(words.IndexOf("random")); // return -1
 
 Console.WriteLine(words.Contains("five")); // returns true
 Console.WriteLine(words.Contains("random")); // return false
+
+words.Clear(); // Clears list
 
 //int userNumber;
 //do
