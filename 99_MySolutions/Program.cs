@@ -7,7 +7,10 @@ foreach (var w in words)
 
 words.Add("three");
 words.Add("four");
+words.Add("five");
 words.Remove("two");
+
+words.AddRange(new[] { "six", "seven", "eight" });
 
 foreach (var w in words)
 {
@@ -16,7 +19,7 @@ foreach (var w in words)
 
 words.RemoveAt(0);
 
-var moreWords = new[] { "six", "seven", "eight" };
+words.IndexOf("five");
 
 //int userNumber;
 //do
