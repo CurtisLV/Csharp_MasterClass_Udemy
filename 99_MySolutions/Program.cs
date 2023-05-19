@@ -34,6 +34,11 @@ words.Clear(); // Clears list
 
 var numbers = new[] { 10, -8, 2, 12, -17 };
 
+List<int> GetOnlyPositive(int[] numbers)
+{
+    //
+}
+
 Console.ReadKey();
 
 //int userNumber;
