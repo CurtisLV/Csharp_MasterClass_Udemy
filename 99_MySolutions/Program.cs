@@ -33,8 +33,8 @@ Console.WriteLine(words.Contains("random")); // return false
 words.Clear(); // Clears list
 
 var numbers = new[] { 10, -8, 2, 12, -17 };
-
-var onlyPositives = GetOnlyPositive(numbers);
+int countOfNonPositive;
+var onlyPositives = GetOnlyPositive(numbers, out countOfNonPositive);
 
 foreach (var num in onlyPositives)
 {
