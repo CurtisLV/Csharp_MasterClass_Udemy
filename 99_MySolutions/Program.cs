@@ -33,17 +33,19 @@ Console.WriteLine(words.Contains("random")); // return false
 words.Clear(); // Clears list
 
 var numbers = new[] { 10, -8, 2, 12, -17 };
-int countOfNonPositive;
-var onlyPositives = GetOnlyPositive(numbers, out countOfNonPositive);
+int nonPositiveCount;
+var onlyPositives = GetOnlyPositive(numbers, out nonPositiveCount);
 
 foreach (var num in onlyPositives)
 {
     Console.WriteLine(num);
 }
-
+Console.WriteLine($"Count of non-positive: {nonPositiveCount}");
+Console.ReadKey();
 List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
 {
     var result = new List<int>();
+    countOfNonPositive = 0;
 
     foreach (int num in numbers)
     {
@@ -58,8 +60,6 @@ List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
     }
     return result;
 }
-
-Console.ReadKey();
 
 //int userNumber;
 //do
@@ -138,6 +138,3 @@ Console.ReadKey();
 //{
 //    return input.Length > 10;
 //}
-
-
-Console.ReadKey();
