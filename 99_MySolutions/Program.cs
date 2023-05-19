@@ -32,6 +32,10 @@ Console.WriteLine(words.Contains("random")); // return false
 
 words.Clear(); // Clears list
 
+var numbers = new[] { 10, -8, 2, 12, -17 };
+
+Console.ReadKey();
+
 //int userNumber;
 //do
 //{
