@@ -36,7 +36,16 @@ var numbers = new[] { 10, -8, 2, 12, -17 };
 
 List<int> GetOnlyPositive(int[] numbers)
 {
-    //
+    var result = new List<int>();
+
+    foreach (int num in numbers)
+    {
+        if (num > 0)
+        {
+            result.Add(num);
+        }
+    }
+    return result;
 }
 
 Console.ReadKey();
