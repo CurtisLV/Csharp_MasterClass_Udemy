@@ -41,7 +41,7 @@ foreach (var num in onlyPositives)
     Console.WriteLine(num);
 }
 
-List<int> GetOnlyPositive(int[] numbers)
+List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
 {
     var result = new List<int>();
 
@@ -50,6 +50,10 @@ List<int> GetOnlyPositive(int[] numbers)
         if (num > 0)
         {
             result.Add(num);
+        }
+        else
+        {
+            countOfNonPositive++;
         }
     }
     return result;
