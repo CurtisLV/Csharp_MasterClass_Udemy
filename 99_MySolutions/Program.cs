@@ -34,6 +34,13 @@ words.Clear(); // Clears list
 
 var numbers = new[] { 10, -8, 2, 12, -17 };
 
+var onlyPositives = GetOnlyPositive(numbers);
+
+foreach (var num in onlyPositives)
+{
+    Console.WriteLine(num);
+}
+
 List<int> GetOnlyPositive(int[] numbers)
 {
     var result = new List<int>();
