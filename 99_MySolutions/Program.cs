@@ -68,11 +68,11 @@ bool isParsingSucc = int.TryParse(userInput, out int number);
 
 if (isParsingSucc)
 {
-    Console.WriteLine();
+    Console.WriteLine($"Parsing worked, number is {number}");
 }
 else
 {
-    Console.WriteLine();
+    Console.WriteLine($"Not succesful because input value was {userInput}");
 }
 
 
