@@ -1,7 +1,7 @@
 ﻿var names = new Names();
 var path = names.BuildFilePath();
 
-if(File.Exists(path))
+if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
     names.ReadFromTextFile();
@@ -37,25 +37,23 @@ public class Names
 
     private bool IsValidName(string name)
     {
-        return
-            name.Length >= 2 &&
-            name.Length < 25 &&
-            char.IsUpper(name[0]) &&
-            name.All(char.IsLetter);
+        return name.Length >= 2
+            && name.Length < 25
+            && char.IsUpper(name[0])
+            && name.All(char.IsLetter);
     }
 
     public void ReadFromTextFile()
     {
         var fileContents = File.ReadAllText(BuildFilePath());
         var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
-        foreach(var name in namesFromFile)
+        foreach (var name in namesFromFile)
         {
             AddName(name);
         }
     }
 
-    public void WriteToTextFile() =>
-        File.WriteAllText(BuildFilePath(), Format());
+    public void WriteToTextFile() => File.WriteAllText(BuildFilePath(), Format());
 
     public string BuildFilePath()
     {
@@ -64,6 +62,5 @@ public class Names
         return "names.txt";
     }
 
-    public string Format() =>
-        string.Join(Environment.NewLine, _names);
+    public string Format() => string.Join(Environment.NewLine, _names);
 }
