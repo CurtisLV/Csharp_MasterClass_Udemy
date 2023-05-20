@@ -64,19 +64,21 @@ List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
 Console.WriteLine("Enter a number:");
 var userInput = Console.ReadLine();
 
-bool isParsingSucc = int.TryParse(userInput, out int number);
+bool isParsingSucc;
 
-if (isParsingSucc)
+do
 {
-    Console.WriteLine($"Parsing worked, number is {number}");
-}
-else
-{
-    Console.WriteLine($"Not succesful because input value was {userInput}");
-}
+    isParsingSucc = int.TryParse(userInput, out int number);
 
-
-
+    if (isParsingSucc)
+    {
+        Console.WriteLine($"Parsing worked, number is {number}");
+    }
+    else
+    {
+        Console.WriteLine($"Not succesful because input value was {userInput}");
+    }
+} while (!isParsingSucc);
 
 
 //int userNumber;
