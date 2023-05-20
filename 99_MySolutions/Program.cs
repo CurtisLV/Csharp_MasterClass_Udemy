@@ -1,65 +1,65 @@
 ﻿using System.Text.RegularExpressions;
 
-var words = new List<string> { "one", "two" };
+//var words = new List<string> { "one", "two" };
 
-foreach (var w in words)
-{
-    Console.WriteLine(w);
-}
+//foreach (var w in words)
+//{
+//    Console.WriteLine(w);
+//}
 
-words.Add("three");
-words.Add("four");
-words.Add("five");
-words.Remove("two");
+//words.Add("three");
+//words.Add("four");
+//words.Add("five");
+//words.Remove("two");
 
-words.AddRange(new[] { "six", "seven", "eight" });
+//words.AddRange(new[] { "six", "seven", "eight" });
 
-foreach (var w in words)
-{
-    if (w == w.ToUpper() && Regex.IsMatch(w, "^[a-zA-Z]+$"))
-    {
-        //
-    }
-}
+//foreach (var w in words)
+//{
+//    if (w == w.ToUpper() && Regex.IsMatch(w, "^[a-zA-Z]+$"))
+//    {
+//        //
+//    }
+//}
 
-words.RemoveAt(0);
+//words.RemoveAt(0);
 
-Console.WriteLine(words.IndexOf("five")); // returns an index
-Console.WriteLine(words.IndexOf("random")); // return -1
+//Console.WriteLine(words.IndexOf("five")); // returns an index
+//Console.WriteLine(words.IndexOf("random")); // return -1
 
-Console.WriteLine(words.Contains("five")); // returns true
-Console.WriteLine(words.Contains("random")); // return false
+//Console.WriteLine(words.Contains("five")); // returns true
+//Console.WriteLine(words.Contains("random")); // return false
 
-words.Clear(); // Clears list
+//words.Clear(); // Clears list
 
-var numbers = new[] { 10, -8, 2, 12, -17 };
-int nonPositiveCount;
-var onlyPositives = GetOnlyPositive(numbers, out nonPositiveCount);
+//var numbers = new[] { 10, -8, 2, 12, -17 };
+//int nonPositiveCount;
+//var onlyPositives = GetOnlyPositive(numbers, out nonPositiveCount);
 
-foreach (var num in onlyPositives)
-{
-    Console.WriteLine(num);
-}
-Console.WriteLine($"Count of non-positive: {nonPositiveCount}");
-Console.ReadKey();
-List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
-{
-    var result = new List<int>();
-    countOfNonPositive = 0;
+//foreach (var num in onlyPositives)
+//{
+//    Console.WriteLine(num);
+//}
+//Console.WriteLine($"Count of non-positive: {nonPositiveCount}");
+//Console.ReadKey();
+//List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
+//{
+//    var result = new List<int>();
+//    countOfNonPositive = 0;
 
-    foreach (int num in numbers)
-    {
-        if (num > 0)
-        {
-            result.Add(num);
-        }
-        else
-        {
-            countOfNonPositive++;
-        }
-    }
-    return result;
-}
+//    foreach (int num in numbers)
+//    {
+//        if (num > 0)
+//        {
+//            result.Add(num);
+//        }
+//        else
+//        {
+//            countOfNonPositive++;
+//        }
+//    }
+//    return result;
+//}
 
 Console.WriteLine("Enter a number:");
 var userInput = Console.ReadLine();
