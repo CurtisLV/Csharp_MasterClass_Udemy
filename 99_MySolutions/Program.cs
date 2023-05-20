@@ -68,6 +68,8 @@ bool isParsingSucc;
 
 do
 {
+    Console.WriteLine("Enter a number:");
+    userInput = Console.ReadLine();
     isParsingSucc = int.TryParse(userInput, out int number);
 
     if (isParsingSucc)
