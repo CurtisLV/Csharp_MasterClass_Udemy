@@ -63,7 +63,17 @@ List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
 
 Console.WriteLine("Enter a number:");
 var userInput = Console.ReadLine();
-int asNumber = int.Parse(userInput);
+
+bool isParsingSucc = int.TryParse(userInput, out int number);
+
+if (isParsingSucc)
+{
+    Console.WriteLine();
+}
+else
+{
+    Console.WriteLine();
+}
 
 
 
