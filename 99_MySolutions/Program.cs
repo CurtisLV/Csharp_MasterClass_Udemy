@@ -61,6 +61,14 @@ List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
     return result;
 }
 
+Console.WriteLine("Enter a number:");
+var userInput = Console.ReadLine();
+int asNumber = int.Parse(userInput);
+
+
+
+
+
 //int userNumber;
 //do
 //{
