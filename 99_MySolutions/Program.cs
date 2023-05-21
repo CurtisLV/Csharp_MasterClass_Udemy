@@ -1,13 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 
 Console.WriteLine("Hello!");
-Console.WriteLine("What do you want to do?");
-PrintOptions();
 
-var userInput = Console.ReadLine().ToUpper();
+var userInput = "";
 
 do
 {
+    userInput = Console.ReadLine().ToUpper();
+
     switch (userInput)
     {
         case "S":
@@ -30,6 +30,8 @@ do
 
 void PrintOptions()
 {
+    Console.WriteLine();
+    Console.WriteLine("What do you want to do?");
     Console.WriteLine("[S]ee all TODOs");
     Console.WriteLine("[A]dd a TODO");
     Console.WriteLine("[R]emove a TODO");
