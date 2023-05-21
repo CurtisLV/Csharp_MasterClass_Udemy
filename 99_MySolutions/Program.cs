@@ -29,6 +29,11 @@ do
 
             break;
         case "R":
+            // here we add a do while
+            do
+            {
+                //
+            } while (true);
             PrintSelectedOption("Select the index of the TODO you want to remove: ");
             PrintAllTodo();
 
