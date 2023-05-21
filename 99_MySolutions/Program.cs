@@ -21,7 +21,7 @@ do
             bool isAdded;
             do
             {
-                PrintSelectedOption("Enter the TODO description:");
+                Console.WriteLine("Enter the TODO description: ");
                 var addTodoInput = Console.ReadLine();
                 AddTodo(addTodoInput, out bool isTodoAdded);
                 isAdded = isTodoAdded;
@@ -29,7 +29,9 @@ do
 
             break;
         case "R":
-            PrintSelectedOption("Remove a TODO");
+            PrintSelectedOption("Select the index of the TODO you want to remove: ");
+            PrintAllTodo();
+
             break;
         case "E":
             PrintSelectedOption("Exit");
