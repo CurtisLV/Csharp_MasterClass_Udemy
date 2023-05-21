@@ -1,11 +1,14 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
 
 Console.WriteLine("Hello!");
 
 var userInput = "";
+List<string> todoList = new List<string>();
 
 do
 {
+    PrintOptions();
     userInput = Console.ReadLine().ToUpper();
 
     switch (userInput)
@@ -36,6 +39,11 @@ void PrintOptions()
     Console.WriteLine("[A]dd a TODO");
     Console.WriteLine("[R]emove a TODO");
     Console.WriteLine("[E]xit");
+}
+
+void PrintSelectedOption(string selectedOption)
+{
+    Console.WriteLine($"Selected option: {selectedOption}");
 }
 
 //var words = new List<string> { "one", "two" };
@@ -183,10 +191,7 @@ do
 //        break;
 //}
 
-//void PrintSelectedOption(string selectedOption)
-//{
-//    Console.WriteLine($"Selected option: {selectedOption}");
-//}
+
 
 //int Add(int a, int b)
 //{
