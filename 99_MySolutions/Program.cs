@@ -8,7 +8,24 @@ var userInput = Console.ReadLine().ToUpper();
 
 do
 {
-    //
+    switch (userInput)
+    {
+        case "S":
+            PrintSelectedOption("See all TODOs");
+            break;
+        case "A":
+            PrintSelectedOption("Add a TODO");
+            break;
+        case "R":
+            PrintSelectedOption("Remove a TODO");
+            break;
+        case "E":
+            PrintSelectedOption("Exit");
+            break;
+        default:
+            PrintSelectedOption("Invalid option");
+            break;
+    }
 } while (userInput != "E");
 
 void PrintOptions()
