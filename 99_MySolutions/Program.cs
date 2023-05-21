@@ -18,9 +18,15 @@ do
             PrintAllTodo();
             break;
         case "A":
-            PrintSelectedOption("Enter the TODO description:");
-            var addTodoInput = Console.ReadLine();
-            AddTodo(addTodoInput);
+            bool isAdded;
+            do
+            {
+                PrintSelectedOption("Enter the TODO description:");
+                var addTodoInput = Console.ReadLine();
+                AddTodo(addTodoInput, out bool isTodoAdded);
+                isAdded = isTodoAdded;
+            } while (!isAdded);
+
             break;
         case "R":
             PrintSelectedOption("Remove a TODO");
@@ -48,21 +54,24 @@ void PrintAllTodo()
     }
 }
 
-void AddTodo(string addTodoInput)
+void AddTodo(string addTodoInput, out bool isTodoAdded)
 {
     if (string.IsNullOrEmpty(addTodoInput))
     {
         Console.WriteLine("The description cannot be empty.");
+        isTodoAdded = false;
         return;
     }
     if (todoList.Contains(addTodoInput))
     {
-        Console.WriteLine("The description cannot be empty.");
+        Console.WriteLine("The description must be unique.");
+        isTodoAdded = false;
         return;
     }
 
     todoList.Add(addTodoInput);
     Console.WriteLine($"TODO successfully added: {addTodoInput}");
+    isTodoAdded = true;
 }
 
 void PrintSelectedOption(string option)
@@ -131,23 +140,23 @@ void PrintOptions()
 
 //Console.WriteLine("Enter a number:");
 
-//bool isParsingSucc;
+bool isParsingSucc;
 
-//do
-//{
-//    Console.WriteLine("Enter a number:");
-//    userInput = Console.ReadLine();
-//    isParsingSucc = int.TryParse(userInput, out int number);
+do
+{
+    Console.WriteLine("Enter a number:");
+    userInput = Console.ReadLine();
+    isParsingSucc = int.TryParse(userInput, out int number);
 
-//    if (isParsingSucc)
-//    {
-//        Console.WriteLine($"Parsing worked, number is {number}");
-//    }
-//    else
-//    {
-//        Console.WriteLine($"Not succesful because input value was {userInput}");
-//    }
-//} while (!isParsingSucc);
+    if (isParsingSucc)
+    {
+        Console.WriteLine($"Parsing worked, number is {number}");
+    }
+    else
+    {
+        Console.WriteLine($"Not succesful because input value was {userInput}");
+    }
+} while (!isParsingSucc);
 
 
 //int userNumber;
