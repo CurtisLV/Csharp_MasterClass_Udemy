@@ -50,18 +50,19 @@ void PrintAllTodo()
 
 void AddTodo(string addTodoInput)
 {
-    //check if string is not empty, if is -
-    //add to list
-    //else - print error
-    if (!string.IsNullOrEmpty(addTodoInput) && !todoList.Contains(addTodoInput))
+    if (string.IsNullOrEmpty(addTodoInput))
     {
-        todoList.Add(addTodoInput);
-        Console.WriteLine($"TODO successfully added: {addTodoInput}");
+        Console.WriteLine("The description cannot be empty.");
+        return;
     }
-    else
+    if (todoList.Contains(addTodoInput))
     {
-        Console.WriteLine("TODO description cannot be empty.");
+        Console.WriteLine("The description cannot be empty.");
+        return;
     }
+
+    todoList.Add(addTodoInput);
+    Console.WriteLine($"TODO successfully added: {addTodoInput}");
 }
 
 void PrintSelectedOption(string option)
