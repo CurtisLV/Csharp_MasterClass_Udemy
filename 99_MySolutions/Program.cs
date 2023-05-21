@@ -37,9 +37,9 @@ void PrintAllTodo()
 {
     if (todoList.Count > 0)
     {
-        for (int i = 0; i <= todoList.Count; i++)
+        for (int i = 1; i <= todoList.Count; i++)
         {
-            Console.WriteLine($"{i}. {todoList[i]}");
+            Console.WriteLine($"{i}. {todoList[i - 1]}");
         }
     }
     else
@@ -78,18 +78,6 @@ void PrintOptions()
     Console.WriteLine("[R]emove a TODO");
     Console.WriteLine("[E]xit");
 }
-
-//var words = new List<string> { "one", "two" };
-
-//foreach (var w in words)
-//{
-//    Console.WriteLine(w);
-//}
-
-//words.Add("three");
-//words.Add("four");
-//words.Add("five");
-//words.Remove("two");
 
 //words.AddRange(new[] { "six", "seven", "eight" });
 
@@ -140,25 +128,25 @@ void PrintOptions()
 //    return result;
 //}
 
-Console.WriteLine("Enter a number:");
+//Console.WriteLine("Enter a number:");
 
-bool isParsingSucc;
+//bool isParsingSucc;
 
-do
-{
-    Console.WriteLine("Enter a number:");
-    userInput = Console.ReadLine();
-    isParsingSucc = int.TryParse(userInput, out int number);
+//do
+//{
+//    Console.WriteLine("Enter a number:");
+//    userInput = Console.ReadLine();
+//    isParsingSucc = int.TryParse(userInput, out int number);
 
-    if (isParsingSucc)
-    {
-        Console.WriteLine($"Parsing worked, number is {number}");
-    }
-    else
-    {
-        Console.WriteLine($"Not succesful because input value was {userInput}");
-    }
-} while (!isParsingSucc);
+//    if (isParsingSucc)
+//    {
+//        Console.WriteLine($"Parsing worked, number is {number}");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Not succesful because input value was {userInput}");
+//    }
+//} while (!isParsingSucc);
 
 
 //int userNumber;
