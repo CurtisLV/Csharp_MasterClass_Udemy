@@ -15,6 +15,7 @@ do
     {
         case "S":
             PrintSelectedOption("See all TODOs");
+            PrintAllTodo();
             break;
         case "A":
             PrintSelectedOption("Enter the TODO description:");
@@ -28,10 +29,25 @@ do
             PrintSelectedOption("Exit");
             break;
         default:
-            PrintSelectedOption("Invalid option");
+            PrintSelectedOption("Incorrect input1");
             break;
     }
 } while (userInput != "E");
+void PrintAllTodo()
+{
+    if (todoList.Count > 0)
+    {
+        for (int i = 0; i <= todoList.Count; i++)
+        {
+            Console.WriteLine($"{i}. {todoList[i]}");
+        }
+    }
+    else
+    {
+        Console.WriteLine("No TODOs have been added yet.");
+    }
+}
+
 void AddTodo(string? addTodoInput)
 {
     //check if string is not empty, if is -
