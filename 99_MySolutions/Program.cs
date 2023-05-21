@@ -140,24 +140,6 @@ void PrintOptions()
 
 //Console.WriteLine("Enter a number:");
 
-bool isParsingSucc;
-
-do
-{
-    Console.WriteLine("Enter a number:");
-    userInput = Console.ReadLine();
-    isParsingSucc = int.TryParse(userInput, out int number);
-
-    if (isParsingSucc)
-    {
-        Console.WriteLine($"Parsing worked, number is {number}");
-    }
-    else
-    {
-        Console.WriteLine($"Not succesful because input value was {userInput}");
-    }
-} while (!isParsingSucc);
-
 
 //int userNumber;
 //do
