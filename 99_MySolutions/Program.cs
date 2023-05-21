@@ -17,7 +17,9 @@ do
             PrintSelectedOption("See all TODOs");
             break;
         case "A":
-            PrintSelectedOption("Add a TODO");
+            PrintSelectedOption("Enter the TODO description:");
+            var addTodoInput = Console.ReadLine();
+            AddTodo(addTodoInput);
             break;
         case "R":
             PrintSelectedOption("Remove a TODO");
@@ -30,6 +32,12 @@ do
             break;
     }
 } while (userInput != "E");
+void AddTodo(string? addTodoInput)
+{
+    //check if string is not empty, if is -
+    //add to list
+    //else - print error
+}
 
 void PrintOptions()
 {
