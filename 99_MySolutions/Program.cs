@@ -39,10 +39,10 @@ do
 
             break;
         case "E":
-            PrintSelectedOption("Exit");
+            Console.WriteLine("Exit");
             break;
         default:
-            PrintSelectedOption("Incorrect input1");
+            Console.WriteLine("Incorrect input");
             break;
     }
 } while (userInput != "E");
