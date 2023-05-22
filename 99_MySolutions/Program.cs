@@ -38,6 +38,16 @@ do
                 Console.WriteLine("Select the index of the TODO you want to remove: ");
                 PrintAllTodo();
                 var removeInput = Console.ReadLine();
+                isParsingSucc = int.TryParse(removeInput, out int number);
+
+                if (isParsingSucc)
+                {
+                    //
+                }
+                else
+                {
+                    //
+                }
             } while (true);
 
             break;
