@@ -48,10 +48,21 @@ do
                     {
                         Console.WriteLine("The given index is not valid.");
                     }
+                    else
+                    {
+                        todoList.Remove(todoList[number - 1]);
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("The given index is not valid.");
+                    if (string.IsNullOrEmpty(removeInput))
+                    {
+                        Console.WriteLine("Selected index cannot be empty.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("The given index is not valid.");
+                    }
                 }
             } while (!isParsingSucc);
 
