@@ -1,4 +1,5 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 
 Console.WriteLine("Hello!");
@@ -43,12 +44,14 @@ do
                 if (isParsingSucc)
                 {
                     // we check if the index exists or is not empty
-                    // another if
+                    if (number > todoList.Count)
+                    {
+                        Console.WriteLine("The given index is not valid.");
+                    }
                 }
                 else
                 {
-                    // Invalid index
-                    //“The given index is not valid.”
+                    Console.WriteLine("The given index is not valid.");
                 }
             } while (!isParsingSucc);
 
@@ -181,11 +184,6 @@ void PrintOptions()
 
 //Console.WriteLine("The loop is finished!");
 
-//Console.WriteLine("Hello!");
-//Console.WriteLine("[S]ee all TODOs");
-//Console.WriteLine("[A]dd a TODO");
-//Console.WriteLine("[R]emove a TODO");
-//Console.WriteLine("[E]xit");
 
 //// Read line from console and assign to var
 //string userChoice = Console.ReadLine();
