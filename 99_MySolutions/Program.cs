@@ -1,8 +1,4 @@
-﻿using System;
-using System.Net.NetworkInformation;
-using System.Text.RegularExpressions;
-
-Console.WriteLine("Hello!");
+﻿Console.WriteLine("Hello!");
 
 var userInput = "";
 List<string> todoList = new List<string>();
@@ -31,7 +27,6 @@ do
             break;
         case "R":
 
-            // here we add a do while
             bool isParsingSucc;
 
             do
@@ -50,6 +45,7 @@ do
                     }
                     else
                     {
+                        Console.WriteLine($"TODO removed: {todoList[number - 1]}");
                         todoList.Remove(todoList[number - 1]);
                     }
                 }
@@ -120,15 +116,7 @@ void PrintOptions()
     Console.WriteLine("[E]xit");
 }
 
-//words.AddRange(new[] { "six", "seven", "eight" });
 
-//foreach (var w in words)
-//{
-//    if (w == w.ToUpper() && Regex.IsMatch(w, "^[a-zA-Z]+$"))
-//    {
-//        //
-//    }
-//}
 
 //words.RemoveAt(0);
 
