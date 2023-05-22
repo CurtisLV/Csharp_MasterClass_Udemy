@@ -29,13 +29,16 @@ do
 
             break;
         case "R":
+
             // here we add a do while
+            bool isParsingSucc;
+
             do
             {
-                //
+                Console.WriteLine("Select the index of the TODO you want to remove: ");
+                PrintAllTodo();
+                var removeInput = Console.ReadLine();
             } while (true);
-            Console.WriteLine("Select the index of the TODO you want to remove: ");
-            PrintAllTodo();
 
             break;
         case "E":
