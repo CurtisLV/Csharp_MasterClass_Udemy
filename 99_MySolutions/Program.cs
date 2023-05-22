@@ -42,13 +42,15 @@ do
 
                 if (isParsingSucc)
                 {
-                    //
+                    // we check if the index exists or is not empty
+                    // another if
                 }
                 else
                 {
-                    //
+                    // Invalid index
+                    //“The given index is not valid.”
                 }
-            } while (true);
+            } while (!isParsingSucc);
 
             break;
         case "E":
