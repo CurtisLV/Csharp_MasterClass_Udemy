@@ -81,11 +81,6 @@ void AddTodo(string addTodoInput, out bool isTodoAdded)
     isTodoAdded = true;
 }
 
-void PrintSelectedOption(string option)
-{
-    Console.WriteLine($"You have selected: {option}");
-}
-
 void PrintOptions()
 {
     Console.WriteLine();
