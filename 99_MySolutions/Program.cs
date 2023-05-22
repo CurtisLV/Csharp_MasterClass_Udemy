@@ -14,7 +14,7 @@ do
     switch (userInput)
     {
         case "S":
-            PrintSelectedOption("See all TODOs");
+            Console.WriteLine("See all TODOs");
             PrintAllTodo();
             break;
         case "A":
@@ -34,7 +34,7 @@ do
             {
                 //
             } while (true);
-            PrintSelectedOption("Select the index of the TODO you want to remove: ");
+            Console.WriteLine("Select the index of the TODO you want to remove: ");
             PrintAllTodo();
 
             break;
