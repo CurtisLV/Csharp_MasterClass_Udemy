@@ -42,6 +42,7 @@ do
                     if (number > todoList.Count)
                     {
                         Console.WriteLine("The given index is not valid.");
+                        isParsingSucc = false;
                     }
                     else
                     {
@@ -115,3 +116,5 @@ void PrintOptions()
     Console.WriteLine("[R]emove a TODO");
     Console.WriteLine("[E]xit");
 }
+
+Console.ReadKey();
