@@ -7,8 +7,7 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
     private readonly IIngredientsRegister _ingredientsRegister;
 
-    public RecipesConsoleUserInteraction(
-        IIngredientsRegister ingredientsRegister)
+    public RecipesConsoleUserInteraction(IIngredientsRegister ingredientsRegister)
     {
         _ingredientsRegister = ingredientsRegister;
     }
@@ -43,8 +42,7 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 
     public void PromptToCreateRecipe()
     {
-        Console.WriteLine("Create a new cookie recipe! " +
-            "Available ingredients are:");
+        Console.WriteLine("Create a new cookie recipe! " + "Available ingredients are:");
 
         foreach (var ingredient in _ingredientsRegister.All)
         {
@@ -59,8 +57,9 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 
         while (!shallStop)
         {
-            Console.WriteLine("Add an ingredient by its ID, " +
-                "or type anything else if finished.");
+            Console.WriteLine(
+                "Add an ingredient by its ID, " + "or type anything else if finished."
+            );
 
             var userInput = Console.ReadLine();
 
@@ -81,6 +80,3 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
         return ingredients;
     }
 }
-
-
-
