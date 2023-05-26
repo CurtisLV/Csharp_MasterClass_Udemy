@@ -11,6 +11,3 @@ public interface IRecipesUserInteraction
     void PromptToCreateRecipe();
     IEnumerable<Ingredient> ReadIngredientsFromUser();
 }
-
-
-
