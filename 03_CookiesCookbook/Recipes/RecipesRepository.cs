@@ -11,7 +11,8 @@ public class RecipesRepository : IRecipesRepository
 
     public RecipesRepository(
         IStringsRepository stringsRepository,
-        IIngredientsRegister ingredientsRegister)
+        IIngredientsRegister ingredientsRegister
+    )
     {
         _stringsRepository = stringsRepository;
         _ingredientsRegister = ingredientsRegister;
