@@ -63,7 +63,7 @@
 //Console.WriteLine("As JSON:");
 //Console.WriteLine(asJson);
 
-//var personJson = 
+//var personJson =
 //    "{\"FirstName\":\"John\",\"LastName\":\"Smith\",\"YearOfBirth\":1972}";
 
 //var personFromJson = JsonSerializer.Deserialize<Person>(personJson);
@@ -76,4 +76,3 @@
 //    public string LastName { get; set; }
 //    public int YearOfBirth { get; set; }
 //}
-
