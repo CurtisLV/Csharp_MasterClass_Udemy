@@ -6,18 +6,15 @@ public class Cheddar : Cheese
         : base(priceIfExtraTopping)
     {
         AgedForMonths = agedForMonths;
-        Console.WriteLine(
-            "Constructor from the Cheddar class");
+        Console.WriteLine("Constructor from the Cheddar class");
     }
 
     public override string Name =>
-        $"{base.Name}, more specifically, " +
-        $"a Cheddar cheese aged for {AgedForMonths} months";
+        $"{base.Name}, more specifically, " + $"a Cheddar cheese aged for {AgedForMonths} months";
 
     public int AgedForMonths { get; }
 
-    public override void Prepare() =>
-        Console.WriteLine("Grate and sprinkle over pizza.");
+    public override void Prepare() => Console.WriteLine("Grate and sprinkle over pizza.");
 
     public void UseMethodsFromBaseClass()
     {
@@ -26,5 +23,3 @@ public class Cheddar : Cheese
         //Console.WriteLine(PrivateMethod());
     }
 }
-
-
