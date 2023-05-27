@@ -2,29 +2,24 @@
 {
     class Animal
     {
-        public virtual void MakeSound() =>
-            Console.WriteLine(
-                "Make a generic animal sound.");
+        public virtual void MakeSound() => Console.WriteLine("Make a generic animal sound.");
     }
 
     class HousePet : Animal
     {
         public override void MakeSound() =>
-                Console.WriteLine(
-                    "<noises of happines when human comes home>");
+            Console.WriteLine("<noises of happines when human comes home>");
     }
 
     class Feline : Animal
     {
-        public override void MakeSound() =>
-                Console.WriteLine("purr purr");
+        public override void MakeSound() => Console.WriteLine("purr purr");
     }
 
     //cannot be derived from more than one base class
-    class DomesticCat : Feline //, HousePet
-    {
-
-    }
+    class DomesticCat
+        : Feline //, HousePet
+    { }
 
     interface IAnimal
     {
@@ -51,7 +46,6 @@
             Console.WriteLine("Purr purr.");
         }
 
-        public void TakeToVet() =>
-            Console.WriteLine("Take to Dr. Paws using a carrier.");
+        public void TakeToVet() => Console.WriteLine("Take to Dr. Paws using a carrier.");
     }
 }
