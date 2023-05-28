@@ -17,10 +17,15 @@ public static class RandomPizzaGenerator
     {
         var random = new Random();
         var number = random.Next(1, 4);
-        if (number == 1) { return new Cheddar(2, 12); }
-        if (number == 2) { return new TomatoSauce(1); }
-        else return new Mozzarella(2);
+        if (number == 1)
+        {
+            return new Cheddar(2, 12);
+        }
+        if (number == 2)
+        {
+            return new TomatoSauce(1);
+        }
+        else
+            return new Mozzarella(2);
     }
 }
-
-
