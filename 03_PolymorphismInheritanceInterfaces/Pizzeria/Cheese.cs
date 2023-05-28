@@ -2,9 +2,6 @@
 
 public abstract class Cheese : Ingredient
 {
-    public Cheese(int priceIfExtraTopping) : base(priceIfExtraTopping)
-    {
-    }
+    public Cheese(int priceIfExtraTopping)
+        : base(priceIfExtraTopping) { }
 }
-
-
