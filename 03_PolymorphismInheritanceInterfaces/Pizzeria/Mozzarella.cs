@@ -2,9 +2,8 @@
 
 public sealed class Mozzarella : Cheese
 {
-    public Mozzarella(int priceIfExtraTopping) : base(priceIfExtraTopping)
-    {
-    }
+    public Mozzarella(int priceIfExtraTopping)
+        : base(priceIfExtraTopping) { }
 
     public override string Name => "Mozzarella";
     public bool IsLight { get; }
