@@ -4,5 +4,3 @@ public interface IBakeable
 {
     string GetInstructions();
 }
-
-
