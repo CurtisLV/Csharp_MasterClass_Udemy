@@ -75,9 +75,9 @@ void PrintAllTodo()
 {
     if (todoList.Count > 0)
     {
-        for (int i = 1; i <= todoList.Count; i++)
+        for (int i = 0; i < todoList.Count; i++)
         {
-            Console.WriteLine($"{i}. {todoList[i - 1]}");
+            Console.WriteLine($"{i + 1}. {todoList[i]}");
         }
     }
     else
