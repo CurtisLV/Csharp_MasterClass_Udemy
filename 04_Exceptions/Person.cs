@@ -15,8 +15,9 @@
         }
         if (yearOfBirth < 1900 || yearOfBirth > DateTime.Now.Year)
         {
-            throw new ArgumentOutOfRangeException("The year of birth must be " +
-                "between 1900 and the current year.");
+            throw new ArgumentOutOfRangeException(
+                "The year of birth must be " + "between 1900 and the current year."
+            );
         }
 
         Name = name;
