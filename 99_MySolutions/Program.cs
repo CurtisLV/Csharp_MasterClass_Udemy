@@ -28,7 +28,6 @@ do
         case "R":
 
             bool isParsingSucc;
-
             do
             {
                 Console.WriteLine("Select the index of the TODO you want to remove: ");
