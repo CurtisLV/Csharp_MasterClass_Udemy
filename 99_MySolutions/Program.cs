@@ -71,6 +71,7 @@ do
             break;
     }
 } while (userInput != "E");
+
 void PrintAllTodo()
 {
     if (todoList.Count > 0)
