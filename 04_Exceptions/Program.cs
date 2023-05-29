@@ -9,26 +9,23 @@ try
 catch (FormatException ex)
 {
     Console.WriteLine(
-        "Wrong format. Input string was not parsable to int. " +
-        "Exception message: " + ex.Message);
+        "Wrong format. Input string was not parsable to int. " + "Exception message: " + ex.Message
+    );
 }
 catch (DivideByZeroException ex)
 {
     Console.WriteLine(
-        "Division by zero is an invalid operation. " +
-        "Exception message: " + ex.Message);
+        "Division by zero is an invalid operation. " + "Exception message: " + ex.Message
+    );
 }
 catch (Exception ex)
 {
-    Console.WriteLine(
-        "Unexpected exception occurred. " +
-        "Exception message: " + ex.Message);
+    Console.WriteLine("Unexpected exception occurred. " + "Exception message: " + ex.Message);
 }
 finally
 {
     Console.WriteLine("Executing finally block.");
 }
-
 
 var logger = new Logger();
 
@@ -39,15 +36,14 @@ try
 catch (Exception ex)
 {
     Console.WriteLine(
-        "Sorry. The application has experienced " +
-        "an error. The error message: " + ex.Message);
+        "Sorry. The application has experienced " + "an error. The error message: " + ex.Message
+    );
     logger.Log(ex);
 }
 
 GotoShowcase();
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
-
 
 int GetFirstElement(IEnumerable<int> numbers)
 {
@@ -56,8 +52,7 @@ int GetFirstElement(IEnumerable<int> numbers)
         return number;
     }
 
-    throw new InvalidOperationException(
-        "The collection cannot be empty.");
+    throw new InvalidOperationException("The collection cannot be empty.");
 }
 
 bool IsFirstElementPositive(IEnumerable<int> numbers)
@@ -74,8 +69,7 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
     }
     catch (NullReferenceException ex)
     {
-        Console.WriteLine("Sorry! The application experienced " +
-            "an unexpected error.");
+        Console.WriteLine("Sorry! The application experienced " + "an unexpected error.");
         //alternatively, we can just rethrow the original exception:
         //throw;
         throw new ArgumentNullException("The collection is null.", ex);
@@ -123,8 +117,7 @@ void ValidatePasswordWithException(string password)
 {
     if (password != "admin")
     {
-        throw new InvalidPasswordException(
-            $"{password} is not a valid password.");
+        throw new InvalidPasswordException($"{password} is not a valid password.");
     }
 }
 
@@ -148,8 +141,9 @@ void Run()
     catch (NullReferenceException ex)
     {
         Console.WriteLine(
-            "The input is null, and its length cannot be calculated. " +
-            "Did you press CTRL+Z in the console?");
+            "The input is null, and its length cannot be calculated. "
+                + "Did you press CTRL+Z in the console?"
+        );
         logger.Log(ex);
         throw;
     }
