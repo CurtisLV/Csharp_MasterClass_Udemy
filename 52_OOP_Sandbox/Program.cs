@@ -12,7 +12,10 @@
 //Console.WriteLine($"day of the week is {internationalPizzaDay24.DayOfWeek}");
 //Console.WriteLine($"day of the year is {internationalPizzaDay24.DayOfYear}");
 
-var rectangle1 = new Rectangle(5, 10);
+var rectangle1 = new Rectangle();
+
+Console.WriteLine($"Width is {rectangle1.width}");
+Console.WriteLine($"height is {rectangle1.height}");
 
 Console.ReadKey();
 
