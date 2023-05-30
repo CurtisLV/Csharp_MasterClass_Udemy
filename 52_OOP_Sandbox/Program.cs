@@ -9,7 +9,7 @@ Console.WriteLine();
 Console.WriteLine($"year is {internationalPizzaDay24.Year}");
 Console.WriteLine($"month is {internationalPizzaDay24.Month}");
 Console.WriteLine($"day is {internationalPizzaDay24.Day}");
-Console.WriteLine($"day of the week {internationalPizzaDay24.DayOfWeek}");
-Console.WriteLine($"day of the year {internationalPizzaDay24.DayOfYear}");
+Console.WriteLine($"day of the week is {internationalPizzaDay24.DayOfWeek}");
+Console.WriteLine($"day of the year is {internationalPizzaDay24.DayOfYear}");
 
 Console.ReadKey();
