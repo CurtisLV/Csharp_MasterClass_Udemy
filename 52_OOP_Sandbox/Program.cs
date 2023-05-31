@@ -27,4 +27,9 @@ class Rectangle
 {
     int width;
     int height;
+
+    void DummyMethod()
+    {
+        Console.WriteLine($"Heigh is {height}");
+    }
 }
