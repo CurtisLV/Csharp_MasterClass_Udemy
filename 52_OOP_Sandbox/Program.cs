@@ -17,10 +17,7 @@ var rectangle1 = new Rectangle();
 Console.WriteLine($"Width is {rectangle1.width}");
 Console.WriteLine($"height is {rectangle1.height}");
 
-var numbers = new List<int> { 1, 2, 3 };
-Console.WriteLine($"Count of elements is {numbers.Count}");
-
-//numbers.Count = 5;
+rectangle1.width = 10;
 
 Console.ReadKey();
 
@@ -28,9 +25,4 @@ class Rectangle
 {
     public int width;
     public int height;
-
-    void DummyMethod()
-    {
-        Console.WriteLine($"Heigh is {height}");
-    }
 }
