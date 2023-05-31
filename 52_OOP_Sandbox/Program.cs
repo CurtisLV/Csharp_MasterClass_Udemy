@@ -19,14 +19,15 @@ Console.WriteLine($"height is {rectangle1.height}");
 
 var numbers = new List<int> { 1, 2, 3 };
 Console.WriteLine($"Count of elements is {numbers.Count}");
-numbers.Count = 5;
+
+//numbers.Count = 5;
 
 Console.ReadKey();
 
 class Rectangle
 {
-    int width;
-    int height;
+    public int width;
+    public int height;
 
     void DummyMethod()
     {
