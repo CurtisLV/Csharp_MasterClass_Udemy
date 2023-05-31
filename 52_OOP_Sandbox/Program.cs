@@ -14,15 +14,21 @@
 
 var rectangle1 = new Rectangle();
 
-Console.WriteLine($"Width is {rectangle1.width}");
-Console.WriteLine($"height is {rectangle1.height}");
+Console.WriteLine($"Width is {rectangle1.Width}");
+Console.WriteLine($"height is {rectangle1.Height}");
 
-rectangle1.width = 10;
+rectangle1.Width = 10;
 
 Console.ReadKey();
 
 class Rectangle
 {
-    public int width;
-    public int height;
+    public int Width;
+    public int Height;
+
+    public Rectangle(int width, int height)
+    {
+        Width = width;
+        Height = height;
+    }
 }
