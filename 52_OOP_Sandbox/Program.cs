@@ -12,12 +12,15 @@
 //Console.WriteLine($"day of the week is {internationalPizzaDay24.DayOfWeek}");
 //Console.WriteLine($"day of the year is {internationalPizzaDay24.DayOfYear}");
 
-var rectangle1 = new Rectangle();
+var rectangle1 = new Rectangle(5, 10);
 
 Console.WriteLine($"Width is {rectangle1.Width}");
 Console.WriteLine($"height is {rectangle1.Height}");
 
-rectangle1.Width = 10;
+var rectangle2 = new Rectangle(55, 12);
+
+Console.WriteLine($"Width is {rectangle2.Width}");
+Console.WriteLine($"height is {rectangle2.Height}");
 
 Console.ReadKey();
 
@@ -30,5 +33,19 @@ class Rectangle
     {
         Width = width;
         Height = height;
+    }
+}
+
+class HotelBooking
+{
+    public string GuestName;
+    public DateTime StartDate;
+    public DateTime EndDate;
+
+    public HotelBooking(string guestName, DateTime startDate, int lengthOfStayInDays)
+    {
+        GuestName = guestName;
+        StartDate = startDate;
+        EndDate = startDate.AddDays(lengthOfStayInDays);
     }
 }
