@@ -17,15 +17,15 @@ var calculator = new ShapesMeasurementsCalculator();
 
 Console.WriteLine($"Width is {rectangle1.Width}");
 Console.WriteLine($"height is {rectangle1.Height}");
-Console.WriteLine($"Area is {calculator.CalculateRectangleArea()}");
-Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference()}");
+Console.WriteLine($"Area is {calculator.CalculateRectangleArea(rectangle1)}");
+Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference(rectangle1)}");
 
 var rectangle2 = new Rectangle(55, 12);
 
 Console.WriteLine($"Width is {rectangle2.Width}");
 Console.WriteLine($"height is {rectangle2.Height}");
-Console.WriteLine($"Area is {calculator.CalculateRectangleArea()}");
-Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference()}");
+Console.WriteLine($"Area is {calculator.CalculateRectangleArea(rectangle2)}");
+Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference(rectangle2)}");
 
 Console.ReadKey();
 
