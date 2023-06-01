@@ -39,12 +39,12 @@ class Rectangle
         Height = height;
     }
 
-    int CalculateCircumference()
+    public int CalculateCircumference()
     {
         return 2 * Width + 2 * Height;
     }
 
-    int CalculateArea()
+    public int CalculateArea()
     {
         return Width * Height;
     }
