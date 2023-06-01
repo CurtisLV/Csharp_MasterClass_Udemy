@@ -44,12 +44,12 @@ class ShapesMeasurementsCalculator
 {
     public int CalculateRectangleCircumference(Rectangle rectangle)
     {
-        return 2 * Width + 2 * Height;
+        return 2 * rectangle.Width + 2 * rectangle.Height;
     }
 
-    public int CalculateArea()
+    public int CalculateRectangleArea(Rectangle rectangle)
     {
-        return Width * Height;
+        return rectangle.Width * rectangle.Height;
     }
 }
 
