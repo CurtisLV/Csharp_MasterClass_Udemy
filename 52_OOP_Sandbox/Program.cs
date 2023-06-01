@@ -36,6 +36,7 @@ class Rectangle
     }
 }
 
+// First coding assignment
 class HotelBooking
 {
     public string GuestName;
