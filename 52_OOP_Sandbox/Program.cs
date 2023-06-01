@@ -38,8 +38,11 @@ class Rectangle
         Width = width;
         Height = height;
     }
+}
 
-    public int CalculateCircumference()
+class ShapesMeasurementsCalculator
+{
+    public int CalculateRectangleCircumference(Rectangle rectangle)
     {
         return 2 * Width + 2 * Height;
     }
