@@ -20,6 +20,8 @@ Console.WriteLine($"height is {rectangle1.Height}");
 Console.WriteLine($"Area is {calculator.CalculateRectangleArea(rectangle1)}");
 Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference(rectangle1)}");
 
+Console.WriteLine();
+
 var rectangle2 = new Rectangle(55, 12);
 
 Console.WriteLine($"Width is {rectangle2.Width}");
