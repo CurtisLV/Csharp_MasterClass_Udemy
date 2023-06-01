@@ -34,6 +34,11 @@ class Rectangle
         Width = width;
         Height = height;
     }
+
+    int CalculateCircumference()
+    {
+        return 2 * Width + 2 * Height;
+    }
 }
 
 // First coding assignment
