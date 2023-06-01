@@ -39,6 +39,11 @@ class Rectangle
     {
         return 2 * Width + 2 * Height;
     }
+
+    int CalculateArea()
+    {
+        return Width * Height;
+    }
 }
 
 // First coding assignment
