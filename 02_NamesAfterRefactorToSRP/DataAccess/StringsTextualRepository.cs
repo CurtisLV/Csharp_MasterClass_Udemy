@@ -10,11 +10,8 @@ public class StringsTextualRepository
         return fileContents.Split(Separator).ToList();
     }
 
-    public void Write(
-        string filePath, List<string> names)
+    public void Write(string filePath, List<string> names)
     {
-        File.WriteAllText(
-            filePath,
-            string.Join(Separator, names));
+        File.WriteAllText(filePath, string.Join(Separator, names));
     }
 }
