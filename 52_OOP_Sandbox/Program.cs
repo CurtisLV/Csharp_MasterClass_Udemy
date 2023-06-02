@@ -82,4 +82,9 @@ class Triangle
         Base = @base;
         Height = height;
     }
+
+    public int CalculateArea()
+    {
+        return ((Base * Height) / 2);
+    }
 }
