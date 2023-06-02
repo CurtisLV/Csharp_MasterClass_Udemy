@@ -77,8 +77,9 @@ class Triangle
     private int Base;
     private int Height;
 
-    public Triangle()
+    public Triangle(int @base, int height)
     {
-        //
+        Base = @base;
+        Height = height;
     }
 }
