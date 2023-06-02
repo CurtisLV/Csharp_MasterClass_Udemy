@@ -1,31 +1,30 @@
-﻿namespace Polymorphism.Flyables
+﻿namespace Polymorphism.Flyables;
+
+public interface IFlyable
 {
-    public interface IFlyable
-    {
-        void Fly();
-    }
+    void Fly();
+}
 
-    public class Bird : IFlyable
-    {
-        public void Tweet() => Console.WriteLine("Tweet, tweet!");
+public class Bird : IFlyable
+{
+    public void Tweet() => Console.WriteLine("Tweet, tweet!");
 
-        public void Fly() => Console.WriteLine("Flying using its wings.");
-    }
+    public void Fly() => Console.WriteLine("Flying using its wings.");
+}
 
-    public class Kite : IFlyable
-    {
-        public void Fly() => Console.WriteLine("Flying carried by the wind.");
-    }
+public class Kite : IFlyable
+{
+    public void Fly() => Console.WriteLine("Flying carried by the wind.");
+}
 
-    public interface IFuelable
-    {
-        void Fuel();
-    }
+public interface IFuelable
+{
+    void Fuel();
+}
 
-    public class Plane : IFlyable, IFuelable
-    {
-        public void Fly() => Console.WriteLine("Flying using jet propulsion.");
+public class Plane : IFlyable, IFuelable
+{
+    public void Fly() => Console.WriteLine("Flying using jet propulsion.");
 
-        public void Fuel() => Console.WriteLine("Filling tanks with jet fuel.");
-    }
+    public void Fuel() => Console.WriteLine("Filling tanks with jet fuel.");
 }
