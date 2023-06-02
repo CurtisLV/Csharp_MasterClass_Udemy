@@ -70,3 +70,5 @@ class HotelBooking
         EndDate = startDate.AddDays(lengthOfStayInDays);
     }
 }
+
+// Second coding assignment
