@@ -1,7 +1,6 @@
-﻿namespace Polymorphism.Extensions
+﻿namespace Polymorphism.Extensions;
+
+public static class StringExtensions
 {
-    public static class StringExtensions
-    {
-        public static int CountLines(this string input) => input.Split(Environment.NewLine).Length;
-    }
+    public static int CountLines(this string input) => input.Split(Environment.NewLine).Length;
 }
