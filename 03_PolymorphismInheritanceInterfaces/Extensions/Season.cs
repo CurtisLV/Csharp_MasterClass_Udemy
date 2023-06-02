@@ -1,10 +1,9 @@
-﻿namespace Polymorphism.Extensions
+﻿namespace Polymorphism.Extensions;
+
+public enum Season
 {
-    public enum Season
-    {
-        Spring,
-        Summer,
-        Autumn,
-        Winter
-    }
+    Spring,
+    Summer,
+    Autumn,
+    Winter
 }
