@@ -87,4 +87,9 @@ class Triangle
     {
         return ((Base * Height) / 2);
     }
+
+    public string AsString()
+    {
+        return $"Base is {Base}, height is {Height}";
+    }
 }
