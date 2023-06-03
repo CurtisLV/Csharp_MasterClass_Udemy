@@ -73,6 +73,11 @@ class MedicalAppointment
     {
         _date = date;
     }
+
+    public void Reschedule(int month, int day)
+    {
+        _date = new DateTime(_date.Year, month, day);
+    }
 }
 
 // First coding assignment
