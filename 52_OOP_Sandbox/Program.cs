@@ -62,6 +62,12 @@ class MedicalAppointment
 {
     private string _patientName;
     private DateTime _date;
+
+    public MedicalAppointment(string patientName, DateTime date)
+    {
+        _patientName = patientName;
+        _date = date;
+    }
 }
 
 // First coding assignment
