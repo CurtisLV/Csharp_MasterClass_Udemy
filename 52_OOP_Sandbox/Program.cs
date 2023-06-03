@@ -74,12 +74,12 @@ class MedicalAppointment
         _date = date;
     }
 
-    public void Reschedule(int month, int day)
+    public void OverwriteMonthAndDay(int month, int day)
     {
         _date = new DateTime(_date.Year, month, day);
     }
 
-    public void Reschedule(int monthsToAdd, int daysToAdd)
+    public void MoveByMonthsAndDays(int monthsToAdd, int daysToAdd)
     {
         _date = new DateTime(_date.Year, _date.Month + monthsToAdd, _date.Day + daysToAdd);
     }
