@@ -68,6 +68,11 @@ class MedicalAppointment
         _patientName = patientName;
         _date = date;
     }
+
+    public void Reschedule(DateTime date)
+    {
+        _date = date;
+    }
 }
 
 // First coding assignment
