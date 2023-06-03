@@ -56,6 +56,13 @@ class ShapesMeasurementsCalculator
     }
 }
 
+// Method overloading
+
+class MedicalAppointment
+{
+    //
+}
+
 // First coding assignment
 class HotelBooking
 {
