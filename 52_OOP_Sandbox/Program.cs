@@ -60,7 +60,8 @@ class ShapesMeasurementsCalculator
 
 class MedicalAppointment
 {
-    //
+    private string _patientName;
+    private DateTime _date;
 }
 
 // First coding assignment
