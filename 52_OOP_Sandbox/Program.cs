@@ -41,15 +41,9 @@ class Rectangle
         Height = height;
     }
 
-    public int CalculateRectangleCircumference()
-    {
-        return 2 * Width + 2 * Height;
-    }
+    public int CalculateRectangleCircumference() => 2 * Width + 2 * Height;
 
-    public int CalculateRectangleArea()
-    {
-        return Width * Height;
-    }
+    public int CalculateRectangleArea() => Width * Height;
 }
 
 // Method overloading
