@@ -13,12 +13,11 @@
 //Console.WriteLine($"day of the year is {internationalPizzaDay24.DayOfYear}");
 
 var rectangle1 = new Rectangle(5, 10);
-var calculator = new ShapesMeasurementsCalculator();
 
 Console.WriteLine($"Width is {rectangle1.Width}");
 Console.WriteLine($"height is {rectangle1.Height}");
-Console.WriteLine($"Area is {calculator.CalculateRectangleArea(rectangle1)}");
-Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference(rectangle1)}");
+Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
+Console.WriteLine($"Circumference is {rectangle1.CalculateRectangleCircumference()}");
 
 Console.WriteLine();
 
@@ -26,8 +25,8 @@ var rectangle2 = new Rectangle(55, 12);
 
 Console.WriteLine($"Width is {rectangle2.Width}");
 Console.WriteLine($"height is {rectangle2.Height}");
-Console.WriteLine($"Area is {calculator.CalculateRectangleArea(rectangle2)}");
-Console.WriteLine($"Circumference is {calculator.CalculateRectangleCircumference(rectangle2)}");
+Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
+Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
 Console.ReadKey();
 
