@@ -69,6 +69,11 @@ class MedicalAppointment
         _date = date;
     }
 
+    public MedicalAppointment(string patientName)
+    {
+        //
+    }
+
     public void Reschedule(DateTime date)
     {
         _date = date;
