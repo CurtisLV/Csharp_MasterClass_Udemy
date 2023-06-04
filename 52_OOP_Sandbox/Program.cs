@@ -71,7 +71,8 @@ class MedicalAppointment
 
     public MedicalAppointment(string patientName)
     {
-        //
+        _patientName = patientName;
+        _date = DateTime.Now.AddDays(7);
     }
 
     public void Reschedule(DateTime date)
