@@ -70,10 +70,7 @@ class MedicalAppointment
     }
 
     public MedicalAppointment(string patientName)
-    {
-        _patientName = patientName;
-        _date = DateTime.Now.AddDays(7);
-    }
+        : this(patientName, 7) { }
 
     public MedicalAppointment(string patientName, int daysFromNow)
     {
