@@ -41,10 +41,7 @@ class Rectangle
         Width = width;
         Height = height;
     }
-}
 
-class ShapesMeasurementsCalculator
-{
     public int CalculateRectangleCircumference(Rectangle rectangle)
     {
         return 2 * rectangle.Width + 2 * rectangle.Height;
