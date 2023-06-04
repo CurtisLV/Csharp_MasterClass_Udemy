@@ -41,14 +41,14 @@ class Rectangle
         Height = height;
     }
 
-    public int CalculateRectangleCircumference(Rectangle rectangle)
+    public int CalculateRectangleCircumference()
     {
-        return 2 * rectangle.Width + 2 * rectangle.Height;
+        return 2 * Width + 2 * Height;
     }
 
-    public int CalculateRectangleArea(Rectangle rectangle)
+    public int CalculateRectangleArea()
     {
-        return rectangle.Width * rectangle.Height;
+        return Width * Height;
     }
 }
 
