@@ -76,10 +76,10 @@ class MedicalAppointment
 
     public DateTime GetDate() => _date;
 
-    public MedicalAppointment(string patientName)
-        : this(patientName, 7) { }
+    //public MedicalAppointment(string patientName)
+    //    : this(patientName, 7) { }
 
-    public MedicalAppointment(string patientName, int daysFromNow)
+    public MedicalAppointment(string patientName, int daysFromNow = 7)
     {
         _patientName = patientName;
         _date = DateTime.Now.AddDays(daysFromNow);
