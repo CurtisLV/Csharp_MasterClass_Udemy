@@ -52,7 +52,7 @@ class MedicalAppointmentPrinter
 {
     public void Print(MedicalAppointment medicalAppointment)
     {
-        Console.WriteLine($"Appointment will take place on {}");
+        Console.WriteLine($"Appointment will take place on {medicalAppointment.GetDate()}");
     }
 }
 
@@ -66,6 +66,8 @@ class MedicalAppointment
         _patientName = patientName;
         _date = date;
     }
+
+    public DateTime GetDate() => _date;
 
     public MedicalAppointment(string patientName)
         : this(patientName, 7) { }
