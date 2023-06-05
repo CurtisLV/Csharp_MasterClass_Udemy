@@ -31,6 +31,7 @@ Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference
 var medicalAppointment = new MedicalAppointment("John Kaxx", new DateTime(2023, 6, 12));
 var medicalAppointmentTwoWeeksFromNow = new MedicalAppointment("Bob Smith", 14);
 var medicalAppointmentOneWeekFromNow = new MedicalAppointment("Margaret Smith");
+var medicalAppointmentUnknownPatient = new MedicalAppointment();
 
 // simply reschedule
 medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
@@ -79,7 +80,7 @@ class MedicalAppointment
     //public MedicalAppointment(string patientName)
     //    : this(patientName, 7) { }
 
-    public MedicalAppointment(string patientName, int daysFromNow = 7)
+    public MedicalAppointment(string patientName = "Unknown", int daysFromNow = 7)
     {
         _patientName = patientName;
         _date = DateTime.Now.AddDays(daysFromNow);
