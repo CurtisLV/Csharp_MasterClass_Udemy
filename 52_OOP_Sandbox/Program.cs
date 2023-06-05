@@ -86,6 +86,8 @@ class MedicalAppointment
     public void Reschedule(DateTime date)
     {
         _date = date;
+        var printer = new MedicalAppointmentPrinter();
+        printer.Print(this);
     }
 
     public void OverwriteMonthAndDay(int month, int day)
