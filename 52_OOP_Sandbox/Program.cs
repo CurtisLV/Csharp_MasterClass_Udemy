@@ -28,6 +28,11 @@ Console.WriteLine($"height is {rectangle2.Height}");
 Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
+var medicalAppointment = new MedicalAppointment("John Kaxx", new DateTime(2023, 6, 12));
+
+// simply reschedule
+medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
+
 Console.ReadKey();
 
 class Rectangle
