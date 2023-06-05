@@ -48,6 +48,14 @@ class Rectangle
 
 // Method overloading
 
+class MedicalAppointmentPrinter
+{
+    public void Print()
+    {
+        //
+    }
+}
+
 class MedicalAppointment
 {
     private string _patientName;
