@@ -86,6 +86,11 @@ class MedicalAppointment
         _date = DateTime.Now.AddDays(daysFromNow);
     }
 
+    public MedicalAppointment(string patientName)
+    {
+        _patientName = patientName;
+    }
+
     public void Reschedule(DateTime date)
     {
         _date = date;
