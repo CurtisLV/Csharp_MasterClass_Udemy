@@ -50,9 +50,9 @@ class Rectangle
 
 class MedicalAppointmentPrinter
 {
-    public void Print()
+    public void Print(MedicalAppointment medicalAppointment)
     {
-        //
+        Console.WriteLine($"Appointment will take place on {}");
     }
 }
 
