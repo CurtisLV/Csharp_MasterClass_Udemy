@@ -29,6 +29,8 @@ Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
 var medicalAppointment = new MedicalAppointment("John Kaxx", new DateTime(2023, 6, 12));
+var medicalAppointmentTwoWeeksFromNow = new MedicalAppointment("Bob Smith", 14);
+var medicalAppointmentOneWeekFromNow = new MedicalAppointment("Margaret Smith");
 
 // simply reschedule
 medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
