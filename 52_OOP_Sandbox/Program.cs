@@ -158,14 +158,11 @@ class Dog
     }
 
     public Dog(string name, int weight)
-    {
-        _name = name;
-        _weight = weight;
-    }
+        : this(name, "weight-name", weight) { }
 
     public string Describe()
     {
-        return $"This dog is named {_name}, it's {_bread}, and it weighs {_weight} kilograms, so it's a {DescribeSize(this)} dog.";
+        return $"This dog is named {_name}, it's a {_bread}, and it weighs {_weight} kilograms, so it's a {DescribeSize(this)} dog.";
     }
 
     public string DescribeSize(Dog dog)
