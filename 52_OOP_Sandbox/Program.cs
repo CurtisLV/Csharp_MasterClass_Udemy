@@ -86,11 +86,6 @@ class MedicalAppointment
         _date = DateTime.Now.AddDays(daysFromNow);
     }
 
-    public MedicalAppointment(string patientName)
-    {
-        _patientName = patientName;
-    }
-
     public void Reschedule(DateTime date)
     {
         _date = date;
@@ -144,5 +139,15 @@ class Triangle
     public string AsString()
     {
         return $"Base is {Base}, height is {Height}";
+    }
+}
+
+// Third assignment
+
+class Dog
+{
+    public Dog()
+    {
+        //
     }
 }
