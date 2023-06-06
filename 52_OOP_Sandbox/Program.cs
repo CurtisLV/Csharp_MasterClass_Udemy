@@ -162,4 +162,24 @@ class Dog
         _name = name;
         _weight = weight;
     }
+
+    public string Describe()
+    {
+        return $"This dog is named {_name}, it's {_bread}, and it weighs {_weight} kilograms, so it's a {} dog.";
+    }
+
+    public string DescribeSize(Dog dog)
+    {
+        if (dog._weight < 5)
+        {
+            return "tiny";
+        }
+        else if (dog._weight >= 5 && dog._weight < 30)
+        {
+            return "medium";
+        } else
+        {
+            return "large";
+        }
+    }
 }
