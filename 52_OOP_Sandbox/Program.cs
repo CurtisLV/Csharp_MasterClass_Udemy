@@ -158,7 +158,7 @@ class Dog
     }
 
     public Dog(string name, int weight)
-        : this(name, "weight-name", weight) { }
+        : this(name, "mixed-breed", weight) { }
 
     public string Describe()
     {
