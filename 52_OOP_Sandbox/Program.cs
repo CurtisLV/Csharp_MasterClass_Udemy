@@ -146,7 +146,11 @@ class Triangle
 
 class Dog
 {
-    public Dog()
+    private string _name;
+    private string _bread;
+    private int _weight;
+
+    public Dog(string name, string bread, int weight)
     {
         //
     }
