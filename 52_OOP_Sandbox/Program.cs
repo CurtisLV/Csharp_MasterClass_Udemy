@@ -165,7 +165,7 @@ class Dog
 
     public string Describe()
     {
-        return $"This dog is named {_name}, it's {_bread}, and it weighs {_weight} kilograms, so it's a {} dog.";
+        return $"This dog is named {_name}, it's {_bread}, and it weighs {_weight} kilograms, so it's a {DescribeSize(this)} dog.";
     }
 
     public string DescribeSize(Dog dog)
@@ -177,7 +177,8 @@ class Dog
         else if (dog._weight >= 5 && dog._weight < 30)
         {
             return "medium";
-        } else
+        }
+        else
         {
             return "large";
         }
