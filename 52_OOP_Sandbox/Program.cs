@@ -152,6 +152,14 @@ class Dog
 
     public Dog(string name, string bread, int weight)
     {
-        //
+        _name = name;
+        _bread = bread;
+        _weight = weight;
+    }
+
+    public Dog(string name, int weight)
+    {
+        _name = name;
+        _weight = weight;
     }
 }
