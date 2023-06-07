@@ -45,8 +45,8 @@ class Rectangle
 
     public Rectangle(int width, int height)
     {
-        Width = GetLengthOrDefault(width, "Width");
-        Height = GetLengthOrDefault(height, "Height");
+        Width = GetLengthOrDefault(width, nameof(Width));
+        Height = GetLengthOrDefault(height, nameof(Height));
     }
 
     private int GetLengthOrDefault(int length, string name)
