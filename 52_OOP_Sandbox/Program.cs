@@ -51,8 +51,20 @@ class Rectangle
             Console.WriteLine("Width must be a positive number.");
             Width = defaultValueIfNonPositive;
         }
-        Width = width;
-        Height = height;
+        else
+        {
+            Width = width;
+        }
+
+        if (height <= 0)
+        {
+            Console.WriteLine("Height must be a positive number.");
+            Height = defaultValueIfNonPositive;
+        }
+        else
+        {
+            Height = height;
+        }
     }
 
     public int CalculateRectangleCircumference() => 2 * Width + 2 * Height;
