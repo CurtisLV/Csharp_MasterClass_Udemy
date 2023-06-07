@@ -67,6 +67,11 @@ class Rectangle
         }
     }
 
+    private int GetLengthOrDefault(int length, string name)
+    {
+        //
+    }
+
     public int CalculateRectangleCircumference() => 2 * Width + 2 * Height;
 
     public int CalculateRectangleArea() => Width * Height;
