@@ -45,31 +45,20 @@ class Rectangle
 
     public Rectangle(int width, int height)
     {
-        int defaultValueIfNonPositive = 1;
-        if (width <= 0)
-        {
-            Console.WriteLine("Width must be a positive number.");
-            Width = defaultValueIfNonPositive;
-        }
-        else
-        {
-            Width = width;
-        }
+        Height = defaultValueIfNonPositive;
 
-        if (height <= 0)
-        {
-            Console.WriteLine("Height must be a positive number.");
-            Height = defaultValueIfNonPositive;
-        }
-        else
-        {
-            Height = height;
-        }
+        Height = height;
     }
 
     private int GetLengthOrDefault(int length, string name)
     {
-        //
+        int defaultValueIfNonPositive = 1;
+        if (length <= 0)
+        {
+            Console.WriteLine($"{name} must be a positive number.");
+            return defaultValueIfNonPositive;
+        }
+        return length;
     }
 
     public int CalculateRectangleCircumference() => 2 * Width + 2 * Height;
