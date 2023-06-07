@@ -45,6 +45,12 @@ class Rectangle
 
     public Rectangle(int width, int height)
     {
+        int defaultValueIfNonPositive = 1;
+        if (width <= 0)
+        {
+            Console.WriteLine("Width must be a positive number.");
+            Width = defaultValueIfNonPositive;
+        }
         Width = width;
         Height = height;
     }
