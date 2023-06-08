@@ -15,7 +15,7 @@
 var rectangle1 = new Rectangle(5, 10);
 
 Console.WriteLine($"Width is {rectangle1.Width}");
-Console.WriteLine($"height is {rectangle1.Height}");
+Console.WriteLine($"height is {rectangle1._height}");
 Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle1.CalculateRectangleCircumference()}");
 
@@ -24,7 +24,7 @@ Console.WriteLine();
 var rectangle2 = new Rectangle(55, 12);
 
 Console.WriteLine($"Width is {rectangle2.Width}");
-Console.WriteLine($"height is {rectangle2.Height}");
+Console.WriteLine($"height is {rectangle2._height}");
 Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
@@ -43,12 +43,12 @@ class Rectangle
     const int NumberOfSides = 4; // value must be assigned at declaration - things with a const value known at a compilation time
     readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration - when we want a field never to change after it hsa been set in the constructor
     public readonly int Width;
-    public readonly int Height;
+    private readonly int _height;
 
     public Rectangle(int width, int height)
     {
         Width = GetLengthOrDefault(width, nameof(Width));
-        Height = GetLengthOrDefault(height, nameof(Height));
+        _height = GetLengthOrDefault(height, nameof(_height));
     }
 
     private int GetLengthOrDefault(int length, string name)
@@ -62,9 +62,9 @@ class Rectangle
         return length;
     }
 
-    public int CalculateRectangleCircumference() => 2 * Width + 2 * Height;
+    public int CalculateRectangleCircumference() => 2 * Width + 2 * _height;
 
-    public int CalculateRectangleArea() => Width * Height;
+    public int CalculateRectangleArea() => Width * _height;
 }
 
 // Method overloading
