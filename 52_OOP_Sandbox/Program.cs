@@ -40,8 +40,8 @@ Console.ReadKey();
 
 class Rectangle
 {
-    public int Width;
-    public int Height;
+    public readonly int Width;
+    public readonly int Height;
 
     public Rectangle(int width, int height)
     {
