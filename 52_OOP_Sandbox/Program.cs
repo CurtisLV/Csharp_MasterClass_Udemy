@@ -15,7 +15,7 @@
 var rectangle1 = new Rectangle(5, 10);
 
 Console.WriteLine($"Width is {rectangle1.Width}");
-Console.WriteLine($"height is {rectangle1._height}");
+Console.WriteLine($"height is {rectangle1.GetHeight()}");
 Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle1.CalculateRectangleCircumference()}");
 
@@ -24,7 +24,7 @@ Console.WriteLine();
 var rectangle2 = new Rectangle(55, 12);
 
 Console.WriteLine($"Width is {rectangle2.Width}");
-Console.WriteLine($"height is {rectangle2._height}");
+Console.WriteLine($"height is {rectangle2.GetHeight()}");
 Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
@@ -61,6 +61,8 @@ class Rectangle
         }
         return length;
     }
+
+    public int GetHeight() => _height;
 
     public int CalculateRectangleCircumference() => 2 * Width + 2 * _height;
 
