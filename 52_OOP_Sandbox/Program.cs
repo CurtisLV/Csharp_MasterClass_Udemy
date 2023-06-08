@@ -40,6 +40,8 @@ Console.ReadKey();
 
 class Rectangle
 {
+    const int NumberOfSides = 4; // value must be assigned at declaration
+    readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration
     public readonly int Width;
     public readonly int Height;
 
@@ -51,7 +53,7 @@ class Rectangle
 
     private int GetLengthOrDefault(int length, string name)
     {
-        int defaultValueIfNonPositive = 1;
+        const int defaultValueIfNonPositive = 1;
         if (length <= 0)
         {
             Console.WriteLine($"{name} must be a positive number.");
