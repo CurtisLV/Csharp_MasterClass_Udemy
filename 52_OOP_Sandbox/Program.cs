@@ -42,8 +42,9 @@ class Rectangle
 {
     const int NumberOfSides = 4; // value must be assigned at declaration - things with a const value known at a compilation time
     readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration - when we want a field never to change after it hsa been set in the constructor
+
     public readonly int Width;
-    private readonly int _height;
+    private int _height;
 
     public Rectangle(int width, int height)
     {
@@ -63,6 +64,14 @@ class Rectangle
     }
 
     public int GetHeight() => _height;
+
+    public void SetHeight(int value)
+    {
+        if (value > 0)
+        {
+            _height = value;
+        }
+    }
 
     public int CalculateRectangleCircumference() => 2 * Width + 2 * _height;
 
