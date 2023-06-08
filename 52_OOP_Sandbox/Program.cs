@@ -40,8 +40,8 @@ Console.ReadKey();
 
 class Rectangle
 {
-    const int NumberOfSides = 4; // value must be assigned at declaration
-    readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration
+    const int NumberOfSides = 4; // value must be assigned at declaration - things with a const value known at a compilation time
+    readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration - when we want a field never to change after it hsa been set in the constructor
     public readonly int Width;
     public readonly int Height;
 
