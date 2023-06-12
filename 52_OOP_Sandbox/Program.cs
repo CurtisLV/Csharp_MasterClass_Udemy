@@ -46,7 +46,7 @@ class Rectangle
 
     public Rectangle(int width, int height)
     {
-        _width = GetLengthOrDefault(width, nameof(_width));
+        Width = GetLengthOrDefault(width, nameof(Width));
         _height = GetLengthOrDefault(height, nameof(_height));
     }
 
@@ -61,13 +61,7 @@ class Rectangle
         return length;
     }
 
-    private int _width;
-
-    public int Width
-    {
-        get { return _width; }
-        private set { _width = value; }
-    }
+    public int Width { get; private set; }
 
     private int _height;
 
