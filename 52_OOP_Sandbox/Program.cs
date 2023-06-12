@@ -14,7 +14,7 @@
 
 var rectangle1 = new Rectangle(5, 10);
 
-Console.WriteLine($"Width is {rectangle1._width}");
+Console.WriteLine($"Width is {rectangle1.Width}");
 Console.WriteLine($"height is {rectangle1.GetHeight()}");
 Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle1.CalculateRectangleCircumference()}");
@@ -23,7 +23,7 @@ Console.WriteLine();
 
 var rectangle2 = new Rectangle(55, 12);
 
-Console.WriteLine($"Width is {rectangle2._width}");
+Console.WriteLine($"Width is {rectangle2.Width}");
 Console.WriteLine($"height is {rectangle2.GetHeight()}");
 Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
@@ -65,7 +65,13 @@ class Rectangle
     public int Width
     {
         get { return _width; }
-        set { _width = value; }
+        set
+        {
+            if (value > 10)
+            {
+                _width = value;
+            }
+        }
     }
 
     private int _height;
