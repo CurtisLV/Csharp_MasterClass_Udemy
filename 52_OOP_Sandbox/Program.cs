@@ -15,7 +15,6 @@
 var rectangle1 = new Rectangle(5, 10);
 
 Console.WriteLine($"Width is {rectangle1.Width}");
-rectangle1.Width = 15;
 Console.WriteLine($"height is {rectangle1.GetHeight()}");
 Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle1.CalculateRectangleCircumference()}");
@@ -75,9 +74,9 @@ class Rectangle
         }
     }
 
-    public int CalculateRectangleCircumference() => 2 * _width + 2 * _height;
+    public int CalculateRectangleCircumference() => 2 * Width + 2 * _height;
 
-    public int CalculateRectangleArea() => _width * _height;
+    public int CalculateRectangleArea() => Width * _height;
 }
 
 // Method overloading
