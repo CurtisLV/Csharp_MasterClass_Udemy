@@ -217,7 +217,10 @@ public class Order
         get => Date;
         set
         {
-            //
+            if (Date.Year == DateTime.Now.Year)
+            {
+                Date = value;
+            }
         }
     }
 
