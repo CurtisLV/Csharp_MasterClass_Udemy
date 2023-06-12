@@ -206,3 +206,16 @@ class Dog
         }
     }
 }
+
+// Fourth assignment
+
+public class Order
+{
+    //your code goes here
+
+    public Order(string item, DateTime date)
+    {
+        Item = item;
+        Date = date;
+    }
+}
