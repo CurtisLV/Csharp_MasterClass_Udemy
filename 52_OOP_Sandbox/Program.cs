@@ -61,6 +61,13 @@ class Rectangle
     }
 
     private int _width;
+
+    public int Width
+    {
+        get { return _width; }
+        set { _width = value; }
+    }
+
     private int _height;
 
     public int GetHeight() => _height;
