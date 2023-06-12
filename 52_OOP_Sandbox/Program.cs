@@ -211,7 +211,15 @@ class Dog
 
 public class Order
 {
-    //your code goes here
+    public string Item { get; }
+    public DateTime Date
+    {
+        get => Date;
+        set
+        {
+            //
+        }
+    }
 
     public Order(string item, DateTime date)
     {
