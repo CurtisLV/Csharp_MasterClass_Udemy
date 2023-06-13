@@ -37,7 +37,9 @@ var medicalAppointmentUnknownPatient = new MedicalAppointment();
 medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
 
 // Person class - object initializers
-var person = new Person("John", 1981);
+//var person = new Person("John", 1981);
+
+var person = new Person { Name = "John", YearOfBirth = 1981 };
 
 Console.ReadKey();
 
@@ -135,13 +137,13 @@ class MedicalAppointment
 class Person
 {
     public string Name { get; set; }
-    public int YearOfBirth { get; set; }
+    public int YearOfBirth { get; init; } // init so we can initialize value but then it goes private - no setter
 
-    public Person(string name, int yearOfBirth)
-    {
-        Name = name;
-        YearOfBirth = yearOfBirth;
-    }
+    //public Person(string name, int yearOfBirth)
+    //{
+    //    Name = name;
+    //    YearOfBirth = yearOfBirth;
+    //}
 }
 
 // First coding assignment
