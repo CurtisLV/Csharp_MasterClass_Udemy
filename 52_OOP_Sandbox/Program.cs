@@ -211,17 +211,20 @@ class Dog
 
 public class Order
 {
-    public string Item { get; }
+    private string item;
+
+    public string Item
+    {
+        get { return item; }
+        set { item = value; }
+    }
+
+    private DateTime date;
+
     public DateTime Date
     {
-        get { return Date; }
-        set
-        {
-            if (Date.Year == DateTime.Now.Year)
-            {
-                Date = value;
-            }
-        }
+        get { return date; }
+        set { date = value; }
     }
 
     public Order(string item, DateTime date)
@@ -230,3 +233,15 @@ public class Order
         Date = date;
     }
 }
+
+//public DateTime Date
+//{
+//    get { return Date; }
+//    set
+//    {
+//        if (Date.Year == DateTime.Now.Year)
+//        {
+//            Date = value;
+//        }
+//    }
+//}
