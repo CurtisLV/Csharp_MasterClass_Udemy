@@ -216,7 +216,7 @@ public class Order
     public string Item
     {
         get { return item; }
-        set { item = value; }
+        private set { item = value; }
     }
 
     private DateTime date;
@@ -224,7 +224,13 @@ public class Order
     public DateTime Date
     {
         get { return date; }
-        set { date = value; }
+        set
+        {
+            if (Date.Year == DateTime.Now.Year)
+            {
+                Date = value;
+            }
+        }
     }
 
     public Order(string item, DateTime date)
@@ -239,9 +245,9 @@ public class Order
 //    get { return Date; }
 //    set
 //    {
-//        if (Date.Year == DateTime.Now.Year)
-//        {
-//            Date = value;
-//        }
+//if (Date.Year == DateTime.Now.Year)
+//{
+//    Date = value;
+//}
 //    }
 //}
