@@ -36,6 +36,9 @@ var medicalAppointmentUnknownPatient = new MedicalAppointment();
 // simply reschedule
 medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
 
+// Person class - object initializers
+var person = new Person("John", 1981);
+
 Console.ReadKey();
 
 class Rectangle
@@ -134,9 +137,10 @@ class Person
     public string Name { get; set; }
     public int YearOfBirth { get; set; }
 
-    public Person()
+    public Person(string name, int yearOfBirth)
     {
-        //
+        Name = name;
+        YearOfBirth = yearOfBirth;
     }
 }
 
