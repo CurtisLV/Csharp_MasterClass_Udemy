@@ -129,6 +129,17 @@ class MedicalAppointment
     }
 }
 
+class Person
+{
+    public string Name { get; set; }
+    public int YearOfBirth { get; set; }
+
+    public Person()
+    {
+        //
+    }
+}
+
 // First coding assignment
 class HotelBooking
 {
