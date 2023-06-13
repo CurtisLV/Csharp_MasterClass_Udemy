@@ -213,14 +213,16 @@ public class Order
 {
     public string Item { get; }
 
+    private DateTime _date;
+
     public DateTime Date
     {
-        get { return Date; }
+        get { return _date; }
         set
         {
-            if (Date.Year == DateTime.Now.Year)
+            if (value.Year == DateTime.Now.Year)
             {
-                Date = value;
+                _date = value;
             }
         }
     }
