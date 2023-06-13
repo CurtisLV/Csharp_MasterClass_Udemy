@@ -82,6 +82,8 @@ class Rectangle
     public int CalculateRectangleCircumference() => 2 * Width + 2 * _height;
 
     public int CalculateRectangleArea() => Width * _height;
+
+    public string Description => $"A rectangle with width {Width} and height {_height}";
 }
 
 // Method overloading
