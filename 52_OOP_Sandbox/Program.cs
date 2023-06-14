@@ -101,6 +101,8 @@ class Rectangle
 
     public static string DescribeGenerally() =>
         $"A plane figure with four straight sides and four right angles";
+
+    public const int NumbersOfSides = 4;
 }
 
 // Method overloading
