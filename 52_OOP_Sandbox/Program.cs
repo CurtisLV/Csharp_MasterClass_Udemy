@@ -290,3 +290,9 @@ public class DailyAccountState
     public string Report =>
         $"Day: {DateTime.Now.Day}, month: {DateTime.Now.Month}, year: {DateTime.Now.Year}, initial state: {InitialState}, end of day state: {EndOfDayState}";
 }
+
+// Sixth assignment
+static class NumberToDayOfWeekTranslator
+{
+    //
+}
