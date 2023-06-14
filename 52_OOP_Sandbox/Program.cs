@@ -41,7 +41,21 @@ medicalAppointment.Reschedule(new DateTime(2023, 7, 12));
 
 var person = new Person { Name = "John", YearOfBirth = 1981 };
 
+var calculator = new Calculator();
+Console.WriteLine($"1 + 2 is {calculator.Add(1, 2)}");
+Console.WriteLine($"1 - 2 is {calculator.Substract(1, 2)}");
+Console.WriteLine($"1 * 2 is {calculator.Multiply(1, 2)}");
+
 Console.ReadKey();
+
+class Calculator
+{
+    public int Add(int a, int b) => a + b;
+
+    public int Substract(int a, int b) => a - b;
+
+    public int Multiply(int a, int b) => a * b;
+}
 
 class Rectangle
 {
