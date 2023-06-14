@@ -14,6 +14,7 @@
 
 var rectangle1 = new Rectangle(5, 10);
 
+Console.WriteLine(Rectangle.DescribeGenerally());
 Console.WriteLine($"Width is {rectangle1.Width}");
 Console.WriteLine($"height is {rectangle1.GetHeight()}");
 Console.WriteLine($"Area is {rectangle1.CalculateRectangleArea()}");
@@ -97,6 +98,9 @@ class Rectangle
     public int CalculateRectangleArea() => Width * _height;
 
     public string Description => $"A rectangle with width {Width} and height {_height}";
+
+    public static string DescribeGenerally() =>
+        $"A plane figure with four straight sides and four right angles";
 }
 
 // Method overloading
