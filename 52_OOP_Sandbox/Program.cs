@@ -266,5 +266,7 @@ public class DailyAccountState
         SumOfOperations = sumOfOperations;
     }
 
-    //your code goes here
+    public int EndOfDayState => InitialState + SumOfOperations;
+
+    public string Report => $"";
 }
