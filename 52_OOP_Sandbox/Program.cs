@@ -65,6 +65,12 @@ class Rectangle
     readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration - when we want a field never to change after it hsa been set in the constructor
 
     public static int CountOfInstances { get; private set; }
+    private static DateTime _firstUsed = DateTime.Now;
+
+    static Rectangle()
+    {
+        _firstUsed = DateTime.Now;
+    }
 
     public Rectangle(int width, int height)
     {
