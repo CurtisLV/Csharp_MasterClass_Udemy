@@ -36,17 +36,19 @@ class NamesValidator
 
 class NamesRepository
 {
-    public void ReadFromTextFile()
+    public List<string> ReadFromTextFile(string filePath)
     {
         var fileContents = File.ReadAllText(BuildFilePath());
-        var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
-        foreach (var name in namesFromFile)
-        {
-            AddName(name);
-        }
+        return fileContents.Split(Environment.NewLine).ToList();
+
+        //foreach (var name in namesFromFile)
+        //{
+        //    AddName(name);
+        //}
     }
 
-    public void WriteToTextFile() => File.WriteAllText(BuildFilePath(), Format());
+    public void WriteToTextFile(string filePath, string textToBeSaved) =>
+        File.WriteAllText(filePath, textToBeSaved);
 }
 
 public class Names
