@@ -25,7 +25,7 @@ Console.ReadLine();
 
 class NamesValidator
 {
-    public bool IsValidName(string name)
+    public bool IsValid(string name)
     {
         return name.Length >= 2
             && name.Length < 25
@@ -37,10 +37,11 @@ class NamesValidator
 public class Names
 {
     private readonly List<string> _names = new List<string>();
+    private readonly NamesValidator _namesValidator = new NamesValidator();
 
     public void AddName(string name)
     {
-        if (new NamesValidator().IsValidName(name))
+        if (_namesValidator.IsValid(name))
         {
             _names.Add(name);
         }
