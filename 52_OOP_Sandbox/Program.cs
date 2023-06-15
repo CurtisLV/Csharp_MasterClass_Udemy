@@ -339,7 +339,7 @@ public static class StringsTransformator
         string targetSeparator
     )
     {
-        var split = input.Split(targetSeparator);
+        string[] split = input.Split(originalSeparator);
         return string.Join(targetSeparator, split);
     }
 }
