@@ -36,15 +36,17 @@ class NamesValidator
 
 class NamesRepository
 {
+    private static readonly string Separator = Environment.NewLine;
+
     public List<string> ReadFromTextFile(string filePath)
     {
         var fileContents = File.ReadAllText(filePath);
-        return fileContents.Split(Environment.NewLine).ToList();
+        return fileContents.Split(Separator).ToList();
     }
 
     public void WriteToTextFile(string filePath, List<string> strings)
     {
-        File.WriteAllText(filePath, string.Join(Environment.NewLine, strings));
+        File.WriteAllText(filePath, string.Join(Separator, strings));
     }
 }
 
