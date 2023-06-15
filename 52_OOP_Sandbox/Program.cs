@@ -328,3 +328,18 @@ public static class NumberToDayOfWeekTranslator
         }
     }
 }
+
+// Mini assignment
+
+public static class StringsTransformator
+{
+    public static string TransformSeparators(
+        string input,
+        string originalSeparator,
+        string targetSeparator
+    )
+    {
+        var split = input.Split(targetSeparator);
+        return string.Join(targetSeparator, split);
+    }
+}
