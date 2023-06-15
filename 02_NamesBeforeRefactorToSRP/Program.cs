@@ -38,17 +38,14 @@ class NamesRepository
 {
     public List<string> ReadFromTextFile(string filePath)
     {
-        var fileContents = File.ReadAllText(BuildFilePath());
+        var fileContents = File.ReadAllText(filePath);
         return fileContents.Split(Environment.NewLine).ToList();
-
-        //foreach (var name in namesFromFile)
-        //{
-        //    AddName(name);
-        //}
     }
 
-    public void WriteToTextFile(string filePath, string textToBeSaved) =>
-        File.WriteAllText(filePath, textToBeSaved);
+    public void WriteToTextFile(string filePath, List<string> strings)
+    {
+        File.WriteAllText(filePath, string.Join(Environment.NewLine, strings));
+    }
 }
 
 public class Names
