@@ -23,24 +23,27 @@ Console.WriteLine(names.Format());
 
 Console.ReadLine();
 
+class NamesValidator
+{
+    public bool IsValidName(string name)
+    {
+        return name.Length >= 2
+            && name.Length < 25
+            && char.IsUpper(name[0])
+            && name.All(char.IsLetter);
+    }
+}
+
 public class Names
 {
     private readonly List<string> _names = new List<string>();
 
     public void AddName(string name)
     {
-        if (IsValidName(name))
+        if (new NamesValidator().IsValidName(name))
         {
             _names.Add(name);
         }
-    }
-
-    private bool IsValidName(string name)
-    {
-        return name.Length >= 2
-            && name.Length < 25
-            && char.IsUpper(name[0])
-            && name.All(char.IsLetter);
     }
 
     public void ReadFromTextFile()
