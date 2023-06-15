@@ -29,6 +29,8 @@ Console.WriteLine($"height is {rectangle2.GetHeight()}");
 Console.WriteLine($"Area is {rectangle2.CalculateRectangleArea()}");
 Console.WriteLine($"Circumference is {rectangle2.CalculateRectangleCircumference()}");
 
+Console.WriteLine($"Count of Rectangle objects is {Rectangle.CountOfInstances}");
+
 var medicalAppointment = new MedicalAppointment("John Kaxx", new DateTime(2023, 6, 12));
 var medicalAppointmentTwoWeeksFromNow = new MedicalAppointment("Bob Smith", 14);
 var medicalAppointmentOneWeekFromNow = new MedicalAppointment("Margaret Smith");
@@ -62,10 +64,13 @@ class Rectangle
     const int NumberOfSides = 4; // value must be assigned at declaration - things with a const value known at a compilation time
     readonly int NumberOfSidesReadOnly; // value can be not assigned at declaration - when we want a field never to change after it hsa been set in the constructor
 
+    public static int CountOfInstances { get; private set; }
+
     public Rectangle(int width, int height)
     {
         Width = GetLengthOrDefault(width, nameof(Width));
         _height = GetLengthOrDefault(height, nameof(_height));
+        ++CountOfInstances;
     }
 
     private int GetLengthOrDefault(int length, string name)
