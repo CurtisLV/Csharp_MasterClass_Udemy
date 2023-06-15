@@ -34,6 +34,21 @@ class NamesValidator
     }
 }
 
+class NamesRepository
+{
+    public void ReadFromTextFile()
+    {
+        var fileContents = File.ReadAllText(BuildFilePath());
+        var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
+        foreach (var name in namesFromFile)
+        {
+            AddName(name);
+        }
+    }
+
+    public void WriteToTextFile() => File.WriteAllText(BuildFilePath(), Format());
+}
+
 public class Names
 {
     private readonly List<string> _names = new List<string>();
@@ -46,18 +61,6 @@ public class Names
             _names.Add(name);
         }
     }
-
-    public void ReadFromTextFile()
-    {
-        var fileContents = File.ReadAllText(BuildFilePath());
-        var namesFromFile = fileContents.Split(Environment.NewLine).ToList();
-        foreach (var name in namesFromFile)
-        {
-            AddName(name);
-        }
-    }
-
-    public void WriteToTextFile() => File.WriteAllText(BuildFilePath(), Format());
 
     public string BuildFilePath()
     {
