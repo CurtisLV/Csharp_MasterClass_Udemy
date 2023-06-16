@@ -1,10 +1,12 @@
 ﻿var names = new Names();
 var path = names.BuildFilePath();
+var stringsTextualRepository = new StringsTextualRepository();
 
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
-    names.ReadFromTextFile();
+    var stringsFromFile = stringsTextualRepository.Read(path);
+    names.AddNames(stringsFromFile);
 }
 else
 {
@@ -17,7 +19,7 @@ else
     names.AddName("123 definitely not a valid name");
 
     Console.WriteLine("Saving names to the file.");
-    names.WriteToTextFile();
+    names.Write();
 }
 Console.WriteLine(names.Format());
 
@@ -71,4 +73,9 @@ public class Names
     }
 
     public string Format() => string.Join(Environment.NewLine, _names);
+
+    internal void AddNames(List<string> stringsFromFile)
+    {
+        throw new NotImplementedException();
+    }
 }
