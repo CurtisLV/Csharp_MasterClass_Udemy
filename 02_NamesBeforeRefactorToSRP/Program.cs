@@ -69,7 +69,7 @@ public class Names
     {
         if (_namesValidator.IsValid(name))
         {
-            _names.Add(name);
+            All.Add(name);
         }
     }
 
@@ -80,5 +80,5 @@ public class Names
         return "names.txt";
     }
 
-    public string Format() => string.Join(Environment.NewLine, _names);
+    public string Format() => string.Join(Environment.NewLine, All);
 }
