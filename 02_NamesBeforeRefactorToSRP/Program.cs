@@ -57,6 +57,11 @@ public class Names
     private readonly List<string> _names = new List<string>();
     private readonly NamesValidator _namesValidator = new NamesValidator();
 
+    public void AddNames(List<string> stringsFromFile)
+    {
+        //
+    }
+
     public void AddName(string name)
     {
         if (_namesValidator.IsValid(name))
@@ -73,9 +78,4 @@ public class Names
     }
 
     public string Format() => string.Join(Environment.NewLine, _names);
-
-    internal void AddNames(List<string> stringsFromFile)
-    {
-        throw new NotImplementedException();
-    }
 }
