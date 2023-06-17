@@ -52,6 +52,16 @@ class StringsTextualRepository
     }
 }
 
+class NamesFilePath
+{
+    public string BuildFilePath()
+    {
+        //we could imagine this is much more complicated
+        //for example that path is provided by the user and validated
+        return "names.txt";
+    }
+}
+
 public class Names
 {
     public List<string> All { get; } = new List<string>();
@@ -71,13 +81,6 @@ public class Names
         {
             All.Add(name);
         }
-    }
-
-    public string BuildFilePath()
-    {
-        //we could imagine this is much more complicated
-        //for example that path is provided by the user and validated
-        return "names.txt";
     }
 
     public string Format() => string.Join(Environment.NewLine, All);
