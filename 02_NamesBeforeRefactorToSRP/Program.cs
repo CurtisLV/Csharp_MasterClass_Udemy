@@ -64,9 +64,9 @@ class NamesFilePath
 
 class NamesFormatter
 {
-    public string Format()
+    public string Format(List<string> names)
     {
-        return string.Join(Environment.NewLine, All);
+        return string.Join(Environment.NewLine, names);
     }
 }
 
