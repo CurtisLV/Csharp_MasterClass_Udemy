@@ -25,17 +25,6 @@ Console.WriteLine(new NamesFormatter().Format(names.All));
 
 Console.ReadLine();
 
-class NamesValidator
-{
-    public bool IsValid(string name)
-    {
-        return name.Length >= 2
-            && name.Length < 25
-            && char.IsUpper(name[0])
-            && name.All(char.IsLetter);
-    }
-}
-
 class StringsTextualRepository
 {
     private static readonly string Separator = Environment.NewLine;
