@@ -62,6 +62,14 @@ class NamesFilePath
     }
 }
 
+class NamesFormatter
+{
+    public string Format()
+    {
+        return string.Join(Environment.NewLine, All);
+    }
+}
+
 public class Names
 {
     public List<string> All { get; } = new List<string>();
@@ -82,6 +90,4 @@ public class Names
             All.Add(name);
         }
     }
-
-    public string Format() => string.Join(Environment.NewLine, All);
 }
