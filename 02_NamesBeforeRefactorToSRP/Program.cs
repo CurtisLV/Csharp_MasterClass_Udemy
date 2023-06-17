@@ -21,7 +21,7 @@ else
     Console.WriteLine("Saving names to the file.");
     stringsTextualRepository.Write(path, names.All);
 }
-Console.WriteLine(names.Format());
+Console.WriteLine(new NamesFormatter().Format(names.All));
 
 Console.ReadLine();
 
