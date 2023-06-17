@@ -1,5 +1,5 @@
 ﻿var names = new Names();
-var path = names.BuildFilePath();
+var path = new NamesFilePath().BuildFilePath();
 var stringsTextualRepository = new StringsTextualRepository();
 
 if (File.Exists(path))
