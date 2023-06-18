@@ -1,10 +1,13 @@
-﻿class NamesValidator
+﻿namespace _2_NamesBeforeRefactorToSRP
 {
-    public bool IsValid(string name)
+    class NamesValidator
     {
-        return name.Length >= 2
-            && name.Length < 25
-            && char.IsUpper(name[0])
-            && name.All(char.IsLetter);
+        public bool IsValid(string name)
+        {
+            return name.Length >= 2
+                && name.Length < 25
+                && char.IsUpper(name[0])
+                && name.All(char.IsLetter);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿public class Names
+﻿namespace _2_NamesBeforeRefactorToSRP;
+
+public class Names
 {
     public List<string> All { get; } = new List<string>();
     private readonly NamesValidator _namesValidator = new NamesValidator();
