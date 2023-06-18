@@ -1,4 +1,4 @@
-﻿namespace DataAccess;
+﻿namespace _2_NamesBeforeRefactorToSRP.DataAccess;
 
 class StringsTextualRepository
 {
