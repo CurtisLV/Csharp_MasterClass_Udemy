@@ -1,4 +1,6 @@
-﻿namespace _2_NamesBeforeRefactorToSRP.DataAccess;
+﻿global using System.Diagnostics;
+
+namespace _2_NamesBeforeRefactorToSRP.DataAccess;
 
 class StringsTextualRepository
 {
