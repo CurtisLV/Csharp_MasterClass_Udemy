@@ -1,4 +1,6 @@
-﻿class NamesFilePath
+﻿namespace _2_NamesBeforeRefactorToSRP;
+
+class NamesFilePath
 {
     public string BuildFilePath()
     {
