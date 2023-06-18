@@ -1,4 +1,4 @@
-﻿
+﻿namespace DataAccess;
 
 class StringsTextualRepository
 {
