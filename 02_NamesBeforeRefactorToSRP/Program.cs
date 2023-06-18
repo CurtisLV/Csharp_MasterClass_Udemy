@@ -26,11 +26,3 @@ else
 Console.WriteLine(new NamesFormatter().Format(names.All));
 
 Console.ReadLine();
-
-class NamesFormatter
-{
-    public string Format(List<string> names)
-    {
-        return string.Join(Environment.NewLine, names);
-    }
-}
