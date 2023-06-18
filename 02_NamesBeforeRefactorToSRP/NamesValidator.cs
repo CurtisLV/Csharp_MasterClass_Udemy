@@ -1,6 +1,4 @@
-﻿
-
-class NamesValidator
+﻿class NamesValidator
 {
     public bool IsValid(string name)
     {
