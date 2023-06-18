@@ -1,4 +1,6 @@
-﻿var names = new Names();
+﻿using _2_NamesBeforeRefactorToSRP.DataAccess;
+
+var names = new Names();
 var path = new NamesFilePath().BuildFilePath();
 var stringsTextualRepository = new StringsTextualRepository();
 
@@ -24,16 +26,6 @@ else
 Console.WriteLine(new NamesFormatter().Format(names.All));
 
 Console.ReadLine();
-
-class NamesFilePath
-{
-    public string BuildFilePath()
-    {
-        //we could imagine this is much more complicated
-        //for example that path is provided by the user and validated
-        return "names.txt";
-    }
-}
 
 class NamesFormatter
 {
