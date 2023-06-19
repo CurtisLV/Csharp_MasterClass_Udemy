@@ -77,6 +77,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "51_Simple_Calc_Assigment", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "52_OOP_Sandbox", "52_OOP_Sandbox\52_OOP_Sandbox.csproj", "{19446F46-AAC0-4320-8F9C-476B9F183BE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "52_DiceRoll", "52_DiceRoll\52_DiceRoll.csproj", "{2C585BEB-BD0D-4AB3-B7EE-60B8CC9AC261}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{19446F46-AAC0-4320-8F9C-476B9F183BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19446F46-AAC0-4320-8F9C-476B9F183BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19446F46-AAC0-4320-8F9C-476B9F183BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C585BEB-BD0D-4AB3-B7EE-60B8CC9AC261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C585BEB-BD0D-4AB3-B7EE-60B8CC9AC261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C585BEB-BD0D-4AB3-B7EE-60B8CC9AC261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C585BEB-BD0D-4AB3-B7EE-60B8CC9AC261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
