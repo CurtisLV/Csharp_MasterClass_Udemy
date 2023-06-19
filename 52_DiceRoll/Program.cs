@@ -26,7 +26,7 @@ do
     {
         Console.WriteLine("Incorrect input!");
     }
-} while (numberOfTries <= maxTries);
+} while (numberOfTries < maxTries);
 
 // after guessing, determin result
 if (numberOfTries < maxTries)
@@ -40,7 +40,16 @@ else
 
 bool InputValidation(string? guess)
 {
-    return true; // TODO add proper validation
+    try
+    {
+        int.Parse(guess);
+    }
+    catch
+    {
+        return false;
+    }
+
+    return true;
 }
 
 Console.WriteLine($"The number was {numberToGuess}");
