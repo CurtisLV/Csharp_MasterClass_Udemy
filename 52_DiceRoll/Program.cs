@@ -5,7 +5,7 @@ int numberOfTries = 0;
 
 Console.WriteLine("Dice rolled. Guess what number it shows in 3 tries.");
 
-do
+while (numberOfTries < maxTries)
 {
     Console.WriteLine("Enter a number:");
     var guess = Console.ReadLine();
@@ -14,7 +14,8 @@ do
     {
         if (numberToGuess == int.Parse(guess))
         {
-            break;
+            Console.WriteLine($"You win!");
+            return;
         }
         else
         {
@@ -26,19 +27,12 @@ do
     {
         Console.WriteLine("Incorrect input!");
     }
-} while (numberOfTries < maxTries);
-
-// after guessing, determin result
-if (numberOfTries < maxTries)
-{
-    Console.WriteLine($"You win!");
 }
-else
-{
-    Console.WriteLine($"You lose!");
-}
+;
 
-bool InputValidation(string? guess)
+Console.WriteLine($"You lose!");
+
+bool InputValidation(string guess)
 {
     try
     {
