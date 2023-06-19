@@ -9,6 +9,20 @@ do
 {
     Console.WriteLine("Enter a number:");
     var guess = Console.ReadLine();
+
+    if (InputValidation(guess))
+    {
+        //
+    }
+    else
+    {
+        //
+    }
 } while (numberOfTries <= maxTries);
+
+bool InputValidation(string? guess)
+{
+    throw new NotImplementedException();
+}
 
 Console.ReadKey();
