@@ -18,13 +18,13 @@ do
         }
         else
         {
-            //
+            Console.WriteLine("Wrong number!");
+            numberOfTries++;
         }
     }
     else
     {
         Console.WriteLine("Incorrect input!");
-        numberOfTries++;
     }
 } while (numberOfTries <= maxTries);
 
@@ -35,7 +35,7 @@ if (numberOfTries < maxTries)
 }
 else
 {
-    Console.WriteLine($"You loose!");
+    Console.WriteLine($"You lose!");
 }
 
 bool InputValidation(string? guess)
