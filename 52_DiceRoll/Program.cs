@@ -12,15 +12,19 @@ do
 
     if (InputValidation(guess))
     {
-        //
+        if (number == int.Parse(guess))
+        {
+            break;
+        }
     }
     else
     {
-        //
+        Console.WriteLine("Wrong number!");
+        numberOfTries++;
     }
 } while (numberOfTries <= maxTries);
 
-// end of
+// after guessing, determin result
 if (numberOfTries < maxTries)
 {
     Console.WriteLine($"You win!");
