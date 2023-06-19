@@ -20,9 +20,19 @@ do
     }
 } while (numberOfTries <= maxTries);
 
+// end of
+if (numberOfTries < maxTries)
+{
+    Console.WriteLine($"You win!");
+}
+else
+{
+    Console.WriteLine($"You loose!");
+}
+
 bool InputValidation(string? guess)
 {
-    throw new NotImplementedException();
+    return true; // TODO add proper validation
 }
 
 Console.ReadKey();
