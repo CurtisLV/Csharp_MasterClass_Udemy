@@ -31,3 +31,5 @@ while (numberOfTries < maxTries)
 ;
 
 Console.WriteLine($"You lose!");
+Console.WriteLine($"The number was {numberToGuess}");
+Console.ReadKey();

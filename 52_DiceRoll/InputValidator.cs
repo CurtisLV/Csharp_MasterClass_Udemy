@@ -1,23 +1,7 @@
-﻿
-
-
-class InputValidator
+﻿class InputValidator
 {
-    bool InputValidation(string guess)
+    public bool InputValidation(string guess)
     {
-        try
-        {
-            int.Parse(guess);
-        }
-        catch
-        {
-            return false;
-        }
-
-        return true;
+        return int.TryParse(guess, out _);
     }
-
-
-
-Console.WriteLine($"The number was {numberToGuess}");
-Console.ReadKey();
+}
