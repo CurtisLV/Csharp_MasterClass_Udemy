@@ -31,20 +31,23 @@ while (numberOfTries < maxTries)
 ;
 
 Console.WriteLine($"You lose!");
-
-bool InputValidation(string guess)
+class InputValidator
 {
-    try
+    bool InputValidation(string guess)
     {
-        int.Parse(guess);
-    }
-    catch
-    {
-        return false;
+        try
+        {
+            int.Parse(guess);
+        }
+        catch
+        {
+            return false;
+        }
+
+        return true;
     }
 
-    return true;
-}
+
 
 Console.WriteLine($"The number was {numberToGuess}");
 Console.ReadKey();
