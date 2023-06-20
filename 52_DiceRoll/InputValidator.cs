@@ -1,6 +1,6 @@
-﻿class InputValidator
+﻿static class InputValidator
 {
-    public bool InputValidation(string guess)
+    public static bool IsValidNumber(string guess)
     {
         return int.TryParse(guess, out _);
     }

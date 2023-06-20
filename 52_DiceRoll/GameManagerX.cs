@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _52_DiceRoll;
+﻿namespace _52_DiceRoll;
 
 public class GameManagerX
 {
@@ -27,9 +21,9 @@ public class GameManagerX
         while (numberOfTries < maxTries)
         {
             Console.WriteLine("Enter a number:");
-            string guess = Console.ReadLine();
+            var guess = Console.ReadLine();
 
-            if (inputValidator.InputValidation(guess))
+            if (InputValidator.IsValidNumber(guess))
             {
                 if (numberToGuess == int.Parse(guess))
                 {
@@ -47,5 +41,8 @@ public class GameManagerX
                 Console.WriteLine("Incorrect input!");
             }
         }
+        Console.WriteLine($"You lose!");
+        Console.WriteLine($"The number was {numberToGuess}");
+        Console.ReadKey();
     }
 }
