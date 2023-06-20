@@ -1,4 +1,6 @@
-﻿var random = new Random();
+﻿var inputValidator = new InputValidator();
+
+var random = new Random();
 int numberToGuess = random.Next(1, 7);
 int maxTries = 3;
 int numberOfTries = 0;
@@ -10,7 +12,7 @@ while (numberOfTries < maxTries)
     Console.WriteLine("Enter a number:");
     var guess = Console.ReadLine();
 
-    if (InputValidation(guess))
+    if (inputValidator.InputValidation(guess))
     {
         if (numberToGuess == int.Parse(guess))
         {
