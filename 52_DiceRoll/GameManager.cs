@@ -13,13 +13,7 @@
         numberOfTries = 0;
     }
 
-    public void StartGame
-    {
-        Console.WriteLine("Dice rolled. Guess what number it shows in 3 tries.");
-
-        while (numberOfTries<maxTries)
-        {
-            //
-        }
+    public void StartGame {
+        //
     }
 }
