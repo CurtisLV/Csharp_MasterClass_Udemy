@@ -13,7 +13,7 @@ internal class GameManagerX
     private int maxTries;
     private int numberOfTries;
 
-    public GameManager()
+    public GameManagerX()
     {
         random = new Random();
         numberToGuess = random.Next(1, 7);
