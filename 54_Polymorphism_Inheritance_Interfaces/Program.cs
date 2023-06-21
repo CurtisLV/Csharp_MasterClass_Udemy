@@ -1,10 +1,15 @@
-﻿Console.ReadKey();
+﻿var pizza = new Pizza();
+pizza.AddIngridients(new Cheddar());
+pizza.AddIngridients(new Mozzarella());
+pizza.AddIngridients(new TomatoSauce());
+
+Console.ReadKey();
 
 public class Pizza
 {
-    private List<string> _ingredients = new List<string>();
+    private List<Ingredient> _ingredients = new List<Ingredient>();
 
-    public void AddIngridients(string ingredient) => _ingredients.Add(ingredient);
+    public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
 
     public string Describe() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
