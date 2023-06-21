@@ -14,19 +14,19 @@ public class Ingredient
     //
 }
 
-public class Cheddar
+public class Cheddar : Ingredient
 {
     public string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
 }
 
-public class TomatoSauce
+public class TomatoSauce : Ingredient
 {
     public string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
 }
 
-public class Mozzarella
+public class Mozzarella : Ingredient
 {
     public string Name => "Mozzarella";
     public bool IsLight { get; }
