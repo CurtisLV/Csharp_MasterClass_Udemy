@@ -19,3 +19,15 @@ public class Cheddar
     public string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
 }
+
+public class TomatoSauce
+{
+    public string Name => "Tomato sauce";
+    public int TomatoesIn100Grams { get; }
+}
+
+public class Mozzarella
+{
+    public string Name => "Mozzarella";
+    public bool IsLight { get; }
+}
