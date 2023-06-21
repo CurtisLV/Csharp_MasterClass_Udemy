@@ -8,3 +8,14 @@ public class Pizza
 
     public string Describe() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
+
+public class Ingredient
+{
+    //
+}
+
+public class Cheddar
+{
+    public string Name => "Cheddar cheese";
+    public int AgedForMonths { get; }
+}
