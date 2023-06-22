@@ -3,10 +3,18 @@ pizza.AddIngridients(new Cheddar());
 pizza.AddIngridients(new Mozzarella());
 pizza.AddIngridients(new TomatoSauce());
 
+var ingridient = new Ingredient();
+ingridient.PublicField = 10;
+
 var cheddar = new Cheddar();
-Console.WriteLine(cheddar.PublicMethod());
-Console.WriteLine(cheddar.PrivateMethod());
-Console.WriteLine(cheddar.ProtectedMethod());
+cheddar.PublicField = 20;
+
+Console.WriteLine("Value in ingridient " + ingridient.PublicField);
+Console.WriteLine("Value in cheddar " + cheddar.PublicField);
+
+//Console.WriteLine(cheddar.PublicMethod());
+//Console.WriteLine(cheddar.PrivateMethod());
+//Console.WriteLine(cheddar.ProtectedMethod());
 
 Console.ReadKey();
 
@@ -21,6 +29,8 @@ public class Pizza
 
 public class Ingredient
 {
+    public int PublicField;
+
     public string PublicMethod()
     {
         return "This method is PUBLIC in the Ingredient class";
@@ -45,7 +55,7 @@ public class Cheddar : Ingredient
     public void UseMethodsFromBaseClass()
     {
         Console.WriteLine(PublicMethod());
-        Console.WriteLine(PrivateMethod());
+        //Console.WriteLine(PrivateMethod());
         Console.WriteLine(ProtectedMethod());
     }
 }
