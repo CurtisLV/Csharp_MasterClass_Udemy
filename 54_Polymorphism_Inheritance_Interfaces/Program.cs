@@ -16,7 +16,10 @@ public class Pizza
 
 public class Ingredient
 {
-    //
+    public string PublicMethod()
+    {
+        return "This method is PUBLIC in the Ingredient class";
+    }
 }
 
 public class Cheddar : Ingredient
