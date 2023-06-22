@@ -6,6 +6,7 @@ pizza.AddIngridients(new TomatoSauce());
 var cheddar = new Cheddar();
 Console.WriteLine(cheddar.PublicMethod());
 Console.WriteLine(cheddar.PrivateMethod());
+Console.WriteLine(cheddar.ProtectedMethod());
 
 Console.ReadKey();
 
@@ -25,6 +26,11 @@ public class Ingredient
         return "This method is PUBLIC in the Ingredient class";
     }
 
+    protected string ProtectedMethod()
+    {
+        return "This method is PROTECTED in the Ingredient class";
+    }
+
     private string PrivateMethod()
     {
         return "This method is PRIVATE in the Ingredient class";
@@ -39,6 +45,8 @@ public class Cheddar : Ingredient
     public void UseMethodsFromBaseClass()
     {
         Console.WriteLine(PublicMethod());
+        Console.WriteLine(PrivateMethod());
+        Console.WriteLine(ProtectedMethod());
     }
 }
 
