@@ -3,6 +3,9 @@ pizza.AddIngridients(new Cheddar());
 pizza.AddIngridients(new Mozzarella());
 pizza.AddIngridients(new TomatoSauce());
 
+var cheddar = new Cheddar();
+Console.WriteLine(cheddar.PublicMethod());
+
 Console.ReadKey();
 
 public class Pizza
@@ -26,6 +29,11 @@ public class Cheddar : Ingredient
 {
     public string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
+
+    public void UseMethodsFromBaseClass()
+    {
+        Console.WriteLine(PublicMethod());
+    }
 }
 
 public class TomatoSauce : Ingredient
