@@ -34,7 +34,7 @@ public class Pizza
 
 public class Ingredient
 {
-    public string Name { get; } = "Some ingredient!";
+    public virtual string Name { get; } = "Some ingredient!";
 
     public int PublicField;
 
@@ -56,7 +56,7 @@ public class Ingredient
 
 public class Cheddar : Ingredient
 {
-    public string Name => "Cheddar cheese";
+    public override string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
 
     public void UseMethodsFromBaseClass()
@@ -69,12 +69,12 @@ public class Cheddar : Ingredient
 
 public class TomatoSauce : Ingredient
 {
-    public string Name => "Tomato sauce";
+    public override string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
 }
 
 public class Mozzarella : Ingredient
 {
-    public string Name => "Mozzarella";
+    public override string Name => "Mozzarella";
     public bool IsLight { get; }
 }
