@@ -1,16 +1,18 @@
-﻿var pizza = new Pizza();
-pizza.AddIngridients(new Cheddar());
-pizza.AddIngridients(new Mozzarella());
-pizza.AddIngridients(new TomatoSauce());
+﻿//var pizza = new Pizza();
+//pizza.AddIngridients(new Cheddar());
+//pizza.AddIngridients(new Mozzarella());
+//pizza.AddIngridients(new TomatoSauce());
 
-var ingridient = new Ingredient();
-ingridient.PublicField = 10;
+//var ingridient = new Ingredient();
+//ingridient.PublicField = 10;
 
 var cheddar = new Cheddar();
-cheddar.PublicField = 20;
+Console.WriteLine(cheddar.Name);
 
-Console.WriteLine("Value in ingridient " + ingridient.PublicField);
-Console.WriteLine("Value in cheddar " + cheddar.PublicField);
+//cheddar.PublicField = 20;
+
+//Console.WriteLine("Value in ingridient " + ingridient.PublicField);
+//Console.WriteLine("Value in cheddar " + cheddar.PublicField);
 
 //Console.WriteLine(cheddar.PublicMethod());
 //Console.WriteLine(cheddar.PrivateMethod());
