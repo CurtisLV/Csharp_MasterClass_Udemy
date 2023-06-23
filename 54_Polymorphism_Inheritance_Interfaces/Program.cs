@@ -6,11 +6,11 @@
 //var ingridient = new Ingredient();
 //ingridient.PublicField = 10;
 
-Cheddar cheddar = new Cheddar();
-Console.WriteLine(cheddar.Name);
+//Cheddar cheddar = new Cheddar();
+//Console.WriteLine(cheddar.Name);
 
-Ingredient ingredient1 = new Cheddar();
-Console.WriteLine(ingredient1.Name);
+//Ingredient ingredient1 = new Cheddar();
+//Console.WriteLine(ingredient1.Name);
 
 //cheddar.PublicField = 20;
 
@@ -21,7 +21,12 @@ Console.WriteLine(ingredient1.Name);
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
 
-Console.ReadKey();
+var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
+
+foreach (var ingredient in ingredients)
+{
+    Console.WriteLine(ingredient.Name);
+}
 
 public class Pizza
 {
