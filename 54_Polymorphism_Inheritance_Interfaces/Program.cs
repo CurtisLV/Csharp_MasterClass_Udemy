@@ -6,8 +6,11 @@
 //var ingridient = new Ingredient();
 //ingridient.PublicField = 10;
 
-var cheddar = new Cheddar();
+Cheddar cheddar = new Cheddar();
 Console.WriteLine(cheddar.Name);
+
+Ingredient ingredient1 = new Cheddar();
+Console.WriteLine(ingredient1.Name);
 
 //cheddar.PublicField = 20;
 
@@ -31,6 +34,8 @@ public class Pizza
 
 public class Ingredient
 {
+    public string Name { get; } = "Some ingredient!";
+
     public int PublicField;
 
     public string PublicMethod()
