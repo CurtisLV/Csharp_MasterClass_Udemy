@@ -1,9 +1,9 @@
 ﻿var numbers = new List<int> { 1, 4, 6, -1, 12, 44, -8, -19 };
-bool shallAddPositiveOnly = true;
+bool shallAddPositiveOnly = false;
 
 NumbersSumCalculator calculator = shallAddPositiveOnly
-    ? new NumbersSumCalculator()
-    : new PositiveNumbersSumCalculator();
+    ? new PositiveNumbersSumCalculator()
+    : new NumbersSumCalculator();
 
 int sum;
 if (shallAddPositiveOnly)
