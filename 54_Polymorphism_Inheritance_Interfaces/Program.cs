@@ -1,18 +1,19 @@
 ﻿var numbers = new List<int> { 1, 4, 6, -1, 12, 44, -8, -19 };
 bool shallAddPositiveOnly = true;
-var sum = new NumbersSumCalculator().Calculate(numbers);
-Console.WriteLine($"Sum is {sum}");
-Console.ReadKey();
 
 int sum;
 if (shallAddPositiveOnly)
 {
-    //
+    sum = new PositiveNumbersSumCalculator().Calculate(numbers);
+
 }
 else
 {
-    //
+    sum = new NumbersSumCalculator().Calculate(numbers);
 }
+
+Console.WriteLine($"Sum is {sum}");
+Console.ReadKey();
 
 public class NumbersSumCalculator
 {
@@ -21,7 +22,7 @@ public class NumbersSumCalculator
         //
     }
 
-    internal object Calculate(List<int> numbers)
+    public int  Calculate(List<int> numbers)
     {
         int sum = 0;
         foreach (var num in numbers)
@@ -38,7 +39,7 @@ public class PositiveNumbersSumCalculator
         //
     }
 
-    internal object Calculate(List<int> numbers)
+    public int Calculate(List<int> numbers)
     {
         int sum = 0;
         foreach (var num in numbers)
