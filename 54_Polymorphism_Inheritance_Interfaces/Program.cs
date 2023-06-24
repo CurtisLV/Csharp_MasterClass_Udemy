@@ -9,6 +9,16 @@ internal class NumbersSumCalculator
     {
         //
     }
+
+    internal object Calculate(List<int> numbers)
+    {
+        int sum = 0;
+        foreach (var num in numbers)
+        {
+            sum += num;
+        }
+        return sum;
+    }
 }
 
 
