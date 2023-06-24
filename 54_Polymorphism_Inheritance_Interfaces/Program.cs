@@ -2,8 +2,26 @@
 
 var sum = new NumbersSumCalculator().Calculate(numbers);
 Console.WriteLine($"Sum is {sum}");
+Console.ReadKey();
 
-internal class NumbersSumCalculator
+public class NumbersSumCalculator
+{
+    public NumbersSumCalculator()
+    {
+        //
+    }
+
+    internal object Calculate(List<int> numbers)
+    {
+        int sum = 0;
+        foreach (var num in numbers)
+        {
+            sum += num;
+        }
+        return sum;
+    }
+}
+public class PositiveNumbersSumCalculator
 {
     public NumbersSumCalculator()
     {
