@@ -21,7 +21,10 @@ public class NumbersSumCalculator
         int sum = 0;
         foreach (var num in numbers)
         {
-            sum += num;
+            if (ShallBeAdded(num))
+            {
+                sum += num;
+            }
         }
         return sum;
     }
@@ -34,7 +37,10 @@ public class PositiveNumbersSumCalculator : NumbersSumCalculator
     //    int sum = 0;
     //    foreach (var num in numbers)
     //    {
-    //        sum += num;
+    //        if (num > 0)
+    //        {
+    //            sum += num;
+    //        }
     //    }
     //    return sum;
     //}
