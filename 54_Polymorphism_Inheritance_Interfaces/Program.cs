@@ -1,6 +1,10 @@
 ﻿var numbers = new List<int> { 1, 4, 6, -1, 12, 44, -8, -19 };
 bool shallAddPositiveOnly = true;
 
+NumbersSumCalculator calculator = shallAddPositiveOnly
+    ? new NumbersSumCalculator()
+    : new PositiveNumbersSumCalculator();
+
 int sum;
 if (shallAddPositiveOnly)
 {
@@ -39,7 +43,7 @@ public class PositiveNumbersSumCalculator : NumbersSumCalculator
 {
     protected override bool ShallBeAdded(int num)
     {
-        return true;
+        return num > 0;
     }
 }
 
