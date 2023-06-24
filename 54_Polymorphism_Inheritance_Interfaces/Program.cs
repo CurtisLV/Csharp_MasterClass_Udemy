@@ -1,6 +1,22 @@
-﻿//var pizza = new Pizza();
+﻿var numbers = new List<int> { 1, 4, 6, -1, 12, 44, -8, -19 };
+
+var sum = new NumbersSumCalculator().Calculate(numbers);
+Console.WriteLine($"Sum is {sum}");
+
+internal class NumbersSumCalculator
+{
+    public NumbersSumCalculator()
+    {
+        //
+    }
+}
+
+
+
+//var pizza = new Pizza();
 //pizza.AddIngridients(new Cheddar());
 //pizza.AddIngridients(new Mozzarella());
+
 //pizza.AddIngridients(new TomatoSauce());
 
 //var ingridient = new Ingredient();
