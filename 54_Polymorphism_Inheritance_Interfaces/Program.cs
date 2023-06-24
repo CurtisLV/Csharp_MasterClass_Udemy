@@ -28,22 +28,19 @@ public class NumbersSumCalculator
         }
         return sum;
     }
+
+    protected virtual bool ShallBeAdded(int num)
+    {
+        return true;
+    }
 }
 
 public class PositiveNumbersSumCalculator : NumbersSumCalculator
 {
-    //public int Calculate(List<int> numbers)
-    //{
-    //    int sum = 0;
-    //    foreach (var num in numbers)
-    //    {
-    //        if (num > 0)
-    //        {
-    //            sum += num;
-    //        }
-    //    }
-    //    return sum;
-    //}
+    protected override bool ShallBeAdded(int num)
+    {
+        return true;
+    }
 }
 
 
