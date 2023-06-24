@@ -16,11 +16,6 @@ Console.ReadKey();
 
 public class NumbersSumCalculator
 {
-    public NumbersSumCalculator()
-    {
-        //
-    }
-
     public int Calculate(List<int> numbers)
     {
         int sum = 0;
@@ -32,22 +27,17 @@ public class NumbersSumCalculator
     }
 }
 
-public class PositiveNumbersSumCalculator
+public class PositiveNumbersSumCalculator : NumbersSumCalculator
 {
-    public PositiveNumbersSumCalculator()
-    {
-        //
-    }
-
-    public int Calculate(List<int> numbers)
-    {
-        int sum = 0;
-        foreach (var num in numbers)
-        {
-            sum += num;
-        }
-        return sum;
-    }
+    //public int Calculate(List<int> numbers)
+    //{
+    //    int sum = 0;
+    //    foreach (var num in numbers)
+    //    {
+    //        sum += num;
+    //    }
+    //    return sum;
+    //}
 }
 
 
