@@ -23,7 +23,7 @@ namespace _54_Polymorphism_Inheritance_Interfaces.Animals
 
     public class Animal
     {
-        public virtual int NumberOfLegs { get; } = 2;
+        public virtual int NumberOfLegs { get; } = 4;
     }
 
     public class Lion : Animal
@@ -38,11 +38,11 @@ namespace _54_Polymorphism_Inheritance_Interfaces.Animals
 
     public class Duck : Animal
     {
-        //
+        public override int NumberOfLegs => 2;
     }
 
     public class Spider : Animal
     {
-        //
+        public override int NumberOfLegs => 8;
     }
 }
