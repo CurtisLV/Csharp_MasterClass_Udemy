@@ -21,5 +21,13 @@ namespace _54_Polymorphism_Inheritance_Interfaces.Animals
         }
     }
 
-    //your code goes here
+    public class Animal
+    {
+        //
+    }
+
+    public class Lion
+    {
+        //
+    }
 }
