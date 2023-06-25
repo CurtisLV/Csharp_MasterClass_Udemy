@@ -23,25 +23,25 @@ namespace _54_Polymorphism_Inheritance_Interfaces.Animals
 
     public class Animal
     {
-        //
+        public virtual int NumberOfLegs { get; } = 2;
     }
 
-    public class Lion
+    public class Lion : Animal
     {
         //
     }
 
-    public class Tiger
+    public class Tiger : Animal
     {
         //
     }
 
-    public class Duck
+    public class Duck : Animal
     {
         //
     }
 
-    public class Spider
+    public class Spider : Animal
     {
         //
     }
