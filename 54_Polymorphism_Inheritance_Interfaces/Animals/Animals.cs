@@ -30,4 +30,19 @@ namespace _54_Polymorphism_Inheritance_Interfaces.Animals
     {
         //
     }
+
+    public class Tiger
+    {
+        //
+    }
+
+    public class Duck
+    {
+        //
+    }
+
+    public class Spider
+    {
+        //
+    }
 }
