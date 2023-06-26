@@ -4,6 +4,6 @@ public class StringsProcessor
 {
     public List<string> Process(List<string> result)
     {
-        throw new NotImplementedException();
+        return new List<string>();
     }
 }

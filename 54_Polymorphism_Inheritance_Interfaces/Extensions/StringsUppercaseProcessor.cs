@@ -2,5 +2,8 @@
 
 public class StringsUppercaseProcessor : StringsProcessor
 {
-    //
+    public List<string> Process(List<string> result)
+    {
+        throw new NotImplementedException();
+    }
 }
