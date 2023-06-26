@@ -1,6 +1,6 @@
-﻿namespace _54_Polymorphism_Inheritance_Interfaces.Extensions
+﻿namespace _54_Polymorphism_Inheritance_Interfaces.Extensions;
+
+internal class StringsUppercaseProcessor : StringsProcessor
 {
-    internal class StringsUppercaseProcessor : StringsProcessor
-    {
-    }
+    //
 }
