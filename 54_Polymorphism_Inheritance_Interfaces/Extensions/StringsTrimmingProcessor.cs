@@ -9,6 +9,6 @@ public class StringsTrimmingProcessor : StringsProcessor
         {
             words.Add(word.Substring(0, (word.Length / 2)));
         }
-        return result;
+        return words;
     }
 }
