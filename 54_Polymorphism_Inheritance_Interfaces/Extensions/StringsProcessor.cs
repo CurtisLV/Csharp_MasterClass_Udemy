@@ -2,8 +2,8 @@
 
 public class StringsProcessor
 {
-    public List<string> Process(List<string> result)
+    public virtual List<string> Process(List<string> result)
     {
-        return new List<string>();
+        return new List<string>(result);
     }
 }

@@ -2,8 +2,13 @@
 
 public class StringsTrimmingProcessor : StringsProcessor
 {
-    public List<string> Process(List<string> result)
+    public override List<string> Process(List<string> result)
     {
-        throw new NotImplementedException();
+        List<string> words = new List<string>();
+        foreach (var word in result)
+        {
+            words.Add(word.Substring(0, (word.Length / 2)));
+        }
+        return result;
     }
 }
