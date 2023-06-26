@@ -1,6 +1,6 @@
-﻿namespace _54_Polymorphism_Inheritance_Interfaces.Extensions
+﻿namespace _54_Polymorphism_Inheritance_Interfaces.Extensions;
+
+public class StringsTrimmingProcessor : StringsProcessor
 {
-    internal class StringsTrimmingProcessor : StringsProcessor
-    {
-    }
+    //
 }
