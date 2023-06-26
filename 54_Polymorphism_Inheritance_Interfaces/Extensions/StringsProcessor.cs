@@ -2,7 +2,7 @@
 
 public class StringsProcessor
 {
-    internal List<string> Process(List<string> result)
+    public List<string> Process(List<string> result)
     {
         throw new NotImplementedException();
     }
