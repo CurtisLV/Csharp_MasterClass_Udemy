@@ -2,5 +2,8 @@
 
 public class StringsProcessor
 {
-    //
+    internal List<string> Process(List<string> result)
+    {
+        throw new NotImplementedException();
+    }
 }
