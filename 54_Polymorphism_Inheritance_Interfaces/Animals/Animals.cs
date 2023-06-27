@@ -18,6 +18,15 @@
     public class Animal
     {
         public virtual int NumberOfLegs { get; } = 4;
+
+        public virtual void MakeSound() =>
+            Console.WriteLine("Make a generic animal sound !!!!!!!!!!");
+    }
+
+    class HousePet : Animal
+    {
+        public override void MakeSound() =>
+            Console.WriteLine("<noises of happines when human comes home>");
     }
 
     public class Lion : Animal

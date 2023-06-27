@@ -46,6 +46,7 @@
 //        return num > 0;
 //    }
 //}
+using _54_Polymorphism_Inheritance_Interfaces.Animals;
 
 var pizza = new Pizza();
 pizza.AddIngridients(new Cheddar());
@@ -70,7 +71,10 @@ pizza.AddIngridients(new TomatoSauce());
 //Console.WriteLine(cheddar.PublicMethod());
 
 var cheddar = new Cheddar();
-Console.WriteLine(cheddar + " this");
+
+Console.WriteLine(new TomatoSauce());
+Console.WriteLine(new HousePet());
+Console.WriteLine(new List<int>());
 
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
