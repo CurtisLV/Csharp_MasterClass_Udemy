@@ -96,20 +96,11 @@ public class Ingredient
 
     public int PublicField;
 
-    public string PublicMethod()
-    {
-        return "This method is PUBLIC in the Ingredient class";
-    }
+    public string PublicMethod() => "This method is PUBLIC in the Ingredient class";
 
-    protected string ProtectedMethod()
-    {
-        return "This method is PROTECTED in the Ingredient class";
-    }
+    protected string ProtectedMethod() => "This method is PROTECTED in the Ingredient class";
 
-    private string PrivateMethod()
-    {
-        return "This method is PRIVATE in the Ingredient class";
-    }
+    private string PrivateMethod() => "This method is PRIVATE in the Ingredient class";
 }
 
 public class Cheese : Ingredient
@@ -117,7 +108,7 @@ public class Cheese : Ingredient
     //
 }
 
-public class Cheddar : Ingredient
+public class Cheddar : Cheese
 {
     public override string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
@@ -136,7 +127,7 @@ public class TomatoSauce : Ingredient
     public int TomatoesIn100Grams { get; }
 }
 
-public class Mozzarella : Ingredient
+public class Mozzarella : Cheese
 {
     public override string Name => "Mozzarella";
     public bool IsLight { get; }
