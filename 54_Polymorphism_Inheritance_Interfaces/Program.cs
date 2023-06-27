@@ -47,29 +47,30 @@
 //    }
 //}
 
-
-
 var pizza = new Pizza();
 pizza.AddIngridients(new Cheddar());
 pizza.AddIngridients(new Mozzarella());
 
 pizza.AddIngridients(new TomatoSauce());
 
-var ingridient = new Ingredient();
-ingridient.PublicField = 10;
+//var ingridient = new Ingredient();
+//ingridient.PublicField = 10;
 
-Cheddar cheddar = new Cheddar();
-Console.WriteLine(cheddar.Name);
+//Cheddar cheddar = new Cheddar();
+//Console.WriteLine(cheddar.Name);
+//cheddar.PublicField = 20;
 
-Ingredient ingredient1 = new Cheddar();
-Console.WriteLine(ingredient1.Name);
 
-cheddar.PublicField = 20;
+//Ingredient ingredient1 = new Cheddar();
+//Console.WriteLine(ingredient1.Name);
 
-Console.WriteLine("Value in ingridient " + ingridient.PublicField);
-Console.WriteLine("Value in cheddar " + cheddar.PublicField);
+//Console.WriteLine("Value in ingridient " + ingridient.PublicField);
+//Console.WriteLine("Value in cheddar " + cheddar.PublicField);
 
-Console.WriteLine(cheddar.PublicMethod());
+//Console.WriteLine(cheddar.PublicMethod());
+
+var cheddar = new Cheddar();
+Console.WriteLine(cheddar + " this");
 
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
