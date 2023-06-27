@@ -97,6 +97,8 @@ public class Pizza
 
 public class Ingredient
 {
+    public override string ToString() => Name;
+
     public virtual string Name { get; } = "Some ingredient!";
 
     public int PublicField;
