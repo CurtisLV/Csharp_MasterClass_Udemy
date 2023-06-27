@@ -51,8 +51,8 @@ using _54_Polymorphism_Inheritance_Interfaces.Animals;
 var pizza = new Pizza();
 pizza.AddIngridients(new Cheddar());
 pizza.AddIngridients(new Mozzarella());
-
 pizza.AddIngridients(new TomatoSauce());
+Console.WriteLine(pizza.Describe());
 
 //var ingridient = new Ingredient();
 //ingridient.PublicField = 10;
@@ -69,15 +69,14 @@ pizza.AddIngridients(new TomatoSauce());
 //Console.WriteLine("Value in cheddar " + cheddar.PublicField);
 
 //Console.WriteLine(cheddar.PublicMethod());
+//Console.WriteLine(cheddar.PrivateMethod());
+//Console.WriteLine(cheddar.ProtectedMethod());
 
 var cheddar = new Cheddar();
 
 Console.WriteLine(new TomatoSauce());
 Console.WriteLine(new HousePet());
 Console.WriteLine(new List<int>());
-
-//Console.WriteLine(cheddar.PrivateMethod());
-//Console.WriteLine(cheddar.ProtectedMethod());
 
 var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
 
@@ -92,7 +91,7 @@ public class Pizza
 
     public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
 
-    public string Describe() => $"This is a pizza with {string.Join(", ", _ingredients)}";
+    public override string ToString() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
 
 public class Ingredient
