@@ -121,7 +121,8 @@ public class Cheese : Ingredient
 
 public class Cheddar : Ingredient
 {
-    public Cheddar()
+    public Cheddar(int priceIfExtraTopping)
+        : base(priceIfExtraTopping)
     {
         Console.WriteLine("Constructor from the Cheddar class");
     }
