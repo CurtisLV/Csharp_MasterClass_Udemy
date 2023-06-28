@@ -72,7 +72,7 @@ using _54_Polymorphism_Inheritance_Interfaces.Animals;
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
 
-var cheddar = new Cheddar();
+var cheddar = new Cheddar(2, 2);
 Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
@@ -133,7 +133,8 @@ public class Cheddar : Ingredient
         Console.WriteLine("Constructor from the Cheddar class");
     }
 
-    public override string Name => "Cheddar cheese";
+    public override string Name =>
+        $"{base.Name}, more specifically, a Cheddar cheese aged for {AgedForMonths} months";
     public int AgedForMonths { get; }
 
     public void UseMethodsFromBaseClass()
