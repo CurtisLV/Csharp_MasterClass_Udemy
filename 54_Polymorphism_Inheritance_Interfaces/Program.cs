@@ -73,6 +73,7 @@ using _54_Polymorphism_Inheritance_Interfaces.Animals;
 //Console.WriteLine(cheddar.ProtectedMethod());
 
 var cheddar = new Cheddar(2, 2);
+Console.WriteLine(cheddar);
 Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
