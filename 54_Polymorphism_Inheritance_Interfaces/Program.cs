@@ -48,11 +48,11 @@
 //}
 using _54_Polymorphism_Inheritance_Interfaces.Animals;
 
-var pizza = new Pizza();
-pizza.AddIngridients(new Cheddar());
-pizza.AddIngridients(new Mozzarella());
-pizza.AddIngridients(new TomatoSauce());
-Console.WriteLine(pizza.Describe());
+//var pizza = new Pizza();
+//pizza.AddIngridients(new Cheddar());
+//pizza.AddIngridients(new Mozzarella());
+//pizza.AddIngridients(new TomatoSauce());
+//Console.WriteLine(pizza.ToString());
 
 //var ingridient = new Ingredient();
 //ingridient.PublicField = 10;
