@@ -93,10 +93,13 @@ public class Pizza
 
 public class Ingredient
 {
-    public Ingredient()
+    public Ingredient(int priceIfExtraTopping)
     {
         Console.WriteLine("Constructor from Ingredient class");
+        PriceIfExtraTopping = priceIfExtraTopping;
     }
+
+    public int PriceIfExtraTopping { get; }
 
     public override string ToString() => Name;
 
