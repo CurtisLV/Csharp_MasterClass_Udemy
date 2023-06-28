@@ -73,17 +73,14 @@ using _54_Polymorphism_Inheritance_Interfaces.Animals;
 //Console.WriteLine(cheddar.ProtectedMethod());
 
 var cheddar = new Cheddar();
+Console.ReadKey();
 
-Console.WriteLine(new TomatoSauce());
-Console.WriteLine(new HousePet());
-Console.WriteLine(new List<int>());
+//var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
 
-var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
-
-foreach (var ingredient in ingredients)
-{
-    Console.WriteLine(ingredient.Name);
-}
+//foreach (var ingredient in ingredients)
+//{
+//    Console.WriteLine(ingredient.Name);
+//}
 
 public class Pizza
 {
