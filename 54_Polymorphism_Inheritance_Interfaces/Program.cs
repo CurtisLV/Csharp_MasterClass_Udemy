@@ -117,13 +117,19 @@ public class Ingredient
 public class Cheese : Ingredient
 {
     //
+    public Cheese(int priceIfExtraTopping)
+        : base(priceIfExtraTopping)
+    {
+        //
+    }
 }
 
 public class Cheddar : Ingredient
 {
-    public Cheddar(int priceIfExtraTopping)
+    public Cheddar(int priceIfExtraTopping, int agedForMonths)
         : base(priceIfExtraTopping)
     {
+        AgedForMonths = agedForMonths;
         Console.WriteLine("Constructor from the Cheddar class");
     }
 
@@ -140,6 +146,12 @@ public class Cheddar : Ingredient
 
 public class TomatoSauce : Ingredient
 {
+    public TomatoSauce(int priceIfExtraTopping)
+        : base(priceIfExtraTopping)
+    {
+        //
+    }
+
     public override string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
 }
