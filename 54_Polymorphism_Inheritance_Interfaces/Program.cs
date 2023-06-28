@@ -96,6 +96,11 @@ public class Pizza
 
 public class Ingredient
 {
+    public Ingredient()
+    {
+        Console.WriteLine("Constructor from Ingredient class");
+    }
+
     public override string ToString() => Name;
 
     public virtual string Name { get; } = "Some ingredient!";
@@ -114,8 +119,13 @@ public class Cheese : Ingredient
     //
 }
 
-public class Cheddar : Cheese
+public class Cheddar : Ingredient
 {
+    public Cheddar()
+    {
+        Console.WriteLine("Constructor from the Cheddar class");
+    }
+
     public override string Name => "Cheddar cheese";
     public int AgedForMonths { get; }
 
