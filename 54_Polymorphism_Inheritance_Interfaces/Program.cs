@@ -1,9 +1,19 @@
-﻿int seasonNumber = 0;
-Season spring = (Season)seasonNumber;
+﻿int firstSeasonNumber = 0;
+Season spring = (Season)firstSeasonNumber;
 
 decimal a = 10.01m;
+
+// implicit conversion
 int integer = 10;
 decimal b = integer;
+
+// explicit conversion
+decimal c = 10.01m;
+int d = (int)c;
+
+int secondSeasonNumber = 1;
+Season summer = (Season)secondSeasonNumber;
+Console.WriteLine(summer);
 
 Console.ReadKey();
 

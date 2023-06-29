@@ -19,42 +19,44 @@ namespace _54_Polymorphism_Inheritance_Interfaces.NumberSumCalc
         if (shallAddPositiveOnly)
         {
             sum = new PositiveNumbersSumCalculator().Calculate(numbers);
-    }
+        }
         else
         {
             sum = new NumbersSumCalculator().Calculate(numbers);
-}
-
-Console.WriteLine($"Sum is {sum}");
-Console.ReadKey();
-
-public class NumbersSumCalculator
-{
-    public int Calculate(List<int> numbers)
-    {
-        int sum = 0;
-        foreach (var num in numbers)
-        {
-            if (ShallBeAdded(num))
-            {
-                sum += num;
-            }
         }
-        return sum;
+
+        //Console.WriteLine($"Sum is {sum}");
+        //Console.ReadKey();
     }
 
-    protected virtual bool ShallBeAdded(int num)
-    {
-        return true;
-    }
-}
 
-public class PositiveNumbersSumCalculator : NumbersSumCalculator
-{
-    protected override bool ShallBeAdded(int num)
+    public class NumbersSumCalculator
     {
-        return num > 0;
+        public int Calculate(List<int> numbers)
+        {
+            int sum = 0;
+            foreach (var num in numbers)
+            {
+                if (ShallBeAdded(num))
+                {
+                    sum += num;
+                }
+            }
+            return sum;
+        }
+
+        protected virtual bool ShallBeAdded(int num)
+        {
+            return true;
+        }
     }
-}
+
+    public class PositiveNumbersSumCalculator : NumbersSumCalculator
+    {
+        protected override bool ShallBeAdded(int num)
+        {
+            return num > 0;
+        }
     }
+    
 }
