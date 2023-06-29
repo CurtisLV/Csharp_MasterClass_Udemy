@@ -1,6 +1,10 @@
 ﻿int seasonNumber = 0;
 Season spring = (Season)seasonNumber;
 
+decimal a = 10.01m;
+int integer = 10;
+decimal b = integer;
+
 Console.ReadKey();
 
 public enum Season
@@ -35,9 +39,9 @@ public enum Season
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
 
-var cheddar = new Cheddar(2, 2);
-Console.WriteLine(cheddar);
-Console.ReadKey();
+//var cheddar = new Cheddar(2, 2);
+//Console.WriteLine(cheddar);
+//Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
 
