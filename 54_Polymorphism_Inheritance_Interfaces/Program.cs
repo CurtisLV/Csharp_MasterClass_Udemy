@@ -27,8 +27,7 @@
 
 var pizza = new Pizza();
 
-Console.WriteLine(pizza.number);
-Console.WriteLine(pizza.date);
+Console.WriteLine(pizza.ingredient);
 
 Console.ReadKey();
 
@@ -77,8 +76,7 @@ Console.ReadKey();
 
 public class Pizza
 {
-    public int number;
-    public DateTime date;
+    public Ingredient ingredient;
     private List<Ingredient> _ingredients = new List<Ingredient>();
 
     public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
