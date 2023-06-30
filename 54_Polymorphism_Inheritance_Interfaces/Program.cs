@@ -49,9 +49,10 @@
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
 
-var cheddar = new Cheddar(2, 2);
-
+//var cheddar = new Cheddar(2, 12);
 //Console.WriteLine(cheddar);
+
+Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
 Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
