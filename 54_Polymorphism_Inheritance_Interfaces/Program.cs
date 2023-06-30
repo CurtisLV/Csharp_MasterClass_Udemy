@@ -1,29 +1,29 @@
-﻿int firstSeasonNumber = 0;
-Season spring = (Season)firstSeasonNumber;
+﻿//int firstSeasonNumber = 0;
+//Season spring = (Season)firstSeasonNumber;
 
-decimal a = 10.01m;
+//decimal a = 10.01m;
 
-// implicit conversion
-int integer = 10;
-decimal b = integer;
+//// implicit conversion
+//int integer = 10;
+//decimal b = integer;
 
-// explicit conversion
-decimal c = 10.01m;
-int d = (int)c;
+//// explicit conversion
+//decimal c = 10.01m;
+//int d = (int)c;
 
-int secondSeasonNumber = 1;
-Season summer = (Season)secondSeasonNumber;
-Console.WriteLine(summer);
+//int secondSeasonNumber = 1;
+//Season summer = (Season)secondSeasonNumber;
+//Console.WriteLine(summer);
 
-Console.ReadKey();
+//Console.ReadKey();
 
-public enum Season
-{
-    Spring,
-    Summer,
-    Autumn,
-    Winter
-}
+//public enum Season
+//{
+//    Spring,
+//    Summer,
+//    Autumn,
+//    Winter
+//}
 
 //var pizza = new Pizza();
 //pizza.AddIngridients(new Cheddar());
@@ -49,9 +49,10 @@ public enum Season
 //Console.WriteLine(cheddar.PrivateMethod());
 //Console.WriteLine(cheddar.ProtectedMethod());
 
-//var cheddar = new Cheddar(2, 2);
+var cheddar = new Cheddar(2, 2);
+
 //Console.WriteLine(cheddar);
-//Console.ReadKey();
+Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
 
