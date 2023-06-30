@@ -53,8 +53,11 @@
 //Console.WriteLine(cheddar);
 
 Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
-
 Cheddar cheddar = (Cheddar)ingredient; // downcasting - converting from base to derived class;
+
+Console.WriteLine($"is object? {(ingredient is object)}");
+Console.WriteLine($"is igredient {(ingredient is Ingredient)}");
+Console.WriteLine($"is cheddar {(ingredient is Cheddar)}");
 
 Console.ReadKey();
 
