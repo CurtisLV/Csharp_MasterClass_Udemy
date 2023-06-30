@@ -27,7 +27,10 @@
 
 var pizza = new Pizza();
 
-Console.WriteLine(pizza.ingredient);
+if (pizza is not null)
+{
+    Console.WriteLine(pizza.ingredient);
+}
 
 Console.ReadKey();
 
