@@ -53,6 +53,9 @@
 //Console.WriteLine(cheddar);
 
 Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
+
+Cheddar cheddar = (Cheddar)ingredient; // downcasting - converting from base to derived class;
+
 Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
