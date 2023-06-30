@@ -25,7 +25,13 @@
 //    Winter
 //}
 
-//var pizza = new Pizza();
+var pizza = new Pizza();
+
+Console.WriteLine(pizza.number);
+Console.WriteLine(pizza.date);
+
+Console.ReadKey();
+
 //pizza.AddIngridients(new Cheddar());
 //pizza.AddIngridients(new Mozzarella());
 //pizza.AddIngridients(new TomatoSauce());
@@ -52,15 +58,15 @@
 //var cheddar = new Cheddar(2, 12);
 //Console.WriteLine(cheddar);
 
-Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
-Cheddar cheddar = (Cheddar)ingredient; // downcasting - converting from base to derived class;
+//Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
+//Cheddar cheddar = (Cheddar)ingredient; // downcasting - converting from base to derived class;
 
-Console.WriteLine($"is object? {(ingredient is object)}");
-Console.WriteLine($"is igredient? {(ingredient is Ingredient)}");
-Console.WriteLine($"is cheddar? {(ingredient is Cheddar)}");
-Console.WriteLine($"is mozarella? {(ingredient is Mozzarella)}");
+//Console.WriteLine($"is object? {(ingredient is object)}");
+//Console.WriteLine($"is igredient? {(ingredient is Ingredient)}");
+//Console.WriteLine($"is cheddar? {(ingredient is Cheddar)}");
+//Console.WriteLine($"is mozarella? {(ingredient is Mozzarella)}");
 
-Console.ReadKey();
+//Console.ReadKey();
 
 //var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
 
@@ -71,6 +77,8 @@ Console.ReadKey();
 
 public class Pizza
 {
+    public int number;
+    public DateTime date;
     private List<Ingredient> _ingredients = new List<Ingredient>();
 
     public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
