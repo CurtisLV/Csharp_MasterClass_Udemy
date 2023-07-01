@@ -171,6 +171,9 @@ public static class NumericTypesDescriber
 {
     public static string Describe(object someObject)
     {
-        //your code goes here
+        // If this object is any of the int, double, or decimal types, it should print the type's name and the object value.
+
+
+        // If the input is a different type, this method should return null.
     }
 }
