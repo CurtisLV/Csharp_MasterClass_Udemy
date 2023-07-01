@@ -164,3 +164,13 @@ public class Mozzarella : Cheese
     public override string Name => "Mozzarella";
     public bool IsLight { get; }
 }
+
+// Coding assignment
+
+public static class NumericTypesDescriber
+{
+    public static string Describe(object someObject)
+    {
+        //your code goes here
+    }
+}
