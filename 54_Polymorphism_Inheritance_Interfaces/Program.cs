@@ -174,19 +174,14 @@ public static class NumericTypesDescriber
         // If this object is any of the int, double,
         // or decimal types, it should print
         // the type's name and the object value.
-        if (someObject is int)
+        if (someObject is int asInt)
         {
             return $"{someObject.GetType().Name} of value {someObject.ToString()}";
         }
 
-        if (someObject is double)
+        if (someObject is double || someObject is decimal)
         {
-            //
-        }
-
-        if (someObject is decimal)
-        {
-            //
+            return $"{someObject.GetType().Name} of value {someObject.ToString()}";
         }
 
         return null;
