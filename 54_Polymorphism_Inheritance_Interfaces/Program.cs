@@ -176,7 +176,7 @@ public static class NumericTypesDescriber
         // the type's name and the object value.
         if (someObject is int asInt)
         {
-            return $"{someObject.GetType().Name} of value {someObject.ToString()}";
+            return $"Int of value {asInt}";
         }
 
         if (someObject is double || someObject is decimal)
