@@ -176,10 +176,12 @@ public static class NumericTypesDescriber
         // the type's name and the object value.
         if (someObject is int || someObject is double || someObject is decimal)
         {
-            //
+            return $"{someObject.GetType} of value {someObject.ToString}";
         }
 
         // If the input is a different type,
         // this method should return null.
+
+        return null;
     }
 }
