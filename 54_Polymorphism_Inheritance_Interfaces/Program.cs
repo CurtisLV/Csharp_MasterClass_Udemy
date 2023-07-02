@@ -81,7 +81,12 @@ Console.ReadKey();
 
 Ingredient GenerateRandomIngredient()
 {
-    //
+    var random = new Random();
+    var number = random.Next(1, 4);
+    if (number == 1)
+    {
+        return new Cheddar(2, 12);
+    }
 }
 
 public class Pizza
