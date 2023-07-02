@@ -156,10 +156,7 @@ public class Cheddar : Ingredient
         $"{base.Name}, more specifically, a Cheddar cheese aged for {AgedForMonths} months";
     public int AgedForMonths { get; }
 
-    public override void Prepare()
-    {
-        throw new NotImplementedException();
-    }
+    public override void Prepare() => Console.WriteLine("Grate and sprinkle over pizza.");
 
     public void UseMethodsFromBaseClass()
     {
