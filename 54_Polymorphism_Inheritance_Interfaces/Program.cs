@@ -141,6 +141,11 @@ public class Cheese : Ingredient
     {
         //
     }
+
+    public override void Prepare()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Cheddar : Ingredient
