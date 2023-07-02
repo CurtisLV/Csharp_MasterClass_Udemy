@@ -108,7 +108,7 @@ public class Pizza
     public override string ToString() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
 
-public class Ingredient
+public abstract class Ingredient
 {
     public Ingredient(int priceIfExtraTopping)
     {
@@ -121,6 +121,8 @@ public class Ingredient
     public override string ToString() => Name;
 
     public virtual string Name { get; } = "Some ingredient!";
+
+    public abstract void Prepare();
 
     public int PublicField;
 
