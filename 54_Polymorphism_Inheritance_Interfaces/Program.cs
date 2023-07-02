@@ -87,6 +87,10 @@ Ingredient GenerateRandomIngredient()
     {
         return new Cheddar(2, 12);
     }
+    if (number == 2)
+    {
+        return new TomatoSauce(1);
+    }
 }
 
 public class Pizza
