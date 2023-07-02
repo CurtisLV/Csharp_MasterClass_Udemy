@@ -34,6 +34,10 @@ if (pizza is not null)
 
 Ingredient ingredient = GenerateRandomIngredient();
 
+// casting with 'as' gives a null instead of runtime error
+// so there should be a check 'if not null' when using 'as'
+Cheddar cheddar = ingredient as Cheddar;
+
 Console.ReadKey();
 
 //pizza.AddIngridients(new Cheddar());
