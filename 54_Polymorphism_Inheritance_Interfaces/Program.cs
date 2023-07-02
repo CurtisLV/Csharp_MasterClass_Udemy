@@ -32,6 +32,8 @@ if (pizza is not null)
     Console.WriteLine(pizza.ingredient);
 }
 
+Ingredient ingredient = GenerateRandomIngredient();
+
 Console.ReadKey();
 
 //pizza.AddIngridients(new Cheddar());
@@ -76,6 +78,11 @@ Console.ReadKey();
 //{
 //    Console.WriteLine(ingredient.Name);
 //}
+
+Ingredient GenerateRandomIngredient()
+{
+    //
+}
 
 public class Pizza
 {
