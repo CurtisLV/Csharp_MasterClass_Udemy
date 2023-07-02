@@ -174,6 +174,11 @@ public class TomatoSauce : Ingredient
 
     public override string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
+
+    public override void Prepare()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Mozzarella : Cheese
