@@ -133,18 +133,13 @@ public abstract class Ingredient
     private string PrivateMethod() => "This method is PRIVATE in the Ingredient class";
 }
 
-public class Cheese : Ingredient
+public abstract class Cheese : Ingredient
 {
     //
     public Cheese(int priceIfExtraTopping)
         : base(priceIfExtraTopping)
     {
         //
-    }
-
-    public override void Prepare()
-    {
-        throw new NotImplementedException();
     }
 }
 
@@ -191,6 +186,9 @@ public class Mozzarella : Cheese
 
     public override string Name => "Mozzarella";
     public bool IsLight { get; }
+
+    public override void Prepare() =>
+        Console.WriteLine("Slice thinly and place on top of the pizza");
 }
 
 // Coding assignment
