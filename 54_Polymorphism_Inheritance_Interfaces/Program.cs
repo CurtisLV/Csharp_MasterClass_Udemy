@@ -91,6 +91,7 @@ Ingredient GenerateRandomIngredient()
     {
         return new TomatoSauce(1);
     }
+    return new Mozzarella(2);
 }
 
 public class Pizza
