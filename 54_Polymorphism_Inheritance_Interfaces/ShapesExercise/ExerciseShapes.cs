@@ -35,10 +35,7 @@ public class Square : Shape
         Side = side;
     }
 
-    public override double CalculateArea()
-    {
-        return Side * Side;
-    }
+    public override double CalculateArea() => Side * Side;
 }
 
 public class Rectangle : Shape
@@ -52,10 +49,7 @@ public class Rectangle : Shape
         Height = height;
     }
 
-    public override double CalculateArea()
-    {
-        return Width * Height;
-    }
+    public override double CalculateArea() => Width * Height;
 }
 
 public class Circle : Shape
@@ -67,8 +61,5 @@ public class Circle : Shape
         Radius = radius;
     }
 
-    public override double CalculateArea()
-    {
-        return Math.PI * Radius * Radius;
-    }
+    public override double CalculateArea() => Math.PI * Radius * Radius;
 }
