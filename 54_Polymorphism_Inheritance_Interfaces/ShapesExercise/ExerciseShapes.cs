@@ -24,10 +24,7 @@ public static class ExerciseShapes
 //your code goes here - define the Shape class
 public abstract class Shape
 {
-    double CalculateArea()
-    {
-        //
-    }
+    public abstract double CalculateArea();
 }
 
 public class Square : Shape
@@ -37,6 +34,11 @@ public class Square : Shape
     public Square(double side)
     {
         Side = side;
+    }
+
+    public override double CalculateArea()
+    {
+        throw new NotImplementedException();
     }
 
     //your code goes here
@@ -51,6 +53,11 @@ public class Rectangle : Shape
     {
         Width = width;
         Height = height;
+    }
+
+    public override double CalculateArea()
+    {
+        throw new NotImplementedException();
     }
 
     //your code goes here
