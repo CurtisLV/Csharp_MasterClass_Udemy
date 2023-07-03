@@ -37,7 +37,7 @@ public class Square : Shape
 
     public override double CalculateArea()
     {
-        throw new NotImplementedException();
+        return Side * Side;
     }
 }
 
@@ -54,7 +54,7 @@ public class Rectangle : Shape
 
     public override double CalculateArea()
     {
-        throw new NotImplementedException();
+        return Width * Height;
     }
 }
 
@@ -69,6 +69,6 @@ public class Circle : Shape
 
     public override double CalculateArea()
     {
-        throw new NotImplementedException();
+        return Math.PI * Radius * 2;
     }
 }
