@@ -69,6 +69,6 @@ public class Circle : Shape
 
     public override double CalculateArea()
     {
-        return Math.PI * Radius * 2;
+        return Math.PI * Radius * Radius;
     }
 }
