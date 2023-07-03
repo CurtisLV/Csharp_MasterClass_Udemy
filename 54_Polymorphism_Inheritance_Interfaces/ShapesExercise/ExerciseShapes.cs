@@ -22,6 +22,13 @@ public static class ExerciseShapes
 }
 
 //your code goes here - define the Shape class
+public abstract class Shape
+{
+    double CalculateArea()
+    {
+        //
+    }
+}
 
 public class Square : Shape
 {
