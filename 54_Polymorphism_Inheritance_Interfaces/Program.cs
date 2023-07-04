@@ -180,6 +180,15 @@ public class TomatoSauce : Ingredient
         Console.WriteLine("Cook tomatoes with basil, garlic and salt. " + "Spread on pizza.");
 }
 
+public class SpecialTomatoSauce : TomatoSauce
+{
+    public SpecialTomatoSauce(int priceIfExtraTopping)
+        : base(priceIfExtraTopping)
+    {
+        //
+    }
+}
+
 public sealed class Mozzarella : Cheese
 {
     public Mozzarella(int priceIfExtraTopping)
