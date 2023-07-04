@@ -25,6 +25,54 @@
 //    Winter
 //}
 
+
+
+
+// casting with 'as' gives a null instead of runtime error
+// so there should be a check 'if not null' when using 'as'
+
+//pizza.AddIngridients(new Cheddar());
+//pizza.AddIngridients(new Mozzarella());
+//pizza.AddIngridients(new TomatoSauce());
+//Console.WriteLine(pizza.ToString());
+
+//var ingridient = new Ingredient();
+//ingridient.PublicField = 10;
+
+//Cheddar cheddar = new Cheddar();
+//Console.WriteLine(cheddar.Name);
+//cheddar.PublicField = 20;
+
+
+//Ingredient ingredient1 = new Cheddar();
+//Console.WriteLine(ingredient1.Name);
+
+//Console.WriteLine("Value in ingridient " + ingridient.PublicField);
+//Console.WriteLine("Value in cheddar " + cheddar.PublicField);
+
+//Console.WriteLine(cheddar.PublicMethod());
+//Console.WriteLine(cheddar.PrivateMethod());
+//Console.WriteLine(cheddar.ProtectedMethod());
+
+//var cheddar = new Cheddar(2, 12);
+//Console.WriteLine(cheddar);
+
+//Ingredient ingredient = new Cheddar(2, 12); // upcasting - converting from derived to base class
+//Cheddar cheddar = (Cheddar)ingredient; // downcasting - converting from base to derived class;
+
+//Console.WriteLine($"is object? {(ingredient is object)}");
+//Console.WriteLine($"is igredient? {(ingredient is Ingredient)}");
+//Console.WriteLine($"is cheddar? {(ingredient is Cheddar)}");
+//Console.WriteLine($"is mozarella? {(ingredient is Mozzarella)}");
+
+//Console.ReadKey();
+
+//var ingredients = new List<Ingredient> { new Cheddar(), new Mozzarella(), new TomatoSauce() };
+
+//foreach (var ingredient in ingredients)
+//{
+//    Console.WriteLine(ingredient.Name);
+//}
 var pizza = new Pizza();
 
 if (pizza is not null)

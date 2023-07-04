@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="NumberSumCalc\" />
-    <Folder Include="Pizzeria\" />
   </ItemGroup>
 
 </Project>
