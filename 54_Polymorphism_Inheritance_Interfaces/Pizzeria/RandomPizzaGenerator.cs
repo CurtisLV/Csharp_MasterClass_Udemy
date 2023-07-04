@@ -1,6 +1,6 @@
-﻿class RandomPizzaGenerator
+﻿public static class RandomPizzaGenerator
 {
-    Pizza Generate(int howManyIngredients)
+    public static Pizza Generate(int howManyIngredients)
     {
         var pizza = new Pizza();
         for (int i = 0; i < howManyIngredients; i++)
@@ -11,7 +11,7 @@
         return pizza;
     }
 
-    Ingredient GenerateRandomIngredient()
+    private static Ingredient GenerateRandomIngredient()
     {
         var random = new Random();
         var number = random.Next(1, 4);

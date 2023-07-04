@@ -25,9 +25,6 @@
 //    Winter
 //}
 
-
-
-
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
 
