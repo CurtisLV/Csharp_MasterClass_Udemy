@@ -86,6 +86,12 @@ Console.ReadKey();
 Pizza Generate(int howManyIngredients)
 {
     var pizza = new Pizza();
+    for (int i = 0; i < howManyIngredients; i++)
+    {
+        var randomIngredient = GenerateRandomIngredient();
+        pizza.AddIngridients(randomIngredient);
+    }
+    return pizza;
 }
 
 Ingredient GenerateRandomIngredient()
