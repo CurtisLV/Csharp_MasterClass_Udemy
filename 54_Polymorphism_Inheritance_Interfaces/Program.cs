@@ -83,6 +83,11 @@ Console.ReadKey();
 //    Console.WriteLine(ingredient.Name);
 //}
 
+Pizza Generate(int howManyIngredients)
+{
+    var pizza = new Pizza();
+}
+
 Ingredient GenerateRandomIngredient()
 {
     var random = new Random();
@@ -188,10 +193,10 @@ public class SpecialTomatoSauce : TomatoSauce
         //
     }
 
-    public override void Prepare()
-    {
-        base.Prepare();
-    }
+    //public override void Prepare()
+    //{
+    //    base.Prepare();
+    //}
 }
 
 public sealed class Mozzarella : Cheese
