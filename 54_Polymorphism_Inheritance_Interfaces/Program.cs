@@ -123,10 +123,7 @@ public abstract class Ingredient
 public abstract class Cheese : Ingredient
 {
     public Cheese(int priceIfExtraTopping)
-        : base(priceIfExtraTopping)
-    {
-        //
-    }
+        : base(priceIfExtraTopping) { }
 }
 
 public class Cheddar : Ingredient
@@ -155,10 +152,7 @@ public class Cheddar : Ingredient
 public class TomatoSauce : Ingredient
 {
     public TomatoSauce(int priceIfExtraTopping)
-        : base(priceIfExtraTopping)
-    {
-        //
-    }
+        : base(priceIfExtraTopping) { }
 
     public override string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
@@ -175,6 +169,7 @@ public class SpecialTomatoSauce : TomatoSauce
         //
     }
 
+    // cannot be override sealed (or static) method
     //public override void Prepare()
     //{
     //    base.Prepare();
@@ -184,10 +179,7 @@ public class SpecialTomatoSauce : TomatoSauce
 public sealed class Mozzarella : Cheese
 {
     public Mozzarella(int priceIfExtraTopping)
-        : base(priceIfExtraTopping)
-    {
-        //
-    }
+        : base(priceIfExtraTopping) { }
 
     public override string Name => "Mozzarella";
     public bool IsLight { get; }
