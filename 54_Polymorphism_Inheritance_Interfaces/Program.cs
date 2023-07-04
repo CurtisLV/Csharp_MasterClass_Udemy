@@ -176,7 +176,7 @@ public class TomatoSauce : Ingredient
     public override string Name => "Tomato sauce";
     public int TomatoesIn100Grams { get; }
 
-    public override void Prepare() =>
+    public sealed override void Prepare() =>
         Console.WriteLine("Cook tomatoes with basil, garlic and salt. " + "Spread on pizza.");
 }
 
@@ -186,6 +186,11 @@ public class SpecialTomatoSauce : TomatoSauce
         : base(priceIfExtraTopping)
     {
         //
+    }
+
+    public override void Prepare()
+    {
+        base.Prepare();
     }
 }
 
