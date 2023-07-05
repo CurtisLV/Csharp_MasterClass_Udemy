@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _54_Polymorphism_Inheritance_Interfaces.Extensions
+namespace _54_Polymorphism_Inheritance_Interfaces.Extensions;
+
+public class StringExtensions
 {
-    internal class StringExtensions { }
+    //
 }
