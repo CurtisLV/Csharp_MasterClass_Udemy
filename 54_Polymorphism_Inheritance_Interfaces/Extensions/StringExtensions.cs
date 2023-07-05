@@ -2,5 +2,5 @@
 
 public static class StringExtensions
 {
-    public static int CountLines(this string input) => input.Split(Environment.NewLine).Length;
+    public static int CountLines(this string input) => input.Split(Environment.NewLine).Length; // 'this' parameter always has to be first
 }

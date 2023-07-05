@@ -1,4 +1,5 @@
 ﻿using _54_Polymorphism_Inheritance_Interfaces.Pizzeria;
+using _54_Polymorphism_Inheritance_Interfaces.Extensions;
 
 var multilineText =
     @"aaa
@@ -7,7 +8,7 @@ ccc
 ddd
 ";
 
-Console.WriteLine("Count of lines is " + CountLines(multilineText));
+Console.WriteLine("Count of lines is " + multilineText.CountLines());
 
 Console.ReadKey();
 
