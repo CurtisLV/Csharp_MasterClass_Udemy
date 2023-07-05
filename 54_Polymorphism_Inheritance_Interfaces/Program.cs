@@ -1,4 +1,11 @@
-﻿//int firstSeasonNumber = 0;
+﻿var multilineText =
+    @"aaa
+bbb
+ccc
+ddd
+";
+
+//int firstSeasonNumber = 0;
 //Season spring = (Season)firstSeasonNumber;
 
 //decimal a = 10.01m;
