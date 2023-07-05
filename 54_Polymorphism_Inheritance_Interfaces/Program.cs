@@ -33,13 +33,13 @@ int CountLines(string input) => input.Split(Environment.NewLine).Length;
 
 //Console.ReadKey();
 
-//public enum Season
-//{
-//    Spring,
-//    Summer,
-//    Autumn,
-//    Winter
-//}
+public enum Season
+{
+    Spring,
+    Summer,
+    Autumn,
+    Winter
+}
 
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
