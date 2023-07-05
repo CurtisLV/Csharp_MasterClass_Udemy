@@ -7,6 +7,12 @@ ccc
 ddd
 ";
 
+Console.WriteLine("Count of lines is " + CountLines(multilineText));
+
+Console.ReadKey();
+
+int CountLines(string input) => input.Split(Environment.NewLine).Length;
+
 //int firstSeasonNumber = 0;
 //Season spring = (Season)firstSeasonNumber;
 
