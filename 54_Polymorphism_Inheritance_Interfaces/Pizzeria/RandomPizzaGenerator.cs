@@ -1,4 +1,6 @@
-﻿public static class RandomPizzaGenerator
+﻿namespace _54_Polymorphism_Inheritance_Interfaces.Pizzeria;
+
+public static class RandomPizzaGenerator
 {
     public static Pizza Generate(int howManyIngredients)
     {
