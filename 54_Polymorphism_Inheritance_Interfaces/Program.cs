@@ -234,7 +234,7 @@ public static class ListExtension
     public static List<int> TakeEverySecond(this List<int> list)
     {
         List<int> result = new List<int>();
-        for (int i = 0; i < result.Count; i += 2)
+        for (int i = 0; i < list.Count; i += 2)
         {
             result.Add(list[i]);
         }
