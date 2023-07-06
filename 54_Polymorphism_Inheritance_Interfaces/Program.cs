@@ -231,5 +231,8 @@ public static class NumericTypesDescriber
 
 public class ListExtension
 {
-    //
+    List<int> TakeEverySecond()
+    {
+        //
+    }
 }
