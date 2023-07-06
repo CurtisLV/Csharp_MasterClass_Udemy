@@ -229,9 +229,9 @@ public static class NumericTypesDescriber
 
 // Second Coding assignment
 
-public class ListExtension
+public static class ListExtension
 {
-    List<int> TakeEverySecond()
+    List<int> TakeEverySecond(this int list)
     {
         //
     }
