@@ -231,7 +231,7 @@ public static class NumericTypesDescriber
 
 public static class ListExtension
 {
-    static List<int> TakeEverySecond(this int list)
+    static List<int> TakeEverySecond(this List<int> list)
     {
         List<int> result = new List<int>();
         for (int i = 0; i < result.Count; i = i + 2)
