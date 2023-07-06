@@ -231,12 +231,12 @@ public static class NumericTypesDescriber
 
 public static class ListExtension
 {
-    List<int> TakeEverySecond(this int list)
+    static List<int> TakeEverySecond(this int list)
     {
         List<int> result = new List<int>();
-        foreach (int item in list) 
-        { 
-            //
+        for (int i = 0; i < result.Count; i = i + 2)
+        {
+            result.Add(i);
         }
         return result;
     }
