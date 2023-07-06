@@ -233,6 +233,11 @@ public static class ListExtension
 {
     List<int> TakeEverySecond(this int list)
     {
-        //
+        List<int> result = new List<int>();
+        foreach (int item in list) 
+        { 
+            //
+        }
+        return result;
     }
 }
