@@ -1,5 +1,10 @@
 ﻿namespace _54_Polymorphism_Inheritance_Interfaces.Flyables;
 
+public interface IFlyable
+{
+    void Fly();
+}
+
 public class Bird
 {
     public void Tweet() => Console.WriteLine("Tweet, tweet!");
