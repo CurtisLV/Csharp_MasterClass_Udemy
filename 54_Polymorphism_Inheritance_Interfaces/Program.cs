@@ -103,6 +103,11 @@ Cheddar cheddar = ingredient as Cheddar;
 
 Console.ReadKey();
 
+public abstract class Dessert
+{
+    //
+}
+
 public class Panettone
 {
     //
