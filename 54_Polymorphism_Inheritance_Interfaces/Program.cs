@@ -8,6 +8,13 @@ ccc
 ddd
 ";
 
+//public enum Season
+//{
+//    Spring,
+//    Summer,
+//    Autumn,
+//    Winter
+//}
 Console.WriteLine("Count of lines is " + multilineText.CountLines());
 
 Console.ReadKey();
@@ -33,13 +40,7 @@ int CountLines(string input) => input.Split(Environment.NewLine).Length;
 
 //Console.ReadKey();
 
-public enum Season
-{
-    Spring,
-    Summer,
-    Autumn,
-    Winter
-}
+
 
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
@@ -86,6 +87,7 @@ public enum Season
 //{
 //    Console.WriteLine(ingredient.Name);
 //}
+
 var pizza = new Pizza();
 
 if (pizza is not null)
@@ -93,7 +95,7 @@ if (pizza is not null)
     Console.WriteLine(pizza.ingredient);
 }
 
-Ingredient ingredient = GenerateRandomIngredient();
+//Ingredient ingredient = GenerateRandomIngredient();
 
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
