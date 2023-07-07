@@ -105,6 +105,11 @@ Console.ReadKey();
 
 var bakeableDishes = new List<>() { new Pizza(), new Panettone() };
 
+foreach (var bakeableDish in bakeableDishes)
+{
+    Console.WriteLine(bakeableDish.GetInstructions());
+}
+
 public abstract class Dessert
 {
     //
