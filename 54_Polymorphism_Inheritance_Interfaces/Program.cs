@@ -1,5 +1,6 @@
 ﻿using _54_Polymorphism_Inheritance_Interfaces.Pizzeria;
 using _54_Polymorphism_Inheritance_Interfaces.Extensions;
+using System.Runtime.Intrinsics.Arm;
 
 var multilineText =
     @"aaa
@@ -103,7 +104,7 @@ Cheddar cheddar = ingredient as Cheddar;
 
 Console.ReadKey();
 
-var bakeableDishes = new List<>() { new Pizza(), new Panettone() };
+var bakeableDishes = new List<object>() { new Pizza(), new Panettone() };
 
 foreach (var bakeableDish in bakeableDishes)
 {
@@ -115,7 +116,12 @@ public abstract class Dessert
     //
 }
 
-public class Panettone
+public abstract class Bakeable
+{
+    public abstract string GetInstructions();
+}
+
+public class Panettone : Dessert
 {
     //
 }
