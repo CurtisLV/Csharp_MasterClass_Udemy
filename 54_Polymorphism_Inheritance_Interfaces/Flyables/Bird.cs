@@ -9,5 +9,12 @@ public class Bird
 
 public class Kite
 {
-    //
+    public void Fly() => Console.WriteLine("Flying carried by the wind.");
+}
+
+public class Plane
+{
+    public void Fly() => Console.WriteLine("Flying using jet propulsion.");
+
+    public void Fuel() => Console.WriteLine("Filling tanks with jet fuel.");
 }
