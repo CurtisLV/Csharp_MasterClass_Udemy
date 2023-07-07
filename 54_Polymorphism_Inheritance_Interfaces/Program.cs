@@ -103,6 +103,8 @@ Cheddar cheddar = ingredient as Cheddar;
 
 Console.ReadKey();
 
+var bakeableDishes = new List<>() { new Pizza(), new Panettone() };
+
 public abstract class Dessert
 {
     //
