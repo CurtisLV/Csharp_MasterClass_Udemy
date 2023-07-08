@@ -46,9 +46,19 @@
 
     class DomesticCatImplementingInterfaces : IFeline, IHousePet
     {
+        public void HideInACardboardBox()
+        {
+            throw new NotImplementedException();
+        }
+
         public void MakeSound()
         {
             Console.WriteLine("Purr purr.");
+        }
+
+        public void TakeToVet()
+        {
+            throw new NotImplementedException();
         }
     }
 
