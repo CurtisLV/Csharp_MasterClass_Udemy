@@ -46,7 +46,10 @@
 
     class DomesticCatImplementingInterfaces : IFeline, IHousePet
     {
-        //
+        public void MakeSound()
+        {
+            Console.WriteLine("Purr purr.");
+        }
     }
 
     public class Lion : Animal
