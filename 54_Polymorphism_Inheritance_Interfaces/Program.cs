@@ -104,7 +104,7 @@ Cheddar cheddar = ingredient as Cheddar;
 
 Console.ReadKey();
 
-var bakeableDishes = new List<object>() { new Pizza(), new Panettone() };
+var bakeableDishes = new List<IBakeable>() { new Pizza(), new Panettone() };
 
 foreach (var bakeableDish in bakeableDishes)
 {
@@ -123,10 +123,7 @@ public interface IBakeable
 
 public class Panettone : Dessert, IBakeable
 {
-    public string GetInstructions()
-    {
-        throw new NotImplementedException();
-    }
+    public string GetInstructions() => "Bake at 180 degrees C for 35 minutes";
 }
 
 public class Pizza : IBakeable
@@ -136,10 +133,7 @@ public class Pizza : IBakeable
 
     public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
 
-    public string GetInstructions()
-    {
-        throw new NotImplementedException();
-    }
+    public string GetInstructions() => "Bake at 250C for 10 minutes";
 
     public override string ToString() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
