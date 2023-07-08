@@ -44,6 +44,11 @@
         void MakeSound();
     }
 
+    class DomesticCatImplementingInterfaces : IFeline, IHousePet
+    {
+        //
+    }
+
     public class Lion : Animal
     {
         //
