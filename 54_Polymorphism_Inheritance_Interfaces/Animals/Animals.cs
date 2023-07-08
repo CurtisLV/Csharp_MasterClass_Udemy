@@ -31,7 +31,7 @@
 
     interface IAnimal
     {
-        //
+        void MakeSound();
     }
 
     public class Lion : Animal
