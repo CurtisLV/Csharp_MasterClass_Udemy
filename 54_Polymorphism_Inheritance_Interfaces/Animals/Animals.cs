@@ -29,6 +29,11 @@
             Console.WriteLine("<noises of happines when human comes home>");
     }
 
+    interface IAnimal
+    {
+        //
+    }
+
     public class Lion : Animal
     {
         //
