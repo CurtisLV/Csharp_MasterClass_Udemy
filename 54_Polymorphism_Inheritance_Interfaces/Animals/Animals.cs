@@ -36,12 +36,12 @@
 
     interface IHousePet : IAnimal
     {
-        void MakeSound();
+        void TakeToVet();
     }
 
     interface IFeline : IAnimal
     {
-        void MakeSound();
+        void HideInACardboardBox();
     }
 
     class DomesticCatImplementingInterfaces : IFeline, IHousePet
