@@ -116,17 +116,17 @@ public abstract class Dessert
     //
 }
 
-public abstract class Bakeable
+public interface IBakeable
 {
-    public abstract string GetInstructions();
+    string GetInstructions();
 }
 
-public class Panettone : Dessert
+public class Panettone : Dessert, IBakeable
 {
     //
 }
 
-public class Pizza
+public class Pizza : IBakeable
 {
     public Ingredient ingredient;
     private List<Ingredient> _ingredients = new List<Ingredient>();
