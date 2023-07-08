@@ -54,10 +54,7 @@
             Console.WriteLine("Purr purr.");
         }
 
-        public void TakeToVet()
-        {
-            throw new NotImplementedException();
-        }
+        public void TakeToVet() => Console.WriteLine("Take to Dr. Paws using a car.");
     }
 
     public class Lion : Animal
