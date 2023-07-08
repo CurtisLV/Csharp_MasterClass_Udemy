@@ -34,6 +34,11 @@
         void MakeSound();
     }
 
+    interface IHousePet : IAnimal
+    {
+        void MakeSound();
+    }
+
     public class Lion : Animal
     {
         //
