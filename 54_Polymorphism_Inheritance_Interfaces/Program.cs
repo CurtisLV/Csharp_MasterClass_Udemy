@@ -123,7 +123,10 @@ public interface IBakeable
 
 public class Panettone : Dessert, IBakeable
 {
-    //
+    public string GetInstructions()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Pizza : IBakeable
@@ -132,6 +135,11 @@ public class Pizza : IBakeable
     private List<Ingredient> _ingredients = new List<Ingredient>();
 
     public void AddIngridients(Ingredient ingredient) => _ingredients.Add(ingredient);
+
+    public string GetInstructions()
+    {
+        throw new NotImplementedException();
+    }
 
     public override string ToString() => $"This is a pizza with {string.Join(", ", _ingredients)}";
 }
