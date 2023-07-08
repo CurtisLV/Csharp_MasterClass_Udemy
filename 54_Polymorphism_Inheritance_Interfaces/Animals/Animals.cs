@@ -46,10 +46,8 @@
 
     class DomesticCatImplementingInterfaces : IFeline, IHousePet
     {
-        public void HideInACardboardBox()
-        {
-            throw new NotImplementedException();
-        }
+        public void HideInACardboardBox() =>
+            Console.WriteLine("Hide in any cardboard box in sight.");
 
         public void MakeSound()
         {
