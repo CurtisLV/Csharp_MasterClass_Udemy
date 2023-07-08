@@ -39,6 +39,11 @@
         void MakeSound();
     }
 
+    interface IFeline : IAnimal
+    {
+        void MakeSound();
+    }
+
     public class Lion : Animal
     {
         //
