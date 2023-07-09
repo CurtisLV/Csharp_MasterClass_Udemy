@@ -302,11 +302,19 @@ public class ToPowerOf2Raiser : INumericTransformation
 public class By2Multiplier : INumericTransformation
 {
     //
+    public int Transform(int number)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class By1Incrementer : INumericTransformation
 {
     //
+    public int Transform(int number)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public interface INumericTransformation
