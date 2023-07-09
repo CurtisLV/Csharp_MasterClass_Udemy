@@ -291,6 +291,21 @@ public static class NumericTransform
     }
 }
 
+internal class ToPowerOf2Raiser : INumericTransformation
+{
+    //
+}
+
+internal class By2Multiplier : INumericTransformation
+{
+    //
+}
+
+internal class By1Incrementer : INumericTransformation
+{
+    //
+}
+
 internal interface INumericTransformation
 {
     //`
