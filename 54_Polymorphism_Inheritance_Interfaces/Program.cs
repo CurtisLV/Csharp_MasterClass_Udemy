@@ -271,7 +271,7 @@ public static class ListExtension
 
 // Third coding exercise
 
-public static class Exercise
+public static class NumericTransform
 {
     public static int Transform(int number)
     {
@@ -289,4 +289,9 @@ public static class Exercise
         }
         return result;
     }
+}
+
+internal interface INumericTransformation
+{
+    //`
 }
