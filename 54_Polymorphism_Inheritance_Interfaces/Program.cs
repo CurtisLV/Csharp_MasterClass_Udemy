@@ -291,26 +291,25 @@ public static class NumericTransform
     }
 }
 
-internal class ToPowerOf2Raiser : INumericTransformation
+public class ToPowerOf2Raiser : INumericTransformation
 {
-    //
     public int Transform(int number)
     {
-        throw new NotImplementedException();
+        return number * number;
     }
 }
 
-internal class By2Multiplier : INumericTransformation
+public class By2Multiplier : INumericTransformation
 {
     //
 }
 
-internal class By1Incrementer : INumericTransformation
+public class By1Incrementer : INumericTransformation
 {
     //
 }
 
-internal interface INumericTransformation
+public interface INumericTransformation
 {
     int Transform(int number);
 }
