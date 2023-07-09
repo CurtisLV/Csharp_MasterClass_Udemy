@@ -301,19 +301,17 @@ public class ToPowerOf2Raiser : INumericTransformation
 
 public class By2Multiplier : INumericTransformation
 {
-    //
     public int Transform(int number)
     {
-        throw new NotImplementedException();
+        return number * 2;
     }
 }
 
 public class By1Incrementer : INumericTransformation
 {
-    //
     public int Transform(int number)
     {
-        throw new NotImplementedException();
+        return number += 1;
     }
 }
 
