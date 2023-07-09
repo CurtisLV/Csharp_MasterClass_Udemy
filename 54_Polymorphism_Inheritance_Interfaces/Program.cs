@@ -293,26 +293,17 @@ public static class NumericTransform
 
 public class ToPowerOf2Raiser : INumericTransformation
 {
-    public int Transform(int number)
-    {
-        return number * number;
-    }
+    public int Transform(int number) => number * number;
 }
 
 public class By2Multiplier : INumericTransformation
 {
-    public int Transform(int number)
-    {
-        return number * 2;
-    }
+    public int Transform(int number) => number * 2;
 }
 
 public class By1Incrementer : INumericTransformation
 {
-    public int Transform(int number)
-    {
-        return number += 1;
-    }
+    public int Transform(int number) => number += 1;
 }
 
 public interface INumericTransformation
