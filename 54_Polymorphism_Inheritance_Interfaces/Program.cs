@@ -294,6 +294,10 @@ public static class NumericTransform
 internal class ToPowerOf2Raiser : INumericTransformation
 {
     //
+    public int Transform(int number)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 internal class By2Multiplier : INumericTransformation
@@ -308,5 +312,5 @@ internal class By1Incrementer : INumericTransformation
 
 internal interface INumericTransformation
 {
-    //`
+    int Transform(int number);
 }
