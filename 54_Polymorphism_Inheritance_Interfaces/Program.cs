@@ -1,6 +1,4 @@
-﻿using _54_Polymorphism_Inheritance_Interfaces.Pizzeria;
-using _54_Polymorphism_Inheritance_Interfaces.Extensions;
-using System.Runtime.Intrinsics.Arm;
+﻿using _54_Polymorphism_Inheritance_Interfaces.Extensions;
 using System.Text.Json;
 
 var multilineText =
@@ -10,13 +8,6 @@ ccc
 ddd
 ";
 
-//public enum Season
-//{
-//    Spring,
-//    Summer,
-//    Autumn,
-//    Winter
-//}
 Console.WriteLine("Count of lines is " + multilineText.CountLines());
 
 Console.ReadKey();
@@ -41,8 +32,6 @@ int CountLines(string input) => input.Split(Environment.NewLine).Length;
 //Console.WriteLine(summer);
 
 //Console.ReadKey();
-
-
 
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
@@ -129,6 +118,14 @@ public class Person
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int YearOfBirth { get; set; }
+}
+
+public enum Season
+{
+    Spring,
+    Summer,
+    Autumn,
+    Winter
 }
 
 public abstract class Dessert
