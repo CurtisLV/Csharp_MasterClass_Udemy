@@ -113,7 +113,7 @@ if (pizza is not null)
 
 // casting with 'as' gives a null instead of runtime error
 // so there should be a check 'if not null' when using 'as'
-Cheddar cheddar = ingredient as Cheddar;
+//Cheddar cheddar = ingredient as Cheddar;
 
 Console.ReadKey();
 
@@ -122,6 +122,13 @@ var bakeableDishes = new List<IBakeable>() { new Pizza(), new Panettone() };
 foreach (var bakeableDish in bakeableDishes)
 {
     Console.WriteLine(bakeableDish.GetInstructions());
+}
+
+public class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int YearOfBirth { get; set; }
 }
 
 public abstract class Dessert
