@@ -1,6 +1,7 @@
 ﻿using _54_Polymorphism_Inheritance_Interfaces.Pizzeria;
 using _54_Polymorphism_Inheritance_Interfaces.Extensions;
 using System.Runtime.Intrinsics.Arm;
+using System.Text.Json;
 
 var multilineText =
     @"aaa
@@ -89,7 +90,14 @@ int CountLines(string input) => input.Split(Environment.NewLine).Length;
 //    Console.WriteLine(ingredient.Name);
 //}
 
-var pizza = new Pizza();
+var person = new Person()
+{
+    FirstName = "John",
+    LastName = "Smith",
+    YearOfBirth = 1972
+};
+
+new Pizza();
 
 if (pizza is not null)
 {
