@@ -90,6 +90,7 @@ int CountLines(string input) => input.Split(Environment.NewLine).Length;
 //    Console.WriteLine(ingredient.Name);
 //}
 
+
 var person = new Person()
 {
     FirstName = "John",
@@ -97,7 +98,11 @@ var person = new Person()
     YearOfBirth = 1972
 };
 
-new Pizza();
+var asJson = JsonSerializer.Serialize(person);
+Console.WriteLine("As JSON: ");
+Console.WriteLine(asJson);
+
+var pizza = new Pizza();
 
 if (pizza is not null)
 {
