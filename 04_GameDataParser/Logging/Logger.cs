@@ -12,7 +12,7 @@ public class Logger
     public void Log(Exception ex)
     {
         var entry =
-$@"[{DateTime.Now}]
+            $@"[{DateTime.Now}]
 Exception message: {ex.Message}
 Stack trace: {ex.StackTrace}
 
