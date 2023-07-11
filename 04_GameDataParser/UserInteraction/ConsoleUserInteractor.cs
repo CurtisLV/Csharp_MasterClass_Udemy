@@ -40,8 +40,7 @@ public class ConsoleUserInteractor : IUserInteractor
             {
                 isFilePathValid = true;
             }
-        }
-        while (!isFilePathValid);
+        } while (!isFilePathValid);
         return fileName;
     }
 }
