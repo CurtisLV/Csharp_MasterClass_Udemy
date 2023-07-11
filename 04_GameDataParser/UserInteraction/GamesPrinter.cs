@@ -15,8 +15,7 @@ public class GamesPrinter : IGamesPrinter
     {
         if (videoGames.Count > 0)
         {
-            _userInteractor.PrintMessage(
-                Environment.NewLine + "Loaded games are:");
+            _userInteractor.PrintMessage(Environment.NewLine + "Loaded games are:");
             foreach (var videoGame in videoGames)
             {
                 _userInteractor.PrintMessage(videoGame.ToString());
@@ -24,8 +23,7 @@ public class GamesPrinter : IGamesPrinter
         }
         else
         {
-            _userInteractor.PrintMessage(
-                "No games are present in the input file.");
+            _userInteractor.PrintMessage("No games are present in the input file.");
         }
     }
 }
