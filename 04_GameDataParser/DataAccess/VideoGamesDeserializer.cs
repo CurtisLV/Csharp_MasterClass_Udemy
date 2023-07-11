@@ -13,8 +13,7 @@ public class VideoGamesDeserializer : IVideoGamesDeserializer
         _userInteractor = userInteractor;
     }
 
-    public List<VideoGame> DeserializeFrom(
-        string fileName, string fileContents)
+    public List<VideoGame> DeserializeFrom(string fileName, string fileContents)
     {
         try
         {
@@ -22,8 +21,9 @@ public class VideoGamesDeserializer : IVideoGamesDeserializer
         }
         catch (JsonException ex)
         {
-            _userInteractor.PrintError($"JSON in {fileName} file was not " +
-                $"in a valid format. JSON body:");
+            _userInteractor.PrintError(
+                $"JSON in {fileName} file was not " + $"in a valid format. JSON body:"
+            );
             _userInteractor.PrintError(fileContents);
 
             throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
