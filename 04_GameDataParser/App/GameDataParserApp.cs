@@ -14,7 +14,8 @@ public class GameDataParserApp
         IUserInteractor userInteractor,
         IGamesPrinter gamesPrinter,
         IVideoGamesDeserializer videoGamesDeserializer,
-        IFileReader fileReader)
+        IFileReader fileReader
+    )
     {
         _userInteractor = userInteractor;
         _gamesPrinter = gamesPrinter;
@@ -26,8 +27,7 @@ public class GameDataParserApp
     {
         string fileName = _userInteractor.ReadValidFilePath();
         var fileContents = _fileReader.Read(fileName);
-        var videoGames = _videoGamesDeserializer.DeserializeFrom(
-            fileName, fileContents);
+        var videoGames = _videoGamesDeserializer.DeserializeFrom(fileName, fileContents);
         _gamesPrinter.Print(videoGames);
     }
 }
