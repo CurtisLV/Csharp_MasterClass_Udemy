@@ -6,6 +6,5 @@ public class VideoGame
     public int ReleaseYear { get; init; }
     public decimal Rating { get; init; }
 
-    public override string ToString() =>
-        $"{Title}, released in {ReleaseYear}, rating: {Rating}";
+    public override string ToString() => $"{Title}, released in {ReleaseYear}, rating: {Rating}";
 }
