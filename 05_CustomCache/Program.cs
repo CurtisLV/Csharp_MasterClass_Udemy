@@ -37,10 +37,8 @@ public class CachingDataDownloader : IDataDownloader
         _dataDownloader = dataDownloader;
     }
 
-    public string DownloadData(string resourceId)
-    {
-        return _cache.Get(resourceId, _dataDownloader.DownloadData);
-    }
+    public string DownloadData(string resourceId) =>
+        _cache.Get(resourceId, _dataDownloader.DownloadData);
 }
 
 public class PrintingDataDownloader : IDataDownloader
