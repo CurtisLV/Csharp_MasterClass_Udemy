@@ -1,14 +1,12 @@
 ﻿public static class ListExtensions
 {
-    public static List<TTarget> ConvertTo<TSource, TTarget>(
-        this List<TSource> input)
+    public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> input)
     {
         var result = new List<TTarget>();
 
         foreach (var item in input)
         {
-            TTarget itemAfterCasting =
-                (TTarget)Convert.ChangeType(item, typeof(TTarget));
+            TTarget itemAfterCasting = (TTarget)Convert.ChangeType(item, typeof(TTarget));
 
             result.Add(itemAfterCasting);
         }
