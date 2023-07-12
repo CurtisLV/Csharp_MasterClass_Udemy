@@ -1,5 +1,4 @@
-﻿
-public class TwoStrings
+﻿public class TwoStrings
 {
     public TwoStrings(string string1, string string2)
     {
