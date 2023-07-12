@@ -1,5 +1,4 @@
-﻿
-class SimpleList<T>
+﻿class SimpleList<T>
 {
     private T[] _items = new T[4];
     private int _size = 0;
@@ -25,8 +24,7 @@ class SimpleList<T>
     {
         if (index < 0 || index >= _size)
         {
-            throw new IndexOutOfRangeException(
-                $"Index {index} is outside the bounds of the list.");
+            throw new IndexOutOfRangeException($"Index {index} is outside the bounds of the list.");
         }
 
         --_size;
@@ -43,8 +41,7 @@ class SimpleList<T>
     {
         if (index < 0 || index >= _size)
         {
-            throw new IndexOutOfRangeException(
-                $"Index {index} is outside the bounds of the list.");
+            throw new IndexOutOfRangeException($"Index {index} is outside the bounds of the list.");
         }
 
         return _items[index];
