@@ -7,4 +7,3 @@ public class Butter : Ingredient
     public override string PreparationInstructions =>
         $"Melt on low heat. {base.PreparationInstructions}";
 }
-
