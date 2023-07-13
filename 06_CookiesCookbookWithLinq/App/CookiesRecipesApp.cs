@@ -9,7 +9,8 @@ public class CookiesRecipesApp
 
     public CookiesRecipesApp(
         IRecipesRepository recipesRepository,
-        IRecipesUserInteraction recipesUserInteraction)
+        IRecipesUserInteraction recipesUserInteraction
+    )
     {
         _recipesRepository = recipesRepository;
         _recipesUserInteraction = recipesUserInteraction;
@@ -36,8 +37,8 @@ public class CookiesRecipesApp
         else
         {
             _recipesUserInteraction.ShowMessage(
-                "No ingredients have been selected. " +
-                "Recipe will not be saved.");
+                "No ingredients have been selected. " + "Recipe will not be saved."
+            );
         }
 
         _recipesUserInteraction.Exit();
