@@ -8,8 +8,7 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
     private readonly IIngredientsRegister _ingredientsRegister;
 
-    public RecipesConsoleUserInteraction(
-        IIngredientsRegister ingredientsRegister)
+    public RecipesConsoleUserInteraction(IIngredientsRegister ingredientsRegister)
     {
         _ingredientsRegister = ingredientsRegister;
     }
@@ -31,24 +30,22 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
         {
             Console.WriteLine("Existing recipes are:" + Environment.NewLine);
 
-            var allRecipesAsStrings = allRecipes
-            .Select((recipe, index) => 
-$@"*****{index + 1}*****
-{recipe}");
+            var allRecipesAsStrings = allRecipes.Select(
+                (recipe, index) =>
+                    $@"*****{index + 1}*****
+{recipe}"
+            );
 
-            Console.WriteLine(
-                string.Join(Environment.NewLine, allRecipesAsStrings));
+            Console.WriteLine(string.Join(Environment.NewLine, allRecipesAsStrings));
             Console.WriteLine();
         }
     }
 
     public void PromptToCreateRecipe()
     {
-        Console.WriteLine("Create a new cookie recipe! " +
-            "Available ingredients are:");
+        Console.WriteLine("Create a new cookie recipe! " + "Available ingredients are:");
 
-        Console.WriteLine(
-            string.Join(Environment.NewLine, _ingredientsRegister.All));
+        Console.WriteLine(string.Join(Environment.NewLine, _ingredientsRegister.All));
     }
 
     public IEnumerable<Ingredient> ReadIngredientsFromUser()
@@ -58,8 +55,9 @@ $@"*****{index + 1}*****
 
         while (!shallStop)
         {
-            Console.WriteLine("Add an ingredient by its ID, " +
-                "or type anything else if finished.");
+            Console.WriteLine(
+                "Add an ingredient by its ID, " + "or type anything else if finished."
+            );
 
             var userInput = Console.ReadLine();
 
@@ -80,6 +78,3 @@ $@"*****{index + 1}*****
         return ingredients;
     }
 }
-
-
-
