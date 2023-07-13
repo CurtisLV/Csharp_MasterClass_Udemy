@@ -7,4 +7,3 @@ public class Chocolate : Ingredient
     public override string PreparationInstructions =>
         $"Melt in a water bath. {base.PreparationInstructions}";
 }
-
