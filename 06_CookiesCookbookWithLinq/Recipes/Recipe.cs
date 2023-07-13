@@ -13,10 +13,10 @@ public class Recipe
 
     public override string ToString()
     {
-        var steps = Ingredients
-            .Select(ingredient =>
-                $"{ingredient.Name}. {ingredient.PreparationInstructions}");
-            
+        var steps = Ingredients.Select(
+            ingredient => $"{ingredient.Name}. {ingredient.PreparationInstructions}"
+        );
+
         return string.Join(Environment.NewLine, steps);
     }
 }
