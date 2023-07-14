@@ -17,9 +17,9 @@ static class Count
         Console.WriteLine($"countOfPetsNamedBruce: {countOfPetsNamedBruce}");
 
         //we can, of course, define more complex predicate
-        var countOfAllSmallDogs = Data.Pets.Count(pet => 
-            pet.PetType == PetType.Dog && 
-            pet.Weight < 10);
+        var countOfAllSmallDogs = Data.Pets.Count(
+            pet => pet.PetType == PetType.Dog && pet.Weight < 10
+        );
         Console.WriteLine($"countOfAllSmallDogs: {countOfAllSmallDogs}");
 
         //count of all elements
