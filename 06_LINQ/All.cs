@@ -19,8 +19,11 @@ static class All
 
         //please note that we can achieve the same result by using Any
         //and reversing the condition
-        var doAllPetsHaveNonEmptyName_WithAny = 
-            !(Data.Pets.Any(pet => string.IsNullOrEmpty(pet.Name))); //note the "!"
-        Console.WriteLine($"doAllPetsHaveNonEmptyName_WithAny: {doAllPetsHaveNonEmptyName_WithAny}");
+        var doAllPetsHaveNonEmptyName_WithAny = !(
+            Data.Pets.Any(pet => string.IsNullOrEmpty(pet.Name))
+        ); //note the "!"
+        Console.WriteLine(
+            $"doAllPetsHaveNonEmptyName_WithAny: {doAllPetsHaveNonEmptyName_WithAny}"
+        );
     }
 }
