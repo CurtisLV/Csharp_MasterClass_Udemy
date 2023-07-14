@@ -20,8 +20,7 @@ static class Any
         //we can of course use more complex conditions
         //for example, to check if there is any pet with an even Id
         //and name longer than 6 letters
-        var isThereASpecificPet = Data.Pets.Any(
-            pet => pet.Name.Length > 6 && pet.Id % 2 == 0);
+        var isThereASpecificPet = Data.Pets.Any(pet => pet.Name.Length > 6 && pet.Id % 2 == 0);
         Console.WriteLine($"isThereASpecificPet: {isThereASpecificPet}");
 
         //we can use Any without parameter to check if the collection is not empty:
