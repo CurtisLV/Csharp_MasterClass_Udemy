@@ -1,9 +1,8 @@
-﻿namespace _6_LINQ.SampleData
+﻿namespace _6_LINQ.SampleData;
+
+public enum PetType
 {
-    public enum PetType
-    {
-        Cat,
-        Dog,
-        Fish
-    }
+    Cat,
+    Dog,
+    Fish
 }
