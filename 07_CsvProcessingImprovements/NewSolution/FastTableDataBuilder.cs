@@ -29,8 +29,10 @@ public class FastTableDataBuilder : ITableDataBuilder
                 {
                     newRow.AssignCell(column, false);
                 }
-                else if (valueAsString.Contains(".")
-                    && decimal.TryParse(valueAsString, out var valueAsDecimal))
+                else if (
+                    valueAsString.Contains(".")
+                    && decimal.TryParse(valueAsString, out var valueAsDecimal)
+                )
                 {
                     newRow.AssignCell(column, valueAsDecimal);
                 }
