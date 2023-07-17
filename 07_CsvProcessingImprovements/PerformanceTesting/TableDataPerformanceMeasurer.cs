@@ -27,10 +27,7 @@ public static class TableDataPerformanceMeasurer
 
         var timeOfDataReading = stopwatch.Elapsed;
 
-        return new TestResult(
-            memoryIncreaseInBytes,
-            timeOfBuildingTable,
-            timeOfDataReading);
+        return new TestResult(memoryIncreaseInBytes, timeOfBuildingTable, timeOfDataReading);
     }
 
     private static void ReadAllData(ITableData tableData)
