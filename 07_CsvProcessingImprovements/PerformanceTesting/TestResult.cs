@@ -9,7 +9,8 @@ public class TestResult
     public TestResult(
         long memoryIncreaseInBytes,
         TimeSpan timeOfLoading,
-        TimeSpan timeOfDataReading)
+        TimeSpan timeOfDataReading
+    )
     {
         MemoryIncreaseInBytes = memoryIncreaseInBytes;
         TimeOfBuildingTable = timeOfLoading;
