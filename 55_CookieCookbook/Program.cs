@@ -1,7 +1,7 @@
 ﻿// define if saved in .txt or .json
+const FileFormat Format = FileFormat.Json;
 
 // if the defined file is not empty, print all existing recipes
-
 
 Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
@@ -65,6 +65,12 @@ foreach (Ingredient ingredient in ingredients)
     Console.WriteLine($"Ingredient: {ingredient.Name}");
     Console.WriteLine($"Description: {ingredient.Description}");
     Console.WriteLine();
+}
+
+public enum FileFormat
+{
+    Json,
+    Txt
 }
 
 public class Ingredient
