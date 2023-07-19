@@ -1,9 +1,13 @@
-﻿// define if saved in .txt or .json
+﻿const string FileName = "recipes";
+
+// define if saved in .txt or .json
 const FileFormat Format = FileFormat.Json;
 
 // if the defined file is not empty, print all existing recipes
 
 Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
+
+// one class for saving in .json, other for saving in .txt but both have the same interface
 
 // Printing available ingredients
 // Initialize the list of ingredients
