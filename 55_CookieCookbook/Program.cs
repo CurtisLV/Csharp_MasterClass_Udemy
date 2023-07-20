@@ -70,6 +70,19 @@ foreach (Ingredient ingredient in ingredients)
 
 Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
 
+var input = Console.ReadLine();
+
+while (IsIdValid())
+{
+    //
+}
+
+bool IsIdValid()
+{
+    foreach (var ingredient in ingredients) { }
+    return false;
+}
+
 public enum FileFormat
 {
     Json,
