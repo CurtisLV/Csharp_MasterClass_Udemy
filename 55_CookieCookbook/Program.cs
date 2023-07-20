@@ -66,9 +66,7 @@ List<Ingredient> ingredients = new List<Ingredient>()
 // Access and use the list of ingredients as needed
 foreach (Ingredient ingredient in ingredients)
 {
-    Console.WriteLine($"Ingredient: {ingredient.Name}");
-    Console.WriteLine($"Description: {ingredient.Description}");
-    Console.WriteLine();
+    Console.WriteLine($"{ingredient.Id} {ingredient.Name} {{ingredient.Description");
 }
 
 public enum FileFormat
