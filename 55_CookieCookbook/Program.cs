@@ -72,14 +72,24 @@ Console.WriteLine("Add an ingredient by it's ID or type anything else if finishe
 
 var input = Console.ReadLine();
 
-while (IsIdValid())
+while (IsIdValid(input))
 {
     //
 }
 
-bool IsIdValid()
+bool IsIdValid(string input)
 {
-    foreach (var ingredient in ingredients) { }
+    if (int.Parse(input) > 0)
+    {
+        foreach (var ingredient in ingredients)
+        {
+            if (ingredient.Id == int.Parse(input))
+            {
+                return true;
+            }
+        }
+    }
+
     return false;
 }
 
