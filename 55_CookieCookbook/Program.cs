@@ -65,13 +65,13 @@ List<Ingredient> ingredients = new List<Ingredient>()
 
 List<Ingredient> selectedIngredients = new List<Ingredient>();
 
+foreach (Ingredient ingredient in ingredients)
+{
+    Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
+}
+
 while (true)
 {
-    foreach (Ingredient ingredient in ingredients)
-    {
-        Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
-    }
-
     Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
 
     var input = Console.ReadLine();
@@ -84,7 +84,11 @@ while (true)
 
     if (ingredientId != null)
     {
-        //
+        selectedIngredients.Add(ingredientId);
+    }
+    else
+    {
+        break;
     }
 }
 
