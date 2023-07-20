@@ -63,7 +63,7 @@ List<Ingredient> ingredients = new List<Ingredient>()
     }
 };
 
-List<Ingredient> selectedIngredients = new List<Ingredient>();
+List<int> selectedIngredients = new List<int>();
 
 foreach (Ingredient ingredient in ingredients)
 {
@@ -75,16 +75,16 @@ while (true)
     Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
 
     var input = Console.ReadLine();
-    if (int.TryParse(input, out int selectedId))
+    if (!int.TryParse(input, out int selectedId))
     {
         break;
     }
 
-    Ingredient ingredientId = ingredients.Find(ingredient => ingredient.Id == selectedId);
+    Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
 
-    if (ingredientId != null)
+    if (ingredientData != null)
     {
-        selectedIngredients.Add(ingredientId);
+        selectedIngredients.Add(ingredientData.Id);
     }
     else
     {
