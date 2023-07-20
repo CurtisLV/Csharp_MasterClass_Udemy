@@ -63,34 +63,29 @@ List<Ingredient> ingredients = new List<Ingredient>()
     }
 };
 
-foreach (Ingredient ingredient in ingredients)
+List<Ingredient> selectedIngredients = new List<Ingredient>();
+
+while (true)
 {
-    Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
-}
-
-Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
-
-var input = Console.ReadLine();
-
-while (IsIdValid(input))
-{
-    //
-}
-
-bool IsIdValid(string input)
-{
-    if (int.Parse(input) > 0)
+    foreach (Ingredient ingredient in ingredients)
     {
-        foreach (var ingredient in ingredients)
-        {
-            if (ingredient.Id == int.Parse(input))
-            {
-                return true;
-            }
-        }
+        Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
     }
 
-    return false;
+    Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
+
+    var input = Console.ReadLine();
+    if (int.TryParse(input, out int selectedId))
+    {
+        break;
+    }
+
+    Ingredient ingredientId = ingredients.Find(ingredient => ingredient.Id == selectedId);
+
+    if (ingredientId != null)
+    {
+        //
+    }
 }
 
 public enum FileFormat
