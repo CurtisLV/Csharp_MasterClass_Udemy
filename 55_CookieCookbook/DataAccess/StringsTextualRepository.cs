@@ -1,4 +1,5 @@
-﻿namespace _55_CookieCookbook.DataAccess
+﻿namespace _55_CookieCookbook.DataAccess;
+
 class StringsTextualRepository
 {
     private static readonly string Separator = Environment.NewLine;
