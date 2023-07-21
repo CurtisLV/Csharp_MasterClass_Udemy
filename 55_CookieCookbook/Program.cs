@@ -95,6 +95,9 @@ while (true)
 if (selectedIngredients.Count > 0)
 {
     // Happy flow
+    Console.WriteLine("Recipe added:");
+    // Newly added recipe is printed TODO
+    // Store recipe in the txt/json file TODO
 }
 else
 {
