@@ -3,11 +3,11 @@
 // define if saved in .txt or .json
 const FileFormat Format = FileFormat.Json;
 
-// if the defined file is not empty, print all existing recipes
+// if the defined file is not empty, print all existing recipes TODO
 
 Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
-// one class for saving in .json, other for saving in .txt but both have the same interface
+// one class for saving in .json, other for saving in .txt but both have the same interface TODO
 
 // Initialize the list of ingredients
 List<Ingredient> ingredients = new List<Ingredient>()
@@ -103,6 +103,8 @@ else
 {
     // Unhappy flow
 }
+
+Console.WriteLine("Press any key to exit.");
 
 public enum FileFormat
 {
