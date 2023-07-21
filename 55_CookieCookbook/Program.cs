@@ -9,7 +9,6 @@ Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
 // one class for saving in .json, other for saving in .txt but both have the same interface
 
-// Printing available ingredients
 // Initialize the list of ingredients
 List<Ingredient> ingredients = new List<Ingredient>()
 {
@@ -65,6 +64,7 @@ List<Ingredient> ingredients = new List<Ingredient>()
 
 List<int> selectedIngredients = new List<int>();
 
+// Printing available ingredients
 foreach (Ingredient ingredient in ingredients)
 {
     Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
@@ -90,6 +90,15 @@ while (true)
     {
         break;
     }
+}
+
+if (selectedIngredients.Count > 0)
+{
+    // Happy flow
+}
+else
+{
+    // Unhappy flow
 }
 
 public enum FileFormat
