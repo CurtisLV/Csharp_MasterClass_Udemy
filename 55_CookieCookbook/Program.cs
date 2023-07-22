@@ -1,6 +1,8 @@
 ﻿using _55_CookieCookbook.DataAccess;
 
 const string FileName = "recipes";
+const string BaseDirectory =
+    "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
 // define if saved in .txt or .json
 const FileFormat Format = FileFormat.Json;
@@ -121,6 +123,21 @@ public enum FileFormat
 {
     Json,
     Txt
+}
+
+// saving via txt file
+public class WriteToTxtFile
+{
+    public void Write(List<Ingredient> selectedIngredients)
+    {
+        // List of ingredients to array of ingredient IDs
+        List<int> ingredientIDs = new();
+        ingredientIDs = (List<int>)selectedIngredients.Select(i => i.Id);
+
+        // Then check if the file is present already
+
+        // Write to file
+    }
 }
 
 public class Ingredient
