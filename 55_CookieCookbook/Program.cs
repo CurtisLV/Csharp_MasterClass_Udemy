@@ -109,7 +109,10 @@ else
 
 void PrintingARecipe(List<int> selectedIngredients)
 {
-    throw new NotImplementedException();
+    foreach (var i in selectedIngredients)
+    {
+        Console.WriteLine(i.ToString());
+    }
 }
 
 Console.WriteLine("Press any key to exit.");
