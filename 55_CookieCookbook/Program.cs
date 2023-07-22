@@ -99,11 +99,17 @@ if (selectedIngredients.Count > 0)
     // Happy flow
     Console.WriteLine("Recipe added:");
     // Newly added recipe is printed TODO
+    PrintingARecipe(selectedIngredients);
     // Store recipe in the txt/json file TODO
 }
 else
 {
     // Unhappy flow
+}
+
+void PrintingARecipe(List<int> selectedIngredients)
+{
+    throw new NotImplementedException();
 }
 
 Console.WriteLine("Press any key to exit.");
