@@ -126,13 +126,12 @@ public enum FileFormat
 }
 
 // saving via txt file
-public class WriteToTxtFile
+public class StringTextualRepository
 {
     public void Write(List<Ingredient> selectedIngredients)
     {
         // List of ingredients to array of ingredient IDs
-        List<int> ingredientIDs = new();
-        ingredientIDs = (List<int>)selectedIngredients.Select(i => i.Id);
+        int[] ingredientIDs = selectedIngredients.Select(i => i.Id).ToArray();
 
         // Then check if the file is present already
 
