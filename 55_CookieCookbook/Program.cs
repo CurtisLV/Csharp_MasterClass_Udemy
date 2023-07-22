@@ -64,7 +64,7 @@ List<Ingredient> ingredients = new List<Ingredient>()
     }
 };
 
-List<int> selectedIngredients = new List<int>();
+List<Ingredient> selectedIngredients = new List<Ingredient>();
 
 // Printing available ingredients
 foreach (Ingredient ingredient in ingredients)
@@ -86,7 +86,7 @@ while (true)
 
     if (ingredientData != null)
     {
-        selectedIngredients.Add(ingredientData.Id);
+        selectedIngredients.Add(ingredientData);
     }
     else
     {
@@ -107,7 +107,7 @@ else
     // Unhappy flow
 }
 
-void PrintingARecipe(List<int> selectedIngredients)
+void PrintingARecipe(List<Ingredient> selectedIngredients)
 {
     foreach (var i in selectedIngredients)
     {
@@ -131,6 +131,6 @@ public class Ingredient
 
     public override string ToString()
     {
-        return $"{Name}. {Description}. Add to other ingredients.";
+        return $"{Name}. {Description} Add to other ingredients.";
     }
 }
