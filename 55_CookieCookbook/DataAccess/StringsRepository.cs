@@ -5,8 +5,13 @@
         public List<string> Read(string filePath)
         {
             // check if file exists
-
+            if (File.Exists(filePath))
+            {
+                var fileContents = File.ReadAllText(filePath);
+                return TextToStrings(fileContents);
+            }
             // else return empty List<string>
+            return new List<string>();
         }
 
         // helps read file content
