@@ -1,6 +1,6 @@
-﻿namespace _55_CookieCookbook.DataAccess
+﻿namespace _55_CookieCookbook.DataAccess;
+
+public interface IStringsRepository
 {
-    public interface IStringsRepository
-    {
-    }
+    //
 }
