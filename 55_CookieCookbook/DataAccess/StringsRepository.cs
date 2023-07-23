@@ -17,9 +17,9 @@
         // helps read file content
         protected abstract List<string> TextToStrings(string fileContents);
 
-        public void Write(string fileContents)
+        public void Write(string filePath, List<string> strings)
         {
-            //
+            // check if file exists
         }
 
         // helps write to file
