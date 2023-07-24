@@ -1,6 +1,8 @@
 ﻿using _55_CookieCookbook.DataAccess;
 
-const string FileName = "recipes";
+StringsTextualRepository savingTxt = new StringsTextualRepository();
+
+const string FileName = "recipes.txt";
 const string BaseDirectory =
     "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
@@ -66,7 +68,7 @@ List<Ingredient> ingredients = new List<Ingredient>()
     }
 };
 
-List<Ingredient> selectedIngredients = new List<Ingredient>();
+List<string> selectedIngredients = new List<string>();
 
 // Printing available ingredients
 foreach (Ingredient ingredient in ingredients)
@@ -88,7 +90,7 @@ while (true)
 
     if (ingredientData != null)
     {
-        selectedIngredients.Add(ingredientData);
+        selectedIngredients.Add(ingredientData.Id.ToString());
     }
     else
     {
@@ -103,13 +105,15 @@ if (selectedIngredients.Count > 0)
     // Newly added recipe is printed TODO
     PrintingARecipe(selectedIngredients);
     // Store recipe in the txt/json file TODO
+
+    savingTxt.Write(BaseDirectory + "\\" + FileName, selectedIngredients);
 }
 else
 {
     // Unhappy flow
 }
 
-void PrintingARecipe(List<Ingredient> selectedIngredients)
+void PrintingARecipe(List<string> selectedIngredients)
 {
     foreach (var i in selectedIngredients)
     {
@@ -123,20 +127,6 @@ public enum FileFormat
 {
     Json,
     Txt
-}
-
-// saving via txt file
-public class StringTextualRepository
-{
-    public void Write(List<Ingredient> selectedIngredients)
-    {
-        // List of ingredients to array of ingredient IDs
-        int[] ingredientIDs = selectedIngredients.Select(i => i.Id).ToArray();
-
-        // Then check if the file is present already
-
-        // Write to file
-    }
 }
 
 public class Ingredient
