@@ -100,24 +100,28 @@ while (true)
 
 if (selectedIngredients.Count > 0)
 {
+    string joinedSelectedIngredients = string.Join(" ", selectedIngredients);
     // Happy flow
     Console.WriteLine("Recipe added:");
     // Newly added recipe is printed TODO
-    PrintingARecipe(selectedIngredients);
+    PrintingARecipe(joinedSelectedIngredients);
     // Store recipe in the txt/json file TODO
 
-    savingTxt.Write(BaseDirectory + "\\" + FileName, selectedIngredients);
+    savingTxt.Write(
+        BaseDirectory + "\\" + FileName,
+        new List<string> { joinedSelectedIngredients }
+    );
 }
 else
 {
     // Unhappy flow
 }
 
-void PrintingARecipe(List<string> selectedIngredients)
+void PrintingARecipe(string joinedSelectedIngredients)
 {
-    foreach (var i in selectedIngredients)
+    foreach (var i in joinedSelectedIngredients)
     {
-        Console.WriteLine(i.ToString());
+        Console.WriteLine(i);
     }
 }
 
