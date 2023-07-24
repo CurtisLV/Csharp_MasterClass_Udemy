@@ -19,24 +19,6 @@
 
         public void Write(string filePath, List<string> strings)
         {
-            //StreamWriter writer = null;
-            //// check if file exists
-            //if (!File.Exists(filePath))
-            //{
-            //    writer = File.CreateText(filePath);
-            //}
-            //else
-            //{
-            //    writer = File.AppendText(filePath);
-            //}
-
-            //using (writer)
-            //{
-            //    foreach (string str in strings)
-            //    {
-            //        writer.WriteLine(str);
-            //    }
-            //}
             File.AppendAllLines(filePath, strings);
         }
 

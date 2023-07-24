@@ -8,7 +8,7 @@ class StringsTextualRepository : StringsRepository
     protected override List<string> TextToStrings(string fileContents)
     {
         // return List<string>
-        // where each string is a line in text document (like 0, 1, 4)
+        // where each string is a line in text document (like 0,1,4)
         return new();
     }
 
