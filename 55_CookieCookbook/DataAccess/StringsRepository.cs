@@ -25,8 +25,12 @@
             {
                 writer = File.CreateText(filePath);
             }
+            else
+            {
+                writer = File.AppendText(filePath);
+            }
 
-            using (writer = File.AppendText(filePath))
+            using (writer)
             {
                 foreach (string str in strings)
                 {
