@@ -19,7 +19,20 @@
 
         public void Write(string filePath, List<string> strings)
         {
+            StreamWriter writer = null;
             // check if file exists
+            if (!File.Exists(filePath))
+            {
+                writer = File.CreateText(filePath);
+            }
+
+            using (writer = File.AppendText(filePath))
+            {
+                foreach (string str in strings)
+                {
+                    writer.WriteLine(str);
+                }
+            }
         }
 
         // helps write to file
