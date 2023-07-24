@@ -2,16 +2,14 @@
 
 class StringsJsonRepository : StringsRepository
 {
-    private static readonly string Separator = Environment.NewLine;
-
-    public List<string> Read(string filePath)
+    //
+    protected override string StringsToText(List<string> strings)
     {
-        var fileContents = File.ReadAllText(filePath);
-        return fileContents.Split(Separator).ToList();
+        throw new NotImplementedException();
     }
 
-    public void Write(string filePath, List<string> strings)
+    protected override List<string> TextToStrings(string fileContents)
     {
-        File.WriteAllText(filePath, string.Join(Separator, strings));
+        throw new NotImplementedException();
     }
 }
