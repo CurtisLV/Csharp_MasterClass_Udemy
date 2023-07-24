@@ -2,14 +2,16 @@
 
 class StringsJsonRepository : StringsRepository
 {
-    //
-    protected override string StringsToText(List<string> strings)
-    {
-        throw new NotImplementedException();
-    }
-
+    // for Read
     protected override List<string> TextToStrings(string fileContents)
     {
-        throw new NotImplementedException();
+        // return List<string> where each string is Json object
+    }
+
+    // for Write
+    protected override string StringsToText(List<string> strings)
+    {
+        // return one string
+        // where each of the strings is separated by newline
     }
 }

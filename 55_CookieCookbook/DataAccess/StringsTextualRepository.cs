@@ -7,13 +7,14 @@ class StringsTextualRepository : StringsRepository
     // for Read
     protected override List<string> TextToStrings(string fileContents)
     {
-        // create a list of strings
+        // return List<string>
         // where each string is a line in text document (like 0, 1, 4)
     }
 
     // for Write
     protected override string StringsToText(List<string> strings)
     {
-        // for each string, write it to a new line in text document
+        // return one string
+        // that is all lines separated by NewLine
     }
 }
