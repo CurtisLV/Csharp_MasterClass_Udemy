@@ -9,6 +9,7 @@ class StringsTextualRepository : StringsRepository
     {
         // return List<string>
         // where each string is a line in text document (like 0, 1, 4)
+        return new();
     }
 
     // for Write
@@ -16,5 +17,6 @@ class StringsTextualRepository : StringsRepository
     {
         // return one string
         // that is all lines separated by NewLine
+        return string.Empty;
     }
 }
