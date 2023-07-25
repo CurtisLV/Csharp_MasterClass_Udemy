@@ -105,7 +105,7 @@ if (selectedIngredients.Count > 0)
     Console.WriteLine("Recipe added:");
     // Newly added recipe is printed TODO
     //Console.WriteLine(joinedSelectedIngredients);
-    PrintingARecipe(joinedSelectedIngredients);
+    PrintOneRecipe(joinedSelectedIngredients);
     // Store recipe in the txt/json file TODO
 
     savingTxt.Write(
@@ -116,13 +116,21 @@ if (selectedIngredients.Count > 0)
 
 Console.WriteLine("Press any key to exit.");
 
-void PrintingARecipe(string joinedSelectedIngredients)
+void PrintOneRecipe(string joinedSelectedIngredients)
 {
     List<string> strings = joinedSelectedIngredients.Split(",").ToList();
     foreach (string str in strings)
     {
         Ingredient ingredient = ingredients.Find(ingredient => ingredient.Id == int.Parse(str));
         Console.WriteLine(ingredient.ToString());
+    }
+}
+
+void PrintAllRecipes(List<string> recipes)
+{
+    for (int i = 0; i < recipes.Count; i++)
+    {
+        PrintOneRecipe(recipes[i + 1]);
     }
 }
 
