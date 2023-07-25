@@ -72,7 +72,8 @@ List<Ingredient> ingredients = new List<Ingredient>()
 
 if (File.Exists(fullFilePath))
 {
-    //
+    List<string> allRecipes = savingTxt.Read(fullFilePath);
+    PrintAllRecipes(allRecipes);
 }
 List<string> selectedIngredients = new List<string>();
 
@@ -133,7 +134,7 @@ void PrintAllRecipes(List<string> recipes)
 {
     for (int i = 0; i < recipes.Count; i++)
     {
-        PrintOneRecipe(recipes[i + 1]);
+        PrintOneRecipe(recipes[i]);
     }
 }
 

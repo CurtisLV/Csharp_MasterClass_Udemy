@@ -8,7 +8,7 @@
             if (File.Exists(filePath))
             {
                 var fileContents = File.ReadAllText(filePath);
-                return TextToStrings(fileContents);
+                return TextToStrings(fileContents.Trim());
             }
             // else return empty List<string>
             return new List<string>();
