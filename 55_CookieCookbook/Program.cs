@@ -134,7 +134,9 @@ void PrintAllRecipes(List<string> recipes)
 {
     for (int i = 0; i < recipes.Count; i++)
     {
+        Console.WriteLine($"***** {i + 1} *****");
         PrintOneRecipe(recipes[i]);
+        Console.WriteLine();
     }
 }
 
