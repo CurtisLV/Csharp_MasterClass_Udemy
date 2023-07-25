@@ -6,6 +6,8 @@ const string FileName = "recipes.txt";
 const string BaseDirectory =
     "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
+string fullFilePath = BaseDirectory + "\\" + FileName;
+
 // define if saved in .txt or .json
 const FileFormat Format = FileFormat.Json;
 
@@ -68,6 +70,10 @@ List<Ingredient> ingredients = new List<Ingredient>()
     }
 };
 
+if (File.Exists(fullFilePath))
+{
+    //
+}
 List<string> selectedIngredients = new List<string>();
 
 // Printing available ingredients
@@ -108,10 +114,7 @@ if (selectedIngredients.Count > 0)
     PrintOneRecipe(joinedSelectedIngredients);
     // Store recipe in the txt/json file TODO
 
-    savingTxt.Write(
-        BaseDirectory + "\\" + FileName,
-        new List<string> { joinedSelectedIngredients }
-    );
+    savingTxt.Write(fullFilePath, new List<string> { joinedSelectedIngredients });
 }
 
 Console.WriteLine("Press any key to exit.");
