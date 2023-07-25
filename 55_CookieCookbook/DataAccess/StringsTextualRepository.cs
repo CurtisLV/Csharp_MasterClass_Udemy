@@ -10,6 +10,7 @@ class StringsTextualRepository : StringsRepository
         // return List<string>
         // where each string is a line in text document (like 0,1,4)
         List<string> linesList = new List<string>(fileContents.Split('\n'));
+        return linesList;
     }
 
     // for Write

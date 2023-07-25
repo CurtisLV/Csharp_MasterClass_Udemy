@@ -104,7 +104,8 @@ if (selectedIngredients.Count > 0)
     // Happy flow
     Console.WriteLine("Recipe added:");
     // Newly added recipe is printed TODO
-    Console.WriteLine(joinedSelectedIngredients);
+    //Console.WriteLine(joinedSelectedIngredients);
+    PrintingARecipe(joinedSelectedIngredients);
     // Store recipe in the txt/json file TODO
 
     savingTxt.Write(
