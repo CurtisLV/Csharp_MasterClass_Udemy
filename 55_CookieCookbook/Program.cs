@@ -112,17 +112,13 @@ if (selectedIngredients.Count > 0)
         new List<string> { joinedSelectedIngredients }
     );
 }
-else
-{
-    // Unhappy flow
-}
+
+Console.WriteLine("Press any key to exit.");
 
 void PrintingARecipe(string joinedSelectedIngredients)
 {
     //
 }
-
-Console.WriteLine("Press any key to exit.");
 
 public enum FileFormat
 {
