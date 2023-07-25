@@ -117,7 +117,12 @@ Console.WriteLine("Press any key to exit.");
 
 void PrintingARecipe(string joinedSelectedIngredients)
 {
-    //
+    List<string> strings = joinedSelectedIngredients.Split(",").ToList();
+    foreach (string str in strings)
+    {
+        Ingredient ingredient = ingredients.Find(ingredient => ingredient.Id == int.Parse(str));
+        Console.WriteLine(ingredient.ToString());
+    }
 }
 
 public enum FileFormat
