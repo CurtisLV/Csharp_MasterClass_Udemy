@@ -109,7 +109,7 @@ if (selectedIngredients.Count > 0)
 
     savingTxt.Write(
         BaseDirectory + "\\" + FileName,
-        new List<string> { joinedSelectedIngredients } // todo remove, for test only
+        new List<string> { joinedSelectedIngredients }
     );
 }
 else
