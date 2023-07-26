@@ -2,14 +2,16 @@
 
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
-const string FileName = "recipes.txt";
+// define if saved in .txt or .json
+const FileFormat Format = FileFormat.Json;
+
+//const FileFormat Format = FileFormat.Txt;
+
+const string FileName = "recipes";
 const string BaseDirectory =
     "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
 string fullFilePath = BaseDirectory + "\\" + FileName;
-
-// define if saved in .txt or .json
-const FileFormat Format = FileFormat.Json;
 
 // one class for saving in .json, other for saving in .txt but both have the same interface TODO
 
