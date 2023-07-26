@@ -16,8 +16,6 @@ string fileFormat = extension == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
-// one class for saving in .json, other for saving in .txt but both have the same interface TODO
-
 // Initialize the list of ingredients
 List<Ingredient> ingredients = new List<Ingredient>()
 {
