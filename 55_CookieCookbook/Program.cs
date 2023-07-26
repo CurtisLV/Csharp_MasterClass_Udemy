@@ -1,4 +1,5 @@
 ﻿using _55_CookieCookbook.DataAccess;
+using _55_CookieCookbook.FileAccess;
 
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
@@ -145,12 +146,6 @@ void PrintAllRecipes(List<string> recipes)
         PrintOneRecipe(recipes[i]);
         Console.WriteLine();
     }
-}
-
-public enum FileFormat
-{
-    Json,
-    Txt
 }
 
 public class Ingredient
