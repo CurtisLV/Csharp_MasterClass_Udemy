@@ -1,5 +1,6 @@
 ﻿using _55_CookieCookbook.DataAccess;
 using _55_CookieCookbook.FileAccess;
+using _55_CookieCookbook.Recipes.Ingredients;
 
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
@@ -20,24 +21,6 @@ string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 // Initialize the list of ingredients
 List<Ingredient> ingredients = new List<Ingredient>()
 {
-    new Ingredient()
-    {
-        Id = 1,
-        Name = "Olive Oil",
-        Description = "Sauté or dress salads with it."
-    },
-    new Ingredient()
-    {
-        Id = 2,
-        Name = "Garlic",
-        Description = "Sauté for flavor or use in marinades."
-    },
-    new Ingredient()
-    {
-        Id = 3,
-        Name = "Onions",
-        Description = "Sauté for flavor or use as toppings."
-    },
     new Ingredient()
     {
         Id = 4,

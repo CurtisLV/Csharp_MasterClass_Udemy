@@ -1,8 +1,10 @@
-﻿public abstract class Ingredient
+﻿namespace _55_CookieCookbook.Recipes.Ingredients;
+
+public abstract class Ingredient
 {
     public abstract int Id { get; }
     public abstract string Name { get; }
-    public string Description { get; set; }
+    public abstract string Description { get; }
 
     public override string ToString()
     {
