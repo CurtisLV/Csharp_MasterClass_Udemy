@@ -23,12 +23,6 @@ List<Ingredient> ingredients = new List<Ingredient>()
 {
     new Ingredient()
     {
-        Id = 4,
-        Name = "Salt",
-        Description = "Sprinkle for taste while cooking."
-    },
-    new Ingredient()
-    {
         Id = 5,
         Name = "Black Pepper",
         Description = "Grind to enhance flavors in dishes."
