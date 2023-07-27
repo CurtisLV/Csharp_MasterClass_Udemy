@@ -1,7 +1,7 @@
-﻿public class Ingredient
+﻿public abstract class Ingredient
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
+    public abstract int Id { get; }
+    public abstract string Name { get; }
     public string Description { get; set; }
 
     public override string ToString()
