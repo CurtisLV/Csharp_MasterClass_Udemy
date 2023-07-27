@@ -5,16 +5,15 @@ using _55_CookieCookbook.Recipes.Ingredients;
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
 // define if saved in .txt or .json
-const FileFormat extension = FileFormat.Json;
+//const FileFormat Format = FileFormat.Json;
 
-//const FileFormat Format = FileFormat.Txt;
-
+const FileFormat Format = FileFormat.Txt;
 
 const string FileName = "recipes";
 const string BaseDirectory =
     "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
-string fileFormat = extension == FileFormat.Json ? ".json" : ".txt";
+string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
