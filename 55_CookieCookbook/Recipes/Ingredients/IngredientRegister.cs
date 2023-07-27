@@ -14,4 +14,17 @@ public class IngredientRegister
             new ChickenBroth(),
             new SoySauce()
         };
+
+    public Ingredient GetById(int id)
+    {
+        foreach (var ingredient in All)
+        {
+            if (ingredient.Id == id)
+            {
+                return ingredient;
+            }
+        }
+
+        return null;
+    }
 }
