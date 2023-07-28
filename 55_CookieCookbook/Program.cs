@@ -5,9 +5,9 @@ using _55_CookieCookbook.Recipes.Ingredients;
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
 // define if saved in .txt or .json
-//const FileFormat Format = FileFormat.Json;
+const FileFormat Format = FileFormat.Json;
 
-const FileFormat Format = FileFormat.Txt;
+//const FileFormat Format = FileFormat.Txt;
 
 const string FileName = "recipes";
 const string BaseDirectory =
