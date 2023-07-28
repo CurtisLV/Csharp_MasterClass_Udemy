@@ -1,6 +1,6 @@
 ﻿namespace _55_CookieCookbook.Recipes.Ingredients;
 
-public class IngredientRegister
+public class IngredientRegister : IIngredientRegister
 {
     public IEnumerable<Ingredient> All { get; } =
         new List<Ingredient>

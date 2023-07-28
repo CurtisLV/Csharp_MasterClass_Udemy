@@ -17,9 +17,8 @@ string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
-IngredientRegister ir = new IngredientRegister();
-
 // Initialize the list of ingredients
+IngredientRegister ir = new IngredientRegister();
 List<Ingredient> ingredients = new List<Ingredient>(ir.All);
 
 // if the defined file is not empty, print all existing recipes
