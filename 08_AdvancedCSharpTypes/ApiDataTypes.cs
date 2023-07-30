@@ -1,14 +1,14 @@
 ﻿using System.Text.Json.Serialization;
 
 public record Annotations(
-       [property: JsonPropertyName("source_name")] string source_name,
-       [property: JsonPropertyName("source_description")] string source_description,
-       [property: JsonPropertyName("dataset_name")] string dataset_name,
-       [property: JsonPropertyName("dataset_link")] string dataset_link,
-       [property: JsonPropertyName("table_id")] string table_id,
-       [property: JsonPropertyName("topic")] string topic,
-       [property: JsonPropertyName("subtopic")] string subtopic
-   );
+    [property: JsonPropertyName("source_name")] string source_name,
+    [property: JsonPropertyName("source_description")] string source_description,
+    [property: JsonPropertyName("dataset_name")] string dataset_name,
+    [property: JsonPropertyName("dataset_link")] string dataset_link,
+    [property: JsonPropertyName("table_id")] string table_id,
+    [property: JsonPropertyName("topic")] string topic,
+    [property: JsonPropertyName("subtopic")] string subtopic
+);
 
 public record Datum(
     [property: JsonPropertyName("ID Nation")] string IDNation,
@@ -30,8 +30,3 @@ public record Source(
     [property: JsonPropertyName("name")] string name,
     [property: JsonPropertyName("substitutions")] IReadOnlyList<object> substitutions
 );
-
-
-
-
-
