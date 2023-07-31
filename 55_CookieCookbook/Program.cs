@@ -32,11 +32,16 @@ class CookieRecipeApp
             // instructor wants to add new recipes to all old ones and only then write to file ??
             allRecipes.Add(recipe);
             _recipesRepository.Write(filePath, allRecipes);
+
+            _recipesUserInteraction.ShowMessage("Recipe added:");
+            _recipesUserInteraction.ShowMessage(recipe.ToString());
         }
         else
         {
             _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
         }
+
+        _recipesUserInteraction.Exit();
     }
 }
 
