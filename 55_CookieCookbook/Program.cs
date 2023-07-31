@@ -18,7 +18,22 @@ class CookieRecipeApp
     }
     public void Run()
     {
-        //
+        var allRecipes = _recipesRepository.Read(filePath);
+        _recipesUserInteraction.PrintExistingRecipes(allRecipes);
+
+        // print available ingredients could be a part of the below function
+        _recipesUserInteraction.PromptToCreateRecipe();
+
+        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser(); 
+
+        if (ingredients.Count > 0)
+        {
+            //
+        }
+        else
+        {
+            _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
+        }
     }
 }
 
