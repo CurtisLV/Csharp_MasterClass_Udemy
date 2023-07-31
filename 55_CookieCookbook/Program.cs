@@ -2,6 +2,18 @@
 using _55_CookieCookbook.FileAccess;
 using _55_CookieCookbook.Recipes.Ingredients;
 
+var cookieRecipeApp = new CookieRecipeApp();
+cookieRecipeApp.Run();
+
+
+class CookieRecipeApp
+{
+    public void Run()
+    {
+        //
+    }
+}
+
 StringsTextualRepository savingTxt = new StringsTextualRepository();
 
 // define if saved in .txt or .json
