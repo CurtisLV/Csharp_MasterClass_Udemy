@@ -1,3 +1,4 @@
-﻿internal class RecipesUserInteraction
+﻿public class RecipesUserInteraction
 {
+    //
 }

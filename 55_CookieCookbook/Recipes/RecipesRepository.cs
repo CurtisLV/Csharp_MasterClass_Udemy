@@ -1,3 +1,4 @@
-﻿internal class RecipesRepository
+﻿public class RecipesRepository
 {
+    //
 }
