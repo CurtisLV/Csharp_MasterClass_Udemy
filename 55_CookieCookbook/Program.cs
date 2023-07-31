@@ -8,6 +8,13 @@ cookieRecipeApp.Run();
 
 class CookieRecipeApp
 {
+    private readonly RecipesRepository recipesRepository;
+    private readonly RecipesUserInteraction _recipesUserInteraction;
+
+    public CookieRecipeApp()
+    {
+        //
+    }
     public void Run()
     {
         //
