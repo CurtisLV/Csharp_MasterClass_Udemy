@@ -28,7 +28,10 @@ class CookieRecipeApp
 
         if (ingredients.Count > 0)
         {
-            //
+            var recipe = new Recipe(ingredients);
+            // instructor wants to add new recipes to all old ones and only then write to file ??
+            allRecipes.Add(recipe);
+            _recipesRepository.Write(filePath, allRecipes);
         }
         else
         {
