@@ -1,4 +1,4 @@
-﻿public class RecipesConsoleUserInteraction
+﻿public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
     public void ShowMessage(string msg)
     {

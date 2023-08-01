@@ -9,22 +9,22 @@ cookieRecipeApp.Run();
 public class CookieRecipeApp
 {
     private readonly RecipesRepository _recipesRepository;
-    private readonly RecipesConsoleUserInteraction _recipesConsoleUserInteraction;
+    private readonly IRecipesUserInteraction _recipesUserInteraction;
 
     public CookieRecipeApp(RecipesRepository recipesRepository, RecipesConsoleUserInteraction recipesUserInteraction)
     {
         _recipesRepository = recipesRepository;
-        _recipesConsoleUserInteraction = recipesUserInteraction;
+        _recipesUserInteraction = recipesUserInteraction;
     }
     public void Run()
     {
         var allRecipes = _recipesRepository.Read(filePath);
-        _recipesConsoleUserInteraction.PrintExistingRecipes(allRecipes);
+        _recipesUserInteraction.PrintExistingRecipes(allRecipes);
 
         // print available ingredients could be a part of the below function
-        _recipesConsoleUserInteraction.PromptToCreateRecipe();
+        _recipesUserInteraction.PromptToCreateRecipe();
 
-        var ingredients = _recipesConsoleUserInteraction.ReadIngredientsFromUser(); 
+        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser(); 
 
         if (ingredients.Count > 0)
         {
@@ -33,15 +33,15 @@ public class CookieRecipeApp
             allRecipes.Add(recipe);
             _recipesRepository.Write(filePath, allRecipes);
 
-            _recipesConsoleUserInteraction.ShowMessage("Recipe added:");
-            _recipesConsoleUserInteraction.ShowMessage(recipe.ToString());
+            _recipesUserInteraction.ShowMessage("Recipe added:");
+            _recipesUserInteraction.ShowMessage(recipe.ToString());
         }
         else
         {
-            _recipesConsoleUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
+            _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
         }
 
-        _recipesConsoleUserInteraction.Exit();
+        _recipesUserInteraction.Exit();
     }
 }
 
