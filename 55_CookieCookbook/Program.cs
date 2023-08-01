@@ -2,7 +2,7 @@
 using _55_CookieCookbook.FileAccess;
 using _55_CookieCookbook.Recipes.Ingredients;
 
-var cookieRecipeApp = new CookieRecipeApp();
+var cookieRecipeApp = new CookieRecipeApp(new RecipesRepository(), new RecipesConsoleUserInteraction());
 cookieRecipeApp.Run();
 
 

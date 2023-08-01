@@ -1,4 +1,4 @@
-﻿public class RecipesRepository
+﻿public class RecipesRepository : IRecipesRepository
 {
     //
 }
