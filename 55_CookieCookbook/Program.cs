@@ -119,8 +119,7 @@ else
     Console.WriteLine("No ingredients have been selected. Recipe will not be saved.");
 }
 
-Console.WriteLine("Press any key to exit.");
-Console.ReadKey();
+// Exit msg was here
 
 void PrintOneRecipe(string joinedSelectedIngredients)
 {

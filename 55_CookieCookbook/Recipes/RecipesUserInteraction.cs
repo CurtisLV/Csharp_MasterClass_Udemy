@@ -1,13 +1,13 @@
 ﻿public class RecipesUserInteraction
 {
-    public void Exit()
+    public void ShowMessage(string v)
     {
         throw new NotImplementedException();
     }
 
-    //
-    public void ShowMessage(string v)
+    public void Exit()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
     }
 }
