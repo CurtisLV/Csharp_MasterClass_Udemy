@@ -9,9 +9,9 @@ cookieRecipeApp.Run();
 public class CookieRecipeApp
 {
     private readonly RecipesRepository _recipesRepository;
-    private readonly RecipesUserInteraction _recipesUserInteraction;
+    private readonly RecipesConsoleUserInteraction _recipesUserInteraction;
 
-    public CookieRecipeApp(RecipesRepository recipesRepository, RecipesUserInteraction recipesUserInteraction)
+    public CookieRecipeApp(RecipesRepository recipesRepository, RecipesConsoleUserInteraction recipesUserInteraction)
     {
         _recipesRepository = recipesRepository;
         _recipesUserInteraction = recipesUserInteraction;
