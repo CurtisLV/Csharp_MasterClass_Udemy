@@ -11,7 +11,7 @@ public class CookieRecipeApp
     private readonly RecipesRepository _recipesRepository;
     private readonly IRecipesUserInteraction _recipesUserInteraction;
 
-    public CookieRecipeApp(RecipesRepository recipesRepository, RecipesConsoleUserInteraction recipesUserInteraction)
+    public CookieRecipeApp(RecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
     {
         _recipesRepository = recipesRepository;
         _recipesUserInteraction = recipesUserInteraction;
