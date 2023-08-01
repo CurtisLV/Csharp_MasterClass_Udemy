@@ -6,7 +6,7 @@ var cookieRecipeApp = new CookieRecipeApp();
 cookieRecipeApp.Run();
 
 
-class CookieRecipeApp
+public class CookieRecipeApp
 {
     private readonly RecipesRepository _recipesRepository;
     private readonly RecipesUserInteraction _recipesUserInteraction;
