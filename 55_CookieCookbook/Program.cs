@@ -9,22 +9,22 @@ cookieRecipeApp.Run();
 public class CookieRecipeApp
 {
     private readonly RecipesRepository _recipesRepository;
-    private readonly RecipesConsoleUserInteraction _recipesUserInteraction;
+    private readonly RecipesConsoleUserInteraction _recipesConsoleUserInteraction;
 
     public CookieRecipeApp(RecipesRepository recipesRepository, RecipesConsoleUserInteraction recipesUserInteraction)
     {
         _recipesRepository = recipesRepository;
-        _recipesUserInteraction = recipesUserInteraction;
+        _recipesConsoleUserInteraction = recipesUserInteraction;
     }
     public void Run()
     {
         var allRecipes = _recipesRepository.Read(filePath);
-        _recipesUserInteraction.PrintExistingRecipes(allRecipes);
+        _recipesConsoleUserInteraction.PrintExistingRecipes(allRecipes);
 
         // print available ingredients could be a part of the below function
-        _recipesUserInteraction.PromptToCreateRecipe();
+        _recipesConsoleUserInteraction.PromptToCreateRecipe();
 
-        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser(); 
+        var ingredients = _recipesConsoleUserInteraction.ReadIngredientsFromUser(); 
 
         if (ingredients.Count > 0)
         {
@@ -33,15 +33,15 @@ public class CookieRecipeApp
             allRecipes.Add(recipe);
             _recipesRepository.Write(filePath, allRecipes);
 
-            _recipesUserInteraction.ShowMessage("Recipe added:");
-            _recipesUserInteraction.ShowMessage(recipe.ToString());
+            _recipesConsoleUserInteraction.ShowMessage("Recipe added:");
+            _recipesConsoleUserInteraction.ShowMessage(recipe.ToString());
         }
         else
         {
-            _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
+            _recipesConsoleUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
         }
 
-        _recipesUserInteraction.Exit();
+        _recipesConsoleUserInteraction.Exit();
     }
 }
 
