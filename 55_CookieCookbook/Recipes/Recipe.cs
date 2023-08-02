@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _55_CookieCookbook.Recipes;
 
-namespace _55_CookieCookbook.Recipes
+public class Recipe
 {
-    internal class Recipe
-    {
-    }
+    //
 }
