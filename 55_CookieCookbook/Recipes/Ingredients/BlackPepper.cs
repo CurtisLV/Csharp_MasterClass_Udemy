@@ -4,5 +4,5 @@ public class BlackPepper : Ingredient
 {
     public override int Id => 5;
     public override string Name => "Black Pepper";
-    public override string Description => "Grind to enhance flavors in dishes.";
+    public override string PreparationInstructions => "Grind to enhance flavors in dishes.";
 }

@@ -6,5 +6,5 @@ public class OliveOil : Ingredient
 
     public override string Name => "Olive Oil";
 
-    public override string Description => "Sauté or dress salads with it.";
+    public override string PreparationInstructions => "Sauté or dress salads with it.";
 }

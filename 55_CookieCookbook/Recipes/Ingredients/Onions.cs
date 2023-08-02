@@ -6,5 +6,5 @@ public class Onions : Ingredient
 
     public override string Name => "Onions";
 
-    public override string Description => "Sauté for flavor or use as toppings.";
+    public override string PreparationInstructions => "Sauté for flavor or use as toppings.";
 }

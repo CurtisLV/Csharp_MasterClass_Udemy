@@ -4,5 +4,5 @@ public class ChickenBroth : Ingredient
 {
     public override int Id => 7;
     public override string Name => "Chicken Broth";
-    public override string Description => "Simmer bones for flavorful liquid base.";
+    public override string PreparationInstructions => "Simmer bones for flavorful liquid base.";
 }

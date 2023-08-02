@@ -4,10 +4,10 @@ public abstract class Ingredient
 {
     public abstract int Id { get; }
     public abstract string Name { get; }
-    public abstract string Description { get; }
+    public abstract string PreparationInstructions { get; }
 
     public override string ToString()
     {
-        return $"{Name}. {Description} Add to other ingredients.";
+        return $"{Name}. {PreparationInstructions} Add to other ingredients.";
     }
 }

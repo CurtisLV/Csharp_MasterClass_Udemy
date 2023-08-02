@@ -6,5 +6,5 @@ public class Garlic : Ingredient
 
     public override string Name => "Garlic";
 
-    public override string Description => "Sauté for flavor or use in marinades.";
+    public override string PreparationInstructions => "Sauté for flavor or use in marinades.";
 }
