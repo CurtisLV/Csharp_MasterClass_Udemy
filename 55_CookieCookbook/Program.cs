@@ -32,9 +32,10 @@ public class CookieRecipeApp
     }
     public void Run(string filePath)
     {
+        var allRecipes = new List<string>();
         if (File.Exists(filePath))
         {
-            var allRecipes = _recipesRepository.Read(filePath);
+             allRecipes = _recipesRepository.Read(filePath);
             _recipesUserInteraction.PrintExistingRecipes(allRecipes);
         }
 
