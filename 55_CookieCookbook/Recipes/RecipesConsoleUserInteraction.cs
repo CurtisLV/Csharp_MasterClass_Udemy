@@ -2,6 +2,15 @@
 
 public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
+    List<Ingredient> ingredients;
+
+    public RecipesConsoleUserInteraction()
+    {
+        // Initialize the list of ingredients
+        IngredientRegister ir = new IngredientRegister();
+        ingredients = new List<Ingredient>(ir.All);
+    }
+
     public void ShowMessage(string msg)
     {
         Console.WriteLine(msg);

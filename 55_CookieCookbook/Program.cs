@@ -58,21 +58,6 @@ public class CookieRecipeApp
     }
 }
 
-StringsTextualRepository savingTxt = new StringsTextualRepository();
-
-// define if saved in .txt or .json
-const FileFormat Format = FileFormat.Json;
-
-//const FileFormat Format = FileFormat.Txt;
-
-const string FileName = "recipes";
-const string BaseDirectory =
-    "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
-
-string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
-
-string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
-
 // Initialize the list of ingredients
 IngredientRegister ir = new IngredientRegister();
 List<Ingredient> ingredients = new List<Ingredient>(ir.All);
