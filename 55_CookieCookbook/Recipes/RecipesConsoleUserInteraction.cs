@@ -22,8 +22,9 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
         Console.ReadKey();
     }
 
-    public void PrintExistingRecipes(List<string> allRecipes)
+    public void PrintExistingRecipes(IEnumerable<string> allRecipes)
     {
+        Console.WriteLine("Existing recipes are:" + Environment.NewLine);
         PrintAllRecipes(allRecipes);
     }
 
