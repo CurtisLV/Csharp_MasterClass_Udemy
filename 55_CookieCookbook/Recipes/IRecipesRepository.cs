@@ -2,5 +2,5 @@
 
 public interface IRecipesRepository
 {
-    List<Recipe> Read(string filePath);
+    List<string> Read(string filePath);
 }
