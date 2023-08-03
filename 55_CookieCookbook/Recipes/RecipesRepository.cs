@@ -1,7 +1,9 @@
-﻿public class RecipesRepository : IRecipesRepository
+﻿using _55_CookieCookbook.Recipes;
+
+public class RecipesRepository : IRecipesRepository
 {
-    internal object Read(object filePath)
+    public List<Recipe> Read(string filePath)
     {
-        throw new NotImplementedException();
+        //
     }
 }
