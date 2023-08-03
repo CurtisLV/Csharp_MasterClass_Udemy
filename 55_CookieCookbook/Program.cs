@@ -2,8 +2,21 @@
 using _55_CookieCookbook.FileAccess;
 using _55_CookieCookbook.Recipes.Ingredients;
 
+// define if saved in .txt or .json
+const FileFormat Format = FileFormat.Json;
+
+//const FileFormat Format = FileFormat.Txt;
+
+const string FileName = "recipes";
+const string BaseDirectory =
+    "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
+
+string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
+
+string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
+
 var cookieRecipeApp = new CookieRecipeApp(new RecipesRepository(), new RecipesConsoleUserInteraction());
-cookieRecipeApp.Run();
+cookieRecipeApp.Run(fullFilePath);
 
 
 public class CookieRecipeApp
@@ -16,7 +29,7 @@ public class CookieRecipeApp
         _recipesRepository = recipesRepository;
         _recipesUserInteraction = recipesUserInteraction;
     }
-    public void Run()
+    public void Run(string filePath)
     {
         var allRecipes = _recipesRepository.Read(filePath);
         _recipesUserInteraction.PrintExistingRecipes(allRecipes);

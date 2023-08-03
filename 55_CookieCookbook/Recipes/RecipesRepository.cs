@@ -5,7 +5,7 @@ public class RecipesRepository : IRecipesRepository
 {
     StringsTextualRepository textRepository = new StringsTextualRepository();
 
-    public List<Recipe> Read(string filePath)
+    public List<string> Read(string filePath)
     {
         return textRepository.Read(filePath);
     }
