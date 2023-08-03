@@ -1,5 +1,6 @@
 ﻿using _55_CookieCookbook.DataAccess;
 using _55_CookieCookbook.FileAccess;
+using _55_CookieCookbook.Recipes;
 using _55_CookieCookbook.Recipes.Ingredients;
 
 // define if saved in .txt or .json
@@ -31,6 +32,10 @@ public class CookieRecipeApp
     }
     public void Run(string filePath)
     {
+        if (File.Exists(filePath))
+        {
+
+        }
         var allRecipes = _recipesRepository.Read(filePath);
         _recipesUserInteraction.PrintExistingRecipes(allRecipes);
 
@@ -58,16 +63,14 @@ public class CookieRecipeApp
     }
 }
 
-// Initialize the list of ingredients
-IngredientRegister ir = new IngredientRegister();
-List<Ingredient> ingredients = new List<Ingredient>(ir.All);
 
-// if the defined file is not empty, print all existing recipes
-if (File.Exists(fullFilePath))
-{
-    List<string> allRecipes = savingTxt.Read(fullFilePath);
-    PrintAllRecipes(allRecipes);
-}
+
+//// if the defined file is not empty, print all existing recipes
+//if (File.Exists(fullFilePath))
+//{
+//    List<string> allRecipes = savingTxt.Read(fullFilePath);
+//    PrintAllRecipes(allRecipes);
+//}
 
 Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
