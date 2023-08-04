@@ -16,7 +16,7 @@ string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
-var cookieRecipeApp = new CookieRecipeApp(new RecipesRepository(), new RecipesConsoleUserInteraction());
+var cookieRecipeApp = new CookieRecipeApp(new RecipesRepository(), new RecipesConsoleUserInteraction(new IngredientRegister()));
 cookieRecipeApp.Run(fullFilePath);
 
 
@@ -82,27 +82,27 @@ public class CookieRecipeApp
 //    Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
 //}
 
-while (true)
-{
-    Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
+//while (true)
+//{
+//    Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
 
-    var input = Console.ReadLine();
-    if (!int.TryParse(input, out int selectedId))
-    {
-        break;
-    }
+//    var input = Console.ReadLine();
+//    if (!int.TryParse(input, out int selectedId))
+//    {
+//        break;
+//    }
 
-    Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
+//    Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
 
-    if (ingredientData != null)
-    {
-        selectedIngredients.Add(ingredientData.Id.ToString());
-    }
-    else
-    {
-        break;
-    }
-}
+//    if (ingredientData != null)
+//    {
+//        selectedIngredients.Add(ingredientData.Id.ToString());
+//    }
+//    else
+//    {
+//        break;
+//    }
+//}
 
 if (selectedIngredients.Count > 0)
 {

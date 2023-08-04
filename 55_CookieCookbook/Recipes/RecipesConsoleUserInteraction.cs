@@ -63,4 +63,31 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
             Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
         }
     }
+
+    public IEnumerable<string> ReadIngredientsFromUser()
+    {
+        List<string> selectedIngredients = new List<string>();
+        while (true)
+        {
+            Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
+
+            var input = Console.ReadLine();
+            if (!int.TryParse(input, out int selectedId))
+            {
+                break;
+            }
+
+            Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
+
+            if (ingredientData != null)
+            {
+                selectedIngredients.Add(ingredientData.Id.ToString());
+            }
+            else
+            {
+                break;
+            }
+        }
+        return selectedIngredients;
+    }
 }
