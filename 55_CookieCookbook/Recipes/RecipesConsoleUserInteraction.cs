@@ -64,9 +64,9 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
         }
     }
 
-    public IEnumerable<string> ReadIngredientsFromUser()
+    public IEnumerable<Ingredient> ReadIngredientsFromUser()
     {
-        List<string> selectedIngredients = new List<string>();
+        List<Ingredient> selectedIngredients = new List<Ingredient>();
         while (true)
         {
             Console.WriteLine("Add an ingredient by it's ID or type anything else if finished.");
@@ -82,7 +82,7 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 
             if (ingredientData != null)
             {
-                selectedIngredients.Add(ingredientData.Id.ToString());
+                selectedIngredients.Add(ingredientData);
             }
             else
             {

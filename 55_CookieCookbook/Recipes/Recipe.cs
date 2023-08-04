@@ -4,15 +4,21 @@ namespace _55_CookieCookbook.Recipes;
 
 public class Recipe
 {
-    public IEnumerable<string> Ingredients { get; }
+    public IEnumerable<Ingredient> Ingredients { get; }
 
-    public Recipe(IEnumerable<string> ingredients)
+    public Recipe(IEnumerable<Ingredient> ingredients)
     {
         Ingredients = ingredients;
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        var steps = new List<string>();
+
+        foreach (var ingredient in Ingredients)
+        {
+            steps.Add($"{ingredient.Name} {ingredient.PreparationInstructions}");
+        }
+        return string.Join(Environment.NewLine, steps);
     }
 }

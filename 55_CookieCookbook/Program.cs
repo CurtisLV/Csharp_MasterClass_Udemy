@@ -53,7 +53,7 @@ public class CookieRecipeApp
 
         if (ingredients.Count() > 0)
         {
-            var recipe = new Recipe((IEnumerable<string>)ingredients);
+            var recipe = new Recipe(ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
             allRecipes.Add(recipe.ToString()); // TODO this might be wrong
             //_recipesRepository.Write(filePath, allRecipes);
