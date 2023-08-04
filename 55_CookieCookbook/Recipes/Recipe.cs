@@ -17,7 +17,7 @@ public class Recipe
 
         foreach (var ingredient in Ingredients)
         {
-            steps.Add($"{ingredient.Name} {ingredient.PreparationInstructions}");
+            steps.Add($"{ingredient.Name}. {ingredient.PreparationInstructions}");
         }
         return string.Join(Environment.NewLine, steps);
     }
