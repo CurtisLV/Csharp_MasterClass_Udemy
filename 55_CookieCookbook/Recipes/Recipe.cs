@@ -10,4 +10,9 @@ public class Recipe
     {
         Ingredients = ingredients;
     }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
 }
