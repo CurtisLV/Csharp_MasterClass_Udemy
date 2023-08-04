@@ -50,6 +50,14 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 
     public void PromptToCreateRecipe()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
+
+        List<string> selectedIngredients = new List<string>();
+
+        // Printing available ingredients
+        foreach (Ingredient ingredient in ingredients)
+        {
+            Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
+        }
     }
 }
