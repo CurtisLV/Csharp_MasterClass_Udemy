@@ -47,4 +47,9 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
             Console.WriteLine();
         }
     }
+
+    public void PromptToCreateRecipe()
+    {
+        throw new NotImplementedException();
+    }
 }
