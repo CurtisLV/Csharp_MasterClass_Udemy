@@ -16,48 +16,55 @@ string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
-var cookieRecipeApp = new CookieRecipeApp(new RecipesRepository(), new RecipesConsoleUserInteraction(new IngredientRegister()));
+var cookieRecipeApp = new CookieRecipeApp(
+    new RecipesRepository(),
+    new RecipesConsoleUserInteraction(new IngredientRegister())
+);
 cookieRecipeApp.Run(fullFilePath);
-
 
 public class CookieRecipeApp
 {
     private readonly RecipesRepository _recipesRepository;
     private readonly IRecipesUserInteraction _recipesUserInteraction;
 
-    public CookieRecipeApp(RecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
+    public CookieRecipeApp(
+        RecipesRepository recipesRepository,
+        IRecipesUserInteraction recipesUserInteraction
+    )
     {
         _recipesRepository = recipesRepository;
         _recipesUserInteraction = recipesUserInteraction;
     }
+
     public void Run(string filePath)
     {
         var allRecipes = new List<string>();
         if (File.Exists(filePath))
         {
-             allRecipes = _recipesRepository.Read(filePath);
+            allRecipes = _recipesRepository.Read(filePath);
             _recipesUserInteraction.PrintExistingRecipes(allRecipes);
         }
 
         // print available ingredients could be a part of the below function
         _recipesUserInteraction.PromptToCreateRecipe();
 
-        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser(); 
+        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser();
+        ingredients = ingredients.ToList();
 
-        if (ingredients.Count > 0)
-        {
-            var recipe = new Recipe(ingredients);
-            // instructor wants to add new recipes to all old ones and only then write to file ??
-            allRecipes.Add(recipe.ToString()); // TODO this might be wrong
-            _recipesRepository.Write(filePath, allRecipes);
+        //if (ingredients.Count > 0)
+        //{
+        //    var recipe = new Recipe((IEnumerable<Ingredient>)ingredients);
+        //    // instructor wants to add new recipes to all old ones and only then write to file ??
+        //    allRecipes.Add(recipe.ToString()); // TODO this might be wrong
+        //    _recipesRepository.Write(filePath, allRecipes);
 
-            _recipesUserInteraction.ShowMessage("Recipe added:");
-            _recipesUserInteraction.ShowMessage(recipe.ToString());
-        }
-        else
-        {
-            _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
-        }
+        //    _recipesUserInteraction.ShowMessage("Recipe added:");
+        //    _recipesUserInteraction.ShowMessage(recipe.ToString());
+        //}
+        //else
+        //{
+        //    _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
+        //}
 
         _recipesUserInteraction.Exit();
     }
@@ -104,21 +111,21 @@ public class CookieRecipeApp
 //    }
 //}
 
-if (selectedIngredients.Count > 0)
-{
-    string joinedSelectedIngredients = string.Join(",", selectedIngredients);
-    // Happy flow
-    Console.WriteLine("Recipe added:");
-    // Newly added recipe is printed TODO
-    PrintOneRecipe(joinedSelectedIngredients);
-    // Store recipe in the txt/json file TODO
+//if (selectedIngredients.Count > 0)
+//{
+//    string joinedSelectedIngredients = string.Join(",", selectedIngredients);
+//    // Happy flow
+//    Console.WriteLine("Recipe added:");
+//    // Newly added recipe is printed TODO
+//    PrintOneRecipe(joinedSelectedIngredients);
+//    // Store recipe in the txt/json file TODO
 
-    savingTxt.Write(fullFilePath, new List<string> { joinedSelectedIngredients });
-}
-else
-{
-    Console.WriteLine("No ingredients have been selected. Recipe will not be saved.");
-}
+//    savingTxt.Write(fullFilePath, new List<string> { joinedSelectedIngredients });
+//}
+//else
+//{
+//    Console.WriteLine("No ingredients have been selected. Recipe will not be saved.");
+//}
 
 //// Exit msg was here
 
