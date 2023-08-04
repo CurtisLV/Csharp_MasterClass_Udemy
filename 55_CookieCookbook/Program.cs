@@ -51,20 +51,22 @@ public class CookieRecipeApp
         var ingredients = _recipesUserInteraction.ReadIngredientsFromUser();
         ingredients = ingredients.ToList();
 
-        //if (ingredients.Count > 0)
-        //{
-        //    var recipe = new Recipe((IEnumerable<Ingredient>)ingredients);
-        //    // instructor wants to add new recipes to all old ones and only then write to file ??
-        //    allRecipes.Add(recipe.ToString()); // TODO this might be wrong
-        //    _recipesRepository.Write(filePath, allRecipes);
+        if (ingredients.Count() > 0)
+        {
+            var recipe = new Recipe((IEnumerable<Ingredient>)ingredients);
+            // instructor wants to add new recipes to all old ones and only then write to file ??
+            allRecipes.Add(recipe.ToString()); // TODO this might be wrong
+            //_recipesRepository.Write(filePath, allRecipes);
 
-        //    _recipesUserInteraction.ShowMessage("Recipe added:");
-        //    _recipesUserInteraction.ShowMessage(recipe.ToString());
-        //}
-        //else
-        //{
-        //    _recipesUserInteraction.ShowMessage("No ingredients have been selected. Recipe will not be saved.");
-        //}
+            _recipesUserInteraction.ShowMessage("Recipe added:");
+            _recipesUserInteraction.ShowMessage(recipe.ToString());
+        }
+        else
+        {
+            _recipesUserInteraction.ShowMessage(
+                "No ingredients have been selected. Recipe will not be saved."
+            );
+        }
 
         _recipesUserInteraction.Exit();
     }
