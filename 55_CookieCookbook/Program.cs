@@ -49,11 +49,11 @@ public class CookieRecipeApp
         _recipesUserInteraction.PromptToCreateRecipe();
 
         var ingredients = _recipesUserInteraction.ReadIngredientsFromUser();
-        ingredients = ingredients.ToList();
+        //ingredients = ingredients.ToList();
 
         if (ingredients.Count() > 0)
         {
-            var recipe = new Recipe((IEnumerable<Ingredient>)ingredients);
+            var recipe = new Recipe((IEnumerable<string>)ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
             allRecipes.Add(recipe.ToString()); // TODO this might be wrong
             //_recipesRepository.Write(filePath, allRecipes);
@@ -74,7 +74,7 @@ public class CookieRecipeApp
 
 
 
-//// if the defined file is not empty, print all existing recipes
+//// if the defined file is not empty, print all existing recipess
 //if (File.Exists(fullFilePath))
 //{
 //    List<string> allRecipes = savingTxt.Read(fullFilePath);

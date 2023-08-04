@@ -77,7 +77,8 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
                 break;
             }
 
-            Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
+            //Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
+            Ingredient ingredientData = _ingredientRegister.GetById(selectedId);
 
             if (ingredientData != null)
             {
