@@ -3,12 +3,14 @@
 public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
     List<Ingredient> ingredients;
+    private readonly IIngredientRegister _ingredientRegister;
 
     public RecipesConsoleUserInteraction()
     {
         // Initialize the list of ingredients
-        IngredientRegister ir = new IngredientRegister();
-        ingredients = new List<Ingredient>(ir.All);
+        //IngredientRegister ir = new IngredientRegister();
+        //ingredients = new List<Ingredient>(ir.All);
+        ingredients = new List<Ingredient>(_ingredientRegister.All);
     }
 
     public void ShowMessage(string msg)
