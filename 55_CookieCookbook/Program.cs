@@ -48,7 +48,7 @@ public class CookieRecipeApp
         {
             var recipe = new Recipe(ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
-            allRecipes.Add(recipe);
+            allRecipes.Add(recipe.ToString()); // TODO this might be wrong
             _recipesRepository.Write(filePath, allRecipes);
 
             _recipesUserInteraction.ShowMessage("Recipe added:");
@@ -72,15 +72,15 @@ public class CookieRecipeApp
 //    PrintAllRecipes(allRecipes);
 //}
 
-Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
+//Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
-List<string> selectedIngredients = new List<string>();
+//List<string> selectedIngredients = new List<string>();
 
-// Printing available ingredients
-foreach (Ingredient ingredient in ingredients)
-{
-    Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
-}
+//// Printing available ingredients
+//foreach (Ingredient ingredient in ingredients)
+//{
+//    Console.WriteLine($"{ingredient.Id}. {ingredient.Name}");
+//}
 
 while (true)
 {
