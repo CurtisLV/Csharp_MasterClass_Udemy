@@ -5,7 +5,7 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
     List<Ingredient> ingredients;
     private readonly IIngredientRegister _ingredientRegister;
 
-    public RecipesConsoleUserInteraction(IngredientRegister ingredientRegister)
+    public RecipesConsoleUserInteraction(IIngredientRegister ingredientRegister)
     {
         // Initialize the list of ingredients
         //IngredientRegister ir = new IngredientRegister();

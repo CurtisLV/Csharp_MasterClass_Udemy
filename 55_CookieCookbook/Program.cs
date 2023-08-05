@@ -5,7 +5,6 @@ using _55_CookieCookbook.Recipes.Ingredients;
 
 // define if saved in .txt or .json
 //const FileFormat Format = FileFormat.Json;
-
 const FileFormat Format = FileFormat.Txt;
 
 const string FileName = "recipes";
@@ -131,26 +130,4 @@ public class CookieRecipeApp
 //else
 //{
 //    Console.WriteLine("No ingredients have been selected. Recipe will not be saved.");
-//}
-
-//// Exit msg was here
-
-//void PrintOneRecipe(string joinedSelectedIngredients)
-//{
-//    List<string> strings = joinedSelectedIngredients.Split(",").ToList();
-//    foreach (string str in strings)
-//    {
-//        Ingredient ingredient = ingredients.Find(ingredient => ingredient.Id == int.Parse(str));
-//        Console.WriteLine(ingredient.ToString());
-//    }
-//}
-
-//void PrintAllRecipes(List<string> recipes)
-//{
-//    for (int i = 0; i < recipes.Count; i++)
-//    {
-//        Console.WriteLine($"***** {i + 1} *****");
-//        PrintOneRecipe(recipes[i]);
-//        Console.WriteLine();
-//    }
 //}
