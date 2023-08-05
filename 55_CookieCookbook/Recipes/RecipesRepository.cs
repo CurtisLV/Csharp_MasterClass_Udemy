@@ -9,4 +9,9 @@ public class RecipesRepository : IRecipesRepository
     {
         return textRepository.Read(filePath);
     }
+
+    internal void Write(string filePath, List<string> allRecipes)
+    {
+        //
+    }
 }

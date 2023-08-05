@@ -56,7 +56,7 @@ public class CookieRecipeApp
             var recipe = new Recipe(ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
             allRecipes.Add(recipe.ToString()); // TODO this might be wrong
-            //_recipesRepository.Write(filePath, allRecipes);
+            _recipesRepository.Write(filePath, allRecipes);
 
             _recipesUserInteraction.ShowMessage("Recipe added:");
             _recipesUserInteraction.ShowMessage(recipe.ToString());
