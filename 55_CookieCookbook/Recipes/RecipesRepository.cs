@@ -15,7 +15,7 @@ public class RecipesRepository : IRecipesRepository
         return _stringsRepository.Read(filePath);
     }
 
-    internal void Write(string filePath, List<string> allRecipes)
+    public void Write(string filePath, List<string> allRecipes)
     {
         _stringsRepository.Write(filePath, allRecipes);
     }
