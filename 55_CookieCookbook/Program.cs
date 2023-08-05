@@ -53,10 +53,13 @@ public class CookieRecipeApp
 
         if (ingredients.Count() > 0)
         {
+            string joinedSelectedIngredients = string.Join(",", ingredients.Select(i => i.Id));
             var recipe = new Recipe(ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
-            allRecipes.Add(recipe.ToString()); // TODO this might be wrong
-            _recipesRepository.Write(filePath, allRecipes);
+            //allRecipes.Add(recipe.ToString()); // TODO this might be wrong
+            //allRecipes.Add(joinedSelectedIngredients);
+            //_recipesRepository.Write(filePath, allRecipes);
+            _recipesRepository.Write(filePath, new List<string> { joinedSelectedIngredients });
 
             _recipesUserInteraction.ShowMessage("Recipe added:");
             _recipesUserInteraction.ShowMessage(recipe.ToString());
