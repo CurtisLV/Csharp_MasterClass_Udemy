@@ -38,7 +38,7 @@ public class CookieRecipeApp
 
     public void Run(string filePath)
     {
-        var allRecipes = new List<string>();
+        var allRecipes = new List<Recipe>();
         if (File.Exists(filePath))
         {
             allRecipes = _recipesRepository.Read(filePath);
@@ -56,10 +56,11 @@ public class CookieRecipeApp
             string joinedSelectedIngredients = string.Join(",", ingredients.Select(i => i.Id));
             var recipe = new Recipe(ingredients);
             // instructor wants to add new recipes to all old ones and only then write to file ??
-            //allRecipes.Add(recipe.ToString()); // TODO this might be wrong
+            //allRecipes.Add(recipe.ToString()); // TODO this is wrong
             //allRecipes.Add(joinedSelectedIngredients);
             //_recipesRepository.Write(filePath, allRecipes);
-            _recipesRepository.Write(filePath, new List<string> { joinedSelectedIngredients });
+            //_recipesRepository.Write(filePath, new List<string> { joinedSelectedIngredients });
+            _recipesRepository.Write(filePath, allRecipes);
 
             _recipesUserInteraction.ShowMessage("Recipe added:");
             _recipesUserInteraction.ShowMessage(recipe.ToString());

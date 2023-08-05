@@ -17,6 +17,12 @@ public class RecipesRepository : IRecipesRepository
 
     public void Write(string filePath, List<string> allRecipes)
     {
+        //var recipesAsString = new List<string>();
+        //foreach (var recipe in allRecipes)
+        //{
+        //    recipesAsString.Add(string.Join(",", recipe.Ingredients.Select(i => i.Id)));
+        //}
+
         _stringsRepository.Write(filePath, allRecipes);
     }
 }
