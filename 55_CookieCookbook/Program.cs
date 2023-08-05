@@ -38,7 +38,7 @@ public class CookieRecipeApp
 
     public void Run(string filePath)
     {
-        var allRecipes = new List<Recipe>();
+        var allRecipes = new List<string>();
         if (File.Exists(filePath))
         {
             allRecipes = _recipesRepository.Read(filePath);
@@ -59,8 +59,8 @@ public class CookieRecipeApp
             //allRecipes.Add(recipe.ToString()); // TODO this is wrong
             //allRecipes.Add(joinedSelectedIngredients);
             //_recipesRepository.Write(filePath, allRecipes);
-            //_recipesRepository.Write(filePath, new List<string> { joinedSelectedIngredients });
-            _recipesRepository.Write(filePath, allRecipes);
+            _recipesRepository.Write(filePath, new List<string> { joinedSelectedIngredients });
+            //_recipesRepository.Write(filePath, allRecipes);
 
             _recipesUserInteraction.ShowMessage("Recipe added:");
             _recipesUserInteraction.ShowMessage(recipe.ToString());
