@@ -55,8 +55,6 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
     {
         Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
 
-        List<string> selectedIngredients = new List<string>();
-
         // Printing available ingredients
         foreach (Ingredient ingredient in ingredients)
         {
@@ -77,7 +75,6 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
                 break;
             }
 
-            //Ingredient ingredientData = ingredients.Find(ingredient => ingredient.Id == selectedId);
             Ingredient ingredientData = _ingredientRegister.GetById(selectedId);
 
             if (ingredientData != null)
