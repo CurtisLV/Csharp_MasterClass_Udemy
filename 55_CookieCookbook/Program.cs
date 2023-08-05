@@ -17,7 +17,7 @@ string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
 var cookieRecipeApp = new CookieRecipeApp(
-    new RecipesRepository(),
+    new RecipesRepository(new StringsTextualRepository()),
     new RecipesConsoleUserInteraction(new IngredientRegister())
 );
 cookieRecipeApp.Run(fullFilePath);
