@@ -12,9 +12,11 @@ const string FileName = "recipes";
 const string BaseDirectory =
     "C:\\Users\\s3257b\\Desktop\\github.CurtisLV\\Csharp_MasterClass_Udemy\\55_CookieCookbook\\Files";
 
-string filePath = Format == FileFormat.Json ? $"{FileName}.json" : $"{FileName}.txt";
+//string filePath = Format == FileFormat.Json ? $"{FileName}.json" : $"{FileName}.txt";
 
-string fullFilePath = BaseDirectory + "\\" + filePath;
+var fileMetadata = new FileMetadata(FileName, Format);
+
+string fullFilePath = BaseDirectory + "\\" + fileMetadata;
 
 IStringsRepository stringsRepository =
     Format == FileFormat.Json ? new StringsJsonRepository() : new StringsTextualRepository();
