@@ -27,6 +27,19 @@ var cookieRecipeApp = new CookieRecipeApp(
 );
 cookieRecipeApp.Run(fullFilePath);
 
+public class FileMetadata
+{
+    public string Name { get; }
+
+    public FileFormat Format { get; }
+
+    public FileMetadata(string name, FileFormat format)
+    {
+        Name = name;
+        Format = format;
+    }
+}
+
 public class CookieRecipeApp
 {
     private readonly IRecipesRepository _recipesRepository;
