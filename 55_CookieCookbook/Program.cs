@@ -38,6 +38,8 @@ public class FileMetadata
         Name = name;
         Format = format;
     }
+
+    public string ToPath() => $"{Name}.{Format.AsFileExtension()}";
 }
 
 public class CookieRecipeApp
