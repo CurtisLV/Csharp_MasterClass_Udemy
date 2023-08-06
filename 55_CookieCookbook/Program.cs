@@ -24,11 +24,11 @@ cookieRecipeApp.Run(fullFilePath);
 
 public class CookieRecipeApp
 {
-    private readonly RecipesRepository _recipesRepository;
+    private readonly IRecipesRepository _recipesRepository;
     private readonly IRecipesUserInteraction _recipesUserInteraction;
 
     public CookieRecipeApp(
-        RecipesRepository recipesRepository,
+        IRecipesRepository recipesRepository,
         IRecipesUserInteraction recipesUserInteraction
     )
     {
