@@ -42,6 +42,11 @@ public class FileMetadata
     public string ToPath() => $"{Name}.{Format.AsFileExtension()}";
 }
 
+public static class FileFormatExtensions
+{
+    //
+}
+
 public class CookieRecipeApp
 {
     private readonly IRecipesRepository _recipesRepository;
