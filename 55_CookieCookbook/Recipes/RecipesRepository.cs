@@ -1,13 +1,19 @@
 ﻿using _55_CookieCookbook.DataAccess;
 using _55_CookieCookbook.Recipes;
+using _55_CookieCookbook.Recipes.Ingredients;
 
 public class RecipesRepository : IRecipesRepository
 {
     private readonly IStringsRepository _stringsRepository;
+    private readonly IIngredientRegister _iIngredientRegister;
 
-    public RecipesRepository(IStringsRepository stringsRepository)
+    public RecipesRepository(
+        IStringsRepository stringsRepository,
+        IIngredientRegister ingredientRegister
+    )
     {
         _stringsRepository = stringsRepository;
+        _iIngredientRegister = ingredientRegister;
     }
 
     public List<string> Read(string filePath)
