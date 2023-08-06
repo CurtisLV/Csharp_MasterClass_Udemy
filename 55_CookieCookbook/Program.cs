@@ -16,10 +16,13 @@ string fileFormat = Format == FileFormat.Json ? ".json" : ".txt";
 
 string fullFilePath = BaseDirectory + "\\" + FileName + fileFormat;
 
+IStringsRepository stringsRepository =
+    Format == FileFormat.Json ? new StringsJsonRepository() : new StringsTextualRepository();
+
 var ingredientsRegister = new IngredientRegister();
 
 var cookieRecipeApp = new CookieRecipeApp(
-    new RecipesRepository(new StringsTextualRepository(), ingredientsRegister),
+    new RecipesRepository(stringsRepository, ingredientsRegister),
     new RecipesConsoleUserInteraction(ingredientsRegister)
 );
 cookieRecipeApp.Run(fullFilePath);
