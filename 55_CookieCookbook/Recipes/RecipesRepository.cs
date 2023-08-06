@@ -5,7 +5,7 @@ using _55_CookieCookbook.Recipes.Ingredients;
 public class RecipesRepository : IRecipesRepository
 {
     private readonly IStringsRepository _stringsRepository;
-    private readonly IIngredientRegister _iIngredientRegister;
+    private readonly IIngredientRegister _ingredientRegister;
 
     public RecipesRepository(
         IStringsRepository stringsRepository,
@@ -13,7 +13,7 @@ public class RecipesRepository : IRecipesRepository
     )
     {
         _stringsRepository = stringsRepository;
-        _iIngredientRegister = ingredientRegister;
+        _ingredientRegister = ingredientRegister;
     }
 
     public List<string> Read(string filePath)
