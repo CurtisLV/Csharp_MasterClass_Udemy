@@ -1,5 +1,7 @@
 ﻿using _55_CookieCookbook.Recipes;
 
+namespace _55_CookieCookbook.App;
+
 public class CookieRecipeApp
 {
     private readonly IRecipesRepository _recipesRepository;
