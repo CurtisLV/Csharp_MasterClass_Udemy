@@ -4,24 +4,18 @@ using System.Text.Json.Serialization;
 //Reflection
 var converter = new ObjectToTextConverter();
 
-Console.WriteLine(converter.Convert(
-    new HouseRecord("123 Maple Road, Berrytown", 170.6d, 2)));
+Console.WriteLine(converter.Convert(new HouseRecord("123 Maple Road, Berrytown", 170.6d, 2)));
 
-Console.WriteLine(converter.Convert(
-    new Pet("Taiga", PetType.Dog, 30)));
+Console.WriteLine(converter.Convert(new Pet("Taiga", PetType.Dog, 30)));
 
 //Attributes
 var validPerson = new PersonToBeValidated("John", 1982);
 var invalidDog = new Dog("R");
 var validator = new Validator();
 
-Console.WriteLine(validator.Validate(validPerson) ?
-    "Person is valid" :
-    "Person is not valid");
+Console.WriteLine(validator.Validate(validPerson) ? "Person is valid" : "Person is not valid");
 Console.WriteLine();
-Console.WriteLine(validator.Validate(invalidDog) ?
-    "Dog is valid" :
-    "Dog is not valid");
+Console.WriteLine(validator.Validate(invalidDog) ? "Dog is valid" : "Dog is not valid");
 
 //with expression
 var weatherData = new WeatherData(25.1m, 65);
@@ -39,25 +33,20 @@ var point1 = new Point(1, 5);
 var point2 = new Point(1, 5);
 
 Console.WriteLine(object.ReferenceEquals(null, null));
-Console.WriteLine("Are references equal? " +
-    object.ReferenceEquals(john, theSameAsJohn));
+Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, theSameAsJohn));
 
-Console.WriteLine("point1.Equals(point2): " +
-    point1.Equals(point2));
+Console.WriteLine("point1.Equals(point2): " + point1.Equals(point2));
 
 Console.WriteLine("1.Equals(1): " + 1.Equals(1));
 Console.WriteLine("1.Equals(2): " + 1.Equals(2));
 Console.WriteLine("1.Equals(null): " + 1.Equals(null));
-Console.WriteLine(
-    "\"abc\".Equals(\"abc\"): " + "abc".Equals("abc"));
+Console.WriteLine("\"abc\".Equals(\"abc\"): " + "abc".Equals("abc"));
 Console.WriteLine();
 
-Console.WriteLine(
-    "john.Equals(theSameAsJohn): " + john.Equals(theSameAsJohn));
+Console.WriteLine("john.Equals(theSameAsJohn): " + john.Equals(theSameAsJohn));
 
 Console.WriteLine("john.Equals(marie): " + john.Equals(marie));
 Console.WriteLine("john.Equals(null): " + john.Equals(null));
-
 
 //GetHashCode
 var point3 = new Point(27, 1);
@@ -73,7 +62,6 @@ var person3 = new Person(7, "Bella");
 Console.WriteLine(person1.GetHashCode());
 Console.WriteLine(person2.GetHashCode());
 Console.WriteLine(person3.GetHashCode());
-
 
 //Tuples
 var tuple1 = new Tuple<string, bool>("aaa", false);
@@ -127,17 +115,15 @@ var root = JsonSerializer.Deserialize<Root>(json);
 
 foreach (var yearlyData in root.data)
 {
-    Console.WriteLine($"Year: {yearlyData.Year}, " +
-        $"population: {yearlyData.Population}");
+    Console.WriteLine($"Year: {yearlyData.Year}, " + $"population: {yearlyData.Population}");
 }
-
 
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
 
 //documentation comments
 /// <summary>
-/// Calculates the sum of the elements 
+/// Calculates the sum of the elements
 /// in the specified collection.
 /// </summary>
 /// <param name="numbers">Numbers to sum.</param>
@@ -146,7 +132,7 @@ Console.ReadKey();
 /// Thrown if `numbers` is null.
 /// </exception>
 /// <exception cref="OverflowException">
-/// Thrown if the sum of the elements in `numbers` 
+/// Thrown if the sum of the elements in `numbers`
 /// is larger than the max value of an `int`.
 /// </exception>
 static int Sum(IEnumerable<int> numbers)
@@ -156,11 +142,15 @@ static int Sum(IEnumerable<int> numbers)
 
 string FormatHousesData(IEnumerable<House> houses)
 {
-    return string.Join("\n",
-        houses.Select(house =>
-        $"Owner is {house.OwnerName}, " +
-        $"address is {house.Address.Number} " +
-        $"{house.Address.Street}"));
+    return string.Join(
+        "\n",
+        houses.Select(
+            house =>
+                $"Owner is {house.OwnerName}, "
+                + $"address is {house.Address.Number} "
+                + $"{house.Address.Street}"
+        )
+    );
 }
 
 bool ValidateAddress(House house)
@@ -205,26 +195,32 @@ class ObjectToTextConverter
     {
         Type type = obj.GetType();
 
-        var properties = type
-            .GetProperties()
+        var properties = type.GetProperties()
             .Where(property => property.Name != "EqualityContract");
 
         return string.Join(
             ", ",
-            properties
-                .Select(property =>
-                $"{property.Name} is {property.GetValue(obj)}"));
+            properties.Select(property => $"{property.Name} is {property.GetValue(obj)}")
+        );
     }
 }
 
 public record Pet(string Name, PetType PetType, float Weight);
+
 public record HouseRecord(string Adderss, double Area, int Floors);
-public enum PetType { Cat, Dog, Fish }
+
+public enum PetType
+{
+    Cat,
+    Dog,
+    Fish
+}
 
 public class Dog
 {
     [StringLengthValidate(2, 10)]
     public string Name { get; }
+
     public Dog(string name) => Name = name;
 }
 
@@ -262,30 +258,31 @@ class Validator
     public bool Validate(object obj)
     {
         var type = obj.GetType();
-        var propertiesToValidate = type
-            .GetProperties()
-            .Where(property =>
-                Attribute.IsDefined(
-                    property, typeof(StringLengthValidateAttribute)));
+        var propertiesToValidate = type.GetProperties()
+            .Where(
+                property => Attribute.IsDefined(property, typeof(StringLengthValidateAttribute))
+            );
 
         foreach (var property in propertiesToValidate)
         {
             var attribute = (StringLengthValidateAttribute)
-                property.GetCustomAttributes(
-                    typeof(StringLengthValidateAttribute), true).First();
+                property.GetCustomAttributes(typeof(StringLengthValidateAttribute), true).First();
             object? propertyValue = property.GetValue(obj);
             if (propertyValue is not string)
             {
                 throw new InvalidOperationException(
-                    $"Attribute {nameof(StringLengthValidateAttribute)} " +
-                    $"can only be applied to strings.");
+                    $"Attribute {nameof(StringLengthValidateAttribute)} "
+                        + $"can only be applied to strings."
+                );
             }
             var value = (string)propertyValue;
             if (value.Length < attribute.Min || value.Length > attribute.Max)
             {
-                Console.WriteLine($"Property {property.Name} is invalid. " +
-                    $"Value: {value}. The length must be between " +
-                    $"{attribute.Min} and {attribute.Max}");
+                Console.WriteLine(
+                    $"Property {property.Name} is invalid. "
+                        + $"Value: {value}. The length must be between "
+                        + $"{attribute.Min} and {attribute.Max}"
+                );
                 return false;
             }
         }
@@ -313,8 +310,7 @@ readonly struct Point : IEquatable<Point>
 
     public override bool Equals(object? obj)
     {
-        return obj is Point point &&
-            Equals(point);
+        return obj is Point point && Equals(point);
     }
 
     public override int GetHashCode()
@@ -322,14 +318,11 @@ readonly struct Point : IEquatable<Point>
         return HashCode.Combine(X, Y);
     }
 
-    public static bool operator ==(Point point1, Point point2) =>
-        point1.Equals(point2);
+    public static bool operator ==(Point point1, Point point2) => point1.Equals(point2);
 
-    public static bool operator !=(Point point1, Point point2) =>
-        !point1.Equals(point2);
+    public static bool operator !=(Point point1, Point point2) => !point1.Equals(point2);
 
-    public static Point operator +(Point a, Point b) =>
-        new Point(a.X + b.X, a.Y + b.Y);
+    public static Point operator +(Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
 
     public static implicit operator Point(Tuple<int, int> tuple) =>
         new Point(tuple.Item1, tuple.Item2);
@@ -350,8 +343,7 @@ class Person
 
     public override bool Equals(object? obj)
     {
-        return obj is Person other &&
-            Id == other.Id;
+        return obj is Person other && Id == other.Id;
     }
 
     public override int GetHashCode()
@@ -378,8 +370,7 @@ public class WeatherDataClass : IEquatable<WeatherDataClass?>
         Humidity = humidity;
     }
 
-    public override string ToString() =>
-        $"Temperature: {Temperature}, Humidity: {Humidity}";
+    public override string ToString() => $"Temperature: {Temperature}, Humidity: {Humidity}";
 
     public override bool Equals(object? obj)
     {
@@ -388,9 +379,7 @@ public class WeatherDataClass : IEquatable<WeatherDataClass?>
 
     public bool Equals(WeatherDataClass? other)
     {
-        return other is not null &&
-               Temperature == other.Temperature &&
-               Humidity == other.Humidity;
+        return other is not null && Temperature == other.Temperature && Humidity == other.Humidity;
     }
 
     public override int GetHashCode()
@@ -414,8 +403,6 @@ struct FishyStruct
 {
     public List<int> Numbers { get; init; }
 }
-
-
 
 public class House
 {
@@ -448,5 +435,3 @@ public class Address
         Number = number;
     }
 }
-
-
