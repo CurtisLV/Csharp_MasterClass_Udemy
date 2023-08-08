@@ -12,7 +12,8 @@ public class StarWarsPlanetsStatsApp
     public StarWarsPlanetsStatsApp(
         IPlanetsReader planetsReader,
         IPlanetsStatisticsAnalyzer planetsStaticticsAnalyzer,
-        IPlanetsStatsUserInteractor planetsStatsUserInteractor)
+        IPlanetsStatsUserInteractor planetsStatsUserInteractor
+    )
     {
         _planetsReader = planetsReader;
         _planetsStatisticsAnalyzer = planetsStaticticsAnalyzer;
