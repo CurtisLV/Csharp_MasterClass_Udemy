@@ -6,24 +6,22 @@ public class MockStarWarsApiDataReader : IApiDataReader
     private const string ExpectedBaseAddress = "https://swapi.dev/";
     private const string ExpectedRequestUri = "api/planets";
 
-    public Task<string> Read(
-        string baseAddress, string requestUri)
+    public Task<string> Read(string baseAddress, string requestUri)
     {
         if (baseAddress != ExpectedBaseAddress)
         {
-            throw new ArgumentException(
-                $"Base address can only be {ExpectedBaseAddress}");
+            throw new ArgumentException($"Base address can only be {ExpectedBaseAddress}");
         }
         if (requestUri != ExpectedRequestUri)
         {
-            throw new ArgumentException(
-               $"Resuest URI can only be {ExpectedRequestUri}");
+            throw new ArgumentException($"Resuest URI can only be {ExpectedRequestUri}");
         }
 
         return Task.FromResult(Result);
     }
 
-    private const string Result = @"
+    private const string Result =
+        @"
 {
    ""count"":60,
    ""next"":""https://swapi.dev/api/planets/?page=2"",
