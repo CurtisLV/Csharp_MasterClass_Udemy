@@ -2,13 +2,11 @@
 
 public class ApiDataReader : IApiDataReader
 {
-    public async Task<string> Read(
-        string baseAddress, string requestUri)
+    public async Task<string> Read(string baseAddress, string requestUri)
     {
         using var client = new HttpClient();
         client.BaseAddress = new Uri(baseAddress);
-        HttpResponseMessage response = await client.GetAsync(
-            requestUri);
+        HttpResponseMessage response = await client.GetAsync(requestUri);
         response.EnsureSuccessStatusCode();
 
         return await response.Content.ReadAsStringAsync();
@@ -50,7 +48,7 @@ public class ApiDataReader : IApiDataReader
 
 
 //Console.WriteLine(object.ReferenceEquals(null, null));
-//Console.WriteLine("Are references equal? " + 
+//Console.WriteLine("Are references equal? " +
 //    object.ReferenceEquals(john, theSameAsJohn));
 
 //var point1 = new Point(1, 5);
