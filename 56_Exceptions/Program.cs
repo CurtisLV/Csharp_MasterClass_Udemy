@@ -18,13 +18,5 @@ Console.ReadKey();
 
 int ParseStringToInt(string input)
 {
-    try
-    {
-        return int.Parse(input);
-    }
-    catch (Exception)
-    {
-        Console.WriteLine($"Parsing error in the {nameof(ParseStringToInt)} method.");
-        return 0;
-    }
+    return int.Parse(input);
 }
