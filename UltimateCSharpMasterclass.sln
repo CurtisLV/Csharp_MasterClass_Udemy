@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "52_DiceRoll", "52_DiceRoll\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "54_Polymorphism_Inheritance_Interfaces", "54_Polymorphism_Inheritance_Interfaces\54_Polymorphism_Inheritance_Interfaces.csproj", "{346621CE-9818-44E5-8124-9B0D8369C9EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "55_CookieCookbook", "55_CookieCookbook\55_CookieCookbook.csproj", "{795B0DA4-444E-4A9E-B572-6DA2EE71FD75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "55_CookieCookbook", "55_CookieCookbook\55_CookieCookbook.csproj", "{795B0DA4-444E-4A9E-B572-6DA2EE71FD75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "56_Exceptions", "56_Exceptions\56_Exceptions.csproj", "{FD85A876-ACDA-4492-A148-A2A5C903E364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{795B0DA4-444E-4A9E-B572-6DA2EE71FD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{795B0DA4-444E-4A9E-B572-6DA2EE71FD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{795B0DA4-444E-4A9E-B572-6DA2EE71FD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD85A876-ACDA-4492-A148-A2A5C903E364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD85A876-ACDA-4492-A148-A2A5C903E364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD85A876-ACDA-4492-A148-A2A5C903E364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD85A876-ACDA-4492-A148-A2A5C903E364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
