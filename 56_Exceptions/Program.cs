@@ -8,7 +8,7 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine("An exception was thrown. Exception message: " + ex);
+    Console.WriteLine("An exception was thrown. Exception message: " + ex.Message);
 }
 finally
 {
