@@ -15,7 +15,8 @@ public class PlanetsFromApiReader : IPlanetsReader
     public PlanetsFromApiReader(
         IApiDataReader apiDataReader,
         IApiDataReader secondaryApiDataReader,
-        IUserInteractor userInteractor)
+        IUserInteractor userInteractor
+    )
     {
         _apiDataReader = apiDataReader;
         _secondaryApiDataReader = secondaryApiDataReader;
@@ -27,18 +28,18 @@ public class PlanetsFromApiReader : IPlanetsReader
         string? json = null;
         try
         {
-            json = await _apiDataReader.Read(
-                "https://swapi.dev/", "api/planets");
+            json = await _apiDataReader.Read("https://swapi.dev/", "api/planets");
         }
         catch (HttpRequestException ex)
         {
             _userInteractor.ShowMessage(
-                "API request was unsuccessful. " +
-                "Switching to mock data. " +
-                "Exception message: " + ex.Message);
+                "API request was unsuccessful. "
+                    + "Switching to mock data. "
+                    + "Exception message: "
+                    + ex.Message
+            );
         }
-        json ??= await _secondaryApiDataReader.Read(
-                "https://swapi.dev/", "api/planets");
+        json ??= await _secondaryApiDataReader.Read("https://swapi.dev/", "api/planets");
 
         var root = JsonSerializer.Deserialize<Root>(json);
 
@@ -52,7 +53,6 @@ public class PlanetsFromApiReader : IPlanetsReader
             throw new ArgumentNullException(nameof(root));
         }
 
-        return root.results.Select(
-            planetDto => (Planet)planetDto);
+        return root.results.Select(planetDto => (Planet)planetDto);
     }
 }
