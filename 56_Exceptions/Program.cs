@@ -6,9 +6,9 @@ try
     int number = ParseStringToInt(input);
     Console.WriteLine("String successfully parsed, result is " + number);
 }
-catch (Exception)
+catch (Exception ex)
 {
-    Console.WriteLine("An exception was thrown.");
+    Console.WriteLine("An exception was thrown. Exception message: " + ex);
 }
 finally
 {
