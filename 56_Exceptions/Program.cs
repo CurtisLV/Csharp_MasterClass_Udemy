@@ -1,4 +1,8 @@
-﻿Console.WriteLine("Enter a number:");
+﻿using _56_Exceptions;
+
+Person person = new Person("", -100);
+
+Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
 try
