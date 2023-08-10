@@ -6,12 +6,18 @@ try
     int number = ParseStringToInt(input);
     var result = 10 / number;
 
-    Console.WriteLine("String successfully parsed, result is " + number);
+    Console.WriteLine($"10 / {number} is {result}");
 }
 catch (FormatException ex)
 {
     Console.WriteLine(
         "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
+    );
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine(
+        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
     );
 }
 finally
