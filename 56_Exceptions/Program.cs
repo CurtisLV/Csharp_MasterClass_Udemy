@@ -4,11 +4,15 @@ string input = Console.ReadLine();
 try
 {
     int number = ParseStringToInt(input);
+    var result = 10 / number;
+
     Console.WriteLine("String successfully parsed, result is " + number);
 }
-catch (Exception ex)
+catch (FormatException ex)
 {
-    Console.WriteLine("An exception was thrown. Exception message: " + ex.Message);
+    Console.WriteLine(
+        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
+    );
 }
 finally
 {
@@ -23,22 +27,22 @@ int ParseStringToInt(string input)
 Console.ReadKey();
 
 // First coding exercise
-int result = DivideNumbers(4, 0);
-Console.WriteLine(result);
+//int result = DivideNumbers(4, 0);
+//Console.WriteLine(result);
 
-static int DivideNumbers(int a, int b)
-{
-    try
-    {
-        return a / b;
-    }
-    catch
-    {
-        Console.WriteLine("Division by zero.");
-        return 0;
-    }
-    finally
-    {
-        Console.WriteLine("The DivideNumbers method ends.");
-    }
-}
+//static int DivideNumbers(int a, int b)
+//{
+//    try
+//    {
+//        return a / b;
+//    }
+//    catch
+//    {
+//        Console.WriteLine("Division by zero.");
+//        return 0;
+//    }
+//    finally
+//    {
+//        Console.WriteLine("The DivideNumbers method ends.");
+//    }
+//}
