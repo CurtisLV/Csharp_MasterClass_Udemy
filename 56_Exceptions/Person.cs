@@ -10,11 +10,11 @@ public class Person
     {
         if (name == string.Empty)
         {
-            throw new Exception("Invalid name.");
+            throw new Exception("The name cannot be empty.");
         }
         if (yearOfBirth < 1900 || yearOfBirth > DateTime.Now.Year)
         {
-            throw new Exception("Invalid year of birth.");
+            throw new Exception("The year of birth must be between 1900 and current year");
         }
 
         Name = name;
