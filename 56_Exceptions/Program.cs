@@ -1,20 +1,20 @@
-﻿Console.WriteLine("Enter a number:");
-string input = Console.ReadLine();
+﻿//Console.WriteLine("Enter a number:");
+//string input = Console.ReadLine();
 
-try
-{
-    int number = ParseStringToInt(input);
-    Console.WriteLine("String successfully parsed, result is " + number);
-}
-catch (Exception ex)
-{
-    Console.WriteLine("An exception was thrown. Exception message: " + ex.Message);
-}
-finally
-{
-    Console.WriteLine("Finally block is being executed!");
-}
-Console.ReadKey();
+//try
+//{
+//    int number = ParseStringToInt(input);
+//    Console.WriteLine("String successfully parsed, result is " + number);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine("An exception was thrown. Exception message: " + ex.Message);
+//}
+//finally
+//{
+//    Console.WriteLine("Finally block is being executed!");
+//}
+
 
 int ParseStringToInt(string input)
 {
@@ -26,14 +26,11 @@ static int DivideNumbers(int a, int b)
 {
     try
     {
-        //
+        return a / b;
     }
     catch (Exception)
     {
         throw;
     }
-
-    return a / b;
-
-    //
 }
+Console.ReadKey();
