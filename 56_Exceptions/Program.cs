@@ -33,11 +33,12 @@ static int DivideNumbers(int a, int b)
     }
     catch
     {
+        Console.WriteLine("Division by zero.");
         return 0;
     }
     finally
     {
-        //
+        Console.WriteLine("The DivideNumbers method ends.");
     }
 }
 Console.ReadKey();
