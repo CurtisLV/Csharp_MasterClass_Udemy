@@ -34,6 +34,16 @@ int ParseStringToInt(string input)
     return int.Parse(input);
 }
 
+int GetFirstElement(IEnumerable<int> numbers)
+{
+    foreach (var num in numbers)
+    {
+        return num;
+    }
+
+    throw new Exception("The collection cannot be empty!");
+}
+
 Console.ReadKey();
 
 // First coding exercise
