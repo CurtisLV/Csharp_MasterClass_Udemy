@@ -20,6 +20,10 @@ catch (DivideByZeroException ex)
         "Division by zero is an invalid operation." + "\nException message: " + ex.Message
     );
 }
+catch (Exception ex)
+{
+    Console.WriteLine($"Unexpected error: {ex.Message}");
+}
 finally
 {
     Console.WriteLine("Finally block is being executed!");
