@@ -24,7 +24,14 @@ int ParseStringToInt(string input)
 // First coding exercise
 static int DivideNumbers(int a, int b)
 {
-    //
+    try
+    {
+        //
+    }
+    catch (Exception)
+    {
+        throw;
+    }
 
     return a / b;
 
