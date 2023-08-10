@@ -20,3 +20,13 @@ int ParseStringToInt(string input)
 {
     return int.Parse(input);
 }
+
+// First coding exercise
+static int DivideNumbers(int a, int b)
+{
+    //
+
+    return a / b;
+
+    //
+}
