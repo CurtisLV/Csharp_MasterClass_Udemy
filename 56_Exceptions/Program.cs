@@ -21,6 +21,9 @@ int ParseStringToInt(string input)
     return int.Parse(input);
 }
 
+int result = DivideNumbers(4, 0);
+Console.WriteLine(result);
+
 // First coding exercise
 static int DivideNumbers(int a, int b)
 {
@@ -28,9 +31,13 @@ static int DivideNumbers(int a, int b)
     {
         return a / b;
     }
-    catch (Exception)
+    catch
     {
-        throw;
+        return 0;
+    }
+    finally
+    {
+        //
     }
 }
 Console.ReadKey();
