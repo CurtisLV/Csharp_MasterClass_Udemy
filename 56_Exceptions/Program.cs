@@ -33,6 +33,14 @@ int ParseStringToInt(string input)
 {
     return int.Parse(input);
 }
+try
+{
+    var result2 = GetFirstElement(new int[0]);
+}
+catch
+{
+    throw;
+}
 
 int GetFirstElement(IEnumerable<int> numbers)
 {
