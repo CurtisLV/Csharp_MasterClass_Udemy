@@ -1,17 +1,25 @@
 ﻿using _56_Exceptions;
 
-Person invalidPersonObject = new Person("", -100);
+//Person invalidPersonObject = new Person("", -100);
 
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
 var emptyCollection = new List<int>();
+
 var firstElement = GetFirstElement(emptyCollection);
 
 var firstUsingLinq = emptyCollection.First();
 
 var numbers = new int[] { 1, 2, 3 };
-var fourth = numbers[3];
+int fourth = numbers[3];
+
+bool has7 = CheckIfContains7(7, numbers);
+
+bool CheckIfContains7(int v, int[] numbers)
+{
+    throw new NotImplementedException();
+}
 
 Console.ReadKey();
 try
@@ -62,7 +70,7 @@ int GetFirstElement(IEnumerable<int> numbers)
         return num;
     }
 
-    throw new Exception("The collection cannot be empty!");
+    throw new InvalidOperationException("The collection cannot be empty!");
 }
 
 
