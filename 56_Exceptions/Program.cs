@@ -1,10 +1,14 @@
 ﻿using _56_Exceptions;
 
-Person person = new Person("", -100);
+Person invalidPersonObject = new Person("", -100);
 
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
+var emptyCollection = new List<int>();
+var firstElement = GetFirstElement(emptyCollection);
+
+Console.ReadKey();
 try
 {
     int number = ParseStringToInt(input);
@@ -56,7 +60,7 @@ int GetFirstElement(IEnumerable<int> numbers)
     throw new Exception("The collection cannot be empty!");
 }
 
-Console.ReadKey();
+
 
 // First coding exercise
 //int result = DivideNumbers(4, 0);
