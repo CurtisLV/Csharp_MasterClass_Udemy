@@ -8,13 +8,17 @@ public class Person
 
     public Person(string name, int yearOfBirth)
     {
+        if (name is not null)
+        {
+            //
+        }
         if (name == string.Empty)
         {
-            throw new Exception("The name cannot be empty.");
+            throw new ArgumentException("The name cannot be empty.");
         }
         if (yearOfBirth < 1900 || yearOfBirth > DateTime.Now.Year)
         {
-            throw new Exception("The year of birth must be between 1900 and current year");
+            throw new ArgumentException("The year of birth must be between 1900 and current year");
         }
 
         Name = name;
