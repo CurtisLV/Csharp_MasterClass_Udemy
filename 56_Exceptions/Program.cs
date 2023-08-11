@@ -8,6 +8,11 @@ string input = Console.ReadLine();
 var emptyCollection = new List<int>();
 var firstElement = GetFirstElement(emptyCollection);
 
+var firstUsingLinq = emptyCollection.First();
+
+var numbers = new int[] { 1, 2, 3 };
+var fourth = numbers[3];
+
 Console.ReadKey();
 try
 {
