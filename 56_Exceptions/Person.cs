@@ -8,9 +8,9 @@ public class Person
 
     public Person(string name, int yearOfBirth)
     {
-        if (name is not null)
+        if (name is null)
         {
-            //
+            throw new ArgumentException("The name cannot be null.");
         }
         if (name == string.Empty)
         {
