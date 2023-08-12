@@ -6,8 +6,7 @@ public class PlanetsStatsUserInteractor : IPlanetsStatsUserInteractor
 {
     private readonly IUserInteractor _userInteractor;
 
-    public PlanetsStatsUserInteractor(
-        IUserInteractor userInteractor)
+    public PlanetsStatsUserInteractor(IUserInteractor userInteractor)
     {
         _userInteractor = userInteractor;
     }
@@ -22,17 +21,12 @@ public class PlanetsStatsUserInteractor : IPlanetsStatsUserInteractor
         _userInteractor.ShowMessage(message);
     }
 
-    public string? ChooseStaticticsToBeShown(
-        IEnumerable<string> propertiesThatCanBeChosen)
+    public string? ChooseStaticticsToBeShown(IEnumerable<string> propertiesThatCanBeChosen)
     {
         _userInteractor.ShowMessage(
-            Environment.NewLine +
-            "The statistics of which property would you " +
-            "like to see?");
-        _userInteractor.ShowMessage(
-            string.Join(
-                Environment.NewLine,
-                propertiesThatCanBeChosen));
+            Environment.NewLine + "The statistics of which property would you " + "like to see?"
+        );
+        _userInteractor.ShowMessage(string.Join(Environment.NewLine, propertiesThatCanBeChosen));
 
         return _userInteractor.ReadFromUser();
     }
