@@ -10,11 +10,7 @@ public readonly record struct Planet
     public int? SurfaceWater { get; }
     public long? Population { get; }
 
-    public Planet(
-        string name,
-        int diameter,
-        int? surfaceWater,
-        long? population)
+    public Planet(string name, int diameter, int? surfaceWater, long? population)
     {
         if (name is null)
         {
