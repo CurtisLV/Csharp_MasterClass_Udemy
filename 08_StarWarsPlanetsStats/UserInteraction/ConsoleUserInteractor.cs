@@ -16,5 +16,4 @@ public class ConsoleUserInteractor : IUserInteractor
     {
         TablePrinter.Print(items);
     }
-
 }
