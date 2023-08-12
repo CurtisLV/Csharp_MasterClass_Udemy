@@ -8,22 +8,19 @@ public static class TablePrinter
 
         var properties = typeof(T).GetProperties();
 
-        foreach(var property in properties)
+        foreach (var property in properties)
         {
             Console.Write($"{{0,-{columnWidth}}}|", property.Name);
         }
 
         Console.WriteLine();
-        Console.WriteLine(
-            new string('-', properties.Length * (columnWidth + 1)));
-      
-        foreach(var item in items)
+        Console.WriteLine(new string('-', properties.Length * (columnWidth + 1)));
+
+        foreach (var item in items)
         {
-            foreach(var property in properties)
+            foreach (var property in properties)
             {
-                Console.Write(
-                    $"{{0,-{columnWidth}}}|", 
-                    property.GetValue(item));
+                Console.Write($"{{0,-{columnWidth}}}|", property.GetValue(item));
             }
 
             Console.WriteLine();
