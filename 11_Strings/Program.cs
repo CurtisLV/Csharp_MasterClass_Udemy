@@ -62,8 +62,7 @@ for (int i = 0; i < Count; i++)
     text += "a";
 }
 stopwatch.Stop();
-Console.WriteLine(
-    $"Concatenation took {stopwatch.ElapsedMilliseconds} ms");
+Console.WriteLine($"Concatenation took {stopwatch.ElapsedMilliseconds} ms");
 
 stopwatch.Restart();
 var stringBuilder = new StringBuilder();
@@ -73,8 +72,7 @@ for (int i = 0; i < Count; i++)
 }
 var text2 = stringBuilder.ToString();
 stopwatch.Stop();
-Console.WriteLine(
-    $"StringBuilder took {stopwatch.ElapsedMilliseconds} ms");
+Console.WriteLine($"StringBuilder took {stopwatch.ElapsedMilliseconds} ms");
 
 //String interning
 
@@ -86,30 +84,21 @@ Console.WriteLine(object.ReferenceEquals(textA, textB)); //will be true
 var number1 = 100;
 var number2 = 200;
 
-var formattedText = string.Format(
-    "Number 1 is {0}, number 2 is {1,10:C}",
-    number1,
-    number2);
+var formattedText = string.Format("Number 1 is {0}, number 2 is {1,10:C}", number1, number2);
 
 Console.WriteLine(formattedText);
 
 decimal someDecimal = 1.46m;
-Console.WriteLine(
-    String.Format("Number is {0:C3}", someDecimal));
-Console.WriteLine(
-    String.Format("Number is {0:F1}", someDecimal));
-Console.WriteLine(
-    String.Format("Number is {0:P}", someDecimal));
+Console.WriteLine(String.Format("Number is {0:C3}", someDecimal));
+Console.WriteLine(String.Format("Number is {0:F1}", someDecimal));
+Console.WriteLine(String.Format("Number is {0:P}", someDecimal));
 
 Console.WriteLine();
 
 DateTime someDate = new DateTime(2024, 5, 6, 12, 54, 12);
-Console.WriteLine(
-    $"Date is {someDate:d}");
-Console.WriteLine(
-    $"Date is {someDate:D}");
-Console.WriteLine(
-    String.Format("Date is {0:MM/yyyy}", someDate));
+Console.WriteLine($"Date is {someDate:d}");
+Console.WriteLine($"Date is {someDate:D}");
+Console.WriteLine(String.Format("Date is {0:MM/yyyy}", someDate));
 
 //Culture-specific string formatting
 Console.WriteLine("Enter a number");
@@ -117,7 +106,7 @@ var userInput = Console.ReadLine();
 decimal result = decimal.Parse(userInput); //uses current culture
 Console.WriteLine("Number is " + result);
 
-CultureInfo currentCulture = CultureInfo.CurrentCulture; 
+CultureInfo currentCulture = CultureInfo.CurrentCulture;
 Console.WriteLine("en-US culture"); //Current culture may not be en-US different on your machine!
 
 var date = new DateTime(2025, 3, 2, 12, 16, 14);
@@ -131,9 +120,7 @@ CultureInfo.CurrentCulture = new CultureInfo("pl-PL");
 Console.WriteLine(date.ToString("d"));
 Console.WriteLine(number);
 
-Console.WriteLine(
-    date.ToString(CultureInfo.InvariantCulture)); //should be the same for you as for me
-
+Console.WriteLine(date.ToString(CultureInfo.InvariantCulture)); //should be the same for you as for me
 
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
@@ -142,11 +129,3 @@ void Modify(string input)
 {
     input += "xyz";
 }
-
-
-
-
-
-
-
-
