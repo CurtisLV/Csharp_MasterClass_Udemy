@@ -21,8 +21,7 @@ namespace LinkedListTests
             list.Add("a");
 
             Assert.AreEqual(1, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a" }, list);
+            CollectionAssert.AreEqual(new string[] { "a" }, list);
         }
 
         [Test]
@@ -34,8 +33,7 @@ namespace LinkedListTests
             list.Add("c");
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a", "b", "c" }, list);
+            CollectionAssert.AreEqual(new string[] { "a", "b", "c" }, list);
         }
 
         [Test]
@@ -47,8 +45,7 @@ namespace LinkedListTests
             list.Add("c");
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new string?[] { "a", null, "c" }, list);
+            CollectionAssert.AreEqual(new string?[] { "a", null, "c" }, list);
         }
 
         [Test]
@@ -58,8 +55,7 @@ namespace LinkedListTests
             list.AddToEnd("a");
 
             Assert.AreEqual(1, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a" }, list);
+            CollectionAssert.AreEqual(new string[] { "a" }, list);
         }
 
         [Test]
@@ -71,8 +67,7 @@ namespace LinkedListTests
             list.AddToEnd("c");
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a", "b", "c" }, list);
+            CollectionAssert.AreEqual(new string[] { "a", "b", "c" }, list);
         }
 
         [Test]
@@ -82,8 +77,7 @@ namespace LinkedListTests
             list.AddToFront("a");
 
             Assert.AreEqual(1, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a" }, list);
+            CollectionAssert.AreEqual(new string[] { "a" }, list);
         }
 
         [Test]
@@ -95,8 +89,7 @@ namespace LinkedListTests
             list.AddToFront("c");
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "c", "b", "a" }, list);
+            CollectionAssert.AreEqual(new string[] { "c", "b", "a" }, list);
         }
 
         [Test]
@@ -151,8 +144,7 @@ namespace LinkedListTests
 
             Assert.False(isRemoved);
             Assert.AreEqual(2, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "b", "a" }, list);
+            CollectionAssert.AreEqual(new string[] { "b", "a" }, list);
         }
 
         [Test]
@@ -167,8 +159,7 @@ namespace LinkedListTests
 
             Assert.True(isRemoved);
             Assert.AreEqual(2, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "b", "c" }, list);
+            CollectionAssert.AreEqual(new string[] { "b", "c" }, list);
         }
 
         [Test]
@@ -183,8 +174,7 @@ namespace LinkedListTests
 
             Assert.True(isRemoved);
             Assert.AreEqual(2, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a", "b" }, list);
+            CollectionAssert.AreEqual(new string[] { "a", "b" }, list);
         }
 
         [Test]
@@ -217,8 +207,7 @@ namespace LinkedListTests
 
             Assert.True(isRemoved);
             Assert.AreEqual(4, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a", "b", "d", "e" }, list);
+            CollectionAssert.AreEqual(new string[] { "a", "b", "d", "e" }, list);
         }
 
         [Test]
@@ -235,8 +224,7 @@ namespace LinkedListTests
 
             Assert.True(isRemoved);
             Assert.AreEqual(4, list.Count);
-            CollectionAssert.AreEqual(
-                new string[] { "a", "b", "c", "d" }, list);
+            CollectionAssert.AreEqual(new string[] { "a", "b", "c", "d" }, list);
         }
 
         [Test]
@@ -253,8 +241,7 @@ namespace LinkedListTests
 
             Assert.True(isRemoved);
             Assert.AreEqual(4, list.Count);
-            CollectionAssert.AreEqual(
-                new string?[] { "a", "c", null, "e" }, list);
+            CollectionAssert.AreEqual(new string?[] { "a", "c", null, "e" }, list);
         }
 
         [Test]
@@ -271,7 +258,8 @@ namespace LinkedListTests
 
             CollectionAssert.AreEqual(
                 new string?[] { null, null, "a", null, "c", "e", null },
-                array);
+                array
+            );
         }
 
         [Test]
@@ -286,9 +274,7 @@ namespace LinkedListTests
             var array = new string[6];
             list.CopyTo(array, 2);
 
-            CollectionAssert.AreEqual(
-                new string?[] { null, null, "a", null, "c", "e" },
-                array);
+            CollectionAssert.AreEqual(new string?[] { null, null, "a", null, "c", "e" }, array);
         }
 
         [Test]
@@ -296,8 +282,7 @@ namespace LinkedListTests
         {
             var list = new SinglyLinkedList<string>();
 
-            Assert.Throws<ArgumentNullException>(
-                () => list.CopyTo(null!, 2));
+            Assert.Throws<ArgumentNullException>(() => list.CopyTo(null!, 2));
         }
 
         [Test]
@@ -306,8 +291,7 @@ namespace LinkedListTests
             var list = new SinglyLinkedList<string>();
 
             var array = new string[7];
-            Assert.Throws<ArgumentOutOfRangeException>(
-                () => list.CopyTo(array, -1));
+            Assert.Throws<ArgumentOutOfRangeException>(() => list.CopyTo(array, -1));
         }
 
         [Test]
@@ -316,15 +300,13 @@ namespace LinkedListTests
             var list = new SinglyLinkedList<string>();
 
             var array = new string[7];
-            Assert.Throws<ArgumentOutOfRangeException>(
-                () => list.CopyTo(array, 11));
+            Assert.Throws<ArgumentOutOfRangeException>(() => list.CopyTo(array, 11));
         }
 
         [TestCase(3)]
         [TestCase(4)]
         [TestCase(5)]
-        public void CopyTo_ShallThrow_IfArrayIsTooShortForAllItems(
-            int arrayLength)
+        public void CopyTo_ShallThrow_IfArrayIsTooShortForAllItems(int arrayLength)
         {
             var list = new SinglyLinkedList<string>();
             list.Add("a");
@@ -333,16 +315,14 @@ namespace LinkedListTests
             list.Add("e");
 
             var array = new string[arrayLength];
-            Assert.Throws<ArgumentException>(
-                () => list.CopyTo(array, 2));
+            Assert.Throws<ArgumentException>(() => list.CopyTo(array, 2));
         }
 
         [TestCase("a")]
         [TestCase("c")]
         [TestCase("e")]
         [TestCase(null)]
-        public void Contains_ShallReturnTrue_IfItemExistsInList(
-            string itemToCheck)
+        public void Contains_ShallReturnTrue_IfItemExistsInList(string itemToCheck)
         {
             var list = new SinglyLinkedList<string>();
             list.Add("a");
@@ -357,8 +337,7 @@ namespace LinkedListTests
         [TestCase("b")]
         [TestCase("c")]
         [TestCase(null)]
-        public void Contains_ShallReturnFalse_IfItemDoesNotExistInList(
-           string itemToCheck)
+        public void Contains_ShallReturnFalse_IfItemDoesNotExistInList(string itemToCheck)
         {
             var list = new SinglyLinkedList<string>();
             list.Add("e");
@@ -375,8 +354,7 @@ namespace LinkedListTests
             list.Add(3);
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new int[] { 1, 2, 3 }, list);
+            CollectionAssert.AreEqual(new int[] { 1, 2, 3 }, list);
         }
 
         [Test]
@@ -391,8 +369,7 @@ namespace LinkedListTests
             list.Add(date2);
 
             Assert.AreEqual(3, list.Count);
-            CollectionAssert.AreEqual(
-                new DateTime?[] { date1, null, date2 }, list);
+            CollectionAssert.AreEqual(new DateTime?[] { date1, null, date2 }, list);
         }
     }
 }
