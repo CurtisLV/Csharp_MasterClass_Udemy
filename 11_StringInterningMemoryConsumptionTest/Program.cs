@@ -18,8 +18,7 @@ void TestStringsMemoryConsumption(int count)
 
     GC.Collect(2, GCCollectionMode.Default, true);
     var memoryAfter = GC.GetTotalMemory(false);
-    Console.WriteLine(
-        "(strings) difference in bytes is " + (memoryAfter - memoryBefore));
+    Console.WriteLine("(strings) difference in bytes is " + (memoryAfter - memoryBefore));
 }
 
 void TestCharArraysMemoryConsumption(int count)
@@ -34,8 +33,7 @@ void TestCharArraysMemoryConsumption(int count)
     }
     GC.Collect(2, GCCollectionMode.Default, true);
     var memoryAfter = GC.GetTotalMemory(false);
-    Console.WriteLine(
-        "(char arrays) difference in bytes is " + (memoryAfter - memoryBefore));
+    Console.WriteLine("(char arrays) difference in bytes is " + (memoryAfter - memoryBefore));
 }
 
 void TestVariousStringsMemoryConsumption(int count)
@@ -51,6 +49,5 @@ void TestVariousStringsMemoryConsumption(int count)
 
     GC.Collect(2, GCCollectionMode.Default, true);
     var memoryAfter = GC.GetTotalMemory(false);
-    Console.WriteLine(
-        "(various strings) difference in bytes is " + (memoryAfter - memoryBefore));
+    Console.WriteLine("(various strings) difference in bytes is " + (memoryAfter - memoryBefore));
 }
