@@ -2,8 +2,7 @@
 using System.Diagnostics;
 
 //our custom collection
-var customCollection = new CustomCollection(
-    new string[] { "aaa", "bbb", "ccc" });
+var customCollection = new CustomCollection(new string[] { "aaa", "bbb", "ccc" });
 
 foreach (var word in customCollection)
 {
@@ -21,10 +20,7 @@ while (wordsEnumerator.MoveNext())
 
 //Binary search
 
-var sortedList = new List<int>
-{
-    1, 3, 4, 5, 6, 11, 12, 14, 16, 18
-};
+var sortedList = new List<int> { 1, 3, 4, 5, 6, 11, 12, 14, 16, 18 };
 
 //our implementation of Binary search
 var indexOf1 = sortedList.FindIndexInSorted(1);
@@ -47,7 +43,9 @@ var input = Enumerable.Range(0, 100_000_000).ToArray();
 Stopwatch stopwatch = Stopwatch.StartNew();
 var list1 = new List<int>(input);
 stopwatch.Stop();
-Console.WriteLine($"Creating a List from existing collection took: {stopwatch.ElapsedMilliseconds} ms");
+Console.WriteLine(
+    $"Creating a List from existing collection took: {stopwatch.ElapsedMilliseconds} ms"
+);
 
 stopwatch.Restart();
 var list2 = new List<int>();
@@ -66,7 +64,6 @@ foreach (var item in input)
 }
 stopwatch.Stop();
 Console.WriteLine($"Creating a List without resizing took: {stopwatch.ElapsedMilliseconds} ms");
-
 
 //To get distinct items, we can use HashSet or
 //Distinct method (which also uses HashSetUnder the hood)
@@ -115,11 +112,8 @@ Console.WriteLine(Calculator.Add(1, 2, 3));
 Console.WriteLine(Calculator.Add(1, 2, 3, 4));
 Console.WriteLine(Calculator.Add());
 
-
 //yield statement
-var smallSubset = GenerateEvenNumbers()
-    .Skip(5)
-    .Take(50);
+var smallSubset = GenerateEvenNumbers().Skip(5).Take(50);
 
 foreach (var number in GenerateEvenNumbers())
 {
@@ -161,7 +155,6 @@ foreach (var number in GetBeforeFirstNegative(numbers))
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
 
-
 //yield statement
 IEnumerable<int> GenerateEvenNumbers()
 {
@@ -186,8 +179,7 @@ IEnumerable<int> GetSingleDigitNumbers()
     yield return 9;
 }
 
-IEnumerable<T> Distinct<T>(
-    IEnumerable<T> input)
+IEnumerable<T> Distinct<T>(IEnumerable<T> input)
 {
     var hashSet = new HashSet<T>();
     foreach (var item in input)
@@ -200,8 +192,7 @@ IEnumerable<T> Distinct<T>(
     }
 }
 
-IEnumerable<int> GetBeforeFirstNegative(
-    IEnumerable<int> input)
+IEnumerable<int> GetBeforeFirstNegative(IEnumerable<int> input)
 {
     foreach (var number in input)
     {
@@ -266,7 +257,8 @@ public class WordsEnumerator : IEnumerator<string>
             {
                 throw new IndexOutOfRangeException(
                     $"{nameof(CustomCollection)}'s end reached.",
-                    ex);
+                    ex
+                );
             }
         }
     }
@@ -282,18 +274,13 @@ public class WordsEnumerator : IEnumerator<string>
         _currentPosition = InitialPosition;
     }
 
-    public void Dispose()
-    {
-
-    }
+    public void Dispose() { }
 }
-
 
 //Binary search
 public static class ListExtensions
 {
-    public static int? FindIndexInSorted<T>(
-        this IList<T> list, T itemToFind)
+    public static int? FindIndexInSorted<T>(this IList<T> list, T itemToFind)
         where T : IComparable<T>
     {
         int leftBound = 0;
@@ -323,23 +310,17 @@ public static class ListExtensions
 //HashSet
 public class SpellChecker
 {
-    private readonly HashSet<string> _correctWords = new()
-    {
-        "dog", "cat", "fish"
-    };
+    private readonly HashSet<string> _correctWords = new() { "dog", "cat", "fish" };
 
-    public bool IsCorrect(string word) =>
-        _correctWords.Contains(word);
+    public bool IsCorrect(string word) => _correctWords.Contains(word);
 
-    public void AddCorrectWord(string word) =>
-        _correctWords.Add(word);
+    public void AddCorrectWord(string word) => _correctWords.Add(word);
 }
 
 //params
 public static class Calculator
 {
-    public static int Add(params int[] numbers) =>
-        numbers.Sum();
+    public static int Add(params int[] numbers) => numbers.Sum();
 }
 
 public class CustomCollectionWithYield : IEnumerable<string>
@@ -357,6 +338,7 @@ public class CustomCollectionWithYield : IEnumerable<string>
     }
 
     private int _currentIndex = 0;
+
     public void Add(string item)
     {
         Words[_currentIndex] = item;
@@ -376,34 +358,9 @@ public class CustomCollectionWithYield : IEnumerable<string>
 
     public IEnumerator<string> GetEnumerator()
     {
-        foreach(var word in Words)
+        foreach (var word in Words)
         {
             yield return word;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
