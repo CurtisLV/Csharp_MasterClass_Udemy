@@ -9,6 +9,7 @@ public class PublicClass
     }
 
     protected internal void ProtectedInternal() { }
+
     private protected void PrivateProtected() { }
 }
 
@@ -28,26 +29,17 @@ internal class InternalClass
     }
 }
 
-file class AccessibleOnlyInThisFile
-{
-
-}
+file class AccessibleOnlyInThisFile { }
 
 public class Outer
 {
-    private class Inner
-    {
-
-    }
+    private class Inner { }
 }
 
 public static class EnumerableExtensions
 {
-    public static string AsString<T>(
-        this IEnumerable<T> items)
+    public static string AsString<T>(this IEnumerable<T> items)
     {
-        return string.Join(
-            Environment.NewLine,
-            items);
+        return string.Join(Environment.NewLine, items);
     }
 }
