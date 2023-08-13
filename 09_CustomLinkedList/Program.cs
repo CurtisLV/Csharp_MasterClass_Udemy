@@ -6,7 +6,7 @@ list.AddToFront("a");
 list.AddToFront("b");
 list.AddToFront("c");
 
-foreach(var item in list)
+foreach (var item in list)
 {
     Console.WriteLine(item);
 }
@@ -36,7 +36,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
     public void AddToEnd(T? item)
     {
         var newNode = new Node(item);
-        if(_head is null)
+        if (_head is null)
         {
             _head = newNode;
         }
@@ -50,10 +50,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
 
     public void AddToFront(T? item)
     {
-        var newHead = new Node(item)
-        {
-            Next = _head
-        };
+        var newHead = new Node(item) { Next = _head };
         _head = newHead;
         ++_count;
     }
@@ -63,7 +60,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
         //This loop is not really needed
         //if Node is a private class in SinglyLinkedList class
         Node? current = _head;
-        while(current is not null)
+        while (current is not null)
         {
             Node? temporary = current;
             current = current.Next;
@@ -76,7 +73,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
 
     public bool Contains(T? item)
     {
-        if(item is null)
+        if (item is null)
         {
             return GetNodes().Any(node => node.Value is null);
         }
@@ -85,20 +82,20 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
 
     public void CopyTo(T?[] array, int arrayIndex)
     {
-        if(array is null)
+        if (array is null)
         {
             throw new ArgumentNullException(nameof(array));
         }
-        if(arrayIndex < 0 || arrayIndex >= array.Length)
+        if (arrayIndex < 0 || arrayIndex >= array.Length)
         {
             throw new ArgumentOutOfRangeException(nameof(arrayIndex));
         }
-        if(array.Length < _count + arrayIndex)
+        if (array.Length < _count + arrayIndex)
         {
             throw new ArgumentException("Array is not long enough");
         }
 
-        foreach(var node in GetNodes())
+        foreach (var node in GetNodes())
         {
             array[arrayIndex] = node.Value;
             ++arrayIndex;
@@ -108,10 +105,12 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
     public bool Remove(T? item)
     {
         Node? predecessor = null;
-        foreach(var node in GetNodes())
+        foreach (var node in GetNodes())
         {
-            if((node.Value is null && item is null) ||
-               (node.Value is not null && node.Value.Equals(item)))
+            if (
+                (node.Value is null && item is null)
+                || (node.Value is not null && node.Value.Equals(item))
+            )
             {
                 if (predecessor is null)
                 {
@@ -131,7 +130,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
 
     public IEnumerator<T?> GetEnumerator()
     {
-        foreach(var node in GetNodes())
+        foreach (var node in GetNodes())
         {
             yield return node.Value;
         }
@@ -145,7 +144,7 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
     private IEnumerable<Node> GetNodes()
     {
         Node? current = _head;
-        while(current is not null)
+        while (current is not null)
         {
             yield return current;
             current = current.Next;
@@ -163,7 +162,6 @@ public class SinglyLinkedList<T> : ILinkedList<T?>
         }
 
         public override string ToString() =>
-            $"Value: {Value}, " +
-            $"Next: {(Next is null ? "null" : Next.Value)}";
+            $"Value: {Value}, " + $"Next: {(Next is null ? "null" : Next.Value)}";
     }
 }
