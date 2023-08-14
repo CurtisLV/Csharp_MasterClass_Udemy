@@ -1,6 +1,6 @@
 ﻿using _56_Exceptions;
 
-Person invalidPersonObject = new Person("", -100);
+//Person invalidPersonObject = new Person("", -100);
 
 //Console.WriteLine("Enter a number:");
 //string input = Console.ReadLine();
@@ -20,7 +20,7 @@ Person invalidPersonObject = new Person("", -100);
 //    throw new NotImplementedException();
 //}
 
-Console.ReadKey();
+
 
 //try
 //{
@@ -63,10 +63,13 @@ Console.ReadKey();
 //    throw;
 //}
 
+RecursiveMethod();
 
-void RecursiveMethod()
+Console.ReadKey();
+void RecursiveMethod(int counter)
 {
-    Console.WriteLine("");
+    Console.WriteLine("I am going to call myself!");
+    RecursiveMethod();
 }
 
 int GetFirstElement(IEnumerable<int> numbers)
