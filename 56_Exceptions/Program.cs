@@ -63,17 +63,18 @@
 //    throw;
 //}
 
-RecursiveMethod(1);
+//RecursiveMethod(1);
 
 Console.ReadKey();
-void RecursiveMethod(int counter)
-{
-    Console.WriteLine("I am going to call myself!");
-    if (counter < 10)
-    {
-        RecursiveMethod(counter + 1);
-    }
-}
+
+//void RecursiveMethod(int counter)
+//{
+//    Console.WriteLine($"I am going to call myself! Counter is {counter}");
+//    if (counter < 10)
+//    {
+//        RecursiveMethod(counter + 1);
+//    }
+//}
 
 int GetFirstElement(IEnumerable<int> numbers)
 {
@@ -85,6 +86,10 @@ int GetFirstElement(IEnumerable<int> numbers)
     throw new InvalidOperationException("The collection cannot be empty!");
 }
 
+bool IsFirstElementPositive()
+{
+    //
+}
 
 
 // First coding exercise
