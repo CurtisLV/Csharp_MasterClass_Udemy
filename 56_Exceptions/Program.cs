@@ -100,7 +100,7 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
     }
     catch (NullReferenceException ex)
     {
-        //
+        throw new ArgumentNullException("The collection is null!");
     }
 }
 
