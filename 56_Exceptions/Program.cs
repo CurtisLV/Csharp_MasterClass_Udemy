@@ -2,64 +2,71 @@
 
 Person invalidPersonObject = new Person("", -100);
 
-Console.WriteLine("Enter a number:");
-string input = Console.ReadLine();
+//Console.WriteLine("Enter a number:");
+//string input = Console.ReadLine();
 
-var emptyCollection = new List<int>();
+//var emptyCollection = new List<int>();
 
-var firstElement = GetFirstElement(emptyCollection);
-var firstUsingLinq = emptyCollection.First();
+//var firstElement = GetFirstElement(emptyCollection);
+//var firstUsingLinq = emptyCollection.First();
 
-var numbers = new int[] { 1, 2, 3 };
-int fourth = numbers[3];
+//var numbers = new int[] { 1, 2, 3 };
+//int fourth = numbers[3];
 
-bool has7 = CheckIfContains7(7, numbers);
+//bool has7 = CheckIfContains7(7, numbers);
 
-bool CheckIfContains7(int value, int[] numbers)
-{
-    throw new NotImplementedException();
-}
+//bool CheckIfContains7(int value, int[] numbers)
+//{
+//    throw new NotImplementedException();
+//}
 
 Console.ReadKey();
-try
-{
-    int number = ParseStringToInt(input);
-    var result = 10 / number;
 
-    Console.WriteLine($"10 / {number} is {result}");
-}
-catch (FormatException ex)
-{
-    Console.WriteLine(
-        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
-    );
-}
-catch (DivideByZeroException ex)
-{
-    Console.WriteLine(
-        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
-    );
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Unexpected error: {ex.Message}");
-}
-finally
-{
-    Console.WriteLine("Finally block is being executed!");
-}
+//try
+//{
+//    int number = ParseStringToInt(input);
+//    var result = 10 / number;
 
-int ParseStringToInt(string input)
+//    Console.WriteLine($"10 / {number} is {result}");
+//}
+//catch (FormatException ex)
+//{
+//    Console.WriteLine(
+//        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
+//    );
+//}
+//catch (DivideByZeroException ex)
+//{
+//    Console.WriteLine(
+//        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
+//    );
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Unexpected error: {ex.Message}");
+//}
+//finally
+//{
+//    Console.WriteLine("Finally block is being executed!");
+//}
+
+//int ParseStringToInt(string input)
+//{
+//    return int.Parse(input);
+//}
+//try
+//{
+//    var result2 = GetFirstElement(new int[0]);
+//}
+//catch
+//{
+//    throw;
+//}
+
+
+void RecursiveMethod()
 {
-    return int.Parse(input);
-}
-try
-{
-    var result2 = GetFirstElement(new int[0]);
-}
-catch
-{
-    throw;
+    Console.WriteLine("");
 }
 
 int GetFirstElement(IEnumerable<int> numbers)
