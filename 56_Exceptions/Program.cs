@@ -93,9 +93,14 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
         var firstElement = GetFirstElement(numbers);
         return firstElement > 0;
     }
-    catch (Exception)
+    catch (InvalidOperationException ex)
     {
-        throw;
+        Console.WriteLine("The collection is empty!");
+        return true;
+    }
+    catch (NullReferenceException ex)
+    {
+        //
     }
 }
 
