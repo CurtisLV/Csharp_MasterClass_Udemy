@@ -65,6 +65,12 @@
 
 //RecursiveMethod(1);
 
+List<int> numbers = new List<int> { 1, 2 };
+List<int> list = null;
+
+Console.WriteLine(IsFirstElementPositive(numbers));
+Console.WriteLine(IsFirstElementPositive(list));
+
 Console.ReadKey();
 
 //void RecursiveMethod(int counter)
@@ -100,7 +106,7 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
     }
     catch (NullReferenceException ex)
     {
-        throw new ArgumentNullException("The collection is null!");
+        throw new ArgumentNullException("The collection is null!", ex);
     }
 }
 
