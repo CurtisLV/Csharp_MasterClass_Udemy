@@ -86,10 +86,19 @@ int GetFirstElement(IEnumerable<int> numbers)
     throw new InvalidOperationException("The collection cannot be empty!");
 }
 
-bool IsFirstElementPositive()
+bool IsFirstElementPositive(IEnumerable<int> numbers)
 {
-    //
+    try
+    {
+        var firstElement = GetFirstElement(numbers);
+        return firstElement > 0;
+    }
+    catch (Exception)
+    {
+        throw;
+    }
 }
+
 
 
 // First coding exercise
