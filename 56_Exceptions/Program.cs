@@ -63,13 +63,16 @@
 //    throw;
 //}
 
-RecursiveMethod();
+RecursiveMethod(1);
 
 Console.ReadKey();
 void RecursiveMethod(int counter)
 {
     Console.WriteLine("I am going to call myself!");
-    RecursiveMethod();
+    if (counter < 10)
+    {
+        RecursiveMethod(counter + 1);
+    }
 }
 
 int GetFirstElement(IEnumerable<int> numbers)
