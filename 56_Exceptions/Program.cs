@@ -75,7 +75,7 @@ try
 {
     var result = IsFirstElementPositive(null);
 }
-catch (NullReferenceException ex)
+catch (ArgumentNullException ex)
 {
     //
 }
@@ -121,8 +121,6 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
     }
 }
 
-
-
 // First coding exercise
 //int result = DivideNumbers(4, 0);
 //Console.WriteLine(result);
@@ -143,3 +141,10 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
 //        Console.WriteLine("The DivideNumbers method ends.");
 //    }
 //}
+
+// Second coding exercise
+
+static int GetMaxValue(List<int> numbers)
+{
+    return numbers.Max();
+}
