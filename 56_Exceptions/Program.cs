@@ -106,7 +106,9 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
     }
     catch (NullReferenceException ex)
     {
-        throw new ArgumentNullException("The collection is null!", ex);
+        Console.WriteLine("Sorry! The application experienced an unexpected error.");
+        throw ex;
+        //throw new ArgumentNullException("The collection is null!", ex);
     }
 }
 
