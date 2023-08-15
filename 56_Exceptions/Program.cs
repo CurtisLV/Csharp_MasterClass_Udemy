@@ -154,4 +154,9 @@ static int GetMaxValue(List<int> numbers)
     {
         throw new ArgumentNullException("The numbers list cannot be null", ex);
     }
+    catch (InvalidOperationException ex)
+    {
+        Console.WriteLine("The numbers list cannot be empty");
+        throw ex;
+    }
 }
