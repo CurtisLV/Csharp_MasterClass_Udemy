@@ -146,5 +146,12 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
 
 static int GetMaxValue(List<int> numbers)
 {
-    return numbers.Max();
+    try
+    {
+        return numbers.Max();
+    }
+    catch (NullReferenceException ex)
+    {
+        throw new ArgumentNullException("The numbers list cannot be null", ex);
+    }
 }
