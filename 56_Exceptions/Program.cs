@@ -68,8 +68,17 @@
 List<int> numbers = new List<int> { 1, 2 };
 List<int> list = null;
 
-Console.WriteLine(IsFirstElementPositive(numbers));
-Console.WriteLine(IsFirstElementPositive(list));
+//Console.WriteLine(IsFirstElementPositive(numbers));
+//Console.WriteLine(IsFirstElementPositive(list));
+
+try
+{
+    var result = IsFirstElementPositive(null);
+}
+catch (NullReferenceException ex)
+{
+    //
+}
 
 Console.ReadKey();
 
