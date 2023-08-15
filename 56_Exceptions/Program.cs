@@ -150,13 +150,13 @@ static int GetMaxValue(List<int> numbers)
     {
         return numbers.Max();
     }
-    catch (NullReferenceException ex)
+    catch (ArgumentNullException ex)
     {
-        throw new ArgumentNullException("The numbers list cannot be null", ex);
+        throw new ArgumentNullException("The numbers list cannot be null.", ex);
     }
     catch (InvalidOperationException ex)
     {
-        Console.WriteLine("The numbers list cannot be empty");
-        throw ex;
+        Console.WriteLine("The numbers list cannot be empty.");
+        throw;
     }
 }
