@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _56_Exceptions
+namespace _56_Exceptions;
+
+public class PersonDataReader
 {
-    internal class PersonDataReader
-    {
-    }
+    //
 }
