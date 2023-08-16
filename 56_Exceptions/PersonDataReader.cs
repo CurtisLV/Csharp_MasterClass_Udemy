@@ -8,7 +8,7 @@ namespace _56_Exceptions;
 
 public interface ILogger
 {
-    //
+    void Log(Exception ex);
 }
 
 public interface IPeopleRepository
@@ -33,10 +33,10 @@ public class PersonDataReader
         {
             return _peopleRepository.Read(personId);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
 
-            throw;
+            _logger.Log(ex);
         }
         
     }
