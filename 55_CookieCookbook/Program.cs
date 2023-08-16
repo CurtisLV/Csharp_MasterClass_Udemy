@@ -3,7 +3,6 @@ using _55_CookieCookbook.DataAccess;
 using _55_CookieCookbook.FileAccess;
 using _55_CookieCookbook.Recipes.Ingredients;
 
-
 try
 {
     // define if saved in .txt or .json
@@ -32,7 +31,7 @@ try
     );
     cookieRecipeApp.Run(fullFilePath);
 }
-catch (Exception)
+catch (Exception ex)
 {
 
 	throw;
