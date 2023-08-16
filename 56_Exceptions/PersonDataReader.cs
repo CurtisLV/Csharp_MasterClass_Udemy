@@ -29,9 +29,16 @@ public class PersonDataReader
 
     public Person ReadPersonData(int personId)
     {
-        return _peopleRepository.Read(personId);
+        try
+        {
+            return _peopleRepository.Read(personId);
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        
     }
-
-
 }
 
