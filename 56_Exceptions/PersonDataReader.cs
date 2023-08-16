@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace _56_Exceptions;
 
+public interface ILogger
+{
+    //
+}
+
+public interface IPeopleRepository
+{
+    Person Read(int personId);
+}
+
 public class PersonDataReader
 {
     private readonly IPeopleRepository _peopleRepository;
@@ -25,12 +35,3 @@ public class PersonDataReader
 
 }
 
-public interface ILogger
-{
-    //
-}
-
-public interface IPeopleRepository
-{
-    //
-}
