@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _56_Exceptions;
+﻿namespace _56_Exceptions;
 
 public interface ILogger
 {
@@ -35,8 +29,8 @@ public class PersonDataReader
         }
         catch (Exception ex)
         {
-
             _logger.Log(ex);
+            throw;
         }
         
     }
