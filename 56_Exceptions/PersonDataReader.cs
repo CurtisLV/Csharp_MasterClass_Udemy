@@ -8,5 +8,16 @@ namespace _56_Exceptions;
 
 public class PersonDataReader
 {
+    private readonly IPeopleRepository _peopleRepository;
+    private readonly ILogger _logger;
+}
+
+public interface ILogger
+{
+    //
+}
+
+public interface IPeopleRepository
+{
     //
 }
