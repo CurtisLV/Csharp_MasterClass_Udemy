@@ -3,6 +3,16 @@ using _55_CookieCookbook.DataAccess;
 using _55_CookieCookbook.FileAccess;
 using _55_CookieCookbook.Recipes.Ingredients;
 
+
+try
+{
+
+}
+catch (Exception)
+{
+
+	throw;
+}
 // define if saved in .txt or .json
 const FileFormat Format = FileFormat.Json;
 
