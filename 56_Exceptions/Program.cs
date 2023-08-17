@@ -5,20 +5,20 @@
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
-//var emptyCollection = new List<int>();
+var emptyCollection = new List<int>();
 
-//var firstElement = GetFirstElement(emptyCollection);
-//var firstUsingLinq = emptyCollection.First();
+var firstElement = GetFirstElement(emptyCollection);
+var firstUsingLinq = emptyCollection.First();
 
-//var numbers = new int[] { 1, 2, 3 };
-//int fourth = numbers[3];
+var numbers = new int[] { 1, 2, 3 };
+int fourth = numbers[3];
 
-//bool has7 = CheckIfContains7(7, numbers);
+bool has7 = CheckIfContains7(7, numbers);
 
-//bool CheckIfContains7(int value, int[] numbers)
-//{
-//    throw new NotImplementedException();
-//}
+bool CheckIfContains7(int value, int[] numbers)
+{
+    throw new NotImplementedException();
+}
 
 
 
@@ -95,15 +95,15 @@ object SendHttpRequest(string url)
     return null;
 }
 
-List<int> numbers = new List<int> { 1, 2 };
+List<int> numbers2 = new List<int> { 1, 2 };
 List<int> list = null;
 
-Console.WriteLine(IsFirstElementPositive(numbers));
+Console.WriteLine(IsFirstElementPositive(numbers2));
 Console.WriteLine(IsFirstElementPositive(list));
 
 try
 {
-    var result = IsFirstElementPositive(null);
+    var result2 = IsFirstElementPositive(null);
 }
 catch (ArgumentNullException ex)
 {
