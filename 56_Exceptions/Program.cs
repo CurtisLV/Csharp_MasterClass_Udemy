@@ -71,15 +71,17 @@ try
 }
 catch (HttpRequestException ex) when (ex.Message == "403")
 {
-    Console.WriteLine("It wa forbidden to access the resource.");
+    Console.WriteLine("It was forbidden to access the resource.");
     throw;
-}catch (HttpRequestException ex) when (ex.Message == "403")
+}
+catch (HttpRequestException ex) when (ex.Message == "404")
 {
-    Console.WriteLine("It wa forbidden to access the resource.");
+    Console.WriteLine("The resource was not found.");
     throw;
-}catch (HttpRequestException ex) when (ex.Message == "403")
+}
+catch (HttpRequestException ex) when (ex.Message == "500")
 {
-    Console.WriteLine("It wa forbidden to access the resource.");
+    Console.WriteLine("The server has experienced an internal error.");
     throw;
 }
 
