@@ -2,8 +2,8 @@
 
 //Person invalidPersonObject = new Person("", -100);
 
-//Console.WriteLine("Enter a number:");
-//string input = Console.ReadLine();
+Console.WriteLine("Enter a number:");
+string input = Console.ReadLine();
 
 //var emptyCollection = new List<int>();
 
@@ -22,46 +22,46 @@
 
 
 
-//try
-//{
-//    int number = ParseStringToInt(input);
-//    var result = 10 / number;
+try
+{
+    int number = ParseStringToInt(input);
+    var result = 10 / number;
 
-//    Console.WriteLine($"10 / {number} is {result}");
-//}
-//catch (FormatException ex)
-//{
-//    Console.WriteLine(
-//        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
-//    );
-//}
-//catch (DivideByZeroException ex)
-//{
-//    Console.WriteLine(
-//        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
-//    );
-//}
-//catch (Exception ex)
-//{
-//    Console.WriteLine($"Unexpected error: {ex.Message}");
-//}
-//finally
-//{
-//    Console.WriteLine("Finally block is being executed!");
-//}
+    Console.WriteLine($"10 / {number} is {result}");
+}
+catch (FormatException ex)
+{
+    Console.WriteLine(
+        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
+    );
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine(
+        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
+    );
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Unexpected error: {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Finally block is being executed!");
+}
 
-//int ParseStringToInt(string input)
-//{
-//    return int.Parse(input);
-//}
-//try
-//{
-//    var result2 = GetFirstElement(new int[0]);
-//}
-//catch
-//{
-//    throw;
-//}
+int ParseStringToInt(string input)
+{
+    return int.Parse(input);
+}
+try
+{
+    var result2 = GetFirstElement(new int[0]);
+}
+catch
+{
+    throw;
+}
 
 //RecursiveMethod(1);
 
