@@ -69,9 +69,17 @@ try
 {
     var dataFromWeb = SendHttpRequest("www.tvnet.lv");
 }
-catch (HttpRequestException ex)
+catch (HttpRequestException ex) when (ex.Message == "403")
 {
-
+    Console.WriteLine("It wa forbidden to access the resource.");
+    throw;
+}catch (HttpRequestException ex) when (ex.Message == "403")
+{
+    Console.WriteLine("It wa forbidden to access the resource.");
+    throw;
+}catch (HttpRequestException ex) when (ex.Message == "403")
+{
+    Console.WriteLine("It wa forbidden to access the resource.");
     throw;
 }
 
