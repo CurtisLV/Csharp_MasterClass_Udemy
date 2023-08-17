@@ -65,6 +65,13 @@ catch
 
 //RecursiveMethod(1);
 
+var dataFromWeb = SendHttpRequest("www.tvnet.lv");
+
+object SendHttpRequest(string v)
+{
+    return null;
+}
+
 List<int> numbers = new List<int> { 1, 2 };
 List<int> list = null;
 
