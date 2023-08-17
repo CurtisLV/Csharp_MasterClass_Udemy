@@ -25,9 +25,9 @@ bool CheckIfContains7(int value, int[] numbers)
 try
 {
     int number = ParseStringToInt(input);
-    var result = 10 / number;
+    var result3 = 10 / number;
 
-    Console.WriteLine($"10 / {number} is {result}");
+    Console.WriteLine($"10 / {number} is {result3}");
 }
 catch (FormatException ex)
 {
