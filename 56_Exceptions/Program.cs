@@ -98,8 +98,8 @@ object SendHttpRequest(string url)
 List<int> numbers = new List<int> { 1, 2 };
 List<int> list = null;
 
-//Console.WriteLine(IsFirstElementPositive(numbers));
-//Console.WriteLine(IsFirstElementPositive(list));
+Console.WriteLine(IsFirstElementPositive(numbers));
+Console.WriteLine(IsFirstElementPositive(list));
 
 try
 {
@@ -112,14 +112,14 @@ catch (ArgumentNullException ex)
 
 Console.ReadKey();
 
-//void RecursiveMethod(int counter)
-//{
-//    Console.WriteLine($"I am going to call myself! Counter is {counter}");
-//    if (counter < 10)
-//    {
-//        RecursiveMethod(counter + 1);
-//    }
-//}
+void RecursiveMethod(int counter)
+{
+    Console.WriteLine($"I am going to call myself! Counter is {counter}");
+    if (counter < 10)
+    {
+        RecursiveMethod(counter + 1);
+    }
+}
 
 int GetFirstElement(IEnumerable<int> numbers)
 {
