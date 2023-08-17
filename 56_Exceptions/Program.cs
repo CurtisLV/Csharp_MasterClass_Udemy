@@ -20,8 +20,6 @@ bool CheckIfContains7(int value, int[] numbers)
     throw new NotImplementedException();
 }
 
-
-
 try
 {
     int number = ParseStringToInt(input);
@@ -63,7 +61,7 @@ catch
     throw;
 }
 
-//RecursiveMethod(1);
+RecursiveMethod(1);
 
 try
 {
@@ -173,7 +171,6 @@ static int DivideNumbers(int a, int b)
 }
 
 // Second coding exercise
-
 static int GetMaxValue(List<int> numbers)
 {
     try
