@@ -65,9 +65,17 @@ catch
 
 //RecursiveMethod(1);
 
-var dataFromWeb = SendHttpRequest("www.tvnet.lv");
+try
+{
+    var dataFromWeb = SendHttpRequest("www.tvnet.lv");
+}
+catch (HttpRequestException ex)
+{
 
-object SendHttpRequest(string v)
+    throw;
+}
+
+object SendHttpRequest(string url)
 {
     return null;
 }
