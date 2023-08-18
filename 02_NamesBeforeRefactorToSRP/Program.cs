@@ -1,6 +1,4 @@
-﻿using _2_NamesBeforeRefactorToSRP.DataAccess;
-
-var stopwatch = Stopwatch.StartNew();
+﻿var stopwatch = Stopwatch.StartNew();
 for (int i = 0; i < 1000; i++)
 {
     Console.WriteLine($"Loop number {i}");
