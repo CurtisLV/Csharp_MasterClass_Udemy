@@ -3,8 +3,6 @@
 //###################
 //Console.WriteLine(name); //will not compile, because  is not yet declared and initialized
 
-using System.Windows.Markup;
-
 string name = "Nisha"; //variable initialization at declaration
 int number; //variable declaration
 number = 5; //variable initialization
