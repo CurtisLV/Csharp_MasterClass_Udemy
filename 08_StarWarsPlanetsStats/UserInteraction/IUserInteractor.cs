@@ -1,6 +1,4 @@
-﻿using StarWarsPlanetsStats.Model;
-
-namespace StarWarsPlanetsStats.UserInteraction;
+﻿namespace StarWarsPlanetsStats.UserInteraction;
 
 public interface IUserInteractor
 {
