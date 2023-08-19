@@ -7,7 +7,7 @@ var emailPriceChangeNotifierNoEvents = new EmailPriceChangeNotifierNoEvents(
 var pushPriceChangeNotifierNoEvents = new PushPriceChangeNotifierNoEvents(
     threshold);
 var goldPriceReaderNoEvents = new GoldPriceReaderNoEvents();
-goldPriceReaderNoEvents .AttachObserver(emailPriceChangeNotifierNoEvents);
+goldPriceReaderNoEvents.AttachObserver(emailPriceChangeNotifierNoEvents);
 goldPriceReaderNoEvents.AttachObserver(pushPriceChangeNotifierNoEvents);
 
 for (int i = 0; i < 3; ++i)
@@ -72,7 +72,7 @@ public class GoldPriceReader
     private void OnPriceRead(decimal price)
     {
         PriceRead?.Invoke(
-            this, 
+            this,
             new PriceReadEventArgs(price));
     }
 }

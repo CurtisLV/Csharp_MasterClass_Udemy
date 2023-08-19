@@ -27,7 +27,7 @@ namespace FirstWinFormsApp
         private void YearOfBirthTextBox_KeyPress(
             object sender, KeyPressEventArgs e)
         {
-            if(!IsValid(e.KeyChar))
+            if (!IsValid(e.KeyChar))
             {
                 e.Handled = true;
             }
