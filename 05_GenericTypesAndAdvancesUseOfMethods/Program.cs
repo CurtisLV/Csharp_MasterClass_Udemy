@@ -204,7 +204,8 @@ IEnumerable<TPerson> GetOnlyValid<TPerson>(IEnumerable<TPerson> persons)
 
 void SomeMethod<TPet, TOwner>(TPet pet, TOwner owner)
     where TPet : Pet, IComparable<TPet>
-    where TOwner : new() { }
+    where TOwner : new()
+{ }
 
 void PrintInOrder<T>(T first, T second)
     where T : IComparable<T>
