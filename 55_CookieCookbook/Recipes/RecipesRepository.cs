@@ -1,5 +1,4 @@
 ﻿using _55_CookieCookbook.DataAccess;
-using _55_CookieCookbook.Recipes;
 using _55_CookieCookbook.Recipes.Ingredients;
 
 public class RecipesRepository : IRecipesRepository
