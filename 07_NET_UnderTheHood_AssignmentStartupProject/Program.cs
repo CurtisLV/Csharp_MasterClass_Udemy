@@ -1,7 +1,7 @@
 ﻿using CsvDataAccess.CsvReading;
 using CsvDataAccess.Interface;
-using CsvDataAccess.OldSolution;
 using CsvDataAccess.NewSolution;
+using CsvDataAccess.OldSolution;
 using CsvDataAccess.PerformanceTesting;
 
 string filePath = "sampleData.csv";
