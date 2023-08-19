@@ -35,7 +35,7 @@ namespace NumericTypesSuggester
             object sender, KeyPressEventArgs e)
         {
             var textBox = (TextBox)sender;
-            if(!IsValidInput(e.KeyChar, textBox))
+            if (!IsValidInput(e.KeyChar, textBox))
             {
                 e.Handled = true;
             }
@@ -44,7 +44,7 @@ namespace NumericTypesSuggester
         private static bool IsValidInput(
             char keyChar, TextBox textBox)
         {
-            return 
+            return
                 char.IsControl(keyChar) ||
                 char.IsDigit(keyChar) ||
                 (keyChar == '-' && textBox.SelectionStart == 0);
@@ -54,14 +54,14 @@ namespace NumericTypesSuggester
         {
             bool isValid = true;
 
-            if(IsInputComplete())
+            if (IsInputComplete())
             {
                 var minValue = BigInteger.Parse(
                     MinValueTextBox.Text);
                 var maxValue = BigInteger.Parse(
                     MaxValueTextBox.Text);
 
-                if(maxValue < minValue)
+                if (maxValue < minValue)
                 {
                     isValid = false;
                 }
@@ -82,14 +82,14 @@ namespace NumericTypesSuggester
 
         private void RecalculateSuggestedType()
         {
-            if(IsInputComplete())
+            if (IsInputComplete())
             {
                 var minValue = BigInteger.Parse(
                     MinValueTextBox.Text);
                 var maxValue = BigInteger.Parse(
                     MaxValueTextBox.Text);
 
-                if(maxValue >= minValue)
+                if (maxValue >= minValue)
                 {
                     SuggestedTypeResult.Text =
                         NumericTypeSuggester.GetName(
