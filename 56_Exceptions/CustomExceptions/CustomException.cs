@@ -1,9 +1,16 @@
-﻿namespace _56_Exceptions.CustomExceptions;
+﻿using System.Runtime.Serialization;
+
+namespace _56_Exceptions.CustomExceptions;
 
 [Serializable]
 public class CustomException : Exception
 {
     public int StatusCode { get; }
+
+    protected CustomException(SerializationInfo info, StreamingContext context) : base(info, context)
+    {
+        //
+    }
 
     public CustomException()
     {
