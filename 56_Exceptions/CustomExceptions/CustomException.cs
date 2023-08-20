@@ -2,5 +2,18 @@
 
 public class CustomException : Exception
 {
-    //
+    public CustomException()
+    {
+        //
+    }
+
+    public CustomException()
+    {
+        //
+    }
+
+    public CustomException()
+    {
+        //
+    }
 }
