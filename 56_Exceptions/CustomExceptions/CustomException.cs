@@ -8,7 +8,12 @@ public class CustomException : Exception
     {
         //
     }
-    public CustomException(string message, int statusCode)
+    public CustomException(string message, int statusCode) : base(message)
+    {
+        StatusCode = statusCode;
+    }
+
+    public CustomException(string message, Exception innerException, int statusCode) : base(message)
     {
         
     }
