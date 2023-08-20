@@ -2,6 +2,8 @@
 
 public class CustomException : Exception
 {
+    public int StatusCode { get; }
+
     public CustomException()
     {
         //
