@@ -1,6 +1,4 @@
-﻿using _56_Exceptions;
-
-//Person invalidPersonObject = new Person("", -100);
+﻿//Person invalidPersonObject = new Person("", -100);
 
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
