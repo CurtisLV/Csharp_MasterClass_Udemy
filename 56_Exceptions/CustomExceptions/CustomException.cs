@@ -8,6 +8,10 @@ public class CustomException : Exception
     {
         //
     }
+    public CustomException(string message, int statusCode)
+    {
+        
+    }
 
     public CustomException(string message) : base(message)
     {
