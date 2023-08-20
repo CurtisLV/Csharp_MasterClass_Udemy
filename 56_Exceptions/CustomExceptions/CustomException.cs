@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _56_Exceptions.CustomExceptions
+namespace _56_Exceptions.CustomExceptions;
+
+public class CustomException
 {
-    internal class CustomException
-    {
-    }
+    //
 }
