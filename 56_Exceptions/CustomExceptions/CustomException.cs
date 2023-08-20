@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace _56_Exceptions.CustomExceptions;
 
-namespace _56_Exceptions.CustomExceptions;
-
-public class CustomException
+public class CustomException : Exception
 {
     //
 }
