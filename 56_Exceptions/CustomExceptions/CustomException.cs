@@ -1,5 +1,6 @@
 ﻿namespace _56_Exceptions.CustomExceptions;
 
+[Serializable]
 public class CustomException : Exception
 {
     public int StatusCode { get; }
@@ -13,9 +14,9 @@ public class CustomException : Exception
         StatusCode = statusCode;
     }
 
-    public CustomException(string message, Exception innerException, int statusCode) : base(message)
+    public CustomException(string message, Exception innerException, int statusCode) : base(message, innerException)
     {
-        
+        StatusCode=statusCode;
     }
 
     public CustomException(string message) : base(message)
