@@ -1,151 +1,152 @@
-﻿//Person invalidPersonObject = new Person("", -100);
+﻿////Person invalidPersonObject = new Person("", -100);
 
-Console.WriteLine("Enter a number:");
-string input = Console.ReadLine();
+////Console.WriteLine("Enter a number:");
+//string input = Console.ReadLine();
 
-var emptyCollection = new List<int>();
+////var emptyCollection = new List<int>();
 
-var firstElement = GetFirstElement(emptyCollection);
-var firstUsingLinq = emptyCollection.First();
+////var firstElement = GetFirstElement(emptyCollection);
+////var firstUsingLinq = emptyCollection.First();
 
-var numbers = new int[] { 1, 2, 3 };
-int fourth = numbers[3];
+////var numbers = new int[] { 1, 2, 3 };
+////int fourth = numbers[3];
 
-bool has7 = CheckIfContains7(7, numbers);
+////bool has7 = CheckIfContains7(7, numbers);
 
-bool CheckIfContains7(int value, int[] numbers)
-{
-    throw new NotImplementedException();
-}
+//bool CheckIfContains7(int value, int[] numbers)
+//{
+//    throw new NotImplementedException();
+//}
 
-try
-{
-    int number = ParseStringToInt(input);
-    var result3 = 10 / number;
+//try
+//{
+//    //int number = ParseStringToInt(input);
+//    int number = 2;
+//    var result3 = 10 / number;
 
-    Console.WriteLine($"10 / {number} is {result3}");
-}
-catch (FormatException ex)
-{
-    Console.WriteLine(
-        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
-    );
-}
-catch (DivideByZeroException ex)
-{
-    Console.WriteLine(
-        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
-    );
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Unexpected error: {ex.Message}");
-}
-finally
-{
-    Console.WriteLine("Finally block is being executed!");
-}
+//    Console.WriteLine($"10 / {number} is {result3}");
+//}
+//catch (FormatException ex)
+//{
+//    Console.WriteLine(
+//        "Wrong format. Input string is not parsable to int." + "\nException message: " + ex.Message
+//    );
+//}
+//catch (DivideByZeroException ex)
+//{
+//    Console.WriteLine(
+//        "Division by zero is an invalid operation." + "\nException message: " + ex.Message
+//    );
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Unexpected error: {ex.Message}");
+//}
+//finally
+//{
+//    Console.WriteLine("Finally block is being executed!");
+//}
 
-int ParseStringToInt(string input)
-{
-    return int.Parse(input);
-}
-try
-{
-    var result2 = GetFirstElement(new int[0]);
-}
-catch
-{
-    throw;
-}
+//int ParseStringToInt(string input)
+//{
+//    return int.Parse(input);
+//}
+//try
+//{
+//    //var result2 = GetFirstElement(new int[0]);
+//}
+//catch
+//{
+//    throw;
+//}
 
-RecursiveMethod(1);
+//RecursiveMethod(1);
 
-try
-{
-    var dataFromWeb = SendHttpRequest("www.tvnet.lv");
-}
-catch (HttpRequestException ex) when (ex.Message == "403")
-{
-    Console.WriteLine("It was forbidden to access the resource.");
-    throw;
-}
-catch (HttpRequestException ex) when (ex.Message == "404")
-{
-    Console.WriteLine("The resource was not found.");
-    throw;
-}
-catch (HttpRequestException ex) when (ex.Message.StartsWith("4"))
-{
-    Console.WriteLine("Some kind of client error.");
-    throw;
-}
-catch (HttpRequestException ex) when (ex.Message == "500")
-{
-    Console.WriteLine("The server has experienced an internal error.");
-    throw;
-}
+//try
+//{
+//    var dataFromWeb = SendHttpRequest("www.tvnet.lv");
+//}
+//catch (HttpRequestException ex) when (ex.Message == "403")
+//{
+//    Console.WriteLine("It was forbidden to access the resource.");
+//    throw;
+//}
+//catch (HttpRequestException ex) when (ex.Message == "404")
+//{
+//    Console.WriteLine("The resource was not found.");
+//    throw;
+//}
+//catch (HttpRequestException ex) when (ex.Message.StartsWith("4"))
+//{
+//    Console.WriteLine("Some kind of client error.");
+//    throw;
+//}
+//catch (HttpRequestException ex) when (ex.Message == "500")
+//{
+//    Console.WriteLine("The server has experienced an internal error.");
+//    throw;
+//}
 
-object SendHttpRequest(string url)
-{
-    return null;
-}
+//object SendHttpRequest(string url)
+//{
+//    return null;
+//}
 
-List<int> numbers2 = new List<int> { 1, 2 };
-List<int> list = null;
+//List<int> numbers2 = new List<int> { 1, 2 };
+//List<int> list = null;
 
-Console.WriteLine(IsFirstElementPositive(numbers2));
-Console.WriteLine(IsFirstElementPositive(list));
+////Console.WriteLine(IsFirstElementPositive(numbers2));
+////Console.WriteLine(IsFirstElementPositive(list));
 
-try
-{
-    var result2 = IsFirstElementPositive(null);
-}
-catch (ArgumentNullException ex)
-{
-    //
-}
+//try
+//{
+//    var result2 = IsFirstElementPositive(null);
+//}
+//catch (ArgumentNullException ex)
+//{
+//    //
+//}
 
-Console.ReadKey();
+//Console.ReadKey();
 
-void RecursiveMethod(int counter)
-{
-    Console.WriteLine($"I am going to call myself! Counter is {counter}");
-    if (counter < 10)
-    {
-        RecursiveMethod(counter + 1);
-    }
-}
+//void RecursiveMethod(int counter)
+//{
+//    Console.WriteLine($"I am going to call myself! Counter is {counter}");
+//    if (counter < 10)
+//    {
+//        RecursiveMethod(counter + 1);
+//    }
+//}
 
-int GetFirstElement(IEnumerable<int> numbers)
-{
-    foreach (var num in numbers)
-    {
-        return num;
-    }
+//int GetFirstElement(IEnumerable<int> numbers)
+//{
+//    foreach (var num in numbers)
+//    {
+//        return num;
+//    }
 
-    throw new InvalidOperationException("The collection cannot be empty!");
-}
+//    throw new InvalidOperationException("The collection cannot be empty!");
+//}
 
-bool IsFirstElementPositive(IEnumerable<int> numbers)
-{
-    try
-    {
-        var firstElement = GetFirstElement(numbers);
-        return firstElement > 0;
-    }
-    catch (InvalidOperationException ex)
-    {
-        Console.WriteLine("The collection is empty!");
-        return true;
-    }
-    catch (NullReferenceException ex)
-    {
-        Console.WriteLine("Sorry! The application experienced an unexpected error.");
-        //throw;
-        throw new ArgumentNullException("The collection is null!", ex);
-    }
-}
+//bool IsFirstElementPositive(IEnumerable<int> numbers)
+//{
+//    try
+//    {
+//        var firstElement = GetFirstElement(numbers);
+//        return firstElement > 0;
+//    }
+//    catch (InvalidOperationException ex)
+//    {
+//        Console.WriteLine("The collection is empty!");
+//        return true;
+//    }
+//    catch (NullReferenceException ex)
+//    {
+//        Console.WriteLine("Sorry! The application experienced an unexpected error.");
+//        //throw;
+//        throw new ArgumentNullException("The collection is null!", ex);
+//    }
+//}
 
 try
 {
@@ -158,9 +159,16 @@ catch (Exception ex)
 
 void Run()
 {
-    Console.WriteLine("Enter a word:");
-    var word = Console.ReadLine();
-    Console.WriteLine($"Count of characters is {word.Length}");
+    try
+    {
+        Console.WriteLine("Enter a word:");
+        var word = Console.ReadLine();
+        Console.WriteLine($"Count of characters is {word.Length}");
+    }
+    catch (Exception)
+    {
+        throw;
+    }
 }
 
 // First coding exercise
