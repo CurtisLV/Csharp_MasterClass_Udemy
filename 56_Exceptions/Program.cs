@@ -1,7 +1,5 @@
 ﻿//Person invalidPersonObject = new Person("", -100);
 
-using System.Runtime.Serialization;
-
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
@@ -147,6 +145,20 @@ bool IsFirstElementPositive(IEnumerable<int> numbers)
         //throw;
         throw new ArgumentNullException("The collection is null!", ex);
     }
+}
+
+try
+{
+    Run();
+}
+catch (Exception)
+{
+    throw;
+}
+
+void Run()
+{
+    throw new NotImplementedException();
 }
 
 // First coding exercise
