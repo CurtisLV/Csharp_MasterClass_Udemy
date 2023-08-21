@@ -1,5 +1,7 @@
 ﻿//Person invalidPersonObject = new Person("", -100);
 
+using System.Runtime.Serialization;
+
 Console.WriteLine("Enter a number:");
 string input = Console.ReadLine();
 
@@ -192,10 +194,15 @@ public class InvalidTransactionException : Exception
 {
     public TransactionData TransactionData { get; }
 
-    protected public InvalidTransactionException(TransactionData transactionData)
+    protected InvalidTransactionException(SerializationInfo info, StreamingContext context)
         : base(info, context)
     {
-        TransactionData = transactionData;
+        //
+    }
+
+    public InvalidTransactionException()
+    {
+        //
     }
 }
 
