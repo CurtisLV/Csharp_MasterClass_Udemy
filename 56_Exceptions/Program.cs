@@ -189,26 +189,23 @@ static int GetMaxValue(List<int> numbers)
 }
 
 // Third exercise
-[Serializable]
 public class InvalidTransactionException : Exception
 {
     public TransactionData TransactionData { get; }
-
-    protected InvalidTransactionException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    {
-        //
-    }
 
     public InvalidTransactionException()
     {
         //
     }
 
-    public InvalidTransactionException(TransactionData transactionData)
-        : base()
+    public InvalidTransactionException(string message)
     {
-        TransactionData = transactionData;
+        //
+    }
+
+    public InvalidTransactionException(string message, Exception innerException)
+    {
+        //
     }
 
     public InvalidTransactionException(string message, TransactionData transactionData)
