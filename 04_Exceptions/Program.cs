@@ -161,7 +161,7 @@ void GotoShowcase()
     Console.WriteLine("The number is positive or zero.");
     return;
 
-NegativeNumber:
+    NegativeNumber:
     Console.WriteLine("The number is negative.");
 }
 
