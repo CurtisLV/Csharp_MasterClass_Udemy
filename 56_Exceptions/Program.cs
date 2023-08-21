@@ -188,6 +188,11 @@ static int GetMaxValue(List<int> numbers)
 
 // Third exercise
 
+public class InvalidTransactionException : Exception
+{
+    public TransactionData TransactionData { get; }
+}
+
 public class TransactionData
 {
     public string Sender { get; init; }
