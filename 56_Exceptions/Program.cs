@@ -148,6 +148,9 @@
 //    }
 //}
 
+
+var loggger = new Logger();
+
 try
 {
     Run();
@@ -155,6 +158,7 @@ try
 catch (Exception ex)
 {
     Console.WriteLine("Sorry! The app has experienced an error. The error message: " + ex.Message);
+    loggger.Log(ex);
 }
 
 void Run()
@@ -168,6 +172,7 @@ void Run()
     catch (NullReferenceException ex)
     {
         Console.WriteLine("The input is null, and its length cannot be calculated.");
+        loggger.Log(ex);
         throw;
     }
 }
@@ -255,4 +260,12 @@ public class TransactionData
     public string Sender { get; init; }
     public string Receiver { get; init; }
     public decimal Amount { get; init; }
+}
+
+class Logger
+{
+    public void Log(Exception ex)
+    {
+        Console.WriteLine("Writing the exception to a file with a message: " + ex.Message);
+    }
 }
