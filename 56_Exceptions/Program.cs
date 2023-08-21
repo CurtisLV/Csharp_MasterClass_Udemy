@@ -165,8 +165,9 @@ void Run()
         var word = Console.ReadLine();
         Console.WriteLine($"Count of characters is {word.Length}");
     }
-    catch (Exception)
+    catch (NullReferenceException ex)
     {
+        Console.WriteLine("The input is null, and its length cannot be calculated.");
         throw;
     }
 }
