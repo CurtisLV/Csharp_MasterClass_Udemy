@@ -7,7 +7,8 @@ public class CustomException : Exception
 {
     public int StatusCode { get; }
 
-    protected CustomException(SerializationInfo info, StreamingContext context) : base(info, context)
+    protected CustomException(SerializationInfo info, StreamingContext context)
+        : base(info, context)
     {
         //
     }
@@ -16,22 +17,27 @@ public class CustomException : Exception
     {
         //
     }
-    public CustomException(string message, int statusCode) : base(message)
+
+    public CustomException(string message, int statusCode)
+        : base(message)
     {
         StatusCode = statusCode;
     }
 
-    public CustomException(string message, Exception innerException, int statusCode) : base(message, innerException)
+    public CustomException(string message, Exception innerException, int statusCode)
+        : base(message, innerException)
     {
-        StatusCode=statusCode;
+        StatusCode = statusCode;
     }
 
-    public CustomException(string message) : base(message)
+    public CustomException(string message)
+        : base(message)
     {
         //
     }
 
-    public CustomException(string message, Exception innerException) : base(message, innerException)
+    public CustomException(string message, Exception innerException)
+        : base(message, innerException)
     {
         //
     }

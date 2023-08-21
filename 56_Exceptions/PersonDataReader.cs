@@ -32,7 +32,5 @@ public class PersonDataReader
             _logger.Log(ex);
             throw;
         }
-
     }
 }
-
