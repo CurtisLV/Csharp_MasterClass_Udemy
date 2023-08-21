@@ -151,14 +151,16 @@ try
 {
     Run();
 }
-catch (Exception)
+catch (Exception ex)
 {
-    throw;
+    Console.WriteLine("Sorry! The app has experienced an error. The error message: " + ex.Message);
 }
 
 void Run()
 {
-    throw new NotImplementedException();
+    Console.WriteLine("Enter a word:");
+    var word = Console.ReadLine();
+    Console.WriteLine($"Count of characters is {word.Length}");
 }
 
 // First coding exercise
