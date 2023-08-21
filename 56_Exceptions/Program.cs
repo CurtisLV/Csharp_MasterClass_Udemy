@@ -204,6 +204,28 @@ public class InvalidTransactionException : Exception
     {
         //
     }
+
+    public InvalidTransactionException(TransactionData transactionData)
+        : base()
+    {
+        TransactionData = transactionData;
+    }
+
+    public InvalidTransactionException(string message, TransactionData transactionData)
+        : base(message)
+    {
+        TransactionData = transactionData;
+    }
+
+    public InvalidTransactionException(
+        string message,
+        TransactionData transactionData,
+        Exception innerException
+    )
+        : base(message, innerException)
+    {
+        TransactionData = transactionData;
+    }
 }
 
 public class TransactionData
