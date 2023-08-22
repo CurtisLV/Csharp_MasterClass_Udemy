@@ -12,10 +12,10 @@ public class NumericTypeSuggesterTests
             -1,
             new BigInteger(long.MaxValue) + 1,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.BigInteger, result);
+        Assert.AreEqual(NumericTypeSuggester.BigInteger, result);
     }
 
     [Test]
@@ -25,10 +25,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(long.MinValue) - 1,
             0,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.BigInteger, result);
+        Assert.AreEqual(NumericTypeSuggester.BigInteger, result);
     }
 
     [Test]
@@ -38,10 +38,10 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger(uint.MaxValue) + 1,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ULong, result);
+        Assert.AreEqual(NumericTypeSuggester.ULong, result);
     }
 
     [Test]
@@ -51,10 +51,10 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger(ushort.MaxValue) + 1,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.UInt, result);
+        Assert.AreEqual(NumericTypeSuggester.UInt, result);
     }
 
     [Test]
@@ -64,23 +64,18 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger(byte.MaxValue) + 1,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.UShort, result);
+        Assert.AreEqual(NumericTypeSuggester.UShort, result);
     }
 
     [Test]
     public void ShallSuggestByte_IfMaxBelowUShort_AndMinZero()
     {
-        var result = NumericTypeSuggester.GetName(
-            0,
-            new BigInteger(byte.MaxValue),
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(0, new BigInteger(byte.MaxValue), true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Byte, result);
+        Assert.AreEqual(NumericTypeSuggester.Byte, result);
     }
 
     [Test]
@@ -90,23 +85,18 @@ public class NumericTypeSuggesterTests
             -1,
             new BigInteger(uint.MaxValue) + 1,
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Long, result);
+        Assert.AreEqual(NumericTypeSuggester.Long, result);
     }
 
     [Test]
     public void ShallSuggestLong_IfMinBelowInt()
     {
-        var result = NumericTypeSuggester.GetName(
-            new BigInteger(int.MinValue) - 1,
-            1,
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(new BigInteger(int.MinValue) - 1, 1, true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Long, result);
+        Assert.AreEqual(NumericTypeSuggester.Long, result);
     }
 
     [TestCase(0)]
@@ -119,10 +109,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             false,
-            true);
+            true
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Decimal, result);
+        Assert.AreEqual(NumericTypeSuggester.Decimal, result);
     }
 
     [Test]
@@ -132,10 +122,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(decimal.MinValue),
             new BigInteger(decimal.MaxValue),
             false,
-            true);
+            true
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Decimal, result);
+        Assert.AreEqual(NumericTypeSuggester.Decimal, result);
     }
 
     [TestCase(0)]
@@ -148,10 +138,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Float, result);
+        Assert.AreEqual(NumericTypeSuggester.Float, result);
     }
 
     [Test]
@@ -161,10 +151,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(float.MinValue),
             new BigInteger(float.MaxValue),
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Float, result);
+        Assert.AreEqual(NumericTypeSuggester.Float, result);
     }
 
     [Test]
@@ -174,10 +164,10 @@ public class NumericTypeSuggesterTests
             new BigInteger((double)float.MinValue * 2),
             0,
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Double, result);
+        Assert.AreEqual(NumericTypeSuggester.Double, result);
     }
 
     [Test]
@@ -187,10 +177,10 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger((double)float.MaxValue * 2),
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Double, result);
+        Assert.AreEqual(NumericTypeSuggester.Double, result);
     }
 
     [Test]
@@ -200,10 +190,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(double.MinValue),
             new BigInteger(double.MaxValue),
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Double, result);
+        Assert.AreEqual(NumericTypeSuggester.Double, result);
     }
 
     [TestCase(long.MaxValue)]
@@ -215,10 +205,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Long, result);
+        Assert.AreEqual(NumericTypeSuggester.Long, result);
     }
 
     [TestCase(int.MaxValue)]
@@ -230,10 +220,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Int, result);
+        Assert.AreEqual(NumericTypeSuggester.Int, result);
     }
 
     [TestCase(short.MaxValue)]
@@ -245,10 +235,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Short, result);
+        Assert.AreEqual(NumericTypeSuggester.Short, result);
     }
 
     [TestCase(sbyte.MaxValue)]
@@ -259,10 +249,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(-value),
             new BigInteger(value),
             true,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.SByte, result);
+        Assert.AreEqual(NumericTypeSuggester.SByte, result);
     }
 
     [TestCase(ulong.MaxValue)]
@@ -270,14 +260,9 @@ public class NumericTypeSuggesterTests
     [TestCase(9999999999999999999)]
     public void ShallSuggestULong(ulong value)
     {
-        var result = NumericTypeSuggester.GetName(
-            0,
-            new BigInteger(value),
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(0, new BigInteger(value), true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ULong, result);
+        Assert.AreEqual(NumericTypeSuggester.ULong, result);
     }
 
     [TestCase(uint.MaxValue)]
@@ -285,14 +270,9 @@ public class NumericTypeSuggesterTests
     [TestCase(80000)]
     public void ShallSuggestUInt(long value)
     {
-        var result = NumericTypeSuggester.GetName(
-            0,
-            new BigInteger(value),
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(0, new BigInteger(value), true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.UInt, result);
+        Assert.AreEqual(NumericTypeSuggester.UInt, result);
     }
 
     [TestCase(ushort.MaxValue)]
@@ -300,28 +280,18 @@ public class NumericTypeSuggesterTests
     [TestCase(40000)]
     public void ShallSuggestUShort(long value)
     {
-        var result = NumericTypeSuggester.GetName(
-            0,
-            new BigInteger(value),
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(0, new BigInteger(value), true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.UShort, result);
+        Assert.AreEqual(NumericTypeSuggester.UShort, result);
     }
 
     [TestCase(byte.MaxValue)]
     [TestCase(140)]
     public void ShallSuggestByte(long value)
     {
-        var result = NumericTypeSuggester.GetName(
-            0,
-            new BigInteger(value),
-            true,
-            false);
+        var result = NumericTypeSuggester.GetName(0, new BigInteger(value), true, false);
 
-        Assert.AreEqual(
-            NumericTypeSuggester.Byte, result);
+        Assert.AreEqual(NumericTypeSuggester.Byte, result);
     }
 
     [Test]
@@ -331,10 +301,10 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger(decimal.MaxValue) * 2,
             false,
-            true);
+            true
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ImpossibleRepresentation, result);
+        Assert.AreEqual(NumericTypeSuggester.ImpossibleRepresentation, result);
     }
 
     [Test]
@@ -344,10 +314,10 @@ public class NumericTypeSuggesterTests
             new BigInteger(decimal.MinValue) * 2,
             0,
             false,
-            true);
+            true
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ImpossibleRepresentation, result);
+        Assert.AreEqual(NumericTypeSuggester.ImpossibleRepresentation, result);
     }
 
     [Test]
@@ -357,10 +327,10 @@ public class NumericTypeSuggesterTests
             0,
             new BigInteger(double.MaxValue) * 2,
             false,
-            false);
+            false
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ImpossibleRepresentation, result);
+        Assert.AreEqual(NumericTypeSuggester.ImpossibleRepresentation, result);
     }
 
     [Test]
@@ -370,9 +340,9 @@ public class NumericTypeSuggesterTests
             new BigInteger(double.MinValue) * 2,
             0,
             false,
-            true);
+            true
+        );
 
-        Assert.AreEqual(
-            NumericTypeSuggester.ImpossibleRepresentation, result);
+        Assert.AreEqual(NumericTypeSuggester.ImpossibleRepresentation, result);
     }
 }
