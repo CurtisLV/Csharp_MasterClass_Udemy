@@ -1,4 +1,6 @@
-﻿var input = "";
+﻿using System.Text.RegularExpressions;
+
+var input = "";
 
 while (input == null || input == "")
 {
@@ -8,3 +10,10 @@ while (input == null || input == "")
 
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
+
+static bool IsJsonFile(string filename)
+{
+    // Using regex to match the "*.json" file format
+    string pattern = @"\.json$";
+    return Regex.IsMatch(filename, pattern, RegexOptions.IgnoreCase);
+}
