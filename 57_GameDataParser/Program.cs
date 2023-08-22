@@ -1,9 +1,9 @@
-﻿Console.WriteLine("Enter the name of the file you want to read:");
-var input = Console.ReadLine();
+﻿var input = "";
 
-while (input != null || input != "")
+while (input == null || input == "")
 {
-    Console.WriteLine("Hello!");
+    Console.WriteLine("Enter the name of the file you want to read:");
+    input = Console.ReadLine();
 }
 
 Console.WriteLine("Press any key to close.");
