@@ -23,6 +23,7 @@ do
     else
     {
         // run the code?
+        isFilePathValid = true;
     }
 } while (!isFilePathValid);
 
