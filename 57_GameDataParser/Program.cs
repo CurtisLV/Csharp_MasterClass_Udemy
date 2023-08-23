@@ -30,6 +30,12 @@ do
         // return VideoGameModel list?
         List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
 
+        // print all games to console
+        foreach (VideoGame vg in videoGames)
+        {
+            Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
+        }
+
         isFilePathValid = true;
     }
 } while (!isFilePathValid);

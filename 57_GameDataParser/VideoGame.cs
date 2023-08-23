@@ -2,7 +2,7 @@
 
 public class VideoGame
 {
-    public string Title { get; }
-    public int ReleaseYear { get; }
-    public double Rating { get; }
+    public string Title { get; set; }
+    public int ReleaseYear { get; set; }
+    public double Rating { get; set; }
 }
