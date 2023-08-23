@@ -1,4 +1,7 @@
-﻿bool isFilePathValid = false;
+﻿using _57_GameDataParser;
+using System.Text.Json;
+
+bool isFilePathValid = false;
 string fileName;
 
 do
@@ -23,10 +26,9 @@ do
     else
     {
         // read the json
-
+        var json = File.ReadAllText(fileName);
         // return VideoGameModel list?
-
-
+        List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
 
         isFilePathValid = true;
     }
