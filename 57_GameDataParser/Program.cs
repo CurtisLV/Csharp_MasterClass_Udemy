@@ -25,15 +25,22 @@ do
     }
     else
     {
-        // read the json
-        var json = File.ReadAllText(fileName);
-        // return VideoGameModel list?
-        List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
+        try
+        {
+            // read the json
+            var json = File.ReadAllText(fileName);
+            // return VideoGameModel list?
+            List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
 
-        // print all games to console
-        PrintVideoGames(videoGames);
+            // print all games to console
+            PrintVideoGames(videoGames);
 
-        isFilePathValid = true;
+            isFilePathValid = true;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
 } while (!isFilePathValid);
 

@@ -1,4 +1,4 @@
-﻿namespace _57_GameDataParser;
+﻿namespace _57_GameDataParser.Model;
 
 public class VideoGame
 {
