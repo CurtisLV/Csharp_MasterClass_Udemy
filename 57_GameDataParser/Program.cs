@@ -7,16 +7,22 @@ do
     fileName = Console.ReadLine();
 
     // need to check for null and empty input
-
-    if (File.Exists(fileName))
+    if (fileName is null)
+    {
+        Console.WriteLine("File cannot be null.");
+    }
+    else if (fileName == "")
+    {
+        Console.WriteLine("File cannot be empty.");
+    }
+    else if (!File.Exists(fileName))
     {
         // try to parse the whole JSON file
-        Console.WriteLine("File exists!");
+        Console.WriteLine("File not found.");
     }
     else
     {
-        Console.WriteLine("File not found.");
-        fileName = "";
+        // run the code?
     }
 } while (!isFilePathValid);
 
