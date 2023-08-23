@@ -1,29 +1,24 @@
-﻿var input = "";
+﻿bool isFilePathValid = false;
+string fileName;
 
-while (input == null || input == "")
+do
 {
     Console.WriteLine("Enter the name of the file you want to read:");
-    input = Console.ReadLine();
+    fileName = Console.ReadLine();
 
     // need to check for null and empty input
 
-    if (File.Exists(input))
+    if (File.Exists(fileName))
     {
         // try to parse the whole JSON file
         Console.WriteLine("File exists!");
     }
     else
     {
-        Console.WriteLine("File doesn't exist!");
+        Console.WriteLine("File not found.");
+        fileName = "";
     }
-}
+} while (!isFilePathValid);
 
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
-
-//static bool IsJsonFile(string filename)
-//{
-//    // Using regex to match the "*.json" file format
-//    string pattern = @"\.json$";
-//    return Regex.IsMatch(filename, pattern, RegexOptions.IgnoreCase);
-//}
