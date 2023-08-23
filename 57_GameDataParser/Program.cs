@@ -22,7 +22,12 @@ do
     }
     else
     {
-        // run the code?
+        // read the json
+
+        // return VideoGameModel list?
+
+
+
         isFilePathValid = true;
     }
 } while (!isFilePathValid);
