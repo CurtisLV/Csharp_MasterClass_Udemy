@@ -1,4 +1,4 @@
-﻿using _57_GameDataParser;
+﻿using _57_GameDataParser.Model;
 using System.Text.Json;
 
 bool isFilePathValid = false;
@@ -31,10 +31,7 @@ do
         List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
 
         // print all games to console
-        foreach (VideoGame vg in videoGames)
-        {
-            Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
-        }
+        PrintVideoGames(videoGames);
 
         isFilePathValid = true;
     }
@@ -42,3 +39,11 @@ do
 
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
+
+static void PrintVideoGames(List<VideoGame> videoGames)
+{
+    foreach (VideoGame vg in videoGames)
+    {
+        Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
+    }
+}
