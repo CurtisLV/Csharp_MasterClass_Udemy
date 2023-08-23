@@ -6,7 +6,14 @@ while (input == null || input == "")
 {
     Console.WriteLine("Enter the name of the file you want to read:");
     input = Console.ReadLine();
-    if (IsJsonFile(input))
+
+    // need to check for null and empty input
+
+    if (File.Exists(input))
+    {
+        // try to parse the whole JSON file
+    }
+    else
     {
         //
     }
