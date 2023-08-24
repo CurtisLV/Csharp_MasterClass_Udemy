@@ -1,10 +1,10 @@
 ﻿using _57_GameDataParser.Model;
-using System.Text.Json;
 using Serilog;
+using System.Text.Json;
 
-var log = new LoggerConfiguration().WriteTo.File("log.txt").CreateLogger();
 bool isFilePathValid = false;
 string fileName;
+var logger = new LoggerConfiguration().WriteTo.File("log.txt").CreateLogger();
 
 do
 {
