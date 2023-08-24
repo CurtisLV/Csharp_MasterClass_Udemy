@@ -57,7 +57,7 @@ Console.ReadKey();
 
 static void PrintVideoGames(List<VideoGame> videoGames)
 {
-    if (videoGames.Count > 0)
+    if (videoGames.Count < 1)
     {
         Console.WriteLine("No games are present in the input file.");
     }
