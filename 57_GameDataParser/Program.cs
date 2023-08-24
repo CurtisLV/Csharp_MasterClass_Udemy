@@ -39,8 +39,11 @@ do
         }
         catch (JsonException ex)
         {
+            Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
             Console.WriteLine(json);
-            throw;
+            Console.WriteLine(
+                "Sorry! The application has experienced an unexpected error and will have to be closed."
+            );
         }
     }
 } while (!isFilePathValid);
