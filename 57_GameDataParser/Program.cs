@@ -1,5 +1,6 @@
 ﻿using _57_GameDataParser.Model;
 using System.Text.Json;
+using log4net;
 
 bool isFilePathValid = false;
 string fileName;
@@ -44,6 +45,7 @@ do
             Console.WriteLine(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
+            // TODO Log here the ex
         }
     }
 } while (!isFilePathValid);
@@ -53,8 +55,15 @@ Console.ReadKey();
 
 static void PrintVideoGames(List<VideoGame> videoGames)
 {
-    foreach (VideoGame vg in videoGames)
+    if (videoGames.Count > 0)
     {
-        Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
+        Console.WriteLine("No games are present in the input file.");
+    }
+    else
+    {
+        foreach (VideoGame vg in videoGames)
+        {
+            Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
+        }
     }
 }
