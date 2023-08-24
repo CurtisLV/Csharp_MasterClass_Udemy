@@ -25,10 +25,10 @@ do
     }
     else
     {
+        // read the json
+        var json = File.ReadAllText(fileName);
         try
         {
-            // read the json
-            var json = File.ReadAllText(fileName);
             // return VideoGameModel list?
             List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
 
@@ -37,8 +37,9 @@ do
 
             isFilePathValid = true;
         }
-        catch (Exception)
+        catch (JsonException ex)
         {
+            Console.WriteLine(json);
             throw;
         }
     }
