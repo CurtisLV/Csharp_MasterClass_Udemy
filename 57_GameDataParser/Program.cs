@@ -41,7 +41,9 @@ do
         catch (JsonException ex)
         {
             Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(json);
+            Console.ResetColor();
             Console.WriteLine(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
@@ -61,6 +63,7 @@ static void PrintVideoGames(List<VideoGame> videoGames)
     }
     else
     {
+        Console.WriteLine("Loaded games are:");
         foreach (VideoGame vg in videoGames)
         {
             Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
