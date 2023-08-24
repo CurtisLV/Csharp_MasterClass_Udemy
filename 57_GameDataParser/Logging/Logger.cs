@@ -7,9 +7,4 @@ public static class Logger
     {
         return new LoggerConfiguration().WriteTo.File(logFileName).CreateLogger();
     }
-
-    private static object LoggerConfiguration()
-    {
-        throw new NotImplementedException();
-    }
 }
