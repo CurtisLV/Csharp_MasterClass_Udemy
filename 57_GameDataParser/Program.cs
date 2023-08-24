@@ -1,7 +1,8 @@
 ﻿using _57_GameDataParser.Model;
 using System.Text.Json;
-using log4net;
+using Serilog;
 
+var log = new LoggerConfiguration().WriteTo.File("log.txt").CreateLogger();
 bool isFilePathValid = false;
 string fileName;
 
@@ -48,6 +49,7 @@ do
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
             // TODO Log here the ex
+            log.Information(ex.ToString());
         }
     }
 } while (!isFilePathValid);
@@ -57,7 +59,7 @@ Console.ReadKey();
 
 static void PrintVideoGames(List<VideoGame> videoGames)
 {
-    if (videoGames.Count < 1)
+    if (videoGames.Count == 0)
     {
         Console.WriteLine("No games are present in the input file.");
     }
