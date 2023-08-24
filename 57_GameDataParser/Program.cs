@@ -4,7 +4,9 @@ using System.Text.Json;
 
 bool isFilePathValid = false;
 string fileName;
-var logger = new LoggerConfiguration().WriteTo.File("log.txt").CreateLogger();
+
+string logFileName = "log.txt";
+var logger = new LoggerConfiguration().WriteTo.File(logFileName).CreateLogger();
 
 do
 {
@@ -49,7 +51,7 @@ do
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
             // TODO Log here the ex
-            log.Information(ex.ToString());
+            logger.Information(ex.ToString());
         }
     }
 } while (!isFilePathValid);
