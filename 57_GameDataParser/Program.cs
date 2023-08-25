@@ -42,6 +42,7 @@ do
         }
         catch (JsonException ex)
         {
+            throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
             Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(jsonContent);
