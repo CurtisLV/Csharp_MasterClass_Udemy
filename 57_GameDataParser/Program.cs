@@ -29,11 +29,11 @@ do
     else
     {
         // read the json
-        var json = File.ReadAllText(fileName);
+        var jsonContent = File.ReadAllText(fileName);
         try
         {
             // return VideoGameModel list?
-            List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(json);
+            List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
 
             // print all games to console
             PrintVideoGames(videoGames);
@@ -44,7 +44,7 @@ do
         {
             Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(json);
+            Console.WriteLine(jsonContent);
             Console.ResetColor();
             Console.WriteLine(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
