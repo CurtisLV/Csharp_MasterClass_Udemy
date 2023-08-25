@@ -64,7 +64,7 @@ static void PrintVideoGames(List<VideoGame> videoGames)
         Console.WriteLine("Loaded games are:");
         foreach (VideoGame vg in videoGames)
         {
-            Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
+            Console.WriteLine(vg.ToString());
         }
     }
     else
