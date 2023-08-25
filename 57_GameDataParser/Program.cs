@@ -24,7 +24,6 @@ do
     }
     else if (!File.Exists(fileName))
     {
-        // try to parse the whole JSON file
         Console.WriteLine("File not found.");
     }
     else

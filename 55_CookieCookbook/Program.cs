@@ -33,9 +33,10 @@ try
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"Sorry! The application experienced an unexpected error and will have to be closed."
-        + $"The error message: {ex.Message}");
+    Console.WriteLine(
+        $"Sorry! The application experienced an unexpected error and will have to be closed."
+            + $"The error message: {ex.Message}"
+    );
     Console.WriteLine("Press any key to close.");
     Console.ReadKey();
 }
-
