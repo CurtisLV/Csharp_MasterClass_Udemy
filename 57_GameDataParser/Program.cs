@@ -50,7 +50,6 @@ do
             Console.WriteLine(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
-            // TODO Log here the ex
             logger.Information(ex.ToString());
         }
     }
