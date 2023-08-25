@@ -59,16 +59,16 @@ Console.ReadKey();
 
 static void PrintVideoGames(List<VideoGame> videoGames)
 {
-    if (videoGames.Count == 0)
-    {
-        Console.WriteLine("No games are present in the input file.");
-    }
-    else
+    if (videoGames.Count > 0)
     {
         Console.WriteLine("Loaded games are:");
         foreach (VideoGame vg in videoGames)
         {
             Console.WriteLine($"{vg.Title}, released in {vg.ReleaseYear}, rating: {vg.Rating}");
         }
+    }
+    else
+    {
+        Console.WriteLine("No games are present in the input file.");
     }
 }
