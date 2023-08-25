@@ -42,7 +42,6 @@ do
         }
         catch (JsonException ex)
         {
-            //throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
             var originalConsoleForegroundColor = Console.ForegroundColor;
             Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -52,6 +51,7 @@ do
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
             logger.Information(ex.ToString());
+            throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
         }
     }
 } while (!isFilePathValid);
