@@ -9,5 +9,10 @@ try
 }
 catch (Exception ex)
 {
-    throw;
+    Console.WriteLine(
+        "Sorry! The app has experienced an unexpected error and will have to be closed."
+    );
 }
+
+Console.WriteLine("Press any key to close.");
+Console.ReadKey();
