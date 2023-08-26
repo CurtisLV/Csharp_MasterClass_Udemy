@@ -1,4 +1,5 @@
 ﻿using _57_GameDataParser.Model;
+using _57_GameDataParser.UserInteraction;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ public class GameDataParserApp
 
         string logFileName = "log.txt";
         var logger = new LoggerConfiguration().WriteTo.File(logFileName).CreateLogger();
+        var _userInteraction = new GamesPrinter();
 
         do
         {
@@ -44,17 +46,21 @@ public class GameDataParserApp
                 try
                 {
                     // return VideoGameModel list?
-                    List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
+                    List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(
+                        jsonContent
+                    );
 
                     // print all games to console
-                    PrintVideoGames(videoGames);
+                    _userInteraction.PrintVideoGames(videoGames);
 
                     isFilePathValid = true;
                 }
                 catch (JsonException ex)
                 {
                     var originalConsoleForegroundColor = Console.ForegroundColor;
-                    Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
+                    Console.WriteLine(
+                        $"JSON in the {fileName} was not in a valid format. JSON body:"
+                    );
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(jsonContent);
                     Console.ForegroundColor = originalConsoleForegroundColor;
@@ -69,6 +75,5 @@ public class GameDataParserApp
 
         Console.WriteLine("Press any key to close.");
         Console.ReadKey();
-
     }
 }

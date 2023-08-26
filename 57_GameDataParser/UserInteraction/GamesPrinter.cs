@@ -4,7 +4,7 @@ namespace _57_GameDataParser.UserInteraction;
 
 public class GamesPrinter
 {
-    static void PrintVideoGames(List<VideoGame> videoGames)
+    public static void PrintVideoGames(List<VideoGame> videoGames)
     {
         if (videoGames.Count > 0)
         {
