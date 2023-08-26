@@ -19,7 +19,6 @@ public class GameDataParserApp
 
         string logFileName = "log.txt";
         var logger = new LoggerConfiguration().WriteTo.File(logFileName).CreateLogger();
-        var _userInteraction = new GamesPrinter();
 
         do
         {
@@ -51,7 +50,7 @@ public class GameDataParserApp
                     );
 
                     // print all games to console
-                    _userInteraction.PrintVideoGames(videoGames);
+                    GamesPrinter.PrintVideoGames(videoGames);
 
                     isFilePathValid = true;
                 }
