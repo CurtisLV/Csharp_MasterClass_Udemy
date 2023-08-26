@@ -1,5 +1,6 @@
 ﻿using _57_GameDataParser;
 using _57_GameDataParser.Model;
+using _57_GameDataParser.Logging;
 
 var app = new GameDataParserApp();
 

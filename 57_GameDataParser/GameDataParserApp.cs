@@ -1,12 +1,7 @@
-﻿using _57_GameDataParser.Model;
+﻿using _57_GameDataParser.Logging;
+using _57_GameDataParser.Model;
 using _57_GameDataParser.UserInteraction;
-using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace _57_GameDataParser;
 
@@ -18,7 +13,7 @@ public class GameDataParserApp
         string fileName;
 
         string logFileName = "log.txt";
-        var logger = new LoggerConfiguration().WriteTo.File(logFileName).CreateLogger();
+        var logger = Logger.CreateLogger(logFileName);
 
         do
         {
