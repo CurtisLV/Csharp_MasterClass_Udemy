@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _57_GameDataParser
+namespace _57_GameDataParser;
+
+public class GameDataParserApp
 {
-    internal class GameDataParserApp
-    {
-    }
+    //
 }
