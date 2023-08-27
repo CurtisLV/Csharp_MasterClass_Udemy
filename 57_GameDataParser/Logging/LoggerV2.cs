@@ -15,8 +15,12 @@ public class LoggerV2
         _logFileName = logFileName;
     }
 
-    public void Log()
+    public void Log(Exception ex)
     {
-        //
+        var entry =
+            $@"[{DateTime.UtcNow}]
+            Exception message: {ex.Message}
+            Stack trace: {ex.StackTrace}
+            ";
     }
 }
