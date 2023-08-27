@@ -18,5 +18,6 @@ public class LoggerV2
 
 
             ";
+        File.AppendAllText(_logFileName, entry);
     }
 }
