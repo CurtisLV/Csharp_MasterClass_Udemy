@@ -15,14 +15,6 @@ public class ApiDataReader : IApiDataReader
 
 
 
-
-
-
-
-
-
-
-
 //struct FishyStruct
 //{
 //    public List<int> Numbers { get; init; }
