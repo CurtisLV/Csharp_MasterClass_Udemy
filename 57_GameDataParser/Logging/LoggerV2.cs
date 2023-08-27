@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _57_GameDataParser.Logging;
+﻿namespace _57_GameDataParser.Logging;
 
 public class LoggerV2
 {
@@ -21,6 +15,8 @@ public class LoggerV2
             $@"[{DateTime.UtcNow}]
             Exception message: {ex.Message}
             Stack trace: {ex.StackTrace}
+
+
             ";
     }
 }
