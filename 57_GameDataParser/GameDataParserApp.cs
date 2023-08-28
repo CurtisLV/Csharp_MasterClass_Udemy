@@ -25,7 +25,7 @@ public class GameDataParserApp
             {
                 Console.WriteLine("File cannot be null.");
             }
-            else if (fileName == "")
+            else if (fileName == String.Empty)
             {
                 Console.WriteLine("File cannot be empty.");
             }
@@ -37,34 +37,31 @@ public class GameDataParserApp
             {
                 // read the json
                 var jsonContent = File.ReadAllText(fileName);
-                try
-                {
-                    // return VideoGameModel list?
-                    List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(
-                        jsonContent
-                    );
-
-                    // print all games to console
-                    GamesPrinter.PrintVideoGames(videoGames);
-
-                    isFilePathValid = true;
-                }
-                catch (JsonException ex)
-                {
-                    var originalConsoleForegroundColor = Console.ForegroundColor;
-                    Console.WriteLine(
-                        $"JSON in the {fileName} was not in a valid format. JSON body:"
-                    );
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(jsonContent);
-                    Console.ForegroundColor = originalConsoleForegroundColor;
-                    Console.WriteLine(
-                        "Sorry! The application has experienced an unexpected error and will have to be closed."
-                    );
-                    logger.Information(ex.ToString());
-                    throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
-                }
             }
         } while (!isFilePathValid);
+
+        try
+        {
+            // return VideoGameModel list?
+            List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
+
+            // print all games to console
+            GamesPrinter.PrintVideoGames(videoGames);
+
+            isFilePathValid = true;
+        }
+        catch (JsonException ex)
+        {
+            var originalConsoleForegroundColor = Console.ForegroundColor;
+            Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(jsonContent);
+            Console.ForegroundColor = originalConsoleForegroundColor;
+            Console.WriteLine(
+                "Sorry! The application has experienced an unexpected error and will have to be closed."
+            );
+            logger.Information(ex.ToString());
+            throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
+        }
     }
 }
