@@ -12,17 +12,19 @@ public class GameDataParserApp
         string fileName = ReadValidFilePathFromUser();
 
         var fileContents = File.ReadAllText(fileName);
-        List<VideoGame> videoGames = default;
+        List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
+        // print all games to console
+        GamesPrinter.PrintVideoGames(videoGames);
+    }
 
+    private static List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
+    {
         string logFileName = "log.txt";
         var logger = Logger.CreateLogger(logFileName);
         try
         {
             // return VideoGameModel list?
-            videoGames = JsonSerializer.Deserialize<List<VideoGame>>(fileContents);
-
-            // print all games to console
-            GamesPrinter.PrintVideoGames(videoGames);
+            return JsonSerializer.Deserialize<List<VideoGame>>(fileContents);
         }
         catch (JsonException ex)
         {
@@ -65,7 +67,6 @@ public class GameDataParserApp
             else
             {
                 // read the json
-
                 isFilePathValid = true;
             }
         } while (!isFilePathValid);
