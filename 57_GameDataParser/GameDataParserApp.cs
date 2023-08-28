@@ -12,9 +12,6 @@ public class GameDataParserApp
         bool isFilePathValid = false;
         string fileName;
 
-        string logFileName = "log.txt";
-        var logger = Logger.CreateLogger(logFileName);
-
         do
         {
             Console.WriteLine("Enter the name of the file you want to read:");
@@ -41,12 +38,15 @@ public class GameDataParserApp
             }
         } while (!isFilePathValid);
 
-        var jsonContent = File.ReadAllText(fileName);
+        var fileContents = File.ReadAllText(fileName);
         List<VideoGame> videoGames = default;
+
+        string logFileName = "log.txt";
+        var logger = Logger.CreateLogger(logFileName);
         try
         {
             // return VideoGameModel list?
-            videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
+            videoGames = JsonSerializer.Deserialize<List<VideoGame>>(fileContents);
 
             // print all games to console
             GamesPrinter.PrintVideoGames(videoGames);
@@ -56,7 +56,7 @@ public class GameDataParserApp
             var originalConsoleForegroundColor = Console.ForegroundColor;
             Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(jsonContent);
+            Console.WriteLine(fileContents);
             Console.ForegroundColor = originalConsoleForegroundColor;
             Console.WriteLine(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
