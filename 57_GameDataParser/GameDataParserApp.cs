@@ -38,6 +38,7 @@ public class GameDataParserApp
             {
                 // read the json
                 jsonContent = File.ReadAllText(fileName);
+                isFilePathValid = true;
             }
         } while (!isFilePathValid);
 
@@ -49,8 +50,6 @@ public class GameDataParserApp
 
             // print all games to console
             GamesPrinter.PrintVideoGames(videoGames);
-
-            isFilePathValid = true;
         }
         catch (JsonException ex)
         {
