@@ -14,6 +14,7 @@ public class GameDataParserApp
 
         string logFileName = "log.txt";
         var logger = Logger.CreateLogger(logFileName);
+        var jsonContent = default(string);
 
         do
         {
@@ -36,14 +37,15 @@ public class GameDataParserApp
             else
             {
                 // read the json
-                var jsonContent = File.ReadAllText(fileName);
+                jsonContent = File.ReadAllText(fileName);
             }
         } while (!isFilePathValid);
 
+        List<VideoGame> videoGames = default;
         try
         {
             // return VideoGameModel list?
-            List<VideoGame> videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
+            videoGames = JsonSerializer.Deserialize<List<VideoGame>>(jsonContent);
 
             // print all games to console
             GamesPrinter.PrintVideoGames(videoGames);
