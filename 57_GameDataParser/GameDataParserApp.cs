@@ -44,10 +44,17 @@ public class GameDataParserApp
 public interface IUserInteractor
 {
     string ReadValidFilePath();
+
+    void PrintMessage(string message);
 }
 
 public class ConsoleUserInteractor : IUserInteractor
 {
+    public void PrintMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+
     public string ReadValidFilePath()
     {
         bool isFilePathValid = false;
@@ -55,21 +62,21 @@ public class ConsoleUserInteractor : IUserInteractor
 
         do
         {
-            Console.WriteLine("Enter the name of the file you want to read:");
+            PrintMessage("Enter the name of the file you want to read:");
             fileName = Console.ReadLine();
 
             // need to check for null and empty input
             if (fileName is null)
             {
-                Console.WriteLine("File cannot be null.");
+                PrintMessage("File cannot be null.");
             }
             else if (fileName == String.Empty)
             {
-                Console.WriteLine("File cannot be empty.");
+                PrintMessage("File cannot be empty.");
             }
             else if (!File.Exists(fileName))
             {
-                Console.WriteLine("File not found.");
+                PrintMessage("File not found.");
             }
             else
             {
