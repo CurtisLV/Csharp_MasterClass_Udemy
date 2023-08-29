@@ -2,7 +2,7 @@
 
 namespace _57_GameDataParser.UserInteraction;
 
-public class GamesPrinter
+public class GamesPrinter : IGamesPrinter
 {
     private readonly IUserInteractor _userInteractor;
 
@@ -11,11 +11,11 @@ public class GamesPrinter
         _userInteractor = userInteractor;
     }
 
-    private void PrintVideoGames(List<VideoGame> videoGames)
+    public void Print(List<VideoGame> videoGames)
     {
         if (videoGames.Count > 0)
         {
-            _userInteractor.PrintMessage("Loaded games are:");
+            _userInteractor.PrintMessage(Environment.NewLine + "Loaded games are:");
             foreach (VideoGame vg in videoGames)
             {
                 _userInteractor.PrintMessage(vg.ToString());

@@ -20,7 +20,7 @@ public class GameDataParserApp
         var fileContents = File.ReadAllText(fileName);
         List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
         // print all games to console
-        GamesPrinter.PrintVideoGames(videoGames);
+        GamesPrinter.Print(videoGames);
     }
 
     private List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
