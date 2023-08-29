@@ -4,6 +4,8 @@ namespace _57_GameDataParser.UserInteraction;
 
 public class GamesPrinter
 {
+    private readonly IUserInteractor _userInteractor;
+
     public static void PrintVideoGames(List<VideoGame> videoGames)
     {
         if (videoGames.Count > 0)
@@ -11,7 +13,7 @@ public class GamesPrinter
             Console.WriteLine("Loaded games are:");
             foreach (VideoGame vg in videoGames)
             {
-                Console.WriteLine(vg.ToString());
+                (vg.ToString());
             }
         }
         else

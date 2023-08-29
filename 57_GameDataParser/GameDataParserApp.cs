@@ -7,9 +7,16 @@ namespace _57_GameDataParser;
 
 public class GameDataParserApp
 {
+    private readonly IUserInteractor _userInteractor;
+
+    public GameDataParserApp(IUserInteractor userInteractor)
+    {
+        _userInteractor = userInteractor;
+    }
+
     public void Run()
     {
-        string fileName = ReadValidFilePathFromUser();
+        string fileName = _userInteractor.ReadValidFilePath();
         var fileContents = File.ReadAllText(fileName);
         List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
         // print all games to console
@@ -28,7 +35,9 @@ public class GameDataParserApp
         catch (JsonException ex)
         {
             var originalConsoleForegroundColor = Console.ForegroundColor;
-            Console.WriteLine($"JSON in the {fileName} was not in a valid format. JSON body:");
+            _userInteractor.PrintMessage(
+                $"JSON in the {fileName} was not in a valid format. JSON body:"
+            );
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(fileContents);
             Console.ForegroundColor = originalConsoleForegroundColor;
