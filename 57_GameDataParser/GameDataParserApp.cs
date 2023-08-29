@@ -10,7 +10,6 @@ public class GameDataParserApp
     public void Run()
     {
         string fileName = ReadValidFilePathFromUser();
-
         var fileContents = File.ReadAllText(fileName);
         List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
         // print all games to console
