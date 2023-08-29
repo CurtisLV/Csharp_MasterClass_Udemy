@@ -1,7 +1,15 @@
 ﻿using _57_GameDataParser;
 using _57_GameDataParser.Logging;
+using _57_GameDataParser.UserInteraction;
 
-var app = new GameDataParserApp();
+var userInteractor = new ConsoleUserInteractor();
+
+var app = new GameDataParserApp(
+    userInteractor,
+    new GamesPrinter(userInteractor),
+    new VideoGamesDeserializer(userInteractor),
+    new LocalFileReader()
+);
 string logFileName = "log.txt";
 var logger = Logger.CreateLogger(logFileName);
 try
