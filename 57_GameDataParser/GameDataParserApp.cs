@@ -9,26 +9,39 @@ public class GameDataParserApp
 {
     private readonly IUserInteractor _userInteractor;
     private readonly IGamesPrinter _gamesPrinter;
+    private readonly IVideoGamesDeserializer _videoGamesDeserializer;
 
-    public GameDataParserApp(IUserInteractor userInteractor, IGamesPrinter gamesPrinter)
+    public GameDataParserApp(
+        IUserInteractor userInteractor,
+        IGamesPrinter gamesPrinter,
+        IVideoGamesDeserializer videoGamesDeserializer = null
+    )
     {
         _userInteractor = userInteractor;
         _gamesPrinter = gamesPrinter;
+        _videoGamesDeserializer = videoGamesDeserializer;
     }
 
     public void Run()
     {
         string fileName = _userInteractor.ReadValidFilePath();
         var fileContents = File.ReadAllText(fileName);
-        List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
+        List<VideoGame> videoGames = _videoGamesDeserializer.Deserialize(fileName, fileContents);
         // print all games to console
         _gamesPrinter.Print(videoGames);
     }
 }
 
-public class VideoGamesDeserializer
+public class VideoGamesDeserializer : IVideoGamesDeserializer
 {
-    private List<VideoGame> Deserialize(string fileName, string fileContents)
+    private readonly IUserInteractor _userInteractor;
+
+    public VideoGamesDeserializer(IUserInteractor userInteractor)
+    {
+        _userInteractor = userInteractor;
+    }
+
+    public List<VideoGame> Deserialize(string fileName, string fileContents)
     {
         string logFileName = "log.txt";
         var logger = Logger.CreateLogger(logFileName);
