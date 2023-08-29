@@ -39,8 +39,16 @@ public class GameDataParserApp
             throw new JsonException($"{ex.Message} The file is: {fileName}", ex);
         }
     }
+}
 
-    private static string ReadValidFilePathFromUser()
+public interface IUserInteractor
+{
+    string ReadValidFilePath();
+}
+
+public class ConsoleUserInteractor : IUserInteractor
+{
+    public string ReadValidFilePath()
     {
         bool isFilePathValid = false;
         string fileName;
@@ -71,14 +79,4 @@ public class GameDataParserApp
         } while (!isFilePathValid);
         return fileName;
     }
-}
-
-public interface IUserInteractor
-{
-    //
-}
-
-public class ConsoleUserInteractor : IUserInteractor
-{
-    //
 }
