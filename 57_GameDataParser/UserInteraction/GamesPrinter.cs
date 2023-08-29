@@ -6,19 +6,24 @@ public class GamesPrinter
 {
     private readonly IUserInteractor _userInteractor;
 
-    public static void PrintVideoGames(List<VideoGame> videoGames)
+    public GamesPrinter(IUserInteractor userInteractor)
+    {
+        _userInteractor = userInteractor;
+    }
+
+    public void PrintVideoGames(List<VideoGame> videoGames)
     {
         if (videoGames.Count > 0)
         {
-            Console.WriteLine("Loaded games are:");
+            _userInteractor.PrintMessage("Loaded games are:");
             foreach (VideoGame vg in videoGames)
             {
-                (vg.ToString());
+                _userInteractor.PrintMessage(vg.ToString());
             }
         }
         else
         {
-            Console.WriteLine("No games are present in the input file.");
+            _userInteractor.PrintMessage("No games are present in the input file.");
         }
     }
 }

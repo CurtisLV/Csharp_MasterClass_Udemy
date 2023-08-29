@@ -23,7 +23,7 @@ public class GameDataParserApp
         GamesPrinter.PrintVideoGames(videoGames);
     }
 
-    private static List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
+    private List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
     {
         string logFileName = "log.txt";
         var logger = Logger.CreateLogger(logFileName);
@@ -39,9 +39,9 @@ public class GameDataParserApp
                 $"JSON in the {fileName} was not in a valid format. JSON body:"
             );
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(fileContents);
+            _userInteractor.PrintMessage(fileContents);
             Console.ForegroundColor = originalConsoleForegroundColor;
-            Console.WriteLine(
+            _userInteractor.PrintMessage(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
             logger.Information(ex.ToString());
