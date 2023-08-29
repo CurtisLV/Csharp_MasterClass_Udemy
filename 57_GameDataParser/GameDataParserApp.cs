@@ -72,3 +72,13 @@ public class GameDataParserApp
         return fileName;
     }
 }
+
+public interface IUserInteractor
+{
+    //
+}
+
+public class ConsoleUserInteractor : IUserInteractor
+{
+    //
+}
