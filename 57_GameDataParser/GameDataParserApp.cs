@@ -8,10 +8,12 @@ namespace _57_GameDataParser;
 public class GameDataParserApp
 {
     private readonly IUserInteractor _userInteractor;
+    private readonly IGamesPrinter _gamesPrinter;
 
-    public GameDataParserApp(IUserInteractor userInteractor)
+    public GameDataParserApp(IUserInteractor userInteractor, IGamesPrinter gamesPrinter)
     {
         _userInteractor = userInteractor;
+        _gamesPrinter = gamesPrinter;
     }
 
     public void Run()
@@ -20,10 +22,13 @@ public class GameDataParserApp
         var fileContents = File.ReadAllText(fileName);
         List<VideoGame> videoGames = DeserializeVideoGamesFrom(fileName, fileContents);
         // print all games to console
-        GamesPrinter.Print(videoGames);
+        _gamesPrinter.Print(videoGames);
     }
+}
 
-    private List<VideoGame> DeserializeVideoGamesFrom(string fileName, string fileContents)
+public class VideoGamesDeserializer
+{
+    private List<VideoGame> Deserialize(string fileName, string fileContents)
     {
         string logFileName = "log.txt";
         var logger = Logger.CreateLogger(logFileName);
