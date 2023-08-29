@@ -11,7 +11,7 @@ public class GamesPrinter
         _userInteractor = userInteractor;
     }
 
-    public void PrintVideoGames(List<VideoGame> videoGames)
+    private void PrintVideoGames(List<VideoGame> videoGames)
     {
         if (videoGames.Count > 0)
         {

@@ -34,14 +34,11 @@ public class GameDataParserApp
         }
         catch (JsonException ex)
         {
-            var originalConsoleForegroundColor = Console.ForegroundColor;
             _userInteractor.PrintMessage(
                 $"JSON in the {fileName} was not in a valid format. JSON body:"
             );
-            Console.ForegroundColor = ConsoleColor.Red;
-            _userInteractor.PrintMessage(fileContents);
-            Console.ForegroundColor = originalConsoleForegroundColor;
-            _userInteractor.PrintMessage(
+            _userInteractor.PrintError(fileContents);
+            _userInteractor.PrintError(
                 "Sorry! The application has experienced an unexpected error and will have to be closed."
             );
             logger.Information(ex.ToString());
@@ -55,10 +52,19 @@ public interface IUserInteractor
     string ReadValidFilePath();
 
     void PrintMessage(string message);
+    void PrintError(string message);
 }
 
 public class ConsoleUserInteractor : IUserInteractor
 {
+    public void PrintError(string message)
+    {
+        var originalConsoleForegroundColor = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Red;
+        PrintMessage(message);
+        Console.ForegroundColor = originalConsoleForegroundColor;
+    }
+
     public void PrintMessage(string message)
     {
         Console.WriteLine(message);
