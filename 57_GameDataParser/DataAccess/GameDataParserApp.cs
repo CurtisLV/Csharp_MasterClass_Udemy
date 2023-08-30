@@ -33,14 +33,6 @@ public class GameDataParserApp
     }
 }
 
-public interface IUserInteractor
-{
-    string ReadValidFilePath();
-
-    void PrintMessage(string message);
-    void PrintError(string message);
-}
-
 public class ConsoleUserInteractor : IUserInteractor
 {
     public void PrintError(string message)
