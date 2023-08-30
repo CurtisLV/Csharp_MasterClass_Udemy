@@ -1,5 +1,4 @@
-﻿using _57_GameDataParser.DataAccess;
-using _57_GameDataParser.Model;
+﻿using _57_GameDataParser.Model;
 
 namespace _57_GameDataParser.UserInteraction;
 
