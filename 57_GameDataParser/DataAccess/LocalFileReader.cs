@@ -1,6 +1,4 @@
-﻿using _57_GameDataParser.DataAccess;
-
-namespace _57_GameDataParser.App;
+﻿namespace _57_GameDataParser.DataAccess;
 
 public class LocalFileReader : IFileReader
 {
