@@ -35,19 +35,6 @@ public class GameDataParserApp
     }
 }
 
-public interface IFileReader
-{
-    string Read(string fileName);
-}
-
-public class LocalFileReader : IFileReader
-{
-    public string Read(string fileName)
-    {
-        return File.ReadAllText(fileName);
-    }
-}
-
 public class VideoGamesDeserializer : IVideoGamesDeserializer
 {
     private readonly IUserInteractor _userInteractor;
