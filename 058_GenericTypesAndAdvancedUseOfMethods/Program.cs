@@ -19,7 +19,7 @@ class ListOfInts
 
     public void Add(int item)
     {
-        if (_size > _items.Length)
+        if (_size >= _items.Length)
         {
             var newItems = new int[_items.Length * 2];
 
@@ -30,7 +30,7 @@ class ListOfInts
 
             _items = newItems;
         }
-        _items[0] = item;
+        _items[_size] = item;
         ++_size;
     }
 }

@@ -87,7 +87,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "56_Exceptions", "56_Excepti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "57_GameDataParser", "57_GameDataParser\57_GameDataParser.csproj", "{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "058_GenericTypesAndAdvancedUseOfMethods", "058_GenericTypesAndAdvancedUseOfMethods\058_GenericTypesAndAdvancedUseOfMethods.csproj", "{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "58_GenericTypesAndAdvancedUseOfMethods", "058_GenericTypesAndAdvancedUseOfMethods\58_GenericTypesAndAdvancedUseOfMethods.csproj", "{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
