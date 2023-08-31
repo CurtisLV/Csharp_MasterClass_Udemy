@@ -2,6 +2,14 @@
 //var words = new List<string> { "aaa", "bbb", "ccc" };
 //var dates = new List<DateTime> { new DateTime(2023, 8, 31) };
 
+var numbers = new ListOfInts();
+
+numbers.Add(7);
+numbers.Add(3);
+numbers.Add(12);
+numbers.Add(2);
+numbers.Add(41);
+
 Console.ReadKey();
 
 class ListOfInts
@@ -19,6 +27,8 @@ class ListOfInts
             {
                 newItems[i] = _items[i];
             }
+
+            _items = newItems;
         }
         _items[0] = item;
         ++_size;
