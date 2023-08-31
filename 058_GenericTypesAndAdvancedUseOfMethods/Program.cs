@@ -36,6 +36,13 @@ class ListOfInts
 
     public void RemoveAt(int index)
     {
-        //
+        // making sure that the index is valid, it should be between zero and the size of the list
+        if (index < 0 || index >= _size)
+        {
+            throw new IndexOutOfRangeException(
+                $"Index {index} is outside of the bounds of the list.r"
+            );
+        }
+        --_size;
     }
 }
