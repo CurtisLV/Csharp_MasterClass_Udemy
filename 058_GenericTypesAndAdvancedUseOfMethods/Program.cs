@@ -33,4 +33,9 @@ class ListOfInts
         _items[_size] = item;
         ++_size;
     }
+
+    public void RemoveAt(int index)
+    {
+        //
+    }
 }
