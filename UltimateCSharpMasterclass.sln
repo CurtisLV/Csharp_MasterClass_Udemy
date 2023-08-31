@@ -85,7 +85,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "55_CookieCookbook", "55_Coo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "56_Exceptions", "56_Exceptions\56_Exceptions.csproj", "{FD85A876-ACDA-4492-A148-A2A5C903E364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "57_GameDataParser", "57_GameDataParser\57_GameDataParser.csproj", "{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "57_GameDataParser", "57_GameDataParser\57_GameDataParser.csproj", "{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "058_GenericTypesAndAdvancedUseOfMethods", "058_GenericTypesAndAdvancedUseOfMethods\058_GenericTypesAndAdvancedUseOfMethods.csproj", "{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -261,6 +263,10 @@ Global
 		{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C594DE-2B83-4E8D-8B29-02D8AEABDFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
