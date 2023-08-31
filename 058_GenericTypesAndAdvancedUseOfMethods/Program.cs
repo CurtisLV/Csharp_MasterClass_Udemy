@@ -40,9 +40,15 @@ class ListOfInts
         if (index < 0 || index >= _size)
         {
             throw new IndexOutOfRangeException(
-                $"Index {index} is outside of the bounds of the list.r"
+                $"Index {index} is outside of the bounds of the list."
             );
         }
+
         --_size;
+
+        for (int i = index; i < _size; i++)
+        {
+            _items[i] = _items[i + 1];
+        }
     }
 }
