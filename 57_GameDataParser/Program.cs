@@ -1,4 +1,5 @@
-﻿using _57_GameDataParser;
+﻿using _57_GameDataParser.App;
+using _57_GameDataParser.DataAccess;
 using _57_GameDataParser.Logging;
 using _57_GameDataParser.UserInteraction;
 
