@@ -4,11 +4,13 @@
 
 var numbers = new ListOfInts();
 
-numbers.Add(7);
-numbers.Add(3);
-numbers.Add(12);
-numbers.Add(2);
-numbers.Add(41);
+numbers.Add(10);
+numbers.Add(20);
+numbers.Add(30);
+numbers.Add(40);
+numbers.Add(50);
+
+numbers.RemoveAt(2);
 
 Console.ReadKey();
 
@@ -46,9 +48,11 @@ class ListOfInts
 
         --_size;
 
-        for (int i = index; i < _size; i++)
+        for (int i = index; i < _size; ++i)
         {
             _items[i] = _items[i + 1];
         }
+
+        _items[_size] = 0;
     }
 }
