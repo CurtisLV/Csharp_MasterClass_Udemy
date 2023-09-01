@@ -2,7 +2,7 @@
 //var words = new List<string> { "aaa", "bbb", "ccc" };
 //var dates = new List<DateTime> { new DateTime(2023, 8, 31) };
 
-var numbers = new ListOfInts();
+var numbers = new SimpleList<int>();
 
 numbers.Add(10);
 numbers.Add(20);
@@ -12,11 +12,17 @@ numbers.Add(50);
 
 numbers.RemoveAt(2);
 
-var words = new ListOfStrings();
+var words = new SimpleList<string>();
 
 words.Add("aaa");
 words.Add("bbb");
 words.Add("ccc");
+
+var dates = new SimpleList<DateTime>();
+
+dates.Add(new DateTime(2023, 9, 1));
+dates.Add(new DateTime(2023, 9, 2));
+dates.Add(new DateTime(2023, 9, 3));
 
 Console.ReadKey();
 
@@ -59,7 +65,7 @@ class SimpleList<T>
             _items[i] = _items[i + 1];
         }
 
-        _items[_size] = default(T);
+        _items[_size] = default;
     }
 
     public T GetAtIndex(int index)
