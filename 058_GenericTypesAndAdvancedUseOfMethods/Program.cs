@@ -81,8 +81,7 @@ class SimpleList<T>
 }
 
 // First coding exercise
-
-class Pair<T>
+public class Pair<T>
 {
     public T First { get; private set; }
     public T Second { get; private set; }
