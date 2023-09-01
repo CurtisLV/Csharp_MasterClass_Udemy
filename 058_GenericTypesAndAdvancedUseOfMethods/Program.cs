@@ -82,12 +82,12 @@ class SimpleList<T>
 
 // First coding exercise
 
-class Pair<TFirst, TSecond>
+class Pair<T>
 {
-    public TFirst First { get; private set; }
-    public TSecond Second { get; private set; }
+    public T First { get; private set; }
+    public T Second { get; private set; }
 
-    public Pair(TFirst first, TSecond second)
+    public Pair(T first, T second)
     {
         First = first;
         Second = second;
