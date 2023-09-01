@@ -79,3 +79,11 @@ class SimpleList<T>
         return _items[index];
     }
 }
+
+// First coding exercise
+
+class Pair<T>
+{
+    public T First { get; init; }
+    public T Second { get; init; }
+}
