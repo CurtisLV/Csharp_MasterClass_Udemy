@@ -14,61 +14,11 @@ numbers.RemoveAt(2);
 
 var words = new ListOfStrings();
 
+words.Add("aaa");
+words.Add("bbb");
+words.Add("ccc");
+
 Console.ReadKey();
-
-class ListOfStrings
-{
-    private string[] _items = new string[4];
-    private int _size = 0;
-
-    public void Add(string item)
-    {
-        if (_size >= _items.Length)
-        {
-            var newItems = new string[_items.Length * 2];
-
-            for (int i = 0; i < _items.Length; i++)
-            {
-                newItems[i] = _items[i];
-            }
-
-            _items = newItems;
-        }
-        _items[_size] = item;
-        ++_size;
-    }
-
-    public void RemoveAt(int index)
-    {
-        // making sure that the index is valid, it should be between zero and the size of the list
-        if (index < 0 || index >= _size)
-        {
-            throw new IndexOutOfRangeException(
-                $"Index {index} is outside of the bounds of the list."
-            );
-        }
-
-        --_size;
-
-        for (int i = index; i < _size; ++i)
-        {
-            _items[i] = _items[i + 1];
-        }
-
-        _items[_size] = null;
-    }
-
-    public string GetAtIndex(int index)
-    {
-        if (index < 0 || index >= _size)
-        {
-            throw new IndexOutOfRangeException(
-                $"Index {index} is outside of the bounds of the list."
-            );
-        }
-        return _items[index];
-    }
-}
 
 class ListOfInts
 {
