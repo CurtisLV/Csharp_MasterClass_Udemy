@@ -20,16 +20,16 @@ words.Add("ccc");
 
 Console.ReadKey();
 
-class ListOfInts
+class SimpleList<T>
 {
-    private int[] _items = new int[4];
+    private T[] _items = new T[4];
     private int _size = 0;
 
-    public void Add(int item)
+    public void Add(T item)
     {
         if (_size >= _items.Length)
         {
-            var newItems = new int[_items.Length * 2];
+            var newItems = new T[_items.Length * 2];
 
             for (int i = 0; i < _items.Length; i++)
             {
@@ -59,10 +59,10 @@ class ListOfInts
             _items[i] = _items[i + 1];
         }
 
-        _items[_size] = 0;
+        _items[_size] = default(T);
     }
 
-    public int GetAtIndex(int index)
+    public T GetAtIndex(int index)
     {
         if (index < 0 || index >= _size)
         {
