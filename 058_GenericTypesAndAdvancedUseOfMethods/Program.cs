@@ -86,4 +86,14 @@ class Pair<T>
 {
     public T First { get; init; }
     public T Second { get; init; }
+
+    public void ResetFirst()
+    {
+        //
+    }
+
+    public void ResetSecond()
+    {
+        //
+    }
 }
