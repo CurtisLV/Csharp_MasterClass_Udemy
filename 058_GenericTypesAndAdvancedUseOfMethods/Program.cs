@@ -12,18 +12,20 @@ numbers.Add(50);
 
 numbers.RemoveAt(2);
 
+var words = new ListOfStrings();
+
 Console.ReadKey();
 
 class ListOfStrings
 {
-    private int[] _items = new int[4];
+    private string[] _items = new string[4];
     private int _size = 0;
 
-    public void Add(int item)
+    public void Add(string item)
     {
         if (_size >= _items.Length)
         {
-            var newItems = new int[_items.Length * 2];
+            var newItems = new string[_items.Length * 2];
 
             for (int i = 0; i < _items.Length; i++)
             {
@@ -53,10 +55,10 @@ class ListOfStrings
             _items[i] = _items[i + 1];
         }
 
-        _items[_size] = 0;
+        _items[_size] = null;
     }
 
-    public int GetAtIndex(int index)
+    public string GetAtIndex(int index)
     {
         if (index < 0 || index >= _size)
         {
