@@ -82,18 +82,24 @@ class SimpleList<T>
 
 // First coding exercise
 
-class Pair<T>
+class Pair<TFirst, TSecond>
 {
-    public T First { get; init; }
-    public T Second { get; init; }
+    public TFirst First { get; private set; }
+    public TSecond Second { get; private set; }
+
+    public Pair(TFirst first, TSecond second)
+    {
+        First = first;
+        Second = second;
+    }
 
     public void ResetFirst()
     {
-        //
+        First = default;
     }
 
     public void ResetSecond()
     {
-        //
+        Second = default;
     }
 }
