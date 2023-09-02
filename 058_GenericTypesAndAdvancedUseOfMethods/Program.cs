@@ -21,12 +21,18 @@ dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
 
 var numbaz = new List<int> { 5, 3, 2, 8, 16, 7 };
+TwoInts minAndMax = GetMinMax(numbaz);
+Console.WriteLine("Smallest number is " + minAndMax.Int1);
+Console.WriteLine("Largest number is " + minAndMax.Int2);
 
 Console.ReadKey();
 
 TwoInts GetMinMax(IEnumerable<int> input)
 {
-    //
+    if (!input.Any())
+    {
+        throw new InvalidOperationException($"The input collection cannot be empty");
+    }
 }
 
 public class TwoInts
