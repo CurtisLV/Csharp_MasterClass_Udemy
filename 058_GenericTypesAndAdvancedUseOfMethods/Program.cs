@@ -29,6 +29,17 @@ int GetMinMax(IEnumerable<int> input)
     //
 }
 
+public class TwoInts
+{
+    public TwoInts(int first, int second)
+    {
+        //
+    }
+
+    public int Int1 { get; }
+    public int Int2 { get; }
+}
+
 class SimpleList<T>
 {
     private T[] _items = new T[4];
