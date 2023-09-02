@@ -21,19 +21,19 @@ dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
 
 var numbaz = new List<int> { 5, 3, 2, 8, 16, 7, -9, -12, 16 };
-SimpleTuple<int, int> minAndMax = GetMinMax(numbaz);
+Tuple<int, int> minAndMax = GetMinMax(numbaz);
 
-var twoStrings = new SimpleTuple<string, string>("aaa", "bbb");
-var differentTypes = new SimpleTuple<string, int>("aaa", 7);
+var twoStrings = new Tuple<string, string>("aaa", "bbb");
+var differentTypes = new Tuple<string, int>("aaa", 7);
 
-//var threeItems = new SimpleTuple<string, int, bool>("aaa", 7, false);
+var threeItems = new Tuple<string, int, bool>("aaa", 7, false);
 
 Console.WriteLine("Smallest number is " + minAndMax.Item1);
 Console.WriteLine("Largest number is " + minAndMax.Item2);
 
 Console.ReadKey();
 
-SimpleTuple<int, int> GetMinMax(IEnumerable<int> input)
+Tuple<int, int> GetMinMax(IEnumerable<int> input)
 {
     if (!input.Any())
     {
@@ -56,7 +56,7 @@ SimpleTuple<int, int> GetMinMax(IEnumerable<int> input)
         }
     }
 
-    return new SimpleTuple<int, int>(min, max);
+    return new Tuple<int, int>(min, max);
 }
 
 //public class SimpleTuple<T1, T2>
