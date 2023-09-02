@@ -20,7 +20,14 @@ dates.Add(new DateTime(2023, 9, 1));
 dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
 
+var numbaz = new List<int> { 5, 3, 2, 8, 16, 7 };
+
 Console.ReadKey();
+
+int GetMinMax(IEnumerable<int> input)
+{
+    //
+}
 
 class SimpleList<T>
 {
