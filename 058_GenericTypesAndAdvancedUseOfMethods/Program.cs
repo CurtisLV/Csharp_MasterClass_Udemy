@@ -20,7 +20,7 @@ dates.Add(new DateTime(2023, 9, 1));
 dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
 
-var numbaz = new List<int> { 5, 3, 2, 8, 16, 7 };
+var numbaz = new List<int> { 5, 3, 2, 8, 16, 7, -9, -12, 16 };
 TwoInts minAndMax = GetMinMax(numbaz);
 Console.WriteLine("Smallest number is " + minAndMax.Int1);
 Console.WriteLine("Largest number is " + minAndMax.Int2);
@@ -50,8 +50,7 @@ TwoInts GetMinMax(IEnumerable<int> input)
         }
     }
 
-    TwoInts result = new TwoInts(min, max);
-    return result;
+    return new TwoInts(min, max);
 }
 
 public class TwoInts
