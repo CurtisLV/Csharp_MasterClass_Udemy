@@ -33,6 +33,17 @@ TwoInts GetMinMax(IEnumerable<int> input)
     {
         throw new InvalidOperationException($"The input collection cannot be empty");
     }
+
+    int min = input.First();
+    int max = input.First();
+
+    foreach (var num in numbaz)
+    {
+        if (num > max)
+        {
+            //
+        }
+    }
 }
 
 public class TwoInts
