@@ -21,13 +21,13 @@ dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
 
 var numbaz = new List<int> { 5, 3, 2, 8, 16, 7, -9, -12, 16 };
-TwoInts minAndMax = GetMinMax(numbaz);
+SimpleTuple minAndMax = GetMinMax(numbaz);
 Console.WriteLine("Smallest number is " + minAndMax.Int1);
 Console.WriteLine("Largest number is " + minAndMax.Int2);
 
 Console.ReadKey();
 
-TwoInts GetMinMax(IEnumerable<int> input)
+SimpleTuple GetMinMax(IEnumerable<int> input)
 {
     if (!input.Any())
     {
@@ -50,19 +50,19 @@ TwoInts GetMinMax(IEnumerable<int> input)
         }
     }
 
-    return new TwoInts(min, max);
+    return new SimpleTuple(min, max);
 }
 
-public class TwoInts
+public class SimpleTuple<T1, T2>
 {
-    public TwoInts(int first, int second)
+    public SimpleTuple(T1 item1, T2 item2)
     {
-        Int1 = first;
-        Int2 = second;
+        Item1 = item1;
+        Item2 = item2;
     }
 
-    public int Int1 { get; }
-    public int Int2 { get; }
+    public T1 Item1 { get; }
+    public T2 Item2 { get; }
 }
 
 class SimpleList<T>
