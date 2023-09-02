@@ -41,9 +41,17 @@ TwoInts GetMinMax(IEnumerable<int> input)
     {
         if (num > max)
         {
-            //
+            max = num;
+        }
+
+        if (num < min)
+        {
+            min = num;
         }
     }
+
+    TwoInts result = new TwoInts(min, max);
+    return result;
 }
 
 public class TwoInts
