@@ -24,7 +24,7 @@ var numbaz = new List<int> { 5, 3, 2, 8, 16, 7 };
 
 Console.ReadKey();
 
-int GetMinMax(IEnumerable<int> input)
+TwoInts GetMinMax(IEnumerable<int> input)
 {
     //
 }
@@ -33,7 +33,8 @@ public class TwoInts
 {
     public TwoInts(int first, int second)
     {
-        //
+        Int1 = first;
+        Int2 = second;
     }
 
     public int Int1 { get; }
