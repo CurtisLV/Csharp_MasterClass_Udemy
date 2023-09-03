@@ -41,7 +41,7 @@ numbaz.AddToFront<int>(11); // no need to use <int>
 
 var decimals = new List<decimal> { 1.1m, 0.5m, 22.5m, 12m };
 
-var integers = decimals.ConvertTo<int>();
+//var integers = decimals.ConvertTo<int>();
 
 Console.ReadKey();
 
@@ -73,6 +73,18 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 
 static class ListExtensions
 {
+    public static List<int> ConvertTo(this List<decimal> decimals)
+    {
+        var result = new List<int>();
+
+        foreach (decimal dec in decimals)
+        {
+            //
+        }
+
+        return result;
+    }
+
     public static void AddToFront<T>(this List<T> list, T value)
     {
         list.Insert(0, value);
