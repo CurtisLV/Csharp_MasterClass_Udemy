@@ -73,13 +73,13 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 
 static class ListExtensions
 {
-    public static List<int> ConvertTo(this List<decimal> decimals)
+    public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> decimals)
     {
-        var result = new List<int>();
+        var result = new List<TTarget>();
 
         foreach (var item in decimals)
         {
-            result.Add((int)item);
+            result.Add((TTarget)item);
         }
 
         return result;
