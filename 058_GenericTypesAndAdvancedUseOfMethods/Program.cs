@@ -36,6 +36,8 @@ ArrayList variousItems = new ArrayList { 1, false, "abc", new DateTime() };
 // Generic methods
 
 numbaz.AddToFront(10);
+numbaz.AddToFront<int>(11);
+numbaz.AddToFront<int>("abc");
 
 Console.ReadKey();
 
