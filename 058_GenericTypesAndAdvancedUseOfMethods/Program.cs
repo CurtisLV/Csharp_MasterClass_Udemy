@@ -34,10 +34,14 @@ ArrayList strings = new ArrayList { "a", "b", "c", "d" };
 ArrayList variousItems = new ArrayList { 1, false, "abc", new DateTime() };
 
 // Generic methods
-
 numbaz.AddToFront(10);
-numbaz.AddToFront<int>(11);
-numbaz.AddToFront<int>("abc");
+numbaz.AddToFront<int>(11); // no need to use <int>
+
+//numbaz.AddToFront<int>("abc");
+
+var decimals = new List<decimal> { 1.1m, 0.5m, 22.5m, 12m };
+
+var integers = decimals.ConvertTo<int>();
 
 Console.ReadKey();
 
