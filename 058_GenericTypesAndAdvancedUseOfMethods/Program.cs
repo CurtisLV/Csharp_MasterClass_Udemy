@@ -1,4 +1,6 @@
-﻿var numbers = new SimpleList<int>();
+﻿using System.Collections;
+
+var numbers = new SimpleList<int>();
 
 numbers.Add(10);
 numbers.Add(20);
@@ -30,6 +32,11 @@ var threeItems = new Tuple<string, int, bool>("aaa", 7, false);
 
 Console.WriteLine("Smallest number is " + minAndMax.Item1);
 Console.WriteLine("Largest number is " + minAndMax.Item2);
+
+ArrayList ints = new ArrayList { 2, 3, 4, 5, };
+ArrayList strings = new ArrayList { "a", "b", "c", "d" };
+
+ArrayList variousItems = new ArrayList { 1, false, "abc", new DateTime() };
 
 Console.ReadKey();
 
