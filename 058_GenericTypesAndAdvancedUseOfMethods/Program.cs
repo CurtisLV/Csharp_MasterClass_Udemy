@@ -1,23 +1,19 @@
 ﻿using System.Collections;
 
 var numbers = new SimpleList<int>();
-
 numbers.Add(10);
 numbers.Add(20);
 numbers.Add(30);
 numbers.Add(40);
 numbers.Add(50);
-
 numbers.RemoveAt(2);
 
 var words = new SimpleList<string>();
-
 words.Add("aaa");
 words.Add("bbb");
 words.Add("ccc");
 
 var dates = new SimpleList<DateTime>();
-
 dates.Add(new DateTime(2023, 9, 1));
 dates.Add(new DateTime(2023, 9, 2));
 dates.Add(new DateTime(2023, 9, 3));
@@ -27,7 +23,6 @@ Tuple<int, int> minAndMax = GetMinMax(numbaz);
 
 var twoStrings = new Tuple<string, string>("aaa", "bbb");
 var differentTypes = new Tuple<string, int>("aaa", 7);
-
 var threeItems = new Tuple<string, int, bool>("aaa", 7, false);
 
 Console.WriteLine("Smallest number is " + minAndMax.Item1);
@@ -37,6 +32,10 @@ Console.WriteLine("Largest number is " + minAndMax.Item2);
 ArrayList ints = new ArrayList { 2, 3, 4, 5, };
 ArrayList strings = new ArrayList { "a", "b", "c", "d" };
 ArrayList variousItems = new ArrayList { 1, false, "abc", new DateTime() };
+
+// Generic methods
+
+numbaz.AddToFront(10);
 
 Console.ReadKey();
 
@@ -64,6 +63,14 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
     }
 
     return new Tuple<int, int>(min, max);
+}
+
+static class ListExtensions
+{
+    public static void AddToFront<T>(this List<T> list, T value)
+    {
+        list.Insert(0, value);
+    }
 }
 
 // First coding exercise
