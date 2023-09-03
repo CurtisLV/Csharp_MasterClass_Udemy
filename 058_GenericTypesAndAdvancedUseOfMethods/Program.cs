@@ -33,9 +33,9 @@ var threeItems = new Tuple<string, int, bool>("aaa", 7, false);
 Console.WriteLine("Smallest number is " + minAndMax.Item1);
 Console.WriteLine("Largest number is " + minAndMax.Item2);
 
+// ArrayLists - they suck!
 ArrayList ints = new ArrayList { 2, 3, 4, 5, };
 ArrayList strings = new ArrayList { "a", "b", "c", "d" };
-
 ArrayList variousItems = new ArrayList { 1, false, "abc", new DateTime() };
 
 Console.ReadKey();
