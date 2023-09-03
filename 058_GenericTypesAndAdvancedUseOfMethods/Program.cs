@@ -41,7 +41,7 @@ numbaz.AddToFront<int>(11); // no need to use <int>
 
 var decimals = new List<decimal> { 1.1m, 0.5m, 22.5m, 12m };
 
-//var integers = decimals.ConvertTo<int>();
+var integers = decimals.ConvertTo();
 
 Console.ReadKey();
 
@@ -77,9 +77,9 @@ static class ListExtensions
     {
         var result = new List<int>();
 
-        foreach (decimal dec in decimals)
+        foreach (var item in decimals)
         {
-            //
+            result.Add((int)item);
         }
 
         return result;
