@@ -79,7 +79,8 @@ static class ListExtensions
 
         foreach (var item in decimals)
         {
-            result.Add((TTarget)item);
+            TTarget itemAfterCasting = (TTarget)Convert.ChangeType(item, typeof(TTarget));
+            result.Add(itemAfterCasting);
         }
 
         return result;
