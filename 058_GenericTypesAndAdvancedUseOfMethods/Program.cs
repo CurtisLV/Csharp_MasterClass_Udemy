@@ -120,8 +120,8 @@ public static class TupleSwapExercise<TSource, TTarget>
     //public TSource First { get; private set; }
     //public TTarget Second { get; private set; }
 
-    static Tuple<TSource, TTarget> SwapTupleItems(TSource first, TTarget second)
+    static Tuple<TTarget, TSource> SwapTupleItems(Tuple<TSource, TTarget> input)
     {
-        return new Tuple<TTarget, TSource> { second, first };
+        return new Tuple<TTarget, TSource>(input.Item2, input.Item1);
     }
 }
