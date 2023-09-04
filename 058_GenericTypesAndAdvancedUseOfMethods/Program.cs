@@ -117,8 +117,8 @@ public class Pair<T>
 // Second coding exercise
 public static class TupleSwapExercise<TSource, TTarget>
 {
-    static Tuple<TTarget, TSource> SwapTupleItems(TSource first, TTarget second)
+    static Tuple<TTarget, TSource> SwapTupleItems<TSource, TTarget>(Tuple<TSource, TTarget> input)
     {
-        return new Tuple<TTarget, TSource>(second, first);
+        return new Tuple<TTarget, TSource>(input.Item2, input.Item1);
     }
 }
