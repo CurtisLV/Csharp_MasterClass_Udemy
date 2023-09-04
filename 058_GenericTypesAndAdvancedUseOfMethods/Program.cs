@@ -113,3 +113,9 @@ public class Pair<T>
         Second = default;
     }
 }
+
+// Second coding exercise
+public static class TupleSwapExercise
+{
+    //
+}
