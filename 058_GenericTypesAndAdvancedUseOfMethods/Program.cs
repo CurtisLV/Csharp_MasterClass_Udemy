@@ -40,8 +40,10 @@ numbaz.AddToFront<int>(11); // no need to use <int>
 //numbaz.AddToFront<int>("abc");
 
 var decimals = new List<decimal> { 1.1m, 0.5m, 22.5m, 12m };
+var integers = decimals.ConvertTo<decimal, int>();
 
-var integers = decimals.ConvertTo();
+var floats = new List<float> { 1.5f, -10.2f, 123.12f };
+var longs = floats.ConvertTo<float, long>();
 
 Console.ReadKey();
 
