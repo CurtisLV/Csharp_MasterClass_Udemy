@@ -74,9 +74,10 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 }
 
 IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
+    where T : new()
 {
     var length = new Random().Next(maxLength + 1);
-
+    var point = new Point(1, 2);
     var result = new List<T>();
 
     for (int i = 0; i < length; ++i)
