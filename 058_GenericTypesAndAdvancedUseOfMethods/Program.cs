@@ -45,6 +45,9 @@ var integers = decimals.ConvertTo<decimal, int>();
 var floats = new List<float> { 1.5f, -10.2f, 123.12f };
 var longs = floats.ConvertTo<float, long>();
 
+//var points = CreateCollectionOfRandomLenght<Point>(2);
+var intss = CreateCollectionOfRandomLenght<int>(2);
+
 Console.ReadKey();
 
 Tuple<int, int> GetMinMax(IEnumerable<int> input)
