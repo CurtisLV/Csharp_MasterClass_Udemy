@@ -73,6 +73,11 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
     return new Tuple<int, int>(min, max);
 }
 
+IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
+{
+    //
+}
+
 static class ListExtensions
 {
     public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> decimals)
