@@ -79,6 +79,11 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
 
     var result = new List<T>();
 
+    for (int i = 0; i < length; ++i)
+    {
+        result.Add(new T());
+    }
+
     return result;
 }
 
