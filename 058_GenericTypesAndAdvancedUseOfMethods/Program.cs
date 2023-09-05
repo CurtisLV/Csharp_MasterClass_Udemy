@@ -75,7 +75,11 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 
 IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
 {
-    //
+    var length = new Random().Next(maxLength + 1);
+
+    var result = new List<T>();
+
+    return result;
 }
 
 static class ListExtensions
