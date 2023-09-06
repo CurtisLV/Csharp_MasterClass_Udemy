@@ -88,7 +88,7 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     var length = 1_000_000_00;
     //var length = new Random().Next(maxLength + 1);
     var point = new Point(1, 2);
-    var result = new List<T>();
+    var result = new List<T>(length);
 
     for (int i = 0; i < length; ++i)
     {
@@ -96,6 +96,12 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     }
 
     return result;
+}
+
+public class Person
+{
+    public string Name { get; init; }
+    public int YearOfBirth { get; init; }
 }
 
 static class ListExtensions
