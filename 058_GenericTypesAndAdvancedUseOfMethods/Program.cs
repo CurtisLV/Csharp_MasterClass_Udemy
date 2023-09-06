@@ -56,6 +56,15 @@ stopwatch.Stop();
 Console.WriteLine($"Execution took {stopwatch.ElapsedMilliseconds} milliseconds.");
 Console.ReadKey();
 
+IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
+{
+    var result = new List<Person>();
+    foreach (var person in persons)
+    {
+        //
+    }
+}
+
 Tuple<int, int> GetMinMax(IEnumerable<int> input)
 {
     if (!input.Any())
