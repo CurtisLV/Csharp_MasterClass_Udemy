@@ -54,6 +54,23 @@ Stopwatch stopwatch = Stopwatch.StartNew();
 var dates2 = CreateCollectionOfRandomLenght<DateTime>(0);
 stopwatch.Stop();
 Console.WriteLine($"Execution took {stopwatch.ElapsedMilliseconds} milliseconds.");
+
+List<Person> people = new List<Person>
+{
+    new Person { Name = "Alice", YearOfBirth = 1990 },
+    new Person { Name = "Bob", YearOfBirth = 1985 },
+    new Person { Name = "Charlie", YearOfBirth = -2000 },
+    new Person { Name = null, YearOfBirth = 1995 },
+    new Person { Name = "DavidDavidDavidDavidDavidDavidDavidDavidDavidDavid", YearOfBirth = 2000 },
+    new Person { Name = "$%& John", YearOfBirth = 1980 }
+};
+
+List<Employee> employees = new List<Employee>
+{
+    new Employee { Name = "Eve", YearOfBirth = 1993 },
+    new Employee { Name = "Frank", YearOfBirth = 1988 }
+};
+
 Console.ReadKey();
 
 IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
