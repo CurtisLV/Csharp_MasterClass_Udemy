@@ -104,6 +104,11 @@ public class Person
     public int YearOfBirth { get; init; }
 }
 
+public class Employee : Person
+{
+    public void GoToWork() => Console.WriteLine("Going to work!");
+}
+
 static class ListExtensions
 {
     public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> decimals)
