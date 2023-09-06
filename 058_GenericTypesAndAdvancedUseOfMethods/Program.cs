@@ -53,7 +53,7 @@ Stopwatch stopwatch = Stopwatch.StartNew();
 
 var dates2 = CreateCollectionOfRandomLenght<DateTime>(0);
 stopwatch.Stop();
-
+Console.WriteLine($"Execution took {stopwatch.ElapsedMilliseconds} milliseconds.");
 Console.ReadKey();
 
 Tuple<int, int> GetMinMax(IEnumerable<int> input)
@@ -85,7 +85,7 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     where T : new()
 {
-    var length = 1_000_000;
+    var length = 1_000_000_00;
     //var length = new Random().Next(maxLength + 1);
     var point = new Point(1, 2);
     var result = new List<T>();
