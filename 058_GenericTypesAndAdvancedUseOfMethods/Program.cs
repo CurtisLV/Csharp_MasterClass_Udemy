@@ -76,7 +76,8 @@ var validEmployees = GetOnlyValid(employees);
 
 foreach (var emp in validEmployees)
 {
-    emp.GoToWork();
+    //emp.GoToWork(); // doesnt work when GetOnlyValid() returns Person class
+    //((Employee)emp).GoToWork(); // works but clouds code and worse performance
 }
 
 Console.ReadKey();
