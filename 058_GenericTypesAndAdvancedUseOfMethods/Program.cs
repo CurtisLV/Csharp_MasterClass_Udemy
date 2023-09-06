@@ -78,13 +78,15 @@ foreach (var emp in validEmployees)
 {
     //emp.GoToWork(); // doesnt work when GetOnlyValid() returns Person class
     //((Employee)emp).GoToWork(); // works but clouds code and worse performance
+    emp.GoToWork(); // we changed Person class to accept generics
 }
 
 Console.ReadKey();
 
-IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
+IEnumerable<TPerson> GetOnlyValid<TPerson>(IEnumerable<TPerson> persons)
+    where TPerson : Person
 {
-    var result = new List<Person>();
+    var result = new List<TPerson>();
     foreach (var person in persons)
     {
         if (person.YearOfBirth > 1900 && person.YearOfBirth < DateTime.Now.Year)
