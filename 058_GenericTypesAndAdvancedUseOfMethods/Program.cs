@@ -83,6 +83,7 @@ foreach (var emp in validEmployees)
 
 Console.ReadKey();
 
+// Type constraints
 IEnumerable<TPerson> GetOnlyValid<TPerson>(IEnumerable<TPerson> persons)
     where TPerson : Person
 {
