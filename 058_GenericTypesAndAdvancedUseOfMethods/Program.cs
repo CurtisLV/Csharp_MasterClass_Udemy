@@ -71,6 +71,14 @@ List<Employee> employees = new List<Employee>
     new Employee { Name = "Frank", YearOfBirth = 1988 }
 };
 
+var validPeople = GetOnlyValid(people);
+var validEmployees = GetOnlyValid(employees);
+
+foreach (var emp in validEmployees)
+{
+    emp.GoToWork();
+}
+
 Console.ReadKey();
 
 IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
@@ -78,7 +86,7 @@ IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
     var result = new List<Person>();
     foreach (var person in persons)
     {
-        if (person.YearOfBirth > 1990 && person.YearOfBirth < DateTime.Now.Year)
+        if (person.YearOfBirth > 1900 && person.YearOfBirth < DateTime.Now.Year)
         {
             result.Add(person);
         }
