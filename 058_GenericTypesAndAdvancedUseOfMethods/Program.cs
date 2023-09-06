@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics;
 
 var numbers = new SimpleList<int>();
 numbers.Add(10);
@@ -48,7 +49,10 @@ var longs = floats.ConvertTo<float, long>();
 //var points = CreateCollectionOfRandomLenght<Point>(2);
 var intss = CreateCollectionOfRandomLenght<int>(2);
 
-var dates = CreateCollectionOfRandomLenght<DateTime>(0);
+Stopwatch stopwatch = Stopwatch.StartNew();
+
+var dates2 = CreateCollectionOfRandomLenght<DateTime>(0);
+stopwatch.Stop();
 
 Console.ReadKey();
 
