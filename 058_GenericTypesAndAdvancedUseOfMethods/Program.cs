@@ -48,6 +48,8 @@ var longs = floats.ConvertTo<float, long>();
 //var points = CreateCollectionOfRandomLenght<Point>(2);
 var intss = CreateCollectionOfRandomLenght<int>(2);
 
+var dates = CreateCollectionOfRandomLenght<DateTime>(0);
+
 Console.ReadKey();
 
 Tuple<int, int> GetMinMax(IEnumerable<int> input)
@@ -79,7 +81,8 @@ Tuple<int, int> GetMinMax(IEnumerable<int> input)
 IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     where T : new()
 {
-    var length = new Random().Next(maxLength + 1);
+    var length = 1_000_000;
+    //var length = new Random().Next(maxLength + 1);
     var point = new Point(1, 2);
     var result = new List<T>();
 
