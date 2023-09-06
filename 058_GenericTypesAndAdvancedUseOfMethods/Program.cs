@@ -61,8 +61,12 @@ IEnumerable<Person> GetOnlyValid(IEnumerable<Person> persons)
     var result = new List<Person>();
     foreach (var person in persons)
     {
-        //
+        if (person.YearOfBirth > 1990 && person.YearOfBirth < DateTime.Now.Year)
+        {
+            result.Add(person);
+        }
     }
+    return result;
 }
 
 Tuple<int, int> GetMinMax(IEnumerable<int> input)
