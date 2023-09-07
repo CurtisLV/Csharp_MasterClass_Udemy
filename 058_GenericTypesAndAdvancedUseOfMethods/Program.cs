@@ -96,8 +96,9 @@ PrintInOrder(anna, john);
 Console.ReadKey();
 
 void PrintInOrder<T>(T first, T second)
+    where T : IComparable<T>
 {
-    if (first > second)
+    if (first.CompareTo(second) > 0) // 1 means first is larger than second
     {
         Console.WriteLine($"{second} {first}");
     }
