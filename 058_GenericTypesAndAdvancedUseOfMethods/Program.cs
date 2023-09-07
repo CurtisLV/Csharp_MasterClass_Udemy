@@ -93,7 +93,11 @@ void PrintInOrder(int first, int second)
 {
     if (first > second)
     {
-        //
+        Console.WriteLine($"{second} {first}");
+    }
+    else
+    {
+        Console.WriteLine($"{first} {second}");
     }
 }
 
