@@ -87,8 +87,8 @@ List<string> words2 = new List<string> { "ccc", "ddd", "aaa" };
 words2.Sort();
 people.Sort();
 
-var john = new Person { Name = "John", YearOfBirth = 1990 };
-var anna = new Person { Name = "Anna", YearOfBirth = 1990 };
+var john = new Person { Name = "John", YearOfBirth = 1955 };
+var anna = new Person { Name = "Anna", YearOfBirth = 1976 };
 
 PrintInOrder(10, 5);
 PrintInOrder("aaa", "bbb");
@@ -259,4 +259,27 @@ public static class TupleSwapExercise
     {
         return new Tuple<TSecond, TFirst>(input.Item2, input.Item1);
     }
+}
+
+// Third coding exercise
+public class SortedList<T> //your code goes here
+{
+    public IEnumerable<T> Items { get; }
+
+    public SortedList(IEnumerable<T> items)
+    {
+        var asList = items.ToList();
+        asList.Sort();
+        Items = asList;
+    }
+}
+
+public class FullName // your code goes here
+{
+    public string FirstName { get; init; }
+    public string LastName { get; init; }
+
+    public override string ToString() => $"{FirstName} {LastName}";
+
+    //your code hoes here
 }
