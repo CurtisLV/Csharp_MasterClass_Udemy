@@ -182,6 +182,11 @@ public class Person : IComparable<Person>
         }
         return 0;
     }
+
+    public override string ToString()
+    {
+        return $"{Name} born in {YearOfBirth}";
+    }
 }
 
 public class Employee : Person
