@@ -81,6 +81,11 @@ foreach (var emp in validEmployees)
     emp.GoToWork(); // we changed Person class to accept generics
 }
 
+numbaz.Sort();
+
+List<string> words2 = new List<string> { "aaa", "bbb", "ccc" };
+words2.Sort();
+
 Console.ReadKey();
 
 // Type constraints
