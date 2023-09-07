@@ -274,12 +274,15 @@ public class SortedList<T> //your code goes here
     }
 }
 
-public class FullName // your code goes here
+public class FullName : IComparable<FullName>
 {
     public string FirstName { get; init; }
     public string LastName { get; init; }
 
-    public override string ToString() => $"{FirstName} {LastName}";
+    public int CompareTo(FullName? other)
+    {
+        throw new NotImplementedException();
+    }
 
-    //your code hoes here
+    public override string ToString() => $"{FirstName} {LastName}";
 }
