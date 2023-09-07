@@ -83,8 +83,10 @@ foreach (var emp in validEmployees)
 
 numbaz.Sort();
 
-List<string> words2 = new List<string> { "aaa", "bbb", "ccc" };
+List<string> words2 = new List<string> { "ccc", "ddd", "aaa" };
 words2.Sort();
+
+validPeople.Sort();
 
 Console.ReadKey();
 
@@ -145,10 +147,15 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     return result;
 }
 
-public class Person
+public class Person : IComparable<Person>
 {
     public string Name { get; init; }
     public int YearOfBirth { get; init; }
+
+    public int CompareTo(Person? other)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Employee : Person
