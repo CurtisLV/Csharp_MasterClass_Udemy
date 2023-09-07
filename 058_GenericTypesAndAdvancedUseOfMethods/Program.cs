@@ -85,10 +85,17 @@ numbaz.Sort();
 
 List<string> words2 = new List<string> { "ccc", "ddd", "aaa" };
 words2.Sort();
-
 people.Sort();
 
 Console.ReadKey();
+
+void PrintInOrder(int first, int second)
+{
+    if (first > second)
+    {
+        //
+    }
+}
 
 // Type constraints
 IEnumerable<TPerson> GetOnlyValid<TPerson>(IEnumerable<TPerson> persons)
