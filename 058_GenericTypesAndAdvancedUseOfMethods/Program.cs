@@ -86,7 +86,7 @@ numbaz.Sort();
 List<string> words2 = new List<string> { "ccc", "ddd", "aaa" };
 words2.Sort();
 
-validPeople.Sort();
+people.Sort();
 
 Console.ReadKey();
 
@@ -162,6 +162,7 @@ public class Person : IComparable<Person>
         {
             return -1;
         }
+        return 0;
     }
 }
 
