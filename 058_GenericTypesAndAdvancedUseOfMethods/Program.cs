@@ -87,9 +87,15 @@ List<string> words2 = new List<string> { "ccc", "ddd", "aaa" };
 words2.Sort();
 people.Sort();
 
+var john = new Person { Name = "John", YearOfBirth = 1990 };
+var anna = new Person { Name = "Anna", YearOfBirth = 1990 };
+
+PrintInOrder(10, 5);
+PrintInOrder("aaa", "bbb");
+PrintInOrder(anna, john);
 Console.ReadKey();
 
-void PrintInOrder(int first, int second)
+void PrintInOrder<T>(T first, T second)
 {
     if (first > second)
     {
