@@ -262,7 +262,8 @@ public static class TupleSwapExercise
 }
 
 // Third coding exercise
-public class SortedList<T> //your code goes here
+public class SortedList<T>
+    where T : new()
 {
     public IEnumerable<T> Items { get; }
 
