@@ -263,7 +263,7 @@ public static class TupleSwapExercise
 
 // Third coding exercise
 public class SortedList<T>
-    where T : new()
+    where T : IComparable<T>
 {
     public IEnumerable<T> Items { get; }
 
@@ -280,7 +280,7 @@ public class FullName : IComparable<FullName>
     public string FirstName { get; init; }
     public string LastName { get; init; }
 
-    public int CompareTo(FullName? other)
+    public int CompareTo(FullName other)
     {
         throw new NotImplementedException();
     }
