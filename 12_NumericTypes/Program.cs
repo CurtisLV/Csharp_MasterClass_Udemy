@@ -1,10 +1,8 @@
 ﻿using System.Diagnostics;
 
-
 //numeric overflow
 var twoBillion = 2_000_000_000;
-Console.WriteLine(
-    "Two billion plus two billion is " + (twoBillion + twoBillion));
+Console.WriteLine("Two billion plus two billion is " + (twoBillion + twoBillion));
 
 //this method will throw a NumericOverflow exception
 //SomeMethodWithCheckedContext(twoBillion, twoBillion);
@@ -12,8 +10,7 @@ Console.WriteLine(
 //Example when numeric overflow is dangerous
 int sumSoFar = 1_900_000_000;
 int nextTransaction = 1_000_000_000;
-int sumAfterTransaction =
-    sumSoFar + nextTransaction;
+int sumAfterTransaction = sumSoFar + nextTransaction;
 
 //to avoid the overflow, we could use long
 //long sumAfterTransaction =
@@ -44,8 +41,7 @@ Console.WriteLine(AreEqual(0.3d, 0.2d + 0.1d, 0.000001d));
 Console.WriteLine(0d / 0d);
 var result = 10d / 0d;
 
-bool AreEqual(double a, double b, double tolerance) =>
-    Math.Abs(a - b) < tolerance;
+bool AreEqual(double a, double b, double tolerance) => Math.Abs(a - b) < tolerance;
 
 //double vs decimal - performance test
 
@@ -60,7 +56,6 @@ var differenceScaled = (double)resultForDecimal / (double)resultForDouble;
 Console.WriteLine($"Decimal took {differenceScaled:00.00} times as much time");
 
 Console.ReadKey();
-
 
 void SomeMethodWithCheckedContext(int a, int b)
 {
@@ -103,12 +98,3 @@ long DecimalTest(int iterations)
     return stopwatch.ElapsedTicks;
 }
 Console.ReadKey();
-
-
-
-
-
-
-
-
-
