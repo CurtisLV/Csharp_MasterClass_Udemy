@@ -284,6 +284,16 @@ public class FullName : IComparable<FullName>
     {
         int lastNameComparison = string.Compare(LastName, other.LastName);
         int firstNameComparison = string.Compare(FirstName, other.FirstName);
+
+        if (lastNameComparison != 0)
+        {
+            return lastNameComparison;
+        }
+        else
+        {
+            return
+        }
+        
     }
 
     public override string ToString() => $"{FirstName} {LastName}";
