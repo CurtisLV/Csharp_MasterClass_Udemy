@@ -282,7 +282,8 @@ public class FullName : IComparable<FullName>
 
     public int CompareTo(FullName other)
     {
-        throw new NotImplementedException();
+        int lastNameComparison = string.Compare(LastName, other.LastName);
+        int firstNameComparison = string.Compare(FirstName, other.FirstName);
     }
 
     public override string ToString() => $"{FirstName} {LastName}";
