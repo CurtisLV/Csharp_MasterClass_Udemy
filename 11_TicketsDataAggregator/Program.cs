@@ -8,14 +8,14 @@ try
     var ticketsAggregator = new TicketsAggregator(
         TicketsFolder,
         new FileWriter(),
-        new DocumentsFromPdfsReader());
+        new DocumentsFromPdfsReader()
+    );
 
     ticketsAggregator.Run();
 }
 catch (Exception ex)
 {
-    Console.WriteLine("An exception occurred. " +
-        "Exception message: " + ex.Message);
+    Console.WriteLine("An exception occurred. " + "Exception message: " + ex.Message);
 }
 
 Console.WriteLine("Press any key to close.");
