@@ -291,9 +291,8 @@ public class FullName : IComparable<FullName>
         }
         else
         {
-            return
+            return firstNameComparison;
         }
-        
     }
 
     public override string ToString() => $"{FirstName} {LastName}";
