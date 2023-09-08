@@ -2,8 +2,7 @@
 
 public class FileWriter : IFileWriter
 {
-    public void Write(
-        string content, params string[] pathParts)
+    public void Write(string content, params string[] pathParts)
     {
         var resultPath = Path.Combine(pathParts);
         File.WriteAllText(resultPath, content);
