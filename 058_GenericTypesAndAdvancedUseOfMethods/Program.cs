@@ -170,6 +170,16 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     return result;
 }
 
+// Type constraints - numeric types. General math.
+
+public static class Calculator
+{
+    public static int Square(int input)
+    {
+        return input * input;
+    }
+}
+
 public class Person : IComparable<Person>
 {
     public string Name { get; init; }
@@ -217,16 +227,6 @@ static class ListExtensions
     public static void AddToFront<T>(this List<T> list, T value)
     {
         list.Insert(0, value);
-    }
-}
-
-// Type constraints - numeric types. General math.
-
-public static class Calculator
-{
-    public static int Square(int input)
-    {
-        return input * input;
     }
 }
 
