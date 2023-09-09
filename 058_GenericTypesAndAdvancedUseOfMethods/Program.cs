@@ -99,6 +99,9 @@ Console.WriteLine($"Square of 2 is {Calculator.Square(2)}");
 Console.WriteLine($"Square of 4m is {Calculator.Square(4m)}");
 Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 
+Console.WriteLine("Is larger than 10?" + IsAnyLargerThan10((IEnumerable<int>)numbers));
+Console.WriteLine("Is any even?" + IsAnyEven((IEnumerable<int>)numbers));
+
 Console.ReadKey();
 
 bool IsAnyLargerThan10(IEnumerable<int> numbers)
@@ -106,6 +109,17 @@ bool IsAnyLargerThan10(IEnumerable<int> numbers)
     foreach (var number in numbers)
     {
         if (number > 10)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+bool IsAnyEven(IEnumerable<int> numbers)
+{
+    foreach (var number in numbers)
+    {
+        if (number % 2 == 0)
         {
             return true;
         }
