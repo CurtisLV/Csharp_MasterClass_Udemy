@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Diagnostics;
+using System.Numerics;
 
 var numbers = new SimpleList<int>();
 numbers.Add(10);
@@ -174,7 +175,8 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
 
 public static class Calculator
 {
-    public static int Square(int input)
+    public static T Square<T>(T input)
+        where T : INumber<T>
     {
         return input * input;
     }
