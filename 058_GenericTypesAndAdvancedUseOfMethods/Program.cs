@@ -215,6 +215,16 @@ static class ListExtensions
     }
 }
 
+// Type constraints - numeric types. General math.
+
+public static class Calculator
+{
+    public static int Square(int input)
+    {
+        return input * input;
+    }
+}
+
 // First coding exercise
 public class Pair<T>
 {
