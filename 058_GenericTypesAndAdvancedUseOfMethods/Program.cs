@@ -101,6 +101,11 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 
 Console.ReadKey();
 
+void SomeMethod<TPet>()
+{
+    //
+}
+
 void PrintInOrder<T>(T first, T second)
     where T : IComparable<T>
 {
@@ -181,6 +186,12 @@ public static class Calculator
         return input * input;
     }
 }
+
+// Type constraints - multiple constraints
+
+public class Pet { }
+
+public class PetOwner { }
 
 public class Person : IComparable<Person>
 {
