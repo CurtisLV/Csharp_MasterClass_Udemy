@@ -101,8 +101,9 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 
 Console.ReadKey();
 
-void SomeMethod<TPet>(TPet pet)
+void SomeMethod<TPet, TOwner>(TPet pet, TOwner owner)
     where TPet : Pet, IComparable<TPet>
+    where TOwner : new()
 {
     //
 }
