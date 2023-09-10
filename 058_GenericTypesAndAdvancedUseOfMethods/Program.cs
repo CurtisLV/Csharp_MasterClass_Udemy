@@ -106,6 +106,15 @@ Func<int, DateTime, string, decimal> someFunc; // when we want something returne
 Action<string, string, bool> someAction; // when want VOID returned, so all parameters are input
 
 Console.ReadKey();
+bool IsLargerThan10(int number)
+{
+    return number > 10;
+}
+
+bool IsEven(int number)
+{
+    return number % 2 == 0;
+}
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
 {
@@ -117,16 +126,6 @@ bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
         }
     }
     return false;
-}
-
-bool IsLargerThan10(int number)
-{
-    return number > 10;
-}
-
-bool IsEven(int number)
-{
-    return number % 2 == 0;
 }
 
 void SomeMethod<TPet, TOwner>(TPet pet, TOwner owner)
