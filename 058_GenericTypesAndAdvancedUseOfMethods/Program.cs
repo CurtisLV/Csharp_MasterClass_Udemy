@@ -111,25 +111,13 @@ bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
 {
     foreach (var number in numbers)
     {
-        if (number > 10)
+        if (predicate(number))
         {
             return true;
         }
     }
     return false;
 }
-
-//bool IsAnyEven(IEnumerable<int> numbers)
-//{
-//    foreach (var number in numbers)
-//    {
-//        if (number % 2 == 0)
-//        {
-//            return true;
-//        }
-//    }
-//    return false;
-//}
 
 void SomeMethod<TPet, TOwner>(TPet pet, TOwner owner)
     where TPet : Pet, IComparable<TPet>, new()
