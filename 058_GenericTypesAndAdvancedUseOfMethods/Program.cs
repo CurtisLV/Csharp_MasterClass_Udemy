@@ -104,7 +104,7 @@ Console.WriteLine("Is any even?" + IsAnyEven((IEnumerable<int>)numbers));
 
 Console.ReadKey();
 
-bool IsAnyLargerThan10(IEnumerable<int> numbers)
+bool IsAnyLargerThan10(IEnumerable<int> numbers, Func<int, bool> predicate)
 {
     foreach (var number in numbers)
     {
