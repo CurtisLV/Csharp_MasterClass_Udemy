@@ -102,8 +102,8 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 Console.WriteLine("Is larger than 10?" + IsAnyLargerThan10((IEnumerable<int>)numbers));
 Console.WriteLine("Is any even?" + IsAnyEven((IEnumerable<int>)numbers));
 
-Func<int, DateTime, string, decimal> someFunc; // when we want somethign returned - last parameter is always return parameter
-Action<string, string, bool> someAction;
+Func<int, DateTime, string, decimal> someFunc; // when we want something returned - last parameter is always return parameter
+Action<string, string, bool> someAction; // when want VOID returned, so all parameters are input
 
 Console.ReadKey();
 
