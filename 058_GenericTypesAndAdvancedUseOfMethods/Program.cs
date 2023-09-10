@@ -77,7 +77,7 @@ var validEmployees = GetOnlyValid(employees);
 
 foreach (var emp in validEmployees)
 {
-    //emp.GoToWork(); // doesnt work when GetOnlyValid() returns Person class
+    //emp.GoToWork(); // doesn't work when GetOnlyValid() returns Person class
     //((Employee)emp).GoToWork(); // works but clouds code and worse performance
     emp.GoToWork(); // we changed Person class to accept generics
 }
@@ -335,4 +335,25 @@ public class FullName : IComparable<FullName>
     }
 
     public override string ToString() => $"{FirstName} {LastName}";
+}
+
+// Fourth coding exercise
+
+public class Exercise4
+{
+    public void TestMethod()
+    {
+        /*your code goes here*/
+        someMethod1 = Method1;
+        /*your code goes here*/
+        someMethod2 = Method2;
+        /*your code goes here*/
+        someMethod3 = Method3;
+    }
+
+    public double Method1(int a, bool b) => 0;
+
+    public DateTime Method2() => default(DateTime);
+
+    public void Method3(string a, string b) { }
 }
