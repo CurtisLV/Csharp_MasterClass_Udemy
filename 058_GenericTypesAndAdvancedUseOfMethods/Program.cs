@@ -124,6 +124,11 @@ bool IsLargerThan10(int number)
     return number > 10;
 }
 
+bool IsEven(int number)
+{
+    return number % 2 == 0;
+}
+
 void SomeMethod<TPet, TOwner>(TPet pet, TOwner owner)
     where TPet : Pet, IComparable<TPet>, new()
     where TOwner : new()
