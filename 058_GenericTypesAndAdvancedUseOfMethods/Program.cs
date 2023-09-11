@@ -352,6 +352,6 @@ public class Exercise4
 
 public class Exercise5
 {
-    public Func<string, int> GetLength = // your code goes here;
-        public Func<int> GetRandomNumberBetween1And10 = 1// your code goes here;
-    }
+    public Func<string, int> GetLength = f => int.Parse(f);
+    public Func<int> GetRandomNumberBetween1And10 = () => new Random. (1, 11); 
+}
