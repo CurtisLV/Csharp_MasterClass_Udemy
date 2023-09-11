@@ -344,7 +344,7 @@ public class Exercise4
     public void TestMethod()
     {
         /*your code goes here*/
-        someMethod1 = Method1;
+        Func<int, bool, double> meth1 = Method1;
         /*your code goes here*/
         someMethod2 = Method2;
         /*your code goes here*/
