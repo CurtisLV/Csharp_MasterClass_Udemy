@@ -343,12 +343,11 @@ public class Exercise4
 {
     public void TestMethod()
     {
-
         Func<int, bool, double> meth1 = Method1;
 
-        Func<> = Method2;
+        Func<DateTime> meth2 = Method2;
 
-        someMethod3 = Method3;
+        Action<string, string> action1 = Method3;
     }
 
     public double Method1(int a, bool b) => 0;
