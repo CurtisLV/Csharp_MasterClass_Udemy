@@ -211,7 +211,6 @@ public static class Calculator
 }
 
 // Type constraints - multiple constraints
-
 public class Pet { }
 
 public class PetOwner { }
@@ -329,7 +328,6 @@ public class FullName : IComparable<FullName>
 }
 
 // Fourth coding exercise
-
 public class Exercise4
 {
     public void TestMethod()
@@ -349,13 +347,8 @@ public class Exercise4
 }
 
 // Fifth coding exercise
-
 public class Exercise5
 {
     public Func<string, int> GetLength = f => f.Length;
-    public Func<int> GetRandomNumberBetween1And10 = () =>
-    {
-        Random rand = new Random();
-        return rand.Next(1, 11);
-    };
+    public Func<int> GetRandomNumberBetween1And10 = () => new Random().Next(1, 11);
 }
