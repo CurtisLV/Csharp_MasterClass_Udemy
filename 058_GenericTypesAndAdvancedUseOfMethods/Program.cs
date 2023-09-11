@@ -352,7 +352,8 @@ public class Exercise4
 
 public class Exercise5
 {
-    public Func<string, int> GetLength = f => int.Parse(f);
+    public Func<string, int> GetLength = f =>
+        int.TryParse(f, out int length) == true ? int.Parse(f) : 0;
     public Func<int> GetRandomNumberBetween1And10 = () =>
     {
         Random rand = new Random();
