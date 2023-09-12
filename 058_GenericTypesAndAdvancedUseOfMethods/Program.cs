@@ -199,7 +199,7 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     return result;
 }
 
-// Delegates
+// Delegates + multicast delegates
 ProcessString processString1 = TrimTo5Letters;
 ProcessString processString2 = ToUpper;
 Console.WriteLine(processString1("JohnSmith"));
@@ -221,6 +221,13 @@ Print multicast = print1 + print2;
 Print print4 = text => Console.WriteLine(text.Substring(0, 3));
 multicast += print4;
 multicast("Zilonis");
+
+Func<string, string, int> sumLenghts = (text1, text2) => text1.Length + text2.Length;
+
+int SumLengths(string text1, string text2)
+{
+    //
+}
 
 delegate string ProcessString(string input);
 delegate void Print(string input);
