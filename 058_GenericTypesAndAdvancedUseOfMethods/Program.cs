@@ -217,6 +217,10 @@ string ToUpper(string input)
 
 Print print1 = text => Console.WriteLine(text.ToUpper());
 Print print2 = text => Console.WriteLine(text.ToLower());
+Print multicast = print1 + print2;
+Print print4 = text => Console.WriteLine(text.Substring(0, 3));
+multicast += print4;
+multicast("Zilonis");
 
 delegate string ProcessString(string input);
 delegate void Print(string input);
