@@ -215,7 +215,11 @@ string ToUpper(string input)
     return input.ToUpper();
 }
 
+Print print1 = text => Console.WriteLine(text.ToUpper());
+Print print2 = text => Console.WriteLine(text.ToLower());
+
 delegate string ProcessString(string input);
+delegate void Print(string input);
 
 // Type constraints - numeric types. General math.
 
