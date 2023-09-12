@@ -102,8 +102,8 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 //Func<int, bool> predicate1 = IsLargerThan10;
 //Func<int, bool> predicate2 = IsEven;
 
-Console.WriteLine("Is larger than 10?" + IsAny((IEnumerable<int>)numbers, n => n > 10));
-Console.WriteLine("Is any even?" + IsAny((IEnumerable<int>)numbers, n => n % 2 == 0));
+//Console.WriteLine("Is larger than 10?" + IsAny((IEnumerable<int>)numbers, n => n > 10));
+//Console.WriteLine("Is any even?" + IsAny((IEnumerable<int>)numbers, n => n % 2 == 0));
 
 Func<int, DateTime, string, decimal> someFunc; // when we want something returned - last parameter is always return parameter
 Action<string, string, bool> someAction; // when want VOID returned, so all parameters are input
@@ -200,7 +200,10 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
 }
 
 // Delegates
-
+ProcessString processString1 = TrimTo5Letters;
+ProcessString processString2 = ToUpper;
+Console.WriteLine(processString1("JohnSmith"));
+Console.WriteLine(processString2("JohnSmith"));
 
 string TrimTo5Letters(string input)
 {
