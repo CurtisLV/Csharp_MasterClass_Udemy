@@ -222,11 +222,11 @@ Print print4 = text => Console.WriteLine(text.Substring(0, 3));
 multicast += print4;
 multicast("Zilonis");
 
-Func<string, string, int> sumLenghts = (text1, text2) => text1.Length + text2.Length;
+Func<string, string, int> sumLenghts = (text1, text2) => SumLengths(text1, text2);
 
 int SumLengths(string text1, string text2)
 {
-    //
+    return text1.Length + text2.Length;
 }
 
 delegate string ProcessString(string input);
