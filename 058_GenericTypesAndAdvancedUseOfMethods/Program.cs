@@ -199,6 +199,14 @@ IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength)
     return result;
 }
 
+// Delegates
+
+
+string TrimTo5Letters(string input)
+{
+    return input.Substring(0, 5);
+}
+
 // Type constraints - numeric types. General math.
 
 public static class Calculator
