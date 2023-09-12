@@ -207,6 +207,13 @@ string TrimTo5Letters(string input)
     return input.Substring(0, 5);
 }
 
+string ToUpper(string input)
+{
+    return input.ToUpper();
+}
+
+delegate string ProcessString(string input);
+
 // Type constraints - numeric types. General math.
 
 public static class Calculator
