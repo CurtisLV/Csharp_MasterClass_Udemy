@@ -311,9 +311,11 @@ public class Employee : Person
     public string Department { get; init; }
     public decimal MonthlySalary { get; init; }
 
-    public Employee()
+    public Employee(string name, string department, decimal monthlySalary)
     {
-        //
+        Name = name;
+        Department = department;
+        MonthlySalary = monthlySalary;
     }
 
     public void GoToWork() => Console.WriteLine("Going to work!");
