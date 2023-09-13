@@ -108,6 +108,12 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 Func<int, DateTime, string, decimal> someFunc; // when we want something returned - last parameter is always return parameter
 Action<string, string, bool> someAction; // when want VOID returned, so all parameters are input
 
+var countryToCurrencyMapping = new Dictionary<string, string>();
+
+countryToCurrencyMapping.Add("USA", "USD");
+countryToCurrencyMapping.Add("LV", "EUR");
+countryToCurrencyMapping.Add("JP", "YENI");
+
 Console.ReadKey();
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
