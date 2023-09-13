@@ -115,6 +115,14 @@ var countryToCurrencyMapping = new Dictionary<string, string>()
     ["Poland"] = "PLN"
 };
 
+// Alternative sintax to the above
+var countryToCurrencyMappingOldWay = new Dictionary<string, string>()
+{
+    { "USA", "USD" },
+    { "Spain", "EUR" },
+    { "Poland", "PLN" }
+};
+
 countryToCurrencyMapping["Poland"] = "PLN";
 Console.WriteLine($"Currency in Poland is {countryToCurrencyMapping["Poland"]}");
 Console.WriteLine($"Currency in Italy is {countryToCurrencyMapping["Italy"]}");
