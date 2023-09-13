@@ -108,14 +108,12 @@ Console.WriteLine($"Square of 6d is {Calculator.Square(6d)}");
 Func<int, DateTime, string, decimal> someFunc; // when we want something returned - last parameter is always return parameter
 Action<string, string, bool> someAction; // when want VOID returned, so all parameters are input
 
-var countryToCurrencyMapping = new Dictionary<string, string>();
-
-//countryToCurrencyMapping.Add("USA", "USD");
-//countryToCurrencyMapping.Add("Latvia", "EUR");
-//countryToCurrencyMapping.Add("Italy", "EUR");
-//countryToCurrencyMapping.Add("India", "INR");
-
-Console.WriteLine($"Currency in Latvia is {countryToCurrencyMapping["Latvia"]}");
+var countryToCurrencyMapping = new Dictionary<string, string>()
+{
+    ["USA"] = "USD",
+    ["Spain"] = "EUR",
+    ["Poland"] = "PLN"
+};
 
 countryToCurrencyMapping["Poland"] = "PLN";
 Console.WriteLine($"Currency in Poland is {countryToCurrencyMapping["Poland"]}");
