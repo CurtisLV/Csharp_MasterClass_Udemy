@@ -110,14 +110,16 @@ Action<string, string, bool> someAction; // when want VOID returned, so all para
 
 var countryToCurrencyMapping = new Dictionary<string, string>();
 
-countryToCurrencyMapping.Add("USA", "USD");
-countryToCurrencyMapping.Add("Latvia", "EUR");
-countryToCurrencyMapping.Add("India", "INR");
+//countryToCurrencyMapping.Add("USA", "USD");
+//countryToCurrencyMapping.Add("Latvia", "EUR");
+//countryToCurrencyMapping.Add("Italy", "EUR");
+//countryToCurrencyMapping.Add("India", "INR");
 
 Console.WriteLine($"Currency in Latvia is {countryToCurrencyMapping["Latvia"]}");
 
 countryToCurrencyMapping["Poland"] = "PLN";
 Console.WriteLine($"Currency in Poland is {countryToCurrencyMapping["Poland"]}");
+Console.WriteLine($"Currency in Italy is {countryToCurrencyMapping["Italy"]}");
 
 Console.ReadKey();
 
