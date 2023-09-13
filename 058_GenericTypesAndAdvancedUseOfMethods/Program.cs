@@ -136,6 +136,11 @@ if (countryToCurrencyMapping.ContainsKey("Italy"))
     Console.WriteLine($"Currency in Italy is {countryToCurrencyMapping["Italy"]}");
 }
 
+foreach (var countryPair in countryToCurrencyMapping)
+{
+    //
+}
+
 Console.ReadKey();
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
