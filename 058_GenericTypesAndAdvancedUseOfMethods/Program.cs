@@ -136,9 +136,9 @@ if (countryToCurrencyMapping.ContainsKey("Italy"))
     Console.WriteLine($"Currency in Italy is {countryToCurrencyMapping["Italy"]}");
 }
 
-foreach (var countryPair in countryToCurrencyMapping)
+foreach (var countryCurrencyPair in countryToCurrencyMapping)
 {
-    //
+    Console.WriteLine($"Country: {countryCurrencyPair.Key}, Key: {countryCurrencyPair.Value}");
 }
 
 Console.ReadKey();
