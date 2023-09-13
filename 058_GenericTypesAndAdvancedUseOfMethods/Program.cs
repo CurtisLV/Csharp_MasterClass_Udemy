@@ -114,7 +114,10 @@ countryToCurrencyMapping.Add("USA", "USD");
 countryToCurrencyMapping.Add("Latvia", "EUR");
 countryToCurrencyMapping.Add("India", "INR");
 
-Console.WriteLine($"Currency in Spain is {countryToCurrencyMapping["Spain"]}");
+Console.WriteLine($"Currency in Latvia is {countryToCurrencyMapping["Latvia"]}");
+
+countryToCurrencyMapping["Poland"] = "PLN";
+Console.WriteLine($"Currency in Poland is {countryToCurrencyMapping["Poland"]}");
 
 Console.ReadKey();
 
