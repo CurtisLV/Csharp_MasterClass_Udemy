@@ -138,7 +138,7 @@ if (countryToCurrencyMapping.ContainsKey("Italy"))
 
 foreach (var countryCurrencyPair in countryToCurrencyMapping)
 {
-    Console.WriteLine($"Country: {countryCurrencyPair.Key}, Key: {countryCurrencyPair.Value}");
+    Console.WriteLine($"Country: {countryCurrencyPair.Key}, Currency: {countryCurrencyPair.Value}");
 }
 
 Console.ReadKey();
@@ -307,6 +307,15 @@ public class Person : IComparable<Person>
 
 public class Employee : Person
 {
+    public string Name { get; init; }
+    public string Department { get; init; }
+    public decimal MonthlySalary { get; init; }
+
+    public Employee()
+    {
+        //
+    }
+
     public void GoToWork() => Console.WriteLine("Going to work!");
 }
 
