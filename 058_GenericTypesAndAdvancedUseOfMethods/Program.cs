@@ -141,6 +141,17 @@ foreach (var countryCurrencyPair in countryToCurrencyMapping)
     Console.WriteLine($"Country: {countryCurrencyPair.Key}, Currency: {countryCurrencyPair.Value}");
 }
 
+List<Employee> employeesDict = new List<Employee>
+{
+    new Employee("Jake Smith", "Space Navigation", 25000),
+    new Employee("John Doe", "Engineering", 30000),
+    new Employee("Jane Smith", "Human Resources", 22000),
+    new Employee("Emily Johnson", "Marketing", 28000),
+    new Employee("Michael Brown", "Finance", 32000),
+    new Employee("Sarah Wilson", "Customer Support", 24000),
+    new Employee("David Lee", "IT", 27000)
+};
+
 Console.ReadKey();
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
