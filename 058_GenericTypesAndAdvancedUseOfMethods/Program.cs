@@ -472,3 +472,9 @@ public class Exercise5
     public Func<string, int> GetLength = f => f.Length;
     public Func<int> GetRandomNumberBetween1And10 = () => new Random().Next(1, 11);
 }
+
+// Sith coding exercise
+namespace Coding.Exercise
+{
+    //
+}
