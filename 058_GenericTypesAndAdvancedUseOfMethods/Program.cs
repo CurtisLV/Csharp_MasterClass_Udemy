@@ -144,15 +144,20 @@ foreach (var countryCurrencyPair in countryToCurrencyMapping)
 List<Employee> employeesDict = new List<Employee>
 {
     new Employee("Jake Smith", "Space Navigation", 25000),
+    new Employee("Jane Smith", "Space Navigation", 22000),
     new Employee("John Doe", "Engineering", 30000),
-    new Employee("Jane Smith", "Human Resources", 22000),
-    new Employee("Emily Johnson", "Marketing", 28000),
-    new Employee("Michael Brown", "Finance", 32000),
-    new Employee("Sarah Wilson", "Customer Support", 24000),
+    new Employee("Emily Johnson", "IT", 28000),
+    new Employee("Michael Brown", "Engineering", 32000),
+    new Employee("Sarah Wilson", "Engineering", 24000),
     new Employee("David Lee", "IT", 27000)
 };
 
 Console.ReadKey();
+
+Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Employee> employees)
+{
+    //
+}
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
 {
