@@ -169,6 +169,16 @@ Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Empl
         employeesPerDepartment[emp.Department].Add(emp);
     }
 
+    var result = new Dictionary<string, decimal>();
+
+    foreach (var dept in employeesPerDepartment)
+    {
+        if (!result.ContainsKey(dept.Key))
+        {
+            result[dept.Key] = dept.Key;
+        }
+    }
+
     return null;
 }
 
@@ -334,7 +344,7 @@ public class Person : IComparable<Person>
     }
 }
 
-public class Employee : Person
+public class Employee //: Person
 {
     public string Name { get; init; }
     public string Department { get; init; }
