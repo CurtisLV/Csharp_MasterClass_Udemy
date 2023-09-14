@@ -66,21 +66,21 @@ List<Person> people = new List<Person>
     new Person { Name = "$%& John", YearOfBirth = 1980 }
 };
 
-List<Employee> employees = new List<Employee>
-{
-    new Employee { Name = "Eve", YearOfBirth = 1993 },
-    new Employee { Name = "Frank", YearOfBirth = 1988 }
-};
+//List<Employee> employees = new List<Employee>
+//{
+//    new Employee { Name = "Eve", YearOfBirth = 1993 },
+//    new Employee { Name = "Frank", YearOfBirth = 1988 }
+//};
 
-var validPeople = GetOnlyValid(people);
-var validEmployees = GetOnlyValid(employees);
+//var validPeople = GetOnlyValid(people);
+//var validEmployees = GetOnlyValid(employees);
 
-foreach (var emp in validEmployees)
-{
-    //emp.GoToWork(); // doesn't work when GetOnlyValid() returns Person class
-    //((Employee)emp).GoToWork(); // works but clouds code and worse performance
-    emp.GoToWork(); // we changed Person class to accept generics
-}
+//foreach (var emp in validEmployees)
+//{
+//    //emp.GoToWork(); // doesn't work when GetOnlyValid() returns Person class
+//    //((Employee)emp).GoToWork(); // works but clouds code and worse performance
+//    emp.GoToWork(); // we changed Person class to accept generics
+//}
 
 numbaz.Sort();
 
