@@ -152,6 +152,8 @@ List<Employee> employeesDict = new List<Employee>
     new Employee("David Lee", "IT", 27000)
 };
 
+var result = CalculateAverageSalaryPerDepartment(employeesDict);
+
 Console.ReadKey();
 
 Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Employee> employees)
@@ -160,8 +162,14 @@ Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Empl
 
     foreach (var emp in employees)
     {
+        if (!employeesPerDepartment.ContainsKey(emp.Department))
+        {
+            employeesPerDepartment[emp.Department] = new List<Employee>();
+        }
         employeesPerDepartment[emp.Department].Add(emp);
     }
+
+    return null;
 }
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
