@@ -171,12 +171,19 @@ Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Empl
 
     var result = new Dictionary<string, decimal>();
 
-    foreach (var dept in employeesPerDepartment)
+    foreach (var empl in employeesPerDepartment)
     {
-        if (!result.ContainsKey(dept.Key))
+        //if (!result.ContainsKey(empl.Key))
+        //{
+        //    result[empl.Key] = empl.Key;
+        //}
+
+        decimal sumOfAvgSalary = default;
+        foreach (var e in empl.Value)
         {
-            result[dept.Key] = dept.Key;
+            sumOfAvgSalary += e.MonthlySalary;
         }
+        sumOfAvgSalary = sumOfAvgSalary / empl.Value.Count;
     }
 
     return null;
