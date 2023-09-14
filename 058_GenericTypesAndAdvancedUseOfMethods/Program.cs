@@ -156,7 +156,12 @@ Console.ReadKey();
 
 Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Employee> employees)
 {
-    //
+    var employeesPerDepartment = new Dictionary<string, List<Employee>>();
+
+    foreach (var emp in employees)
+    {
+        employeesPerDepartment[emp.Department].Add(emp);
+    }
 }
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
