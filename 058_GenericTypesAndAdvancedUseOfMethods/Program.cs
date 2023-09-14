@@ -183,10 +183,13 @@ Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Empl
         {
             sumOfAvgSalary += e.MonthlySalary;
         }
-        sumOfAvgSalary = sumOfAvgSalary / empl.Value.Count;
+        sumOfAvgSalary = Math.Round(sumOfAvgSalary / empl.Value.Count, 2);
+
+        //result.Add(empl.Key, sumOfAvgSalary);
+        result[empl.Key] = sumOfAvgSalary;
     }
 
-    return null;
+    return result;
 }
 
 bool IsAny(IEnumerable<int> numbers, Func<int, bool> predicate)
