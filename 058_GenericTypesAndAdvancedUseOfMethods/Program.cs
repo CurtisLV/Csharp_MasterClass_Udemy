@@ -484,7 +484,10 @@ namespace Coding.Exercise6
 
             foreach (var pet in pets)
             {
-                //
+                if (!petsPerType.ContainsKey(pet.PetType.ToString()))
+                {
+                    petsPerType[pet.PetType.ToString()] = new List<Pet>();
+                }
             }
         }
     }
