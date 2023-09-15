@@ -478,7 +478,15 @@ namespace Coding.Exercise6
 {
     public static class Exercise
     {
-        public static Dictionary<PetType, double> FindMaxWeights(List<Pet> pets) { }
+        public static Dictionary<PetType, double> FindMaxWeights(List<Pet> pets)
+        {
+            var petsPerType = new Dictionary<string, List<Pet>>();
+
+            foreach (var pet in pets)
+            {
+                //
+            }
+        }
     }
 
     public class Pet
