@@ -480,23 +480,26 @@ namespace Coding.Exercise6
     {
         public static Dictionary<PetType, double> FindMaxWeights(List<Pet> pets)
         {
-            var petsPerType = new Dictionary<string, List<Pet>>();
+            var petsPerType = new Dictionary<PetType, List<Pet>>();
 
             foreach (var pet in pets)
             {
-                if (!petsPerType.ContainsKey(pet.PetType.ToString()))
+                if (!petsPerType.ContainsKey(pet.PetType))
                 {
-                    petsPerType[pet.PetType.ToString()] = new List<Pet>();
+                    petsPerType[pet.PetType] = new List<Pet>();
                 }
-                petsPerType[pet.PetType.ToString()].Add(pet);
+                petsPerType[pet.PetType].Add(pet);
             }
 
             var result = new Dictionary<PetType, double>();
 
             foreach (var petPerType in petsPerType)
             {
-                //
+                double maxWeightPerType = petPerType.Value.Max(x => x.Weight);
+                result.Add(petPerType.Key, maxWeightPerType);
             }
+
+            return result;
         }
     }
 
