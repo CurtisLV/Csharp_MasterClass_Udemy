@@ -474,14 +474,11 @@ public class Exercise5
 }
 
 // Sith coding exercise
-namespace Coding.Exercise
+namespace Coding.Exercise6
 {
     public static class Exercise
     {
-        public static Dictionary<PetType, double> FindMaxWeights(List<Pet> pets)
-        {
-            //your code goes here
-        }
+        public static Dictionary<PetType, double> FindMaxWeights(List<Pet> pets) { }
     }
 
     public class Pet
