@@ -488,7 +488,10 @@ namespace Coding.Exercise6
                 {
                     petsPerType[pet.PetType.ToString()] = new List<Pet>();
                 }
+                petsPerType[pet.PetType.ToString()].Add(pet);
             }
+
+            var result = new Dictionary<PetType, double>();
         }
     }
 
