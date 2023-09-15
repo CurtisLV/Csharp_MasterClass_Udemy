@@ -492,6 +492,11 @@ namespace Coding.Exercise6
             }
 
             var result = new Dictionary<PetType, double>();
+
+            foreach (var petPerType in petsPerType)
+            {
+                //
+            }
         }
     }
 
