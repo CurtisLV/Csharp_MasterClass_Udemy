@@ -163,6 +163,20 @@ Odd"
 
 var userInput = Console.ReadLine();
 
+List<int> result;
+
+switch (userInput)
+{
+    case "Even":
+        result = SelectEven(nums);
+        break;
+    case "Odd":
+        result = SelectOdd(nums);
+        break;
+    default:
+        break;
+}
+
 Print(nums);
 
 Console.ReadKey();
