@@ -174,7 +174,7 @@ switch (userInput)
         result = SelectOdd(nums);
         break;
     default:
-        break;
+        throw new NotSupportedException($"{userInput} is not a valid filter");
 }
 
 Print(nums);
