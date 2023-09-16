@@ -181,51 +181,6 @@ switch (userInput)
         throw new NotSupportedException($"{userInput} is not a valid filter");
 }
 
-List<int> SelectPositive(List<int> nums)
-{
-    var result = new List<int>();
-
-    foreach (int i in nums)
-    {
-        if (i > 0)
-        {
-            result.Add(i);
-        }
-    }
-
-    return result;
-}
-
-List<int> SelectOdd(List<int> nums)
-{
-    var result = new List<int>();
-
-    foreach (int i in nums)
-    {
-        if (i % 2 == 1)
-        {
-            result.Add(i);
-        }
-    }
-
-    return result;
-}
-
-List<int> SelectEven(List<int> nums)
-{
-    var result = new List<int>();
-
-    foreach (int i in nums)
-    {
-        if (i % 2 == 0)
-        {
-            result.Add(i);
-        }
-    }
-
-    return result;
-}
-
 Print(result2);
 
 Console.ReadKey();
@@ -401,8 +356,53 @@ public class NumbersFilter
             case "Positive":
                 return SelectPositive(numbers);
             default:
-                throw new NotSupportedException($"{userInput} is not a valid filter");
+                throw new NotSupportedException($"{filteringType} is not a valid filter");
         }
+    }
+
+    List<int> SelectPositive(List<int> nums)
+    {
+        var result = new List<int>();
+
+        foreach (int i in nums)
+        {
+            if (i > 0)
+            {
+                result.Add(i);
+            }
+        }
+
+        return result;
+    }
+
+    List<int> SelectOdd(List<int> nums)
+    {
+        var result = new List<int>();
+
+        foreach (int i in nums)
+        {
+            if (i % 2 == 1)
+            {
+                result.Add(i);
+            }
+        }
+
+        return result;
+    }
+
+    List<int> SelectEven(List<int> nums)
+    {
+        var result = new List<int>();
+
+        foreach (int i in nums)
+        {
+            if (i % 2 == 0)
+            {
+                result.Add(i);
+            }
+        }
+
+        return result;
     }
 }
 
