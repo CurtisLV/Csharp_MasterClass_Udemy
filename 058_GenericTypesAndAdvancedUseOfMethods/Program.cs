@@ -226,7 +226,7 @@ List<int> SelectEven(List<int> nums)
     return result;
 }
 
-Print(nums);
+Print(result2);
 
 Console.ReadKey();
 
@@ -387,6 +387,24 @@ int SumLengths(string text1, string text2)
 
 delegate string ProcessString(string input);
 delegate void Print(string input);
+
+public class NumbersFilter
+{
+    public List<int> FilterBy(string filteringType, List<int> numbers)
+    {
+        switch (filteringType)
+        {
+            case "Even":
+                return SelectEven(numbers);
+            case "Odd":
+                return SelectOdd(numbers);
+            case "Positive":
+                return SelectPositive(numbers);
+            default:
+                throw new NotSupportedException($"{userInput} is not a valid filter");
+        }
+    }
+}
 
 // Type constraints - numeric types. General math.
 
