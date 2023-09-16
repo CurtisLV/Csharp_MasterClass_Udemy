@@ -183,7 +183,17 @@ switch (userInput)
 
 List<int> SelectPositive(List<int> nums)
 {
-    throw new NotImplementedException();
+    var result = new List<int>();
+
+    foreach (int i in nums)
+    {
+        if (i > 0)
+        {
+            result.Add(i);
+        }
+    }
+
+    return result;
 }
 
 List<int> SelectOdd(List<int> nums)
