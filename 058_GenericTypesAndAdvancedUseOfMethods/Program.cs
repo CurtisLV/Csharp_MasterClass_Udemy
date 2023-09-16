@@ -153,11 +153,13 @@ List<Employee> employeesDict = new List<Employee>
 
 var result = CalculateAverageSalaryPerDepartment(employeesDict);
 
+var nums = new List<int> { 10, 12, -100, 55, 17, 22 };
+
 Console.ReadKey();
 
 void Print(IEnumerable<int> numbers)
 {
-    //
+    Console.WriteLine(string.Join(", ", numbers));
 }
 
 Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Employee> employees)
