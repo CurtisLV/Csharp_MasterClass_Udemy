@@ -155,6 +155,11 @@ var result = CalculateAverageSalaryPerDepartment(employeesDict);
 
 Console.ReadKey();
 
+void Print(IEnumerable<int> numbers)
+{
+    //
+}
+
 Dictionary<string, decimal> CalculateAverageSalaryPerDepartment(IEnumerable<Employee> employees)
 {
     var employeesPerDepartment = new Dictionary<string, List<Employee>>();
