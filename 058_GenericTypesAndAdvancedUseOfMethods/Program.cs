@@ -164,22 +164,7 @@ Positive"
 
 var userInput = Console.ReadLine();
 
-List<int> result2;
-
-switch (userInput)
-{
-    case "Even":
-        result2 = SelectEven(nums);
-        break;
-    case "Odd":
-        result2 = SelectOdd(nums);
-        break;
-    case "Positive":
-        result2 = SelectPositive(nums);
-        break;
-    default:
-        throw new NotSupportedException($"{userInput} is not a valid filter");
-}
+List<int> result2 = new NumbersFilter().FilterBy(userInput, nums);
 
 Print(result2);
 
@@ -360,7 +345,7 @@ public class NumbersFilter
         }
     }
 
-    List<int> SelectPositive(List<int> nums)
+    private List<int> SelectPositive(List<int> nums)
     {
         var result = new List<int>();
 
@@ -375,7 +360,7 @@ public class NumbersFilter
         return result;
     }
 
-    List<int> SelectOdd(List<int> nums)
+    private List<int> SelectOdd(List<int> nums)
     {
         var result = new List<int>();
 
@@ -390,7 +375,7 @@ public class NumbersFilter
         return result;
     }
 
-    List<int> SelectEven(List<int> nums)
+    private List<int> SelectEven(List<int> nums)
     {
         var result = new List<int>();
 
