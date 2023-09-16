@@ -158,7 +158,8 @@ var nums = new List<int> { 10, 12, -100, 55, 17, 22 };
 Console.WriteLine(
     @"Select filter:
 Even
-Odd"
+Odd
+Positive"
 );
 
 var userInput = Console.ReadLine();
@@ -173,8 +174,16 @@ switch (userInput)
     case "Odd":
         result2 = SelectOdd(nums);
         break;
+    case "Positive":
+        result2 = SelectPositive(nums);
+        break;
     default:
         throw new NotSupportedException($"{userInput} is not a valid filter");
+}
+
+List<int> SelectPositive(List<int> nums)
+{
+    throw new NotImplementedException();
 }
 
 List<int> SelectOdd(List<int> nums)
@@ -183,7 +192,7 @@ List<int> SelectOdd(List<int> nums)
 
     foreach (int i in nums)
     {
-        if (i % 2 == 0)
+        if (i % 2 == 1)
         {
             result.Add(i);
         }
@@ -198,7 +207,7 @@ List<int> SelectEven(List<int> nums)
 
     foreach (int i in nums)
     {
-        if (i % 2 != 0)
+        if (i % 2 == 0)
         {
             result.Add(i);
         }
