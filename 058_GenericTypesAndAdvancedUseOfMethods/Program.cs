@@ -179,7 +179,17 @@ switch (userInput)
 
 List<int> SelectOdd(List<int> nums)
 {
-    throw new NotImplementedException();
+    var result = new List<int>();
+
+    foreach (int i in nums)
+    {
+        if (i % 2 == 0)
+        {
+            result.Add(i);
+        }
+    }
+
+    return result;
 }
 
 List<int> SelectEven(List<int> nums)
