@@ -155,6 +155,16 @@ var result = CalculateAverageSalaryPerDepartment(employeesDict);
 
 var nums = new List<int> { 10, 12, -100, 55, 17, 22 };
 
+Console.WriteLine(
+    @"Select filter:
+Even
+Odd"
+);
+
+var userInput = Console.ReadLine();
+
+Print(nums);
+
 Console.ReadKey();
 
 void Print(IEnumerable<int> numbers)
