@@ -163,18 +163,28 @@ Odd"
 
 var userInput = Console.ReadLine();
 
-List<int> result;
+List<int> result2;
 
 switch (userInput)
 {
     case "Even":
-        result = SelectEven(nums);
+        result2 = SelectEven(nums);
         break;
     case "Odd":
-        result = SelectOdd(nums);
+        result2 = SelectOdd(nums);
         break;
     default:
         throw new NotSupportedException($"{userInput} is not a valid filter");
+}
+
+List<int> SelectOdd(List<int> nums)
+{
+    throw new NotImplementedException();
+}
+
+List<int> SelectEven(List<int> nums)
+{
+    throw new NotImplementedException();
 }
 
 Print(nums);
