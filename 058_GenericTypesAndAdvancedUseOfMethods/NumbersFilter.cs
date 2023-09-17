@@ -7,9 +7,9 @@
             case "Even":
                 return Select(numbers, number => number % 2 == 0);
             case "Odd":
-                return SelectOdd(numbers);
+                return Select(numbers, number => number % 2 == 1);
             case "Positive":
-                return SelectPositive(numbers);
+                return Select(numbers, number => number > 0);
             default:
                 throw new NotSupportedException($"{filteringType} is not a valid filter");
         }
