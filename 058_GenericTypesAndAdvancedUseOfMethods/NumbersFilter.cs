@@ -5,7 +5,7 @@
         switch (filteringType)
         {
             case "Even":
-                return SelectEven(numbers);
+                return Select(numbers, number => number % 2 == 0);
             case "Odd":
                 return SelectOdd(numbers);
             case "Positive":
@@ -60,13 +60,13 @@
         return result;
     }
 
-    private List<int> Select(List<int> nums)
+    private List<int> Select(List<int> nums, Func<int, bool> predicate)
     {
         var result = new List<int>();
 
         foreach (int i in nums)
         {
-            if (i % 2 == 0)
+            if (predicate(i))
             {
                 result.Add(i);
             }
