@@ -15,51 +15,6 @@
         }
     }
 
-    private List<int> SelectPositive(List<int> nums)
-    {
-        var result = new List<int>();
-
-        foreach (int i in nums)
-        {
-            if (i > 0)
-            {
-                result.Add(i);
-            }
-        }
-
-        return result;
-    }
-
-    private List<int> SelectOdd(List<int> nums)
-    {
-        var result = new List<int>();
-
-        foreach (int i in nums)
-        {
-            if (i % 2 == 1)
-            {
-                result.Add(i);
-            }
-        }
-
-        return result;
-    }
-
-    private List<int> SelectEven(List<int> nums)
-    {
-        var result = new List<int>();
-
-        foreach (int i in nums)
-        {
-            if (i % 2 == 0)
-            {
-                result.Add(i);
-            }
-        }
-
-        return result;
-    }
-
     private List<int> Select(List<int> nums, Func<int, bool> predicate)
     {
         var result = new List<int>();
