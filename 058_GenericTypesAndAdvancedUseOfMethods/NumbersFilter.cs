@@ -59,4 +59,19 @@
 
         return result;
     }
+
+    private List<int> Select(List<int> nums)
+    {
+        var result = new List<int>();
+
+        foreach (int i in nums)
+        {
+            if (i % 2 == 0)
+            {
+                result.Add(i);
+            }
+        }
+
+        return result;
+    }
 }
