@@ -30,6 +30,12 @@ public class FilteringStrategySelector
 
     public Func<int, bool> Select(string filteringType)
     {
+        if (!_filteringStrategies.ContainsKey(filteringType))
+        {
+            throw new NotSupportedException($"{filteringType} is not a valid filter");
+        }
+        return _filteringStrategies[filteringType];
+
         switch (filteringType)
         {
             case "Even":
@@ -39,7 +45,7 @@ public class FilteringStrategySelector
             case "Positive":
                 return number => number > 0;
             default:
-                throw new NotSupportedException($"{filteringType} is not a valid filter");
+
         }
     }
 }
