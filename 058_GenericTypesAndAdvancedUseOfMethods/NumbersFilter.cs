@@ -1,7 +1,9 @@
 ﻿public class NumbersFilter
 {
-    public List<int> FilterBy(string filteringType, List<int> numbers)
+    public List<int> FilterBy(Func<int, bool> predicate, List<int> numbers)
     {
+        return Select(numbers, predicate);
+
         switch (filteringType)
         {
             case "Even":
@@ -29,4 +31,9 @@
 
         return result;
     }
+}
+
+public class FilteringStrategySelector
+{
+    //
 }
