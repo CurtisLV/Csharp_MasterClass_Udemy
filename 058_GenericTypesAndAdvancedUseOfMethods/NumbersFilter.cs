@@ -28,11 +28,11 @@ public class FilteringStrategySelector
         switch (filteringType)
         {
             case "Even":
-                return Select(numbers, number => number % 2 == 0);
+                return number => number % 2 == 0;
             case "Odd":
-                return Select(numbers, number => number % 2 == 1);
+                return number => number % 2 == 1;
             case "Positive":
-                return Select(numbers, number => number > 0);
+                return number => number > 0;
             default:
                 throw new NotSupportedException($"{filteringType} is not a valid filter");
         }
