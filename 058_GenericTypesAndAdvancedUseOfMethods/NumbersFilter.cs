@@ -3,18 +3,6 @@
     public List<int> FilterBy(Func<int, bool> predicate, List<int> numbers)
     {
         return Select(numbers, predicate);
-
-        switch (filteringType)
-        {
-            case "Even":
-                return Select(numbers, number => number % 2 == 0);
-            case "Odd":
-                return Select(numbers, number => number % 2 == 1);
-            case "Positive":
-                return Select(numbers, number => number > 0);
-            default:
-                throw new NotSupportedException($"{filteringType} is not a valid filter");
-        }
     }
 
     private List<int> Select(List<int> nums, Func<int, bool> predicate)
@@ -37,6 +25,16 @@ public class FilteringStrategySelector
 {
     public Func<int, bool> Select(string filteringType)
     {
-        //
+        switch (filteringType)
+        {
+            case "Even":
+                return Select(numbers, number => number % 2 == 0);
+            case "Odd":
+                return Select(numbers, number => number % 2 == 1);
+            case "Positive":
+                return Select(numbers, number => number > 0);
+            default:
+                throw new NotSupportedException($"{filteringType} is not a valid filter");
+        }
     }
 }
