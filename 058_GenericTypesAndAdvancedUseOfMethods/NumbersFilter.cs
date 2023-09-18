@@ -35,5 +35,8 @@
 
 public class FilteringStrategySelector
 {
-    //
+    public Func<int, bool> Select(string filteringType)
+    {
+        //
+    }
 }
