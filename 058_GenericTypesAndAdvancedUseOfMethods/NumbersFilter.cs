@@ -2,11 +2,6 @@
 {
     public List<int> FilterBy(Func<int, bool> predicate, List<int> numbers)
     {
-        return Select(numbers, predicate);
-    }
-
-    private List<int> Select(List<int> nums, Func<int, bool> predicate)
-    {
         var result = new List<int>();
 
         foreach (int i in nums)
