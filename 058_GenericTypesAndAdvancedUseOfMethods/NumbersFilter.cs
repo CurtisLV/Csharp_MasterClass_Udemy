@@ -4,7 +4,7 @@
     {
         var result = new List<int>();
 
-        foreach (int i in nums)
+        foreach (int i in numbers)
         {
             if (predicate(i))
             {

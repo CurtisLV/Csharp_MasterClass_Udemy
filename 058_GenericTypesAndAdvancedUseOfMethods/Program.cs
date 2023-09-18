@@ -164,7 +164,8 @@ Positive"
 
 var userInput = Console.ReadLine();
 
-List<int> result2 = new NumbersFilter().FilterBy(userInput, nums);
+var filteringStrategy = new FilteringStrategySelector().Select(userInput);
+List<int> result2 = new NumbersFilter().FilterBy(filteringStrategy, nums);
 
 Print(result2);
 
