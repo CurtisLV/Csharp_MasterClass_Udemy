@@ -1,6 +1,6 @@
-﻿public class NumbersFilter
+﻿public class Filter
 {
-    public List<T> FilterBy<T>(Func<T, bool> predicate, List<T> numbers)
+    public IEnumerable<T> FilterBy<T>(Func<T, bool> predicate, IEnumerable<T> numbers)
     {
         var result = new List<T>();
 
