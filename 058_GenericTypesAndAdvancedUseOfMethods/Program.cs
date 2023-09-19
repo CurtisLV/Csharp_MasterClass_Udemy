@@ -157,7 +157,9 @@ var nums = new List<int> { 10, 12, -100, 55, 17, 22 };
 var filteringStrategySelector = new FilteringStrategySelector();
 
 Console.WriteLine("Select filter:");
-Console.WriteLine(string.Join(Environment.NewLine, filteringStrategySelector));
+Console.WriteLine(
+    string.Join(Environment.NewLine, filteringStrategySelector.FilteringStrategiesNames)
+);
 
 var userInput = Console.ReadLine();
 
