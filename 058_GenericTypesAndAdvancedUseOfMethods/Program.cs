@@ -164,9 +164,12 @@ Console.WriteLine(
 var userInput = Console.ReadLine();
 
 var filteringStrategy = new FilteringStrategySelector().Select(userInput);
-List<int> result2 = new NumbersFilter().FilterBy(filteringStrategy, nums);
+var result2 = new Filter().FilterBy(filteringStrategy, nums);
 
 Print(result2);
+
+var words3 = new[] { "zebra", "yolo", "pupedis" };
+var oWords = new Filter().FilterBy(word => word.StartsWith("o"), words2);
 
 Console.ReadKey();
 
