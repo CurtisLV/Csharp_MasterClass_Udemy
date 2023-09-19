@@ -25,8 +25,11 @@ public class FilteringStrategySelector
     {
         ["Even"] = number => number % 2 == 0,
         ["Odd"] = number => number % 2 == 1,
-        ["Positive"] = number => number > 0
+        ["Positive"] = number => number > 0,
+        ["Negative"] = number => number < 0
     };
+
+    public IEnumerable<string> FilteringStrategiesNames => _filteringStrategies.Keys;
 
     public Func<int, bool> Select(string filteringType)
     {

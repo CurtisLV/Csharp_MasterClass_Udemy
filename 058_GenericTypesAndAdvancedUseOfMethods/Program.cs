@@ -159,7 +159,8 @@ Console.WriteLine(
     @"Select filter:
 Even
 Odd
-Positive"
+Positive
+Negative"
 );
 
 var userInput = Console.ReadLine();
