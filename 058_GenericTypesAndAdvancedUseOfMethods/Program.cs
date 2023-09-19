@@ -154,14 +154,10 @@ List<Employee> employeesDict = new List<Employee>
 var result = CalculateAverageSalaryPerDepartment(employeesDict);
 
 var nums = new List<int> { 10, 12, -100, 55, 17, 22 };
+var filteringStrategySelector = new FilteringStrategySelector();
 
-Console.WriteLine(
-    @"Select filter:
-Even
-Odd
-Positive
-Negative"
-);
+Console.WriteLine("Select filter:");
+Console.WriteLine(string.Join(Environment.NewLine, filteringStrategySelector));
 
 var userInput = Console.ReadLine();
 
