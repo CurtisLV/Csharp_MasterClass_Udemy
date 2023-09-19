@@ -168,12 +168,14 @@ var result2 = new Filter().FilterBy(filteringStrategy, nums);
 
 Print(result2);
 
-var words3 = new[] { "zebra", "yolo", "pupedis" };
-var oWords = new Filter().FilterBy(word => word.StartsWith("o"), words2);
+var words3 = new[] { "zebra", "yolo", "opupedis" };
+var oWords = new Filter().FilterBy(word => word.StartsWith("o"), words3);
+
+Print(oWords);
 
 Console.ReadKey();
 
-void Print(IEnumerable<int> numbers)
+void Print<T>(IEnumerable<T> numbers)
 {
     Console.WriteLine(string.Join(", ", numbers));
 }
