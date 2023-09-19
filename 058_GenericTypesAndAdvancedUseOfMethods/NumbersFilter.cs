@@ -1,10 +1,10 @@
 ﻿public class NumbersFilter
 {
-    public List<int> FilterBy(Func<int, bool> predicate, List<int> numbers)
+    public List<T> FilterBy<T>(Func<T, bool> predicate, List<T> numbers)
     {
-        var result = new List<int>();
+        var result = new List<T>();
 
-        foreach (int i in numbers)
+        foreach (var i in numbers)
         {
             if (predicate(i))
             {
