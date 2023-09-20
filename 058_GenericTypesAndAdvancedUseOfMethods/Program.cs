@@ -171,6 +171,8 @@ Print(result2);
 var words3 = new[] { "zebra", "yolo", "opupedis" };
 var oWords = new Filter().FilterBy(word => word.StartsWith("o"), words3);
 
+var dataDownloader = new SlowDataDownloader();
+
 Print(oWords);
 
 Console.ReadKey();
@@ -332,6 +334,15 @@ int SumLengths(string text1, string text2)
 
 delegate string ProcessString(string input);
 delegate void Print(string input);
+
+// caching
+class SlowDataDownloader
+{
+    public SlowDataDownloader()
+    {
+        //
+    }
+}
 
 // Type constraints - numeric types. General math.
 
