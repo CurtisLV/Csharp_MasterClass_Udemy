@@ -173,6 +173,14 @@ var oWords = new Filter().FilterBy(word => word.StartsWith("o"), words3);
 
 var dataDownloader = new SlowDataDownloader();
 
+Console.WriteLine(dataDownloader.DownloadData("id1"));
+Console.WriteLine(dataDownloader.DownloadData("id2"));
+Console.WriteLine(dataDownloader.DownloadData("id3"));
+Console.WriteLine(dataDownloader.DownloadData("id1"));
+Console.WriteLine(dataDownloader.DownloadData("id3"));
+Console.WriteLine(dataDownloader.DownloadData("id1"));
+Console.WriteLine(dataDownloader.DownloadData("id2"));
+
 Print(oWords);
 
 Console.ReadKey();
