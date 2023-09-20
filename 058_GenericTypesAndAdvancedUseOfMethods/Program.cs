@@ -336,12 +336,17 @@ delegate string ProcessString(string input);
 delegate void Print(string input);
 
 // caching
-class SlowDataDownloader
+class SlowDataDownloader : IDataDownloader
 {
     public SlowDataDownloader()
     {
         //
     }
+}
+
+internal interface IDataDownloader
+{
+    //
 }
 
 // Type constraints - numeric types. General math.
