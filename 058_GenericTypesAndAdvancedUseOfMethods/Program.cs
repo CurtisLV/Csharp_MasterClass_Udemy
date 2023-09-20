@@ -342,11 +342,16 @@ class SlowDataDownloader : IDataDownloader
     {
         //
     }
+
+    public string DownloadData(string resourceId)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 internal interface IDataDownloader
 {
-    //
+    string DownloadData(string resourceId);
 }
 
 // Type constraints - numeric types. General math.
