@@ -32,6 +32,11 @@ public class Cache<TKey, TData>
 
     public TData GetData(TKey key)
     {
+        if (!_cachedData.ContainsKey(key))
+        {
+            _cachedData[key] = new SlowDataDownloader().DownloadData(key);
+        }
+
         return _cachedData[key];
     }
 
