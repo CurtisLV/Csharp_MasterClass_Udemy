@@ -30,11 +30,12 @@ public class Cache<TKey, TData>
 {
     private readonly Dictionary<TKey, TData> _cachedData = new();
 
-    public TData GetData(TKey key)
+    public TData GetData(TKey key, Func<TKey, TData> getForTheFirstTime)
     {
         if (!_cachedData.ContainsKey(key))
         {
-            _cachedData[key] = new SlowDataDownloader().DownloadData(key);
+            _cachedData[key] = getForTheFirstTime(key);
+            //new SlowDataDownloader().DownloadData(key);
         }
 
         return _cachedData[key];
