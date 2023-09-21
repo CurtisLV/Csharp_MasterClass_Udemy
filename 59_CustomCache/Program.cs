@@ -25,3 +25,8 @@ public class SlowDataDownloader : IDataDownloader
         return $"Some data for {resourceId}";
     }
 }
+
+public class Cache
+{
+    //
+}
