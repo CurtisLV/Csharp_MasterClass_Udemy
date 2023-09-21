@@ -21,7 +21,7 @@ public class SlowDataDownloader : IDataDownloader
 
     public string DownloadData(string resourceId)
     {
-        return _cache.GetData(resourceId, DownloadDataWithoutCaching(resourceId));
+        return _cache.Get(resourceId, DownloadDataWithoutCaching);
     }
 
     private string DownloadDataWithoutCaching(string resourceId)
@@ -35,7 +35,7 @@ public class Cache<TKey, TData>
 {
     private readonly Dictionary<TKey, TData> _cachedData = new();
 
-    public TData GetData(TKey key, Func<TKey, TData> getForTheFirstTime)
+    public TData Get(TKey key, Func<TKey, TData> getForTheFirstTime)
     {
         if (!_cachedData.ContainsKey(key))
         {
