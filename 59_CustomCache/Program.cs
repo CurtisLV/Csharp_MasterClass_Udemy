@@ -29,4 +29,11 @@ public class SlowDataDownloader : IDataDownloader
 public class Cache<TKey, TData>
 {
     private readonly Dictionary<TKey, TData> _cachedData = new();
+
+    public TData GetData(TKey key)
+    {
+        return _cachedData[key];
+    }
+
+    // then a function that adds to Dictionary if not yet there
 }
