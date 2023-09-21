@@ -17,7 +17,17 @@ public interface IDataDownloader
 
 public class SlowDataDownloader : IDataDownloader
 {
+    private readonly Cache<string, string> _cache = new();
+
     public string DownloadData(string resourceId)
+    {
+        //let's imagine this method downloads real data,
+        //and it does it slowly
+        Thread.Sleep(1000);
+        return $"Some data for {resourceId}";
+    }
+
+    private string DownloadDataWithoutCachin(string resourceId)
     {
         //let's imagine this method downloads real data,
         //and it does it slowly
@@ -35,7 +45,6 @@ public class Cache<TKey, TData>
         if (!_cachedData.ContainsKey(key))
         {
             _cachedData[key] = getForTheFirstTime(key);
-            //new SlowDataDownloader().DownloadData(key);
         }
 
         return _cachedData[key];
