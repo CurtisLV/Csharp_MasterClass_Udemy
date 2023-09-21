@@ -21,16 +21,11 @@ public class SlowDataDownloader : IDataDownloader
 
     public string DownloadData(string resourceId)
     {
-        //let's imagine this method downloads real data,
-        //and it does it slowly
-        Thread.Sleep(1000);
-        return $"Some data for {resourceId}";
+        return _cache.GetData(resourceId, DownloadDataWithoutCaching(resourceId));
     }
 
-    private string DownloadDataWithoutCachin(string resourceId)
+    private string DownloadDataWithoutCaching(string resourceId)
     {
-        //let's imagine this method downloads real data,
-        //and it does it slowly
         Thread.Sleep(1000);
         return $"Some data for {resourceId}";
     }
@@ -49,6 +44,4 @@ public class Cache<TKey, TData>
 
         return _cachedData[key];
     }
-
-    // then a function that adds to Dictionary if not yet there
 }
