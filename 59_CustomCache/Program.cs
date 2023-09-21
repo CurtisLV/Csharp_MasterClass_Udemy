@@ -26,7 +26,7 @@ public class SlowDataDownloader : IDataDownloader
     }
 }
 
-public class Cache
+public class Cache<TKey, TData>
 {
-    //
+    private readonly Dictionary<TKey, TData> _cachedData = new();
 }
