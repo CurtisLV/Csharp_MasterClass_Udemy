@@ -17,14 +17,7 @@ public interface IDataDownloader
 
 public class SlowDataDownloader : IDataDownloader
 {
-    private readonly Cache<string, string> _cache = new();
-
-    public string DownloadData(string resourceId)
-    {
-        return _cache.Get(resourceId, DownloadDataWithoutCaching);
-    }
-
-    private string DownloadDataWithoutCaching(string resourceId)
+    private string DownloadData(string resourceId)
     {
         Thread.Sleep(1000);
         return $"Some data for {resourceId}";
@@ -45,3 +38,9 @@ public class Cache<TKey, TData>
         return _cachedData[key];
     }
 }
+//private readonly Cache<string, string> _cache = new();
+
+//public string DownloadData(string resourceId)
+//{
+//    return _cache.Get(resourceId, DownloadDataWithoutCaching);
+//}
