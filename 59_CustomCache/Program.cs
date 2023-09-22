@@ -28,6 +28,13 @@ public class CachingDataDownloader : IDataDownloader
 {
     private readonly IDataDownloader _dataDownloader;
 
+    private readonly Cache<string, string> _cache = new();
+
+    public CachingDataDownloader(IDataDownloader dataDownloader)
+    {
+        _dataDownloader = dataDownloader;
+    }
+
     public string DownloadData(string resourceId)
     {
         throw new NotImplementedException();
@@ -48,7 +55,7 @@ public class Cache<TKey, TData>
         return _cachedData[key];
     }
 }
-//private readonly Cache<string, string> _cache = new();
+
 
 //public string DownloadData(string resourceId)
 //{
