@@ -24,9 +24,14 @@ public class SlowDataDownloader : IDataDownloader
     }
 }
 
-public class CachingDataDownloader
+public class CachingDataDownloader : IDataDownloader
 {
-    //
+    private readonly IDataDownloader _dataDownloader;
+
+    public string DownloadData(string resourceId)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Cache<TKey, TData>
