@@ -42,13 +42,11 @@ public class CachingDataDownloader : IDataDownloader
     }
 }
 
-public class CachingDataDownloader2 : IDataDownloader
+public class PrintingDataDownloader : IDataDownloader
 {
     private readonly IDataDownloader _dataDownloader;
 
-    private readonly Cache<string, string> _cache = new();
-
-    public CachingDataDownloader2(IDataDownloader dataDownloader)
+    public PrintingDataDownloader(IDataDownloader dataDownloader)
     {
         _dataDownloader = dataDownloader;
     }
