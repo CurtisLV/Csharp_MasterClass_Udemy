@@ -53,7 +53,9 @@ public class PrintingDataDownloader : IDataDownloader
 
     public string DownloadData(string resourceId)
     {
-        return _cache.Get(resourceId, _dataDownloader.DownloadData);
+        var data = _dataDownloader.DownloadData(resourceId);
+        Console.WriteLine("Data is ready!");
+        return data;
     }
 }
 
