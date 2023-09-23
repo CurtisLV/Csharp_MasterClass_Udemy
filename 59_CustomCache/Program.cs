@@ -42,6 +42,23 @@ public class CachingDataDownloader : IDataDownloader
     }
 }
 
+public class CachingDataDownloader2 : IDataDownloader
+{
+    private readonly IDataDownloader _dataDownloader;
+
+    private readonly Cache<string, string> _cache = new();
+
+    public CachingDataDownloader2(IDataDownloader dataDownloader)
+    {
+        _dataDownloader = dataDownloader;
+    }
+
+    public string DownloadData(string resourceId)
+    {
+        return _cache.Get(resourceId, _dataDownloader.DownloadData);
+    }
+}
+
 public class Cache<TKey, TData>
 {
     private readonly Dictionary<TKey, TData> _cachedData = new();
