@@ -1,5 +1,7 @@
 ﻿//IDataDownloader dataDownloader = new SlowDataDownloader();
-IDataDownloader dataDownloader = new CachingDataDownloader(new SlowDataDownloader());
+IDataDownloader dataDownloader = new CachingDataDownloader(
+    new PrintingDataDownloader(new SlowDataDownloader())
+);
 
 Console.WriteLine(dataDownloader.DownloadData("id1"));
 Console.WriteLine(dataDownloader.DownloadData("id2"));
