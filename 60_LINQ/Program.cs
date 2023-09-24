@@ -9,6 +9,12 @@ var wordsLongerThan2Letters = wordsLetters.Where(w => w.Length > 2);
 var numbersArray = new int[] { 1, 2, 5, 8, 9, 12, 77, 1, 2 };
 var oddNumbers = numbersArray.Where(num => num % 2 == 1);
 
+var numsAppend = new List<int> { 5, 7, 8, 1, 9, 1 };
+var numsWith10 = numsAppend.Append(10);
+
+Console.WriteLine("Numbers: " + string.Join(", ", numsAppend));
+Console.WriteLine("Numbers: " + string.Join(", ", numsWith10));
+
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
 {
     foreach (var word in words)
