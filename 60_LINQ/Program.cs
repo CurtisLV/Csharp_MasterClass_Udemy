@@ -14,3 +14,7 @@ static bool IsAnyWordUpperCase(IEnumerable<string> words)
     }
     return false;
 }
+static bool IsAnyWordUpperCase_Linq(IEnumerable<string> words)
+{
+    return words.Any(word => word.ToUpper() == word);
+}
