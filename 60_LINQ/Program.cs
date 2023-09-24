@@ -15,8 +15,7 @@ var numsWith10 = numsAppend.Append(10);
 Console.WriteLine("Numbers: " + string.Join(", ", numsAppend));
 Console.WriteLine("Numbers: " + string.Join(", ", numsWith10));
 
-var oddNums = numsAppend.Where(num => num % 2 == 1);
-var oddNumsOrdered = oddNums.OrderBy(num => num);
+var oddNumsOrdered = numsWith10.Where(num => num % 2 == 1).OrderBy(num => num);
 
 Console.WriteLine("Numbers: " + string.Join(", ", oddNumsOrdered));
 
