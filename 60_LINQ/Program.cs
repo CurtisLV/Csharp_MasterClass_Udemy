@@ -16,8 +16,14 @@ Console.WriteLine("Numbers: " + string.Join(", ", numsAppend));
 Console.WriteLine("Numbers: " + string.Join(", ", numsWith10));
 
 var oddNumsOrdered = numsWith10.Where(num => num % 2 == 1).OrderBy(num => num);
-
 Console.WriteLine("Numbers: " + string.Join(", ", oddNumsOrdered));
+
+var animals = new List<string> { "Dolphin", "Duck", "Lion", "Tiger" };
+var animalsWithD = animals.Where(animal =>
+{
+    Console.WriteLine("Checking animal: " + animal);
+    return animal.StartsWith('D');
+});
 
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
 {
