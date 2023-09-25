@@ -25,6 +25,11 @@ var animalsWithD = animals.Where(animal =>
     return animal.StartsWith('D');
 });
 
+foreach (var animal in animalsWithD)
+{
+    Console.WriteLine(animal);
+}
+
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
 {
     foreach (var word in words)
