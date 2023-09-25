@@ -1,4 +1,6 @@
-﻿var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
+﻿using _6_LINQ.SampleData;
+
+var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
 Console.WriteLine(IsAnyWordUpperCase(wordsNoUppercase));
 var wordsSomeAllUppercase = new string[] { "Grapes", "kiWi", "Lychee", "ManGo", "ORANGE" };
 Console.WriteLine(IsAnyWordUpperCase(wordsSomeAllUppercase));
@@ -32,6 +34,8 @@ foreach (var animal in animalsWithD)
 {
     Console.WriteLine(animal);
 }
+
+var isAnyPetNamedBruce = Data.Pets.Any(pet => pet.Name == "Bruce");
 
 Console.ReadKey();
 
