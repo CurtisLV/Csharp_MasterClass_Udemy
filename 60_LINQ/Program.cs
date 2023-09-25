@@ -1,4 +1,5 @@
 ﻿using _6_LINQ.SampleData;
+using _6_LINQ.Utilities;
 
 var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
 Console.WriteLine(IsAnyWordUpperCase(wordsNoUppercase));
@@ -36,6 +37,7 @@ foreach (var animal in animalsWithD)
 }
 
 var isAnyPetNamedBruce = Data.Pets.Any(pet => pet.Name == "Bruce");
+Printer.Print(isAnyPetNamedBruce, nameof(isAnyPetNamedBruce));
 
 Console.ReadKey();
 

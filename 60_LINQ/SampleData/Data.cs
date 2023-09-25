@@ -1,6 +1,4 @@
-﻿namespace _6_LINQ.SampleData;
-
-public static class Data
+﻿public static class Data
 {
     public static IEnumerable<Pet> Pets = new[]
     {
