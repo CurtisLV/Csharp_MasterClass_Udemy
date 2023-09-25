@@ -25,10 +25,15 @@ var animalsWithD = animals.Where(animal =>
     return animal.StartsWith('D');
 });
 
+var numbers = new[] { 5, 9, 2, 12, 6 };
+bool isAnyLargerThan10 = numbers.Any(num => num > 10);
+
 foreach (var animal in animalsWithD)
 {
     Console.WriteLine(animal);
 }
+
+Console.ReadKey();
 
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
 {
