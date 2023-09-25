@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
+namespace _60_LINQ.SampleData;
+
 public class PetEqualityByIdComparer : IEqualityComparer<Pet>
 {
     public bool Equals(Pet x, Pet y)

@@ -1,4 +1,6 @@
-﻿public class Pet
+﻿namespace _60_LINQ.SampleData;
+
+public class Pet
 {
     public int Id { get; }
     public string Name { get; }

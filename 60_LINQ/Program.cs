@@ -1,7 +1,4 @@
-﻿using _6_LINQ.SampleData;
-using _6_LINQ.Utilities;
-
-var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
+﻿var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
 Console.WriteLine(IsAnyWordUpperCase(wordsNoUppercase));
 var wordsSomeAllUppercase = new string[] { "Grapes", "kiWi", "Lychee", "ManGo", "ORANGE" };
 Console.WriteLine(IsAnyWordUpperCase(wordsSomeAllUppercase));
