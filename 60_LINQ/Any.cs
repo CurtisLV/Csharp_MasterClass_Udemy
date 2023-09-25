@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _60_LINQ
+namespace _60_LINQ;
+
+public class Any
 {
-    internal class Any
-    {
-    }
+    //
 }
