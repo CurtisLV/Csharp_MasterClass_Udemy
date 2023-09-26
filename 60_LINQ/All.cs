@@ -18,7 +18,10 @@ static class All
 
         var pets = Data.Pets;
 
-        var doAllHaveNonEmptyNames = pets.All(pet => pet.Name != null);
+        var doAllHaveNonEmptyNames = pets.All(pet => !string.IsNullOrEmpty(pet.Name));
         Printer.Print(doAllHaveNonEmptyNames, nameof(doAllHaveNonEmptyNames));
+
+        var areAllCats = pets.All(pet => pet.PetType == PetType.Cat);
+        Printer.Print(areAllCats, nameof(areAllCats));
     }
 }
