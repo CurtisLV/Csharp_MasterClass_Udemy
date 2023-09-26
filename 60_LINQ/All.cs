@@ -17,5 +17,8 @@ static class All
         Printer.Print(areAllLargerThanZero, nameof(areAllLargerThanZero));
 
         var pets = Data.Pets;
+
+        var doAllHaveNonEmptyNames = pets.All(pet => pet.Name != null);
+        Printer.Print(doAllHaveNonEmptyNames, nameof(doAllHaveNonEmptyNames));
     }
 }

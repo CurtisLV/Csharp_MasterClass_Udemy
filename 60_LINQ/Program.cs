@@ -1,4 +1,5 @@
-﻿using _60_LINQ.SampleData;
+﻿using _60_LINQ;
+using _60_LINQ.SampleData;
 using _60_LINQ.Utilities;
 
 var wordsNoUppercase = new string[] { "apple", "banana", "cherry", "date", "elderberry" };
@@ -32,6 +33,9 @@ foreach (var animal in animalsWithD)
 {
     Console.WriteLine(animal);
 }
+
+//Any.Run();
+All.Run();
 
 Console.ReadKey();
 
