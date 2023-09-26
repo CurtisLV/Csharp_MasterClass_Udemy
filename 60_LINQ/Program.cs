@@ -45,6 +45,9 @@ Printer.Print(isAnyFish, nameof(isAnyFish));
 var isThereAVerySpecificPet = Data.Pets.Any(pet => pet.Name.Length > 6 && pet.Id % 2 == 0);
 Printer.Print(isThereAVerySpecificPet, nameof(isThereAVerySpecificPet));
 
+var isNotEmpty = Data.Pets.Any();
+Printer.Print(isNotEmpty, nameof(isNotEmpty));
+
 Console.ReadKey();
 
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
