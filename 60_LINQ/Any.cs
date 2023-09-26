@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _60_LINQ;
 
-public class Any
+static class Any
 {
-    //
+    public static void Run()
+    {
+        //
+    }
 }
