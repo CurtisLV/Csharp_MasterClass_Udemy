@@ -22,5 +22,8 @@ static class Count
 
         var countOfAllSmallDogs = pets.Count(pet => pet.PetType == PetType.Dog && pet.Weight < 10);
         Printer.Print(countOfAllSmallDogs, nameof(countOfAllSmallDogs));
+
+        var countPets = pets.Count();
+        Printer.Print(countPets, nameof(countPets));
     }
 }
