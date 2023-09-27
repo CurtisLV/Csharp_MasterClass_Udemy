@@ -54,3 +54,10 @@ static bool IsAnyWordUpperCase_Linq(IEnumerable<string> words)
 {
     return words.Any(word => word.ToUpper() == word);
 }
+
+// first coding exercise
+
+static bool IsAnyWordWhiteSpace(List<string> words)
+{
+    //
+}
