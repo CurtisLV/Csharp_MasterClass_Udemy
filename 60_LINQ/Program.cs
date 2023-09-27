@@ -36,6 +36,7 @@ foreach (var animal in animalsWithD)
 
 //Any.Run();
 All.Run();
+Count.Run();
 
 Console.ReadKey();
 
