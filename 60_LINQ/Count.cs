@@ -16,5 +16,8 @@ static class Count
 
         var countOfDogs = pets.Count(pet => pet.PetType == PetType.Dog);
         Printer.Print(countOfDogs, nameof(countOfDogs));
+
+        var countOfPetsNamedBruce = pets.LongCount(pet => pet.Name == "Bruce");
+        Printer.Print(countOfPetsNamedBruce, nameof(countOfPetsNamedBruce));
     }
 }
