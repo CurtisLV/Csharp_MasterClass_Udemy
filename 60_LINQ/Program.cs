@@ -63,3 +63,10 @@ static bool IsAnyWordWhiteSpace(List<string> words)
 {
     return words.Any(word => word.All(letter => char.IsWhiteSpace(letter)));
 }
+
+// Second coding exercise
+
+static int CountListsContainingZeroLongerThan(int length, List<List<int>> listsOfNumbers)
+{
+    //
+}
