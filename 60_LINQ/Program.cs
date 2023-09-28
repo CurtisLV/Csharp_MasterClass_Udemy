@@ -68,5 +68,5 @@ static bool IsAnyWordWhiteSpace(List<string> words)
 
 static int CountListsContainingZeroLongerThan(int length, List<List<int>> listsOfNumbers)
 {
-    //
+    return listsOfNumbers.Count(list => list.Count() > length && list.Contains(0));
 }
