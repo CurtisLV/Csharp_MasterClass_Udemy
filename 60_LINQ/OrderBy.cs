@@ -28,7 +28,7 @@ static class OrderBy
         var orderedWordsDesc = words.OrderByDescending(word => word);
         Printer.Print(orderedWordsDesc, nameof(orderedWordsDesc));
 
-        var petsOrderedByTypeThenName = pets.OrderBy(pet => pet.PetType).OrderBy(pet => pet.Name);
+        var petsOrderedByTypeThenName = pets.OrderBy(pet => pet.PetType).ThenBy(pet => pet.Name);
         Printer.Print(petsOrderedByTypeThenName, nameof(petsOrderedByTypeThenName));
     }
 }
