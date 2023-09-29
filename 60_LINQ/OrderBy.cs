@@ -25,5 +25,10 @@ static class OrderBy
         Printer.Print(orderedNumbers, nameof(orderedNumbers));
 
         var words = new[] { "lion", "tiger", "cow", "snow cow" };
+        var orderedWordsDesc = words.OrderByDescending(word => word);
+        Printer.Print(orderedWordsDesc, nameof(orderedWordsDesc));
+
+        var petsOrderedByTypeThenName = pets.OrderBy(pet => pet.PetType).OrderBy(pet => pet.Name);
+        Printer.Print(petsOrderedByTypeThenName, nameof(petsOrderedByTypeThenName));
     }
 }
