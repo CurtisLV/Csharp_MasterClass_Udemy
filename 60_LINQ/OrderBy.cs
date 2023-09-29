@@ -16,5 +16,8 @@ static class OrderBy
 
         var petsOrderedByName = pets.OrderBy(pet => pet.Name);
         Printer.Print(petsOrderedByName, nameof(petsOrderedByName));
+
+        var petsOrderedById = pets.OrderByDescending(pet => pet.Id);
+        Printer.Print(petsOrderedById, nameof(petsOrderedById));
     }
 }
