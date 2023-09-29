@@ -19,5 +19,11 @@ static class OrderBy
 
         var petsOrderedById = pets.OrderByDescending(pet => pet.Id);
         Printer.Print(petsOrderedById, nameof(petsOrderedById));
+
+        var numbers = new[] { 16, -1, 3, 8, 5, 11, };
+        var orderedNumbers = numbers.OrderBy(number => number);
+        Printer.Print(orderedNumbers, nameof(orderedNumbers));
+
+        var words = new[] { "lion", "tiger", "cow", "snow cow" };
     }
 }
