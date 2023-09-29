@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _60_LINQ
+namespace _60_LINQ;
+
+static class OrderBy
 {
-    internal class OrderBy
+    public static void Run()
     {
+        //
     }
 }
