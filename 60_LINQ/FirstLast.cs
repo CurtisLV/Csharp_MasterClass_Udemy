@@ -17,5 +17,11 @@ static class FirstLast
 
         var firstNumber = numbers.First();
         Printer.Print(firstNumber, nameof(firstNumber));
+
+        var firstOddNumber = numbers.First(num => num % 2 == 1);
+        Printer.Print(firstOddNumber, nameof(firstOddNumber));
+
+        var lastDog = pets.Last(pet => pet.PetType == PetType.Dog);
+        Printer.Print(lastDog, nameof(lastDog));
     }
 }
