@@ -27,5 +27,8 @@ static class FirstLast
         //var lastPetHeavierThan100 = pets.Last(pet => pet.Weight > 100);
         var lastPetHeavierThan100 = pets.LastOrDefault(pet => pet.Weight > 100);
         Printer.Print(lastPetHeavierThan100, nameof(lastPetHeavierThan100));
+
+        var heaviestPet = pets.OrderBy(pet => pet.Weight).Last();
+        Printer.Print(heaviestPet, nameof(heaviestPet));
     }
 }
