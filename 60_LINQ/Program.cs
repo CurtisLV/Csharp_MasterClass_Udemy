@@ -34,16 +34,19 @@ foreach (var animal in animalsWithD)
     Console.WriteLine(animal);
 }
 
-Console.WriteLine(" - Any: ");
-Any.Run();
-Console.WriteLine(" - All: ");
-All.Run();
-Console.WriteLine(" - Count: ");
-Count.Run();
-Console.WriteLine(" - Contains: ");
-Contains.Run();
-Console.WriteLine(" - Order by: ");
-OrderBy.Run();
+//Console.WriteLine(" - Any: ");
+//Any.Run();
+//Console.WriteLine(" - All: ");
+//All.Run();
+//Console.WriteLine(" - Count: ");
+//Count.Run();
+//Console.WriteLine(" - Contains: ");
+//Contains.Run();
+//Console.WriteLine(" - Order by: ");
+//OrderBy.Run();
+
+Console.WriteLine(" - First/Last: ");
+FirstLast.Run();
 
 Console.ReadKey();
 

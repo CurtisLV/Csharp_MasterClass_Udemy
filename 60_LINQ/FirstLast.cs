@@ -13,8 +13,9 @@ static class FirstLast
     public static void Run()
     {
         var pets = Data.Pets;
+        var numbers = Data.numbers;
 
-        var petsOrderedByName = pets.OrderBy(p => p.Name).First();
-        Printer.Print(petsOrderedByName, nameof(petsOrderedByName));
+        var firstNumber = numbers.First();
+        Printer.Print(firstNumber, nameof(firstNumber));
     }
 }
