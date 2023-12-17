@@ -79,3 +79,10 @@ static int CountListsContainingZeroLongerThan(int length, List<List<int>> listsO
 {
     return listsOfNumbers.Count(list => list.Count() > length && list.Contains(0));
 }
+
+// third coding exercise
+
+static string FindShortestWord(List<string> words)
+{
+    //
+}
