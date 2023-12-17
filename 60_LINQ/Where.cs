@@ -39,6 +39,17 @@ namespace _60_LINQ
             var petsSelectedByUserAndLighterThank5k = pets.Where(
                 (pet, petIndex) => pet.Weight < 5 && indexesSelectedByUser.Contains(petIndex)
             );
+
+            Printer.Print(
+                petsSelectedByUserAndLighterThank5k,
+                nameof(petsSelectedByUserAndLighterThank5k)
+            );
+
+            int countOfHeavyPets1 = pets.Count(pet => pet.Weight > 30);
+            int countOfHeavyPets2 = pets.Where(pet => pet.Weight > 30).Count();
+
+            Printer.Print(countOfHeavyPets1, nameof(countOfHeavyPets1));
+            Printer.Print(countOfHeavyPets2, nameof(countOfHeavyPets2));
         }
     }
 }
