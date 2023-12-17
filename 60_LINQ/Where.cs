@@ -32,6 +32,13 @@ namespace _60_LINQ
                 .Where(pet => pet.Id % 2 == 0);
 
             Printer.Print(verySpecificPets, nameof(verySpecificPets));
+
+            // where pet is below 5kg and also id selected
+
+            var indexesSelectedByUser = new[] { 1, 6, 7 };
+            var petsSelectedByUserAndLighterThank5k = pets.Where(
+                (pet, petIndex) => pet.Weight < 5 && indexesSelectedByUser.Contains(petIndex)
+            );
         }
     }
 }
