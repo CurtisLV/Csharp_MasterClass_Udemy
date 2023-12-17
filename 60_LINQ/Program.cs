@@ -84,5 +84,5 @@ static int CountListsContainingZeroLongerThan(int length, List<List<int>> listsO
 
 static string FindShortestWord(List<string> words)
 {
-    //
+    return words.OrderBy(w => w.Length).First();
 }
