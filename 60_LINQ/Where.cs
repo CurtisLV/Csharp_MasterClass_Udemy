@@ -26,10 +26,16 @@ namespace _60_LINQ
                 .Where(pet => pet.Weight >= 10)
                 .Where(pet => pet.Id % 2 == 0);
 
+            // can (should?) also be done without multiple where.
+            var verySpecificPets2 = pets.Where(
+                pet =>
+                    pet.PetType == PetType.Cat
+                    || pet.PetType == PetType.Dog && pet.Weight >= 10 && pet.Id % 2 == 0
+            );
             Printer.Print(verySpecificPets, nameof(verySpecificPets));
+            Printer.Print(verySpecificPets2, nameof(verySpecificPets2));
 
             // where pet is below 5kg and also id selected
-
             var indexesSelectedByUser = new[] { 1, 6, 7 };
             var petsSelectedByUserAndLighterThank5k = pets.Where(
                 (pet, petIndex) => pet.Weight < 5 && indexesSelectedByUser.Contains(petIndex)
