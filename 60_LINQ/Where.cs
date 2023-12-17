@@ -17,6 +17,12 @@ namespace _60_LINQ
 
             var evenNumbers = numbers.Where(num => num % 2 == 0);
             Printer.Print(evenNumbers, nameof(evenNumbers));
+
+            var heavierThan10Kilos = 1;
+            Printer.Print(heavierThan10Kilos, nameof(heavierThan10Kilos));
+
+            var heavierThan100Kilos = 1;
+            Printer.Print(heavierThan100Kilos, nameof(heavierThan100Kilos));
         }
     }
 }
