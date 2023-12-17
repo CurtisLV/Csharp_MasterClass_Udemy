@@ -45,8 +45,13 @@ foreach (var animal in animalsWithD)
 //Console.WriteLine(" - Order by: ");
 //OrderBy.Run();
 
+Console.WriteLine();
 Console.WriteLine(" - First/Last: ");
 FirstLast.Run();
+
+Console.WriteLine();
+Console.WriteLine(" - Where: ");
+Where.Run();
 
 Console.ReadKey();
 
