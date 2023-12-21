@@ -30,6 +30,11 @@ namespace _60_LINQ
 
             var weightsOfPets = pets.Select(pet => pet.Weight);
             Printer.Print(weightsOfPets, nameof(weightsOfPets));
+
+            var heavyPetTypes = pets.Where(pet => pet.Weight > 4)
+                .Select(pet => pet.PetType)
+                .Distinct();
+            Printer.Print(heavyPetTypes, nameof(heavyPetTypes));
         }
     }
 }
