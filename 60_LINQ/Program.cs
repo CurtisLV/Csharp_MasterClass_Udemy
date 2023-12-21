@@ -57,6 +57,10 @@ Console.WriteLine();
 Console.WriteLine(" - Distinct: ");
 Distinct.Run();
 
+Console.WriteLine();
+Console.WriteLine(" - Select: ");
+Select.Run();
+
 Console.ReadKey();
 
 static bool IsAnyWordUpperCase(IEnumerable<string> words)
