@@ -95,3 +95,10 @@ static string FindShortestWord(List<string> words)
 {
     return words.OrderBy(w => w.Length).First();
 }
+
+// fourth coding exercise
+
+static IEnumerable<DateTime> GetFridaysOfYear(int year, IEnumerable<DateTime> dates)
+{
+    return dates.Where(date => date.Year == year && date.DayOfWeek == DayOfWeek.Friday).Distinct();
+}
