@@ -14,5 +14,22 @@ public static class Data
         new Pet(8, "Nyan", PetType.Cat, 2.2f)
     };
 
-    public static IEnumerable<int> numbers = new[] { 16, 8, 9, -1, 2, -2 };
+    public static IEnumerable<int> numbers = new[]
+    {
+        16,
+        8,
+        9,
+        -1,
+        2,
+        -2,
+        -1,
+        8,
+        7,
+        12,
+        -3,
+        3,
+        -7,
+        6,
+        16
+    };
 }

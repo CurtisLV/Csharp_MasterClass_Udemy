@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _60_LINQ.SampleData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace _60_LINQ
     {
         public static void Run()
         {
-            //
+            var pets = Data.Pets;
+            var numbers = Data.numbers;
         }
     }
 }
