@@ -24,6 +24,12 @@ namespace _60_LINQ
 
             IEnumerable<string> numbersAsStrings = numbers.Select(word => word.ToString());
             Printer.Print(numbersAsStrings, nameof(numbersAsStrings));
+
+            var numberedWords = words.Select((word, index) => $"{index + 1}. {word}");
+            Printer.Print(numberedWords, nameof(numberedWords));
+
+            var weightsOfPets = pets.Select(pet => pet.Weight);
+            Printer.Print(weightsOfPets, nameof(weightsOfPets));
         }
     }
 }
