@@ -20,7 +20,10 @@ namespace _60_LINQ
 
             var words = new[] { "little", "brown", "fox" };
             var toUpperCase = words.Select(word => word.ToUpper());
-            Printer.Print(words, nameof(words));
+            Printer.Print(toUpperCase, nameof(toUpperCase));
+
+            IEnumerable<string> numbersAsStrings = numbers.Select(word => word.ToString());
+            Printer.Print(numbersAsStrings, nameof(numbersAsStrings));
         }
     }
 }
