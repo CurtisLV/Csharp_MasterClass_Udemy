@@ -35,6 +35,11 @@ namespace _60_LINQ
                 .Select(pet => pet.PetType)
                 .Distinct();
             Printer.Print(heavyPetTypes, nameof(heavyPetTypes));
+
+            var petsInitials = pets.OrderBy(pet => pet.Name)
+                .Select(pet => $"{pet.Name.First()}.")
+                .Distinct();
+            Printer.Print(petsInitials, nameof(petsInitials));
         }
     }
 }
