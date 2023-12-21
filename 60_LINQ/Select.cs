@@ -40,6 +40,11 @@ namespace _60_LINQ
                 .Select(pet => $"{pet.Name.First()}.")
                 .Distinct();
             Printer.Print(petsInitials, nameof(petsInitials));
+
+            var petsData = pets.Select(
+                pet => $"Pet named {pet.Name}, of type {pet.PetType} and weight {pet.Weight}"
+            );
+            Printer.Print(petsData, nameof(petsData));
         }
     }
 }
