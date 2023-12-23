@@ -21,6 +21,10 @@ namespace _60_LINQ
                 .OrderByDescending(list => list.Average())
                 .Select(list => $"{list.Count} {list.Average()}");
             Printer.Print(orderedListOfNum, nameof(orderedListOfNum));
+
+            // Anonymous objects, they are read only so 2nd line does not work.
+            var pet = new { Name = "Jackie", Type = "Dog" };
+            //pet.Name = "Jack";
         }
     }
 }
