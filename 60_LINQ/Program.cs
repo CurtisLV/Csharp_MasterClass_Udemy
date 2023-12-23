@@ -110,3 +110,9 @@ static IEnumerable<DateTime> GetFridaysOfYear(int year, IEnumerable<DateTime> da
 {
     return dates.Where(date => date.Year == year && date.DayOfWeek == DayOfWeek.Friday).Distinct();
 }
+
+// fifth coding exercise
+static double CalculateAverageDurationInMilliseconds(IEnumerable<TimeSpan> timeSpans)
+{
+    //your code goes here
+}
