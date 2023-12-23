@@ -114,5 +114,10 @@ static IEnumerable<DateTime> GetFridaysOfYear(int year, IEnumerable<DateTime> da
 // fifth coding exercise
 static double CalculateAverageDurationInMilliseconds(IEnumerable<TimeSpan> timeSpans)
 {
-    //your code goes here
+    if (!timeSpans.Any())
+    {
+        throw new ArgumentException();
+    }
+
+    return timeSpans.Select(ts => ts.Milliseconds).Average();
 }
