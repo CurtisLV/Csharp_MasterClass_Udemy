@@ -32,4 +32,11 @@ public static class Data
         6,
         16
     };
+
+    public static IEnumerable<List<int>> listOfNumbers = new List<List<int>>
+    {
+        new List<int> { 15, -92, 74, 31, -48, 5 },
+        new List<int> { -18, 60, -88, 42, 3, -67 },
+        new List<int> { 89, -51, 22, -95, 76, 10 },
+    };
 }
