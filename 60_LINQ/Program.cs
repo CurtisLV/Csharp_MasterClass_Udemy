@@ -53,13 +53,13 @@ foreach (var animal in animalsWithD)
 //Console.WriteLine(" - Where: ");
 //Where.Run();
 
-Console.WriteLine();
-Console.WriteLine(" - Distinct: ");
-Distinct.Run();
+//Console.WriteLine();
+//Console.WriteLine(" - Distinct: ");
+//Distinct.Run();
 
-Console.WriteLine();
-Console.WriteLine(" - Select: ");
-Select.Run();
+//Console.WriteLine();
+//Console.WriteLine(" - Select: ");
+//Select.Run();
 
 Console.WriteLine();
 Console.WriteLine(" - Average: ");
