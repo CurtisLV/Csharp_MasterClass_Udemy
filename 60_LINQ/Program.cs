@@ -61,6 +61,10 @@ Console.WriteLine();
 Console.WriteLine(" - Select: ");
 Select.Run();
 
+Console.WriteLine();
+Console.WriteLine(" - Average: ");
+Average.Run();
+
 Console.ReadKey();
 
 static bool IsAnyWordUpperCase(IEnumerable<string> words)

@@ -17,7 +17,9 @@ namespace _60_LINQ
             var listOfNumbers = Data.listOfNumbers;
 
             // print info count of items and average value, msg ordered by max average to small.
-            var orderedListOfNum = 1;
+            var orderedListOfNum = listOfNumbers
+                .OrderByDescending(list => list.Average())
+                .Select(list => $"{list.Count} {list.Average()}");
             Printer.Print(orderedListOfNum, nameof(orderedListOfNum));
         }
     }
