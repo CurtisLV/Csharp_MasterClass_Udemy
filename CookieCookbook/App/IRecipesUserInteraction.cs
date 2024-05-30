@@ -1,5 +1,5 @@
-﻿using CookieCookbook.Recipes.Ingredients;
-using CookieCookbook.Recipes;
+﻿using CookieCookbook.Recipes;
+using CookieCookbook.Recipes.Ingredients;
 
 namespace CookieCookbook.App;
 
@@ -11,6 +11,3 @@ public interface IRecipesUserInteraction
     void PromptToCreateRecipe();
     IEnumerable<Ingredient> ReadIngredientsFromUser();
 }
-
-
-
