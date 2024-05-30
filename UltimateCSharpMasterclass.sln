@@ -89,9 +89,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "57_GameDataParser", "57_Gam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "58_GenericTypesAndAdvancedUseOfMethods", "058_GenericTypesAndAdvancedUseOfMethods\58_GenericTypesAndAdvancedUseOfMethods.csproj", "{5102DDA7-B7A3-49EB-B701-E852DD0BBA47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "59_CustomCache", "59_CustomCache\59_CustomCache.csproj", "{817DA67E-894A-458C-8484-BB90825B3CAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "59_CustomCache", "59_CustomCache\59_CustomCache.csproj", "{817DA67E-894A-458C-8484-BB90825B3CAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "60_LINQ", "60_LINQ\60_LINQ.csproj", "{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "60_LINQ", "60_LINQ\60_LINQ.csproj", "{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookieCookbook", "..\..\Downloads\CookieCookbook\CookieCookbook\CookieCookbook.csproj", "{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +281,10 @@ Global
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
