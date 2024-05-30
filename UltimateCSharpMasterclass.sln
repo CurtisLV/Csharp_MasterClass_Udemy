@@ -93,7 +93,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "59_CustomCache", "59_Custom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "60_LINQ", "60_LINQ\60_LINQ.csproj", "{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookieCookbook", "..\..\Downloads\CookieCookbook\CookieCookbook\CookieCookbook.csproj", "{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookieCookbook", "CookieCookbook\CookieCookbook.csproj", "{969D6D69-B622-45CA-A695-03D842117E58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -281,10 +281,10 @@ Global
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06F59AE7-E7A0-4B28-BC5C-016D7FDD9528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969D6D69-B622-45CA-A695-03D842117E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969D6D69-B622-45CA-A695-03D842117E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969D6D69-B622-45CA-A695-03D842117E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969D6D69-B622-45CA-A695-03D842117E58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

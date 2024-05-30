@@ -43,7 +43,7 @@ public class RecipesRepository : IRecipesRepository
         {
             var id = int.Parse(textualId);
             var ingredient = _ingredientsRegister.GetById(id);
-            ingredients.Add(ingredient);
+            //ingredients.Add(ingredient);
         }
 
         return new Recipe(ingredients);
