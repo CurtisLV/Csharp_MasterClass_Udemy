@@ -25,19 +25,27 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 
     public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes)
     {
-        if (allRecipes.Count() > 0)
-        {
-            Console.WriteLine("Existing recipes are:" + Environment.NewLine);
+        //if (allRecipes.Count() > 0)
+        //{
+        //    Console.WriteLine("Existing recipes are:" + Environment.NewLine);
 
-            var counter = 1;
-            foreach (var recipe in allRecipes)
-            {
-                Console.WriteLine($"*****{counter}*****");
-                Console.WriteLine(recipe);
-                Console.WriteLine();
-                ++counter;
-            }
-        }
+        //    var counter = 1;
+        //    foreach (var recipe in allRecipes)
+        //    {
+        //        Console.WriteLine($"*****{counter}*****");
+        //        Console.WriteLine(recipe);
+        //        Console.WriteLine();
+        //        ++counter;
+        //    }
+        //}
+
+        var allRecipesAsStrings = allRecipes.Select(
+            (recipe, index) =>
+                $@"*****{index + 1}***** 
+{recipe}"
+        );
+
+        Console.WriteLine(Environment.NewLine, allRecipesAsStrings);
     }
 
     public void PromptToCreateRecipe()
