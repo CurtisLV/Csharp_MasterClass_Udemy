@@ -13,8 +13,10 @@ public class Recipe
 
     public override string ToString()
     {
-        var steps = new List<string>();
-        foreach(var ingredient in Ingredients)
+        var steps = Ingredients.Select(ingredient =>
+            $"{ingredient.Name}. {ingredient.PreparationInstructions}"
+        );
+        foreach (var ingredient in Ingredients)
         {
             steps.Add($"{ingredient.Name}. {ingredient.PreparationInstructions}");
         }
