@@ -17,6 +17,13 @@ public class IngredientsRegister : IIngredientsRegister
 
     public Ingredient GetById(int id)
     {
+        var countOfIngredientsWithGivenId = All.Count(ingredient => ingredient.Id == id);
+        if (countOfIngredientsWithGivenId > 1)
+        {
+            throw new InvalidOperationException(
+                $"More than one ingredients have given ID equal {id}."
+            );
+        }
         return All.FirstOrDefault(ingredient => ingredient.Id == id);
     }
 }
