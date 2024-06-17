@@ -93,7 +93,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "59_CustomCache", "59_Custom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "60_LINQ", "60_LINQ\60_LINQ.csproj", "{AD1E4D66-EB77-472A-BD62-CE79ECEC2CAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookieCookbook", "CookieCookbook\CookieCookbook.csproj", "{969D6D69-B622-45CA-A695-03D842117E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "60.1_CookieCookbook", "CookieCookbook\60.1_CookieCookbook.csproj", "{969D6D69-B622-45CA-A695-03D842117E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "61_dotnet_underHood", "61_dotnet_underHood\61_dotnet_underHood.csproj", "{A0AA4001-3DD8-44E2-A221-C5450C5DF968}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,6 +287,10 @@ Global
 		{969D6D69-B622-45CA-A695-03D842117E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969D6D69-B622-45CA-A695-03D842117E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969D6D69-B622-45CA-A695-03D842117E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AA4001-3DD8-44E2-A221-C5450C5DF968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AA4001-3DD8-44E2-A221-C5450C5DF968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AA4001-3DD8-44E2-A221-C5450C5DF968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AA4001-3DD8-44E2-A221-C5450C5DF968}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
