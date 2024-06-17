@@ -26,10 +26,10 @@ public class IngredientsRegister : IIngredientsRegister
             );
         }
 
-        if (All.Select(ingredient => ingredient.Id).Distinct().Count() != All.Count())
-        {
-            throw new InvalidOperationException($"Some ingredients have duplicated IDs.");
-        }
+        //if (All.Select(ingredient => ingredient.Id).Distinct().Count() != All.Count())
+        //{
+        //    throw new InvalidOperationException($"Some ingredients have duplicated IDs.");
+        //}
 
         return allIngredientsWithGivenId.FirstOrDefault();
     }
