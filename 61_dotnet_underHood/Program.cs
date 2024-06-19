@@ -1,21 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-int number = 5;
-int anothNum = number;
-
-anothNum++;
-
-//Console.WriteLine("Number is " + number);
-//Console.WriteLine("2nd number is " + anothNum);
-
+﻿int number = 5;
 var john = new Person { Name = "John", Age = 35 };
-var person = john;
 
-person.Age = 44;
+AddOneToValue(number);
+AddOneToPerson(john);
 
-//Console.WriteLine("Johns age " + john.Age);
-//Console.WriteLine("Persons age " + person.Age);
-
+Console.WriteLine("This is number " + number);
+Console.WriteLine("This is person " + john.Age);
 
 void AddOneToValue(int number)
 {
