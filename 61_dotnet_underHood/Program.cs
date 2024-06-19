@@ -5,16 +5,27 @@ int anothNum = number;
 
 anothNum++;
 
-Console.WriteLine("Number is " + number);
-Console.WriteLine("2nd number is " + anothNum);
+//Console.WriteLine("Number is " + number);
+//Console.WriteLine("2nd number is " + anothNum);
 
 var john = new Person { Name = "John", Age = 35 };
 var person = john;
 
 person.Age = 44;
 
-Console.WriteLine("Johns age " + john.Age);
-Console.WriteLine("Persons age " + person.Age);
+//Console.WriteLine("Johns age " + john.Age);
+//Console.WriteLine("Persons age " + person.Age);
+
+
+void AddOneToValue(int number)
+{
+    ++number;
+}
+
+void AddOneToPerson(Person person)
+{
+    ++person.Age;
+}
 
 class Person
 {
