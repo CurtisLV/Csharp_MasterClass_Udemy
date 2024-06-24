@@ -1,13 +1,13 @@
 ﻿int number = 5;
 var john = new Person { Name = "John", Age = 35 };
 
-AddOneToValue(number);
+AddOneToValue(ref number);
 AddOneToPerson(john);
 
 Console.WriteLine("This is number " + number);
 Console.WriteLine("This is person " + john.Age);
 
-void AddOneToValue(int number)
+void AddOneToValue(ref int number)
 {
     ++number;
 }
