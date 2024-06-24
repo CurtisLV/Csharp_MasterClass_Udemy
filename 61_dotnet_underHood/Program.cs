@@ -12,6 +12,10 @@ int otherNumber = 15;
 MethodWithOutParameter(out otherNumber);
 Console.WriteLine("Other number is " + otherNumber);
 
+DateTime today = new DateTime(2024, 6, 24);
+RefModifierFastForwardToSummerExercise.FastForwardToSummer(today);
+Console.WriteLine("Today is " + today);
+
 void MethodWithOutParameter(out int number)
 {
     number = 10;
@@ -34,10 +38,10 @@ class Person
 }
 
 // Coding exercise 1
-public static class RefModifierFastForwardToSummerExercise
+
+public class RefModifierFastForwardToSummerExercise
 {
-    public static void FastForwardToSummer( /*your code goes here*/
-    )
+    public static void FastForwardToSummer(DateTime dateTime)
     {
         //your code goes here
     }
