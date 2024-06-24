@@ -13,7 +13,7 @@ MethodWithOutParameter(out otherNumber);
 Console.WriteLine("Other number is " + otherNumber);
 
 DateTime today = new DateTime(2024, 6, 24);
-RefModifierFastForwardToSummerExercise.FastForwardToSummer(today);
+RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 Console.WriteLine("Today is " + today);
 
 void MethodWithOutParameter(out int number)
@@ -41,8 +41,11 @@ class Person
 
 public class RefModifierFastForwardToSummerExercise
 {
-    public static void FastForwardToSummer(DateTime dateTime)
+    public static void FastForwardToSummer(ref DateTime dateTime)
     {
-        //your code goes here
+        if (dateTime < new DateTime(2024, 6, 1))
+        {
+            dateTime = new DateTime(2024, 6, 1);
+        }
     }
 }
