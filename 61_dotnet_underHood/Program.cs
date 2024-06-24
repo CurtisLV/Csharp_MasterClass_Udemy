@@ -3,9 +3,15 @@ var john = new Person { Name = "John", Age = 35 };
 
 AddOneToValue(ref number);
 AddOneToPerson(john);
+MethodWithOutParameter(out int otherNumber);
 
 Console.WriteLine("This is number " + number);
 Console.WriteLine("This is person " + john.Age);
+
+void MethodWithOutParameter(out int number)
+{
+    number = 10;
+}
 
 void AddOneToValue(ref int number)
 {
