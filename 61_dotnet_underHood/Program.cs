@@ -1,4 +1,6 @@
-﻿int number = 5;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+int number = 5;
 var john = new Person { Name = "John", Age = 35 };
 
 AddOneToValue(ref number);
@@ -43,11 +45,12 @@ class Person
 
 public class RefModifierFastForwardToSummerExercise
 {
-    public static void FastForwardToSummer(ref DateTime dateTime)
+    public static void FastForwardToSummer(ref DateTime date)
     {
-        if (dateTime.Month < 6)
+        var firstDateOfSummer = new DateTime(date.Year, 6, 21);
+        if (date < firstDateOfSummer)
         {
-            dateTime = new DateTime(dateTime.Year, 6, 21);
+            date = firstDateOfSummer;
         }
     }
 }
