@@ -32,3 +32,13 @@ class Person
     public string Name { get; set; }
     public int Age { get; set; }
 }
+
+// Coding exercise 1
+public static class RefModifierFastForwardToSummerExercise
+{
+    public static void FastForwardToSummer( /*your code goes here*/
+    )
+    {
+        //your code goes here
+    }
+}
