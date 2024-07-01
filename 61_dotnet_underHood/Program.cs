@@ -1,24 +1,27 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿//int number = 5;
+//var john = new Person { Name = "John", Age = 35 };
 
-int number = 5;
-var john = new Person { Name = "John", Age = 35 };
+//AddOneToValue(ref number);
+//AddOneToPerson(john);
 
-AddOneToValue(ref number);
-AddOneToPerson(john);
+//Console.WriteLine("This is number " + number);
+//Console.WriteLine("This is person " + john.Age);
 
-Console.WriteLine("This is number " + number);
-Console.WriteLine("This is person " + john.Age);
+//int otherNumber = 15;
 
-int otherNumber = 15;
+//MethodWithOutParameter(out otherNumber);
+//Console.WriteLine("Other number is " + otherNumber);
 
-MethodWithOutParameter(out otherNumber);
-Console.WriteLine("Other number is " + otherNumber);
+////DateTime today;
 
-//DateTime today;
+//DateTime today = new DateTime(2024, 2, 24);
+//RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
+//Console.WriteLine("Today is " + today);
 
-DateTime today = new DateTime(2024, 2, 24);
-RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
-Console.WriteLine("Today is " + today);
+void AddOneToList(List<int> numbers)
+{
+    numbers.Add(1);
+}
 
 void MethodWithOutParameter(out int number)
 {
