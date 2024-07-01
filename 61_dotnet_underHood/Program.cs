@@ -27,6 +27,11 @@ var variousObjects = new List<object>
     new Person { Name = "Anna", Age = 61 }
 };
 
+foreach (object someObj in variousObjects)
+{
+    Console.WriteLine(someObj.GetType().Name);
+}
+
 var list = new List<int> { 1, 2, 3 };
 
 AddOneToList(ref list);
