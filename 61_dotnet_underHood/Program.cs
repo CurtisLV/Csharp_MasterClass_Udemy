@@ -18,6 +18,10 @@
 //RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 //Console.WriteLine("Today is " + today);
 
+var list = new List<int> { 1, 2, 3 };
+
+AddOneToList(list);
+
 void AddOneToList(List<int> numbers)
 {
     numbers.Add(1);
