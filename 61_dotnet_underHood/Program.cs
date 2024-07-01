@@ -18,11 +18,20 @@
 //RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 //Console.WriteLine("Today is " + today);
 
+var variousObjects = new List<object>
+{
+    1,
+    1.5m,
+    new DateTime(2024, 6, 1),
+    "hello",
+    new Person { Name = "Anna", Age = 61 }
+};
+
 var list = new List<int> { 1, 2, 3 };
 
-AddOneToList(list);
+AddOneToList(ref list);
 
-void AddOneToList(List<int> numbers)
+void AddOneToList(ref List<int> numbers)
 {
     numbers.Add(1);
 }
