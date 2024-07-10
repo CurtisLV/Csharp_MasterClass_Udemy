@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("13_NumericTypesSuggesterTests")]
+
 namespace NumericTypesSuggester;
 
 internal class NumericTypeSuggester
@@ -18,31 +19,28 @@ internal class NumericTypeSuggester
     public const string Decimal = "decimal";
     public const string Double = "double";
     public const string Float = "float";
-    public const string ImpossibleRepresentation =
-        "Impossible representation";
+    public const string ImpossibleRepresentation = "Impossible representation";
 
     public static string GetName(
         BigInteger minValue,
         BigInteger maxValue,
         bool integralOnly,
-        bool mustBePrecise)
+        bool mustBePrecise
+    )
     {
-        return integralOnly ?
-            GetIntegralNumberName(minValue, maxValue) :
-            GetFloatingPointNumberName(
-                minValue, maxValue, mustBePrecise);
+        return integralOnly
+            ? GetIntegralNumberName(minValue, maxValue)
+            : GetFloatingPointNumberName(minValue, maxValue, mustBePrecise);
     }
 
-    private static string GetIntegralNumberName(
-        BigInteger minValue, BigInteger maxValue)
+    private static string GetIntegralNumberName(BigInteger minValue, BigInteger maxValue)
     {
-        return minValue >= 0 ?
-            GetUnsignedIntegralNumberName(maxValue) :
-            GetSignedIntegralNumberName(minValue, maxValue);
+        return minValue >= 0
+            ? GetUnsignedIntegralNumberName(maxValue)
+            : GetSignedIntegralNumberName(minValue, maxValue);
     }
 
-    private static string GetUnsignedIntegralNumberName(
-        BigInteger maxValue)
+    private static string GetUnsignedIntegralNumberName(BigInteger maxValue)
     {
         if (maxValue <= byte.MaxValue)
         {
@@ -63,26 +61,21 @@ internal class NumericTypeSuggester
         return BigInteger;
     }
 
-    private static string GetSignedIntegralNumberName(
-        BigInteger minValue, BigInteger maxValue)
+    private static string GetSignedIntegralNumberName(BigInteger minValue, BigInteger maxValue)
     {
-        if (minValue >= sbyte.MinValue &&
-           maxValue <= sbyte.MaxValue)
+        if (minValue >= sbyte.MinValue && maxValue <= sbyte.MaxValue)
         {
             return SByte;
         }
-        if (minValue >= short.MinValue &&
-            maxValue <= short.MaxValue)
+        if (minValue >= short.MinValue && maxValue <= short.MaxValue)
         {
             return Short;
         }
-        if (minValue >= int.MinValue &&
-            maxValue <= int.MaxValue)
+        if (minValue >= int.MinValue && maxValue <= int.MaxValue)
         {
             return Int;
         }
-        if (minValue >= long.MinValue &&
-            maxValue <= long.MaxValue)
+        if (minValue >= long.MinValue && maxValue <= long.MaxValue)
         {
             return Long;
         }
@@ -92,20 +85,23 @@ internal class NumericTypeSuggester
     private static string GetFloatingPointNumberName(
         BigInteger minValue,
         BigInteger maxValue,
-        bool mustBePrecise)
+        bool mustBePrecise
+    )
     {
-        return mustBePrecise ?
-            GetPreciseFloatingPointNumberName(
-                minValue, maxValue) :
-            GetImpreciseFloatingPointNumberName(
-                minValue, maxValue);
+        return mustBePrecise
+            ? GetPreciseFloatingPointNumberName(minValue, maxValue)
+            : GetImpreciseFloatingPointNumberName(minValue, maxValue);
     }
 
     private static string GetPreciseFloatingPointNumberName(
-        BigInteger minValue, BigInteger maxValue)
+        BigInteger minValue,
+        BigInteger maxValue
+    )
     {
-        if (minValue >= new BigInteger(decimal.MinValue) &&
-           maxValue <= new BigInteger(decimal.MaxValue))
+        if (
+            minValue >= new BigInteger(decimal.MinValue)
+            && maxValue <= new BigInteger(decimal.MaxValue)
+        )
         {
             return Decimal;
         }
@@ -113,15 +109,21 @@ internal class NumericTypeSuggester
     }
 
     private static string GetImpreciseFloatingPointNumberName(
-        BigInteger minValue, BigInteger maxValue)
+        BigInteger minValue,
+        BigInteger maxValue
+    )
     {
-        if (minValue >= new BigInteger(float.MinValue) &&
-           maxValue <= new BigInteger(float.MaxValue))
+        if (
+            minValue >= new BigInteger(float.MinValue)
+            && maxValue <= new BigInteger(float.MaxValue)
+        )
         {
             return Float;
         }
-        if (minValue >= new BigInteger(double.MinValue) &&
-            maxValue <= new BigInteger(double.MaxValue))
+        if (
+            minValue >= new BigInteger(double.MinValue)
+            && maxValue <= new BigInteger(double.MaxValue)
+        )
         {
             return Double;
         }
