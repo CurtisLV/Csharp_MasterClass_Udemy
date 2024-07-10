@@ -1,6 +1,6 @@
-﻿using NumericTypesSuggester;
+﻿using System.Numerics;
+using NumericTypesSuggester;
 using NUnit.Framework;
-using System.Numerics;
 
 [TestFixture]
 public class NumericTypeSuggesterTests
