@@ -1,4 +1,6 @@
-﻿//int number = 5;
+﻿using System.Collections;
+
+int number = 5;
 //var john = new Person { Name = "John", Age = 35 };
 
 //AddOneToValue(ref number);
@@ -17,6 +19,15 @@
 //DateTime today = new DateTime(2024, 2, 24);
 //RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 //Console.WriteLine("Today is " + today);
+
+
+
+object boxedNumber = number;
+
+
+var numbers1 = new List<int> { 1, 2, 3, 4, 5};
+var numbers2 = new ArrayList { 1, 2, 3, 4, 5};
+
 
 var variousObjects = new List<object>
 {
