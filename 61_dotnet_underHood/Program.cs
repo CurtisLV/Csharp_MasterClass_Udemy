@@ -23,10 +23,15 @@ int number = 5;
 
 
 object boxedNumber = number;
+int unboxedNumber = (int)boxedNumber;
 
+IComparable<int> intAsComparble = number;
 
 var numbers1 = new List<int> { 1, 2, 3, 4, 5};
 var numbers2 = new ArrayList { 1, 2, 3, 4, 5};
+
+
+var numbers3 = new List<IComparable<int>> { 1, 2, 3, 4, 5};
 
 
 var variousObjects = new List<object>
