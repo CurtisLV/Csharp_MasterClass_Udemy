@@ -20,8 +20,9 @@ int number = 5;
 //DateTime today = new DateTime(2024, 2, 24);
 //RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 //Console.WriteLine("Today is " + today);
+var someClassInstance = new SomeClass();
 
-
+Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
 
 object boxedNumber = number;
 int unboxedNumber = (int)boxedNumber;
@@ -94,6 +95,8 @@ public class RefModifierFastForwardToSummerExercise
 public class SomeClass
 {
     private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
+
+    public static int CountOfInstances = _allExistingInstances.Count;
 
     public SomeClass()
     {
