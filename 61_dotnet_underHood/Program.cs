@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 
 int number = 5;
+
 //var john = new Person { Name = "John", Age = 35 };
 
 //AddOneToValue(ref number);
@@ -27,12 +28,10 @@ int unboxedNumber = (int)boxedNumber;
 
 IComparable<int> intAsComparble = number;
 
-var numbers1 = new List<int> { 1, 2, 3, 4, 5};
-var numbers2 = new ArrayList { 1, 2, 3, 4, 5};
+var numbers1 = new List<int> { 1, 2, 3, 4, 5 };
+var numbers2 = new ArrayList { 1, 2, 3, 4, 5 };
 
-
-var numbers3 = new List<IComparable<int>> { 1, 2, 3, 4, 5};
-
+var numbers3 = new List<IComparable<int>> { 1, 2, 3, 4, 5 };
 
 var variousObjects = new List<object>
 {
@@ -89,5 +88,15 @@ public class RefModifierFastForwardToSummerExercise
         {
             date = firstDateOfSummer;
         }
+    }
+}
+
+public class SomeClass
+{
+    private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
+
+    public SomeClass()
+    {
+        _allExistingInstances.Add(this);
     }
 }
