@@ -35,6 +35,8 @@ for (var i = 0; i < 5; i++)
     var person = new Person { Name = "Vārds", Age = 35 };
 }
 
+//GC.Collect();
+
 object boxedNumber = number;
 int unboxedNumber = (int)boxedNumber;
 
