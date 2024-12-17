@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _61_dotnet_underHood;
 
-public class FileWriter
+public class FileWriter : IDisposable
 {
     private readonly StreamWriter _streamWriter;
 
@@ -20,9 +21,14 @@ public class FileWriter
         _streamWriter.WriteLine(text);
         _streamWriter?.Flush();
     }
+
+    public void Dispose()
+    {
+        _streamWriter.Dispose();
+    }
 }
 
-public class SpecificLineFromTextFileReader
+public class SpecificLineFromTextFileReader : IDisposable
 {
     private readonly StreamReader _streamReader;
 
@@ -42,5 +48,10 @@ public class SpecificLineFromTextFileReader
         }
 
         return _streamReader.ReadLine();
+    }
+
+    public void Dispose()
+    {
+        _streamReader.Dispose();
     }
 }
