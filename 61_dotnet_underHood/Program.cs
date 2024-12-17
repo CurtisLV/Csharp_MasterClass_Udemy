@@ -3,10 +3,11 @@ using _61_dotnet_underHood;
 
 const string filepath = "file.txt";
 
-using var writer = new FileWriter(filepath);
-
-writer.Write("Hello, World!");
-writer.Write("Good day to be alive!");
+using (var writer = new FileWriter(filepath))
+{
+    writer.Write("Hello, World!");
+    writer.Write("Good day to be alive!");
+}
 
 using var reader = new SpecificLineFromTextFileReader(filepath);
 
@@ -135,4 +136,29 @@ public class RefModifierFastForwardToSummerExercise
             date = firstDateOfSummer;
         }
     }
+}
+
+// Coding exercise 2
+
+public class AllLinesFromTextFileReader // your code goes here
+{
+    private readonly StreamReader _streamReader;
+
+    public AllLinesFromTextFileReader(string filePath)
+    {
+        _streamReader =  //your code goes here
+        }
+
+    public List<string> ReadAllLines()
+    {
+        var result = new List<string>();
+        while (!_streamReader.EndOfStream)
+        {
+            result.Add(_streamReader.ReadLine());
+        }
+
+        return result;
+    }
+
+    //your code goes here
 }
