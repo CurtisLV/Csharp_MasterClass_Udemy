@@ -140,14 +140,14 @@ public class RefModifierFastForwardToSummerExercise
 
 // Coding exercise 2
 
-public class AllLinesFromTextFileReader // your code goes here
+public class AllLinesFromTextFileReader : IDisposable
 {
     private readonly StreamReader _streamReader;
 
     public AllLinesFromTextFileReader(string filePath)
     {
-        _streamReader =  //your code goes here
-        }
+        _streamReader = new StreamReader(filePath);
+    }
 
     public List<string> ReadAllLines()
     {
@@ -160,5 +160,8 @@ public class AllLinesFromTextFileReader // your code goes here
         return result;
     }
 
-    //your code goes here
+    public void Dispose()
+    {
+        throw new NotImplementedException();
+    }
 }
