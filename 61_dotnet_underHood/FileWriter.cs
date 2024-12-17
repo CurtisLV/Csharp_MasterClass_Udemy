@@ -8,13 +8,15 @@ namespace _61_dotnet_underHood;
 
 public class FileWriter
 {
-    public FileWriter(string path)
+    private readonly StreamWriter _streamWriter;
+
+    public FileWriter(string filepath)
     {
-        //
+        _streamWriter = new StreamWriter(filepath, true);
     }
 
     public void Write(string text)
     {
-        //
+        _streamWriter.WriteLine(text);
     }
 }

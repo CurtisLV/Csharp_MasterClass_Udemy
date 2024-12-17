@@ -1,4 +1,10 @@
 ﻿using System.Collections;
+using _61_dotnet_underHood;
+
+const string filepath = "file.txt";
+var writer = new FileWriter(filepath);
+writer.Write("Hello, World!");
+writer.Write("Good day to be alive!");
 
 int number = 5;
 
