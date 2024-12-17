@@ -2,9 +2,16 @@
 using _61_dotnet_underHood;
 
 const string filepath = "file.txt";
-var writer = new FileWriter(filepath);
-writer.Write("Hello, World!");
-writer.Write("Good day to be alive!");
+
+//var writer = new FileWriter(filepath);
+
+//writer.Write("Hello, World!");
+//writer.Write("Good day to be alive!");
+
+var reader = new SpecificLineFromTextFileReader(filepath);
+
+var third = reader.ReadLineNumber(3);
+Console.WriteLine($"Content of third line: {third}");
 
 int number = 5;
 
