@@ -30,6 +30,11 @@ if (someCondition)
 
 Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
 
+for (var i = 0; i < 5; i++)
+{
+    var person = new Person { Name = "Vārds", Age = 35 };
+}
+
 object boxedNumber = number;
 int unboxedNumber = (int)boxedNumber;
 
@@ -82,6 +87,23 @@ class Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
+
+    ~Person()
+    {
+        Console.WriteLine($"Person named {Name} is being destructed.");
+    }
+}
+
+public class SomeClass
+{
+    private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
+
+    public static int CountOfInstances => _allExistingInstances.Count;
+
+    public SomeClass()
+    {
+        _allExistingInstances.Add(this);
+    }
 }
 
 // Coding exercise 1
@@ -95,17 +117,5 @@ public class RefModifierFastForwardToSummerExercise
         {
             date = firstDateOfSummer;
         }
-    }
-}
-
-public class SomeClass
-{
-    private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
-
-    public static int CountOfInstances => _allExistingInstances.Count;
-
-    public SomeClass()
-    {
-        _allExistingInstances.Add(this);
     }
 }
