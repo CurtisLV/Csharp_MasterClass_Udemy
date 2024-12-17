@@ -33,7 +33,10 @@ public class SpecificLineFromTextFileReader
 
     public string ReadLineNumber(int lineNumber)
     {
-        for (int i = 0; i < lineNumber - 1; i++)
+        _streamReader.DiscardBufferedData();
+        _streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
+
+        for (var i = 0; i < lineNumber - 1; ++i)
         {
             _streamReader.ReadLine();
         }

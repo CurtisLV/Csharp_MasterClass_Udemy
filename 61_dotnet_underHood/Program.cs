@@ -11,7 +11,9 @@ const string filepath = "file.txt";
 var reader = new SpecificLineFromTextFileReader(filepath);
 
 var third = reader.ReadLineNumber(3);
+var fourth = reader.ReadLineNumber(4);
 Console.WriteLine($"Content of third line: {third}");
+Console.WriteLine($"Content of fourth line: {fourth}");
 
 int number = 5;
 
