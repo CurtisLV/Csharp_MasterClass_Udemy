@@ -3,20 +3,17 @@ using _61_dotnet_underHood;
 
 const string filepath = "file.txt";
 
-using (var writer = new FileWriter(filepath))
-{
-    writer.Write("Hello, World!");
-    writer.Write("Good day to be alive!");
-}
+using var writer = new FileWriter(filepath);
 
-using (var reader = new SpecificLineFromTextFileReader(filepath))
-{
-    var third = reader.ReadLineNumber(3);
-    var fourth = reader.ReadLineNumber(4);
+writer.Write("Hello, World!");
+writer.Write("Good day to be alive!");
 
-    Console.WriteLine($"Content of third line: {third}");
-    Console.WriteLine($"Content of fourth line: {fourth}");
-}
+using var reader = new SpecificLineFromTextFileReader(filepath);
+
+var third = reader.ReadLineNumber(3);
+var fourth = reader.ReadLineNumber(4);
+Console.WriteLine($"Content of third line: {third}");
+Console.WriteLine($"Content of fourth line: {fourth}");
 
 int number = 5;
 
