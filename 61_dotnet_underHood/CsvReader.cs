@@ -14,6 +14,15 @@ public class CsvReader
 
         const string Separator = ",";
         var columns = streamReader.ReadLine().Split(Separator);
+
+        var rows = new List<string[]>();
+        while (!streamReader.EndOfStream)
+        {
+            var cellsInRow = streamReader.ReadLine().Split(Separator);
+            rows.Add(cellsInRow);
+        }
+
+        return new CsvData(columns, rows);
     }
 }
 

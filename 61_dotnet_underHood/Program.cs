@@ -1,22 +1,22 @@
 ﻿using System.Collections;
 using _61_dotnet_underHood;
 
-const string filepath = "file.txt";
+//const string filepath = "file.txt";
 
-using (var writer = new FileWriter(filepath))
-{
-    writer.Write("Hello, World!");
-    writer.Write("Good day to be alive!");
-}
+//using (var writer = new FileWriter(filepath))
+//{
+//    writer.Write("Hello, World!");
+//    writer.Write("Good day to be alive!");
+//}
 
-using var reader = new SpecificLineFromTextFileReader(filepath);
+//using var reader = new SpecificLineFromTextFileReader(filepath);
 
-var third = reader.ReadLineNumber(3);
-var fourth = reader.ReadLineNumber(4);
-Console.WriteLine($"Content of third line: {third}");
-Console.WriteLine($"Content of fourth line: {fourth}");
+//var third = reader.ReadLineNumber(3);
+//var fourth = reader.ReadLineNumber(4);
+//Console.WriteLine($"Content of third line: {third}");
+//Console.WriteLine($"Content of fourth line: {fourth}");
 
-int number = 5;
+//int number = 5;
 
 //var john = new Person { Name = "John", Age = 35 };
 
@@ -37,31 +37,31 @@ int number = 5;
 //RefModifierFastForwardToSummerExercise.FastForwardToSummer(ref today);
 //Console.WriteLine("Today is " + today);
 
-bool someCondition = true;
+//bool someCondition = true;
 
-if (someCondition)
-{
-    var someClassInstance = new SomeClass();
-}
+//if (someCondition)
+//{
+//    var someClassInstance = new SomeClass();
+//}
 
-Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
+//Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
 
-for (var i = 0; i < 5; i++)
-{
-    var person = new Person { Name = "Vārds", Age = 35 };
-}
+//for (var i = 0; i < 5; i++)
+//{
+//    var person = new Person { Name = "Vārds", Age = 35 };
+//}
 
-//GC.Collect();
+////GC.Collect();
 
-object boxedNumber = number;
-int unboxedNumber = (int)boxedNumber;
+//object boxedNumber = number;
+//int unboxedNumber = (int)boxedNumber;
 
-IComparable<int> intAsComparble = number;
+//IComparable<int> intAsComparble = number;
 
-var numbers1 = new List<int> { 1, 2, 3, 4, 5 };
-var numbers2 = new ArrayList { 1, 2, 3, 4, 5 };
+//var numbers1 = new List<int> { 1, 2, 3, 4, 5 };
+//var numbers2 = new ArrayList { 1, 2, 3, 4, 5 };
 
-var numbers3 = new List<IComparable<int>> { 1, 2, 3, 4, 5 };
+//var numbers3 = new List<IComparable<int>> { 1, 2, 3, 4, 5 };
 
 var variousObjects = new List<object>
 {
@@ -162,6 +162,6 @@ public class AllLinesFromTextFileReader : IDisposable
 
     public void Dispose()
     {
-        _streamReader.Dispose(); 
+        _streamReader.Dispose();
     }
 }
