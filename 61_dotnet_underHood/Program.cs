@@ -162,6 +162,6 @@ public class AllLinesFromTextFileReader : IDisposable
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        _streamReader.Dispose();
     }
 }
