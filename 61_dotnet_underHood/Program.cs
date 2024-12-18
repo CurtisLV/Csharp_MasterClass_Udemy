@@ -1,6 +1,12 @@
 ﻿using System.Collections;
 using _61_dotnet_underHood;
 
+const string path = "C:\\Users\\s3257b\\Desktop\\sampleData.csv";
+
+var csvReader = new CsvReader().Read(path);
+
+Console.ReadKey();
+
 //const string filepath = "file.txt";
 
 //using (var writer = new FileWriter(filepath))
