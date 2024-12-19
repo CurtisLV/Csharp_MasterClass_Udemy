@@ -1,6 +1,5 @@
 ﻿using CsvDataAccess.CsvReading;
 using CsvDataAccess.Interface;
-using CsvDataAccess.OldSolution;
 
 namespace CsvDataAccess.NewSolution;
 
@@ -8,7 +7,7 @@ public class FastTableDataBuilder : ITableDataBuilder
 {
     public ITableData Build(CsvData csvData)
     {
-        var resultRows = new List<Row>();
+        var resultRows = new List<FastRow>();
 
         foreach (var row in csvData.Rows)
         {
@@ -25,10 +24,10 @@ public class FastTableDataBuilder : ITableDataBuilder
                 }
             }
 
-            resultRows.Add(new Row(newRowData));
+            resultRows.Add(new FastRow(newRowData));
         }
 
-        return new TableData(csvData.Columns, resultRows);
+        return new FastTableData(csvData.Columns, resultRows);
     }
 
     private object ConvertValueToTargetType(string value)
@@ -68,6 +67,28 @@ public class FastRow
 
     public object GetAtColumn(string columnName)
     {
-        return _data[columnName];
+        if (_data.ContainsKey(columnName))
+        {
+            return _data[columnName];
+        }
+        return null;
+    }
+}
+
+public class FastTableData : ITableData
+{
+    private readonly List<FastRow> _rows;
+    public int RowCount => _rows.Count;
+    public IEnumerable<string> Columns { get; }
+
+    public FastTableData(IEnumerable<string> columns, List<FastRow> rows)
+    {
+        _rows = rows;
+        Columns = columns;
+    }
+
+    public object GetValue(string columnName, int rowIndex)
+    {
+        return _rows[rowIndex].GetAtColumn(columnName);
     }
 }
