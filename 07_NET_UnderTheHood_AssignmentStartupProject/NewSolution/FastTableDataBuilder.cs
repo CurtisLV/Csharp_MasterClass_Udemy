@@ -8,10 +8,10 @@ public class FastTableDataBuilder : ITableDataBuilder
     public ITableData Build(CsvData csvData)
     {
         var resultRows = new List<FastRow>();
-        var newRow = new FastRow();
 
         foreach (var row in csvData.Rows)
         {
+            var newRow = new FastRow();
             for (int columnIndex = 0; columnIndex < csvData.Columns.Length; ++columnIndex)
             {
                 var column = csvData.Columns[columnIndex];

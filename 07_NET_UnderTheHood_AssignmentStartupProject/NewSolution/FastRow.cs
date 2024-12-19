@@ -2,10 +2,10 @@
 
 public class FastRow
 {
-    private Dictionary<string, int> _intsData;
-    private Dictionary<string, bool> _boolsData;
-    private Dictionary<string, decimal> _decimalsData;
-    private Dictionary<string, string> _stringsData;
+    private Dictionary<string, bool> _boolsData = new();
+    private Dictionary<string, int> _intsData = new();
+    private Dictionary<string, decimal> _decimalsData = new();
+    private Dictionary<string, string> _stringsData = new();
 
     public void AssignCell(string columnName, bool value)
     {
