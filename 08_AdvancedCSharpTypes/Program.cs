@@ -143,11 +143,10 @@ string FormatHousesData(IEnumerable<House> houses)
 {
     return string.Join(
         "\n",
-        houses.Select(
-            house =>
-                $"Owner is {house.OwnerName}, "
-                + $"address is {house.Address.Number} "
-                + $"{house.Address.Street}"
+        houses.Select(house =>
+            $"Owner is {house.OwnerName}, "
+            + $"address is {house.Address.Number} "
+            + $"{house.Address.Street}"
         )
     );
 }
@@ -258,8 +257,8 @@ class Validator
     {
         var type = obj.GetType();
         var propertiesToValidate = type.GetProperties()
-            .Where(
-                property => Attribute.IsDefined(property, typeof(StringLengthValidateAttribute))
+            .Where(property =>
+                Attribute.IsDefined(property, typeof(StringLengthValidateAttribute))
             );
 
         foreach (var property in propertiesToValidate)
