@@ -65,6 +65,15 @@ class Validator
                     $"Attribute {nameof(StringLengthValidateAttribute)} can only be applied to strings"
                 );
             }
+            var value = (string)propertyValue;
+            var attribute = (StringLengthValidateAttribute)
+                property.GetCustomAttributes(typeof(StringLengthValidateAttribute), false).First();
+            if (value.Length < attribute.Min || value.Length > attribute.Max)
+            {
+                Console.WriteLine($"Property {property.Name} is invalid. Value is {value}");
+                return false;
+            }
         }
+        return true;
     }
 }
