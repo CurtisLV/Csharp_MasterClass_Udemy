@@ -33,6 +33,7 @@ public class Person
     public Person(string name) => Name = name;
 }
 
+[AttributeUsage(AttributeTargets.Property)]
 class StringLengthValidateAttribute : Attribute
 {
     public int Min { get; }
@@ -42,5 +43,28 @@ class StringLengthValidateAttribute : Attribute
     {
         Min = min;
         Max = max;
+    }
+}
+
+class Validator
+{
+    public bool Validate(object obj)
+    {
+        var type = obj.GetType();
+        var propertiesToValidate = type.GetProperties()
+            .Where(property =>
+                Attribute.IsDefined(property, typeof(StringLengthValidateAttribute))
+            );
+
+        foreach (var property in propertiesToValidate)
+        {
+            object? propertyValue = property.GetValue(obj);
+            if (propertyValue is not string)
+            {
+                throw new InvalidOperationException(
+                    $"Attribute {nameof(StringLengthValidateAttribute)} can only be applied to strings"
+                );
+            }
+        }
     }
 }
