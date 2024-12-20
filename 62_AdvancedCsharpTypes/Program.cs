@@ -1,4 +1,13 @@
-﻿public class Person
+﻿Console.ReadKey();
+
+public class Dog
+{
+    public string Name { get; } // length must be between 2 and 10 chars
+
+    public Dog(string name) => Name = name;
+}
+
+public class Person
 {
     public string Name { get; }
     public int YearOfBirth { get; }
