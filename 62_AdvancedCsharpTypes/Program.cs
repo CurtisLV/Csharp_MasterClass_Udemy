@@ -13,11 +13,15 @@ var anotherPoint = point;
 
 anotherPoint.Y = 100;
 
+//Point nullPoint = null;
+Person person = new Person();
+
 Console.WriteLine($"Point is {point}");
 Console.WriteLine($"anotherPoint is {anotherPoint}");
 
 SomeMethod(5);
-SomeMethod(new Person());
+
+//SomeMethod(new Person());
 
 Console.ReadKey();
 
@@ -132,8 +136,16 @@ struct Point
     }
 }
 
+struct DerivedPoint : Point
+{
+    //
+}
+
 class Person
 {
+    private Point _favouritePoint;
+    private Person _favouritePerson;
+
     public int Id { get; init; }
     public string Name { get; init; }
 }
