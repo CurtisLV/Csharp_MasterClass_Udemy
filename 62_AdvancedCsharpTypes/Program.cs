@@ -119,7 +119,7 @@ public class SomeAttribute : Attribute
 
 // Structs
 
-struct Point
+struct Point : IComparable<Point>
 {
     public int X { get; set; }
     public int Y { get; set; }
@@ -133,6 +133,11 @@ struct Point
     public override string ToString()
     {
         return $"X: {X}, Y: {Y}";
+    }
+
+    public int CompareTo(Point other)
+    {
+        throw new NotImplementedException();
     }
 }
 
