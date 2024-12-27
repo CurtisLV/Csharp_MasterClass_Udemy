@@ -46,12 +46,6 @@ class StringLengthValidateAttribute : Attribute
     }
 }
 
-[AttributeUsage(AttributeTargets.Property)]
-class MustBeLargerThanAttribute : Attribute
-{
-    public int Min { get; }
-}
-
 class Validator
 {
     public bool Validate(object obj)
@@ -84,5 +78,15 @@ class Validator
     }
 }
 
-
 // First exercise
+
+[AttributeUsage(AttributeTargets.Property)]
+class MustBeLargerThanAttribute : Attribute
+{
+    public int Value { get; }
+
+    public MustBeLargerThanAttribute(int value)
+    {
+        Value = value;
+    }
+}
