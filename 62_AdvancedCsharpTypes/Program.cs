@@ -8,7 +8,24 @@ var validator = new Validator();
 Console.WriteLine(validator.Validate(validPerson) ? "Person is valid" : "Person is invalid");
 Console.WriteLine(validator.Validate(invalidDog) ? "Dog is valid" : "Dog is invalid");
 
+var point = new Point(1, 3);
+var anotherPoint = point;
+
+anotherPoint.Y = 100;
+
+Console.WriteLine($"Point is {point}");
+Console.WriteLine($"anotherPoint is {anotherPoint}");
+
+SomeMethod(5);
+SomeMethod(new Person());
+
 Console.ReadKey();
+
+void SomeMethod<T>(T param)
+    where T : struct // done so that this method now accepts only value types
+{
+    //
+}
 
 // Attributes
 
@@ -111,7 +128,7 @@ struct Point
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"X: {X}, Y: {Y}";
     }
 }
 
