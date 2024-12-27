@@ -136,11 +136,6 @@ struct Point
     }
 }
 
-struct DerivedPoint : Point
-{
-    //
-}
-
 class Person
 {
     private Point _favouritePoint;
