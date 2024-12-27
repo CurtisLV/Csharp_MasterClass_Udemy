@@ -81,7 +81,7 @@ class Validator
 // First exercise
 
 [AttributeUsage(AttributeTargets.Property)]
-class MustBeLargerThanAttribute : Attribute
+public class MustBeLargerThanAttribute : Attribute
 {
     public int Value { get; }
 
