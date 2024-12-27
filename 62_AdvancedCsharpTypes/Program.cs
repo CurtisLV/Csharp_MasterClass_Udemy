@@ -78,11 +78,17 @@ class Validator
     }
 }
 
+[Some(new int[] { 1, 2, 3 })]
+public class SomeClass
+{
+    //
+}
+
 public class SomeAttribute : Attribute
 {
-    public List<int> Numbers { get; }
+    public int[] Numbers { get; }
 
-    public SomeAttribute(List<int> numbers)
+    public SomeAttribute(int[] numbers)
     {
         Numbers = numbers;
     }
