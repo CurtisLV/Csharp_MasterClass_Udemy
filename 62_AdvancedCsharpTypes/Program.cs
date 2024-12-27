@@ -78,15 +78,25 @@ class Validator
     }
 }
 
+public class SomeAttribute : Attribute
+{
+    public List<int> Numbers { get; }
+
+    public SomeAttribute(List<int> numbers)
+    {
+        Numbers = numbers;
+    }
+}
+
 // First exercise
 
 [AttributeUsage(AttributeTargets.Property)]
 public class MustBeLargerThanAttribute : Attribute
 {
-    public int Value { get; }
+    public int Min { get; }
 
-    public MustBeLargerThanAttribute(int value)
+    public MustBeLargerThanAttribute(int min)
     {
-        Value = value;
+        Min = min;
     }
 }
