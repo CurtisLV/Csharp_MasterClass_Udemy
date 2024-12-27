@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-var validPerson = new Person("John", 1989);
+var validPerson = new PersonToBeValidated("John", 1989);
 var invalidDog = new Dog("F");
 
 var validator = new Validator();
@@ -10,6 +10,8 @@ Console.WriteLine(validator.Validate(invalidDog) ? "Dog is valid" : "Dog is inva
 
 Console.ReadKey();
 
+// Attributes
+
 public class Dog
 {
     [StringLengthValidate(2, 10)]
@@ -18,19 +20,19 @@ public class Dog
     public Dog(string name) => Name = name;
 }
 
-public class Person
+public class PersonToBeValidated
 {
     [StringLengthValidate(2, 25)]
     public string Name { get; } // length must be between 2 and 25
     public int YearOfBirth { get; }
 
-    public Person(string name, int age)
+    public PersonToBeValidated(string name, int age)
     {
         Name = name;
         YearOfBirth = age;
     }
 
-    public Person(string name) => Name = name;
+    public PersonToBeValidated(string name) => Name = name;
 }
 
 [AttributeUsage(AttributeTargets.Property)]
@@ -94,7 +96,32 @@ public class SomeAttribute : Attribute
     }
 }
 
-// First exercise
+// Structs
+
+struct Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
+
+class Person
+{
+    public int Id { get; init; }
+    public string Name { get; init; }
+}
+
+// First exercise Attributes
 
 [AttributeUsage(AttributeTargets.Property)]
 public class MustBeLargerThanAttribute : Attribute
