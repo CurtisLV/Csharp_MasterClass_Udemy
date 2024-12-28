@@ -119,6 +119,11 @@ public class SomeAttribute : Attribute
 
 // Structs
 
+struct FishyStruct
+{
+    public List<int> Numbers { get; init; }
+}
+
 struct Point : IComparable<Point>
 {
     public int X { get; set; }
@@ -134,11 +139,6 @@ struct Point : IComparable<Point>
     {
         X = 0;
         Y = 1;
-    }
-
-    ~Point() // Structs cannot have finalizers
-    {
-        //
     }
 
     public override string ToString()
