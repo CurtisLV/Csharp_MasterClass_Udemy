@@ -29,6 +29,8 @@ var fishyStruct1 = new FishyStruct
 };
 var fishyStruct2 = fishyStruct1;
 
+fishyStruct2.Numbers.Clear(); // everything will be deleted from both structs because List<int> Numbers is a reference type
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
