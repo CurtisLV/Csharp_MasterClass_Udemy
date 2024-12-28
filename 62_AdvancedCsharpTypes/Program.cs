@@ -23,7 +23,10 @@ SomeMethod(5);
 
 //SomeMethod(new Person());
 
-var fishyStruct1 = new FishyStruct(Numbers = new List<int> { 1, 2, 3 });
+var fishyStruct1 = new FishyStruct
+{
+    Numbers = new List<int> { 1, 2, 3 }
+};
 var fishyStruct2 = fishyStruct1;
 
 Console.ReadKey();
