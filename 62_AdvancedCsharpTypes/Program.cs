@@ -130,6 +130,12 @@ struct Point : IComparable<Point>
         Y = y;
     }
 
+    public Point()
+    {
+        X = 0;
+        Y = 1;
+    }
+
     public override string ToString()
     {
         return $"X: {X}, Y: {Y}";
