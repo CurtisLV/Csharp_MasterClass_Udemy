@@ -130,10 +130,15 @@ struct Point : IComparable<Point>
         Y = y;
     }
 
-    public Point()
+    public Point() // omly from C# 10
     {
         X = 0;
         Y = 1;
+    }
+
+    ~Point() // Structs cannot have finalizers
+    {
+        //
     }
 
     public override string ToString()
