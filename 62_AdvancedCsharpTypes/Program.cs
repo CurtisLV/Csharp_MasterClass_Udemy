@@ -13,6 +13,11 @@ var anotherPoint = point;
 
 anotherPoint.Y = 100;
 
+var pointImmutableExample = new Point(10, 20);
+
+// move to right by one
+pointImmutableExample.X++;
+
 //Point nullPoint = null;
 Person person = new Person();
 
