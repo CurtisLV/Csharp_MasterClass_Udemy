@@ -194,13 +194,23 @@ public class MustBeLargerThanAttribute : Attribute
 
 // Second exercise Structs
 
-struct Time
+public struct Time
 {
-    public int Hour { get; init; }
-    public int Minute { get; init; }
+    public int Hour { get; }
+    public int Minute { get; }
 
     public Time(int hour, int minute)
     {
+        if (hour < 0 || hour > 24)
+        {
+            throw new ArgumentOutOfRangeException("Hour is out of range.");
+        }
+
+        if (minute < 0 || minute > 60)
+        {
+            throw new ArgumentOutOfRangeException("Minute is out of range.");
+        }
+
         Hour = hour;
         Minute = minute;
     }
