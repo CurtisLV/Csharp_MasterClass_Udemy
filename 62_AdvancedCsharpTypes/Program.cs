@@ -11,7 +11,7 @@ Console.WriteLine(validator.Validate(invalidDog) ? "Dog is valid" : "Dog is inva
 var point = new Point(1, 3);
 var anotherPoint = point;
 
-anotherPoint.Y = 100;
+//anotherPoint.Y = 100; // gives error because Y is immutable
 
 var pointImmutableExample = new Point(10, 20);
 
@@ -20,7 +20,7 @@ MoveToRightBy1Unit(ref pointImmutableExample);
 void MoveToRightBy1Unit(ref Point pointImmutableExample)
 {
     // move to right by one
-    pointImmutableExample.X++;
+    //pointImmutableExample.X++; // gives error because X is immutable
 }
 
 //Point nullPoint = null;
@@ -153,7 +153,7 @@ struct Point : IComparable<Point>
         Y = y;
     }
 
-    public Point() // omly from C# 10
+    public Point() // only from C# 10 - constructor with zero parameters
     {
         X = 0;
         Y = 1;
