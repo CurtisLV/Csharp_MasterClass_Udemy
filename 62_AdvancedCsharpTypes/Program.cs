@@ -201,7 +201,7 @@ public struct Time
 
     public Time(int hour, int minute)
     {
-        if (hour < 0 || hour > 24)
+        if (hour < 0 || hour > 23)
         {
             throw new ArgumentOutOfRangeException("Hour is out of range.");
         }
@@ -217,6 +217,6 @@ public struct Time
 
     public override string? ToString()
     {
-        return base.ToString();
+        return string.Format("HH:MM");
     }
 }
