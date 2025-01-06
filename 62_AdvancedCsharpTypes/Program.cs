@@ -25,6 +25,10 @@ var pointNonDestructiveMutation = new Point(10, 20);
 var pointMoved = pointNonDestructiveMutation with { X = 11 };
 var pointMoved2 = pointNonDestructiveMutation with { X = pointNonDestructiveMutation.X + 1 }; // second way to do it
 
+// non destructive mutation works with structs, recods, record structs and anonymous types
+var pet = new { Name = "Han", Type = "Fish" };
+var asCrab = pet with { Type = "Crab" };
+
 void MoveToRightBy1Unit(ref Point pointImmutableExample)
 {
     // move to right by one
@@ -150,7 +154,7 @@ struct FishyStruct
     public List<int> Numbers { get; init; }
 }
 
-struct Point : IComparable<Point>
+readonly struct Point : IComparable<Point>
 {
     public int X { get; init; }
     public int Y { get; init; }
