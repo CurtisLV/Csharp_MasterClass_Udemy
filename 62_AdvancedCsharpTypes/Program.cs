@@ -144,8 +144,8 @@ struct FishyStruct
 
 struct Point : IComparable<Point>
 {
-    public int X { get; set; }
-    public int Y { get; set; }
+    public int X { get; init; }
+    public int Y { get; init; }
 
     public Point(int x, int y)
     {
@@ -189,5 +189,24 @@ public class MustBeLargerThanAttribute : Attribute
     public MustBeLargerThanAttribute(int min)
     {
         Min = min;
+    }
+}
+
+// Second exercise Structs
+
+struct Time
+{
+    public int Hour { get; init; }
+    public int Minute { get; init; }
+
+    public Time(int hour, int minute)
+    {
+        Hour = hour;
+        Minute = minute;
+    }
+
+    public override string? ToString()
+    {
+        return base.ToString();
     }
 }
