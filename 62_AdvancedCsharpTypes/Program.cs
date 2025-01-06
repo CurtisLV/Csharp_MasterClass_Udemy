@@ -15,9 +15,9 @@ anotherPoint.Y = 100;
 
 var pointImmutableExample = new Point(10, 20);
 
-MoveToRightBy1Unit(pointImmutableExample);
+MoveToRightBy1Unit(ref pointImmutableExample);
 
-void MoveToRightBy1Unit(Point pointImmutableExample)
+void MoveToRightBy1Unit(ref Point pointImmutableExample)
 {
     // move to right by one
     pointImmutableExample.X++;
