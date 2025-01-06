@@ -17,6 +17,14 @@ var pointImmutableExample = new Point(10, 20);
 
 MoveToRightBy1Unit(ref pointImmutableExample);
 
+var dateTime = new DateTime(2025, 1, 6);
+var dateWeekAfter = dateTime.AddDays(7);
+
+//Non-destructive Mutation of struct
+var pointNonDestructiveMutation = new Point(10, 20);
+var pointMoved = pointNonDestructiveMutation with { X = 11 };
+var pointMoved2 = pointNonDestructiveMutation with { X = pointNonDestructiveMutation.X + 1 }; // second way to do it
+
 void MoveToRightBy1Unit(ref Point pointImmutableExample)
 {
     // move to right by one
