@@ -46,8 +46,8 @@ SomeMethod(5);
 //SomeMethod(new Person());
 
 
-var someObject = new object();
-someObject.ToString();
+var john = new PersonToBeValidated(1, "John");
+var sameAsJohn = new PersonToBeValidated(1, "John");
 
 var fishyStruct1 = new FishyStruct
 {
@@ -188,11 +188,14 @@ readonly struct Point : IComparable<Point>
 
 class Person
 {
-    private Point _favouritePoint;
-    private Person _favouritePerson;
-
     public int Id { get; init; }
     public string Name { get; init; }
+
+    public Person(int id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
 }
 
 // First exercise Attributes
