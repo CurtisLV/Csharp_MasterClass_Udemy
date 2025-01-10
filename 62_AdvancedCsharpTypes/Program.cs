@@ -46,8 +46,8 @@ SomeMethod(5);
 //SomeMethod(new Person());
 
 
-var john = new PersonToBeValidated(1, "John");
-var sameAsJohn = new PersonToBeValidated(1, "John");
+var john = new Person(1, "John");
+var sameAsJohn = new Person(1, "John");
 
 var fishyStruct1 = new FishyStruct
 {
@@ -195,6 +195,11 @@ class Person
     {
         Id = id;
         Name = name;
+    }
+
+    public Person()
+    {
+        //
     }
 }
 
