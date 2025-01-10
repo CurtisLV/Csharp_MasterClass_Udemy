@@ -53,6 +53,10 @@ var alsoSameAsJohn = john;
 Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, sameAsJohn));
 Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, alsoSameAsJohn));
 
+Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(1, 1)); // will return false because each value is boxed separately before evaluated. See the green underline
+
+Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(null, null)); //
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
