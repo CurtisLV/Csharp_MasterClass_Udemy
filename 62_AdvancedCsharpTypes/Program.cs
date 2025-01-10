@@ -55,7 +55,7 @@ Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, alsoSa
 
 Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(1, 1)); // will return false because each value is boxed separately before evaluated. See the green underline
 
-Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(null, null)); //
+Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(null, null)); // Reference equals cannot be overriden
 
 var fishyStruct1 = new FishyStruct
 {
