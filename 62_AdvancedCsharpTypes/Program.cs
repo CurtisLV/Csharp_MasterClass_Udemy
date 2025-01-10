@@ -48,6 +48,10 @@ SomeMethod(5);
 
 var john = new Person(1, "John");
 var sameAsJohn = new Person(1, "John");
+var alsoSameAsJohn = john;
+
+Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, sameAsJohn));
+Console.WriteLine("Are references equal? " + object.ReferenceEquals(john, alsoSameAsJohn));
 
 var fishyStruct1 = new FishyStruct
 {
