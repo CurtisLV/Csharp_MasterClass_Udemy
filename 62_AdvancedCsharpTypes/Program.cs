@@ -45,6 +45,10 @@ SomeMethod(5);
 
 //SomeMethod(new Person());
 
+
+var someObject = new object();
+someObject.ToString();
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
