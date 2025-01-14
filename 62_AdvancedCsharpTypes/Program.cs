@@ -65,6 +65,10 @@ Console.WriteLine($"\"ABC\".Equals(\"abc\"): {"abc".Equals("abc")}");
 
 Console.WriteLine();
 
+var johny = new Person(1, "John");
+var sameAsJohny = new Person(1, "John");
+var marie = new Person(2, "Marie");
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
