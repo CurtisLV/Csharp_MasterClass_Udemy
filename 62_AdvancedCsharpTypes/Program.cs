@@ -61,6 +61,10 @@ Console.WriteLine($"1. Equals(1): {1.Equals(1)}");
 Console.WriteLine($"1. Equals(2): {1.Equals(2)}");
 Console.WriteLine($"1. Equals(null): {1.Equals(null)}");
 
+Console.WriteLine($"\"ABC\".Equals(\"abc\"): {"abc".Equals("abc")}");
+
+Console.WriteLine();
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
