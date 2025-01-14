@@ -73,6 +73,11 @@ Console.WriteLine($"johnny.Equals(sameAsJohnny): {johnny.Equals(sameAsJohnny)}")
 Console.WriteLine($"johnny.Equals(marie): {johnny.Equals(marie)}");
 Console.WriteLine($"johnny.Equals(null): {johnny.Equals(null)}");
 
+var point1 = new Point(1, 5);
+var point2 = new Point(1, 5);
+
+Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}");
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
