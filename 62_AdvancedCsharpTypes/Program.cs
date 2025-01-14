@@ -76,7 +76,7 @@ Console.WriteLine($"johnny.Equals(null): {johnny.Equals(null)}");
 var point1 = new Point(1, 5);
 var point2 = new Point(1, 5);
 
-Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}");
+Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
 
 var fishyStruct1 = new FishyStruct
 {
