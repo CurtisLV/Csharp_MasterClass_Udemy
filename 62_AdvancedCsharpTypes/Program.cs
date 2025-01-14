@@ -57,6 +57,10 @@ Console.WriteLine("Are references equal for value types? " + object.ReferenceEqu
 
 Console.WriteLine("Are references equal for value types? " + object.ReferenceEquals(null, null)); // Reference equals cannot be overriden
 
+Console.WriteLine($"1. Equals(1): {1.Equals(1)}");
+Console.WriteLine($"1. Equals(2): {1.Equals(2)}");
+Console.WriteLine($"1. Equals(null): {1.Equals(null)}");
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
