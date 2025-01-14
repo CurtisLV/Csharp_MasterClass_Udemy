@@ -65,9 +65,13 @@ Console.WriteLine($"\"ABC\".Equals(\"abc\"): {"abc".Equals("abc")}");
 
 Console.WriteLine();
 
-var johny = new Person(1, "John");
-var sameAsJohny = new Person(1, "John");
+var johnny = new Person(1, "John");
+var sameAsJohnny = new Person(1, "John");
 var marie = new Person(2, "Marie");
+
+Console.WriteLine($"johnny.Equals(sameAsJohnny): {johnny.Equals(sameAsJohnny)}");
+Console.WriteLine($"johnny.Equals(marie): {johnny.Equals(marie)}");
+Console.WriteLine($"johnny.Equals(null): {johnny.Equals(null)}");
 
 var fishyStruct1 = new FishyStruct
 {
