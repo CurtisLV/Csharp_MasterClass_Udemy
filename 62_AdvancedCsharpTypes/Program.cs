@@ -231,9 +231,9 @@ class Person
         //
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
-        return base.Equals(obj);
+        return obj is Person other && Id == other.Id;
     }
 }
 
