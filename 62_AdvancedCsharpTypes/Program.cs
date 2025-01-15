@@ -199,11 +199,6 @@ readonly struct Point : IComparable<Point>
         Y = y;
     }
 
-    //public override bool Equals(object? obj)
-    //{
-    //    return obj is Point other && X == other.X && Y == other.Y;
-    //}
-
     public Point() // only from C# 10 - constructor with zero parameters
     {
         X = 0;
