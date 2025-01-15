@@ -67,7 +67,7 @@ Console.WriteLine();
 
 var johnny = new Person(1, "John");
 var sameAsJohnny = new Person(1, "John");
-var marie = new Person(2, "Marie");
+var marie = new Person(1, "Marie");
 
 Console.WriteLine($"johnny.Equals(sameAsJohnny): {johnny.Equals(sameAsJohnny)}");
 Console.WriteLine($"johnny.Equals(marie): {johnny.Equals(marie)}");
@@ -233,7 +233,7 @@ class Person
 
     public override bool Equals(object? obj)
     {
-        return obj is Person other && Id == other.Id;
+        return obj is Person other && Id == other.Id; // Id should come from business requiremenets, like how can 2 people be compared
     }
 }
 
