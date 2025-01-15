@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 var validPerson = new PersonToBeValidated("John", 1989);
 var invalidDog = new Dog("F");
@@ -196,6 +197,11 @@ readonly struct Point : IComparable<Point>
     {
         X = x;
         Y = y;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return obj is Point other && X == other.X && Y == other.Y;
     }
 
     public Point() // only from C# 10 - constructor with zero parameters
