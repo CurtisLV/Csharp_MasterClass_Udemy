@@ -285,7 +285,7 @@ public struct Time
     }
 }
 
-// Third exercise Override
+// Third exercise Override Equals
 
 public class FullName
 {
@@ -294,5 +294,8 @@ public class FullName
 
     public override string ToString() => $"{First} {Last}";
 
-    //your code goes here
+    public override bool Equals(object? obj)
+    {
+        return obj is FullName name && First == name.First && Last == name.Last;
+    }
 }
