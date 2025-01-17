@@ -219,6 +219,11 @@ readonly struct Point : IComparable<Point>
     {
         return obj is Point point && X == point.X && Y == point.Y;
     }
+
+    public bool Equals(Point other)
+    {
+        return X == other.X && Y == other.Y;
+    }
 }
 
 class Person
