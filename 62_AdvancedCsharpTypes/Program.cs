@@ -284,3 +284,15 @@ public struct Time
         return $"{Hour.ToString("00")}:{Minute.ToString("00")}";
     }
 }
+
+// Third exercise Override
+
+public class FullName
+{
+    public string First { get; init; }
+    public string Last { get; init; }
+
+    public override string ToString() => $"{First} {Last}";
+
+    //your code goes here
+}
