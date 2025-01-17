@@ -220,7 +220,7 @@ readonly struct Point : IEquatable<Point>
         return obj is Point point && Equals(point);
     }
 
-    public bool Equals(Point other)
+    public bool Equals(Point other) // If point is passed as parameter, C# uses the most concrete Equals method, this one
     {
         return X == other.X && Y == other.Y;
     }
