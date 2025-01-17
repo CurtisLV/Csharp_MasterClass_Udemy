@@ -79,6 +79,10 @@ var point2 = new Point(1, 5);
 
 Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
 
+//Console.WriteLine($"Point1 and point2 are equal: {point1 == point2}"); // == does not work for value types
+
+Console.WriteLine($"1 == 1: {1 == 1}"); // because == is overloaded so it can take integers
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
