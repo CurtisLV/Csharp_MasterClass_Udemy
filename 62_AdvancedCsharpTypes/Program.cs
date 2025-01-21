@@ -84,7 +84,8 @@ var added2 = point1 + point2;
 Console.WriteLine($"Add points with point.Add: {added}");
 Console.WriteLine($"Add points with point1 + point2: {added2}");
 
-Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
+Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is point1 struct and hence value type, so equals method compares values
+Console.WriteLine($"point1 == point2: {point1 == point2}");
 
 //Console.WriteLine($"Point1 and point2 are equal: {point1 == point2}"); // == does not work for value types
 
@@ -96,7 +97,7 @@ var fishyStruct1 = new FishyStruct
 };
 var fishyStruct2 = fishyStruct1;
 
-fishyStruct2.Numbers.Clear(); // everything will be deleted from both structs because List<int> Numbers is a reference type
+fishyStruct2.Numbers.Clear(); // everything will be deleted from both structs because List<int> Numbers is point1 reference type
 
 Console.ReadKey();
 
@@ -239,6 +240,8 @@ readonly struct Point : IEquatable<Point>
     public Point Add(Point point2) => new Point(X + point2.X, Y + point2.Y);
 
     public static Point operator +(Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
+
+    public static bool operator ==(Point point1, Point point2) => point1.Equals(point2);
 }
 
 class Person
