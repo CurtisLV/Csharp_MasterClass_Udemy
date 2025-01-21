@@ -364,4 +364,9 @@ public struct Time
     public static bool operator ==(Time left, Time right) => left.Equals(right);
 
     public static bool operator !=(Time left, Time right) => !left.Equals(right);
+
+    public static Time operator +(Time left, Time right)
+    {
+        //
+    }
 }
