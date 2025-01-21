@@ -98,7 +98,7 @@ decimal someDecimal = 20.01m;
 int someInt = (int)someDecimal; // explicit conversion - not allowed until explicitly stated that converts to (int) as conversion is not loseless
 
 var tuple = Tuple.Create(10, 20);
-Point tupleToPoint = (Point)tuple;
+Point tupleToPoint = tuple;
 
 var fishyStruct1 = new FishyStruct
 {
@@ -254,7 +254,7 @@ readonly struct Point : IEquatable<Point>
 
     public static bool operator !=(Point point1, Point point2) => !point1.Equals(point2);
 
-    public static explicit operator Point(Tuple<int, int> tuple)
+    public static implicit operator Point(Tuple<int, int> tuple)
     {
         return new Point(tuple.Item1, tuple.Item2);
     }
@@ -337,4 +337,29 @@ public class FullName
     {
         return obj is FullName name && First == name.First && Last == name.Last;
     }
+}
+
+// Fourth exercise Operators overload - Time structs
+public struct Time2
+{
+    public int Hour { get; }
+    public int Minute { get; }
+
+    public Time2(int hour, int minute)
+    {
+        if (hour < 0 || hour > 23)
+        {
+            throw new ArgumentOutOfRangeException("Hour is out of range of 0-23");
+        }
+        if (minute < 0 || minute > 59)
+        {
+            throw new ArgumentOutOfRangeException("Minute is out of range of 0-59");
+        }
+        Hour = hour;
+        Minute = minute;
+    }
+
+    public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
+
+    //your code goes here
 }
