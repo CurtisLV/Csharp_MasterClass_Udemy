@@ -297,12 +297,12 @@ public class MustBeLargerThanAttribute : Attribute
 
 // Second exercise Structs
 
-public struct Time
+public struct Time2
 {
     public int Hour { get; }
     public int Minute { get; }
 
-    public Time(int hour, int minute)
+    public Time2(int hour, int minute)
     {
         if (hour < 0 || hour > 23)
         {
@@ -340,12 +340,12 @@ public class FullName
 }
 
 // Fourth exercise Operators overload - Time structs
-public struct Time2
+public struct Time
 {
     public int Hour { get; }
     public int Minute { get; }
 
-    public Time2(int hour, int minute)
+    public Time(int hour, int minute)
     {
         if (hour < 0 || hour > 23)
         {
@@ -361,5 +361,7 @@ public struct Time2
 
     public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
 
-    //your code goes here
+    public static bool operator ==(Time left, Time right) => left.Equals(right);
+
+    public static bool operator !=(Time left, Time right) => !left.Equals(right);
 }
