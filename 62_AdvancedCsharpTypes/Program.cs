@@ -98,7 +98,7 @@ decimal someDecimal = 20.01m;
 int someInt = (int)someDecimal; // explicit conversion - not allowed until explicitly stated that converts to (int) as conversion is not loseless
 
 var tuple = Tuple.Create(10, 20);
-Point tupleToPoint = tuple;
+Point tupleToPoint = (Point)tuple;
 
 var fishyStruct1 = new FishyStruct
 {
@@ -254,9 +254,9 @@ readonly struct Point : IEquatable<Point>
 
     public static bool operator !=(Point point1, Point point2) => !point1.Equals(point2);
 
-    public static implicit operator Point(Tuple<int, int> tuple)
+    public static explicit operator Point(Tuple<int, int> tuple)
     {
-        throw new NotImplementedException();
+        return new Point(tuple.Item1, tuple.Item2);
     }
 }
 
