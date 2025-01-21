@@ -81,6 +81,8 @@ var point2 = new Point(1, 5);
 
 var added = point1.Add(point2); // will work but awkward?
 var added2 = point1 + point2;
+Console.WriteLine($"Add points with point.Add: {added}");
+Console.WriteLine($"Add points with point1 + point2: {added2}");
 
 Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
 
