@@ -91,6 +91,12 @@ Console.WriteLine($"point1 == point2: {point1 == point2}");
 
 Console.WriteLine($"1 == 1: {1 == 1}"); // because == is overloaded so it can take integers
 
+int tenAsInt = 10;
+decimal tenAsDecimal = tenAsInt; // implicit conversion
+
+decimal someDecimal = 20.01m;
+int someInt = (int)someDecimal; // not allowed until explicitly stated that converts to (int) as conversion is not loseless
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
@@ -242,6 +248,8 @@ readonly struct Point : IEquatable<Point>
     public static Point operator +(Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
 
     public static bool operator ==(Point point1, Point point2) => point1.Equals(point2);
+
+    public static bool operator !=(Point point1, Point point2) => !point1.Equals(point2);
 }
 
 class Person
