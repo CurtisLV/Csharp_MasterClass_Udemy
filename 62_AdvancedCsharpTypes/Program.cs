@@ -74,8 +74,12 @@ Console.WriteLine($"johnny.Equals(sameAsJohnny): {johnny.Equals(sameAsJohnny)}")
 Console.WriteLine($"johnny.Equals(marie): {johnny.Equals(marie)}");
 Console.WriteLine($"johnny.Equals(null): {johnny.Equals(null)}");
 
-var point1 = new Point(1, 5);
+var point1 = new Point(2, 4);
+
+//var point1 = new Point(1, 5);
 var point2 = new Point(1, 5);
+
+var added = point1.Add(point2);
 
 Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
 
@@ -227,6 +231,11 @@ readonly struct Point : IEquatable<Point>
     public bool Equals(Point other) // If point is passed as parameter, C# uses the most concrete Equals method, this one
     {
         return X == other.X && Y == other.Y;
+    }
+
+    internal object Add(Point point2)
+    {
+        throw new NotImplementedException();
     }
 }
 
