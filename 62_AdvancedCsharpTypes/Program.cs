@@ -79,7 +79,8 @@ var point1 = new Point(2, 4);
 //var point1 = new Point(1, 5);
 var point2 = new Point(1, 5);
 
-var added = point1.Add(point2);
+var added = point1.Add(point2); // will work but awkward?
+var added2 = point1 + point2;
 
 Console.WriteLine($"point1.Equals(point2): {point1.Equals(point2)}"); // point is a struct and hence value type, so equals method compares values
 
@@ -233,10 +234,9 @@ readonly struct Point : IEquatable<Point>
         return X == other.X && Y == other.Y;
     }
 
-    internal object Add(Point point2)
-    {
-        throw new NotImplementedException();
-    }
+    public Point Add(Point point2) => new Point(X + point2.X, Y + point2.Y);
+
+    public static Point operator +(Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
 }
 
 class Person
