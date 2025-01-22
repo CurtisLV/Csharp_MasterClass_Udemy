@@ -100,6 +100,11 @@ int someInt = (int)someDecimal; // explicit conversion - not allowed until expli
 var tuple = Tuple.Create(10, 20);
 Point tupleToPoint = tuple;
 
+var timeOne = new Time(10, 30);
+var timeTwo = new Time(0, 32);
+
+Console.WriteLine($"count time: {timeOne + timeTwo}");
+
 var fishyStruct1 = new FishyStruct
 {
     Numbers = new List<int> { 1, 2, 3 }
@@ -371,8 +376,8 @@ public struct Time
         int hourTotal = left.Hour + right.Hour;
         if (minTotal > 59)
         {
-            hourTotal = +1;
-            minTotal = -60;
+            hourTotal += 1;
+            minTotal -= 60;
         }
         return new Time(hourTotal, minTotal);
     }
