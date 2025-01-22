@@ -367,6 +367,13 @@ public struct Time
 
     public static Time operator +(Time left, Time right)
     {
-        //
+        int minTotal = left.Minute + right.Minute;
+        int hourTotal = left.Hour + right.Hour;
+        if (minTotal > 59)
+        {
+            hourTotal = +1;
+            minTotal = -60;
+        }
+        return new Time(hourTotal, minTotal);
     }
 }
