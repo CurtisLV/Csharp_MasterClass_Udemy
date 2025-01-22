@@ -101,7 +101,7 @@ var tuple = Tuple.Create(10, 20);
 Point tupleToPoint = tuple;
 
 var timeOne = new Time(10, 30);
-var timeTwo = new Time(0, 32);
+var timeTwo = new Time(15, 32);
 
 Console.WriteLine($"count time: {timeOne + timeTwo}");
 
@@ -379,6 +379,6 @@ public struct Time
             hourTotal += 1;
             minTotal -= 60;
         }
-        return new Time(hourTotal, minTotal);
+        return new Time(hourTotal % 24, minTotal);
     }
 }
