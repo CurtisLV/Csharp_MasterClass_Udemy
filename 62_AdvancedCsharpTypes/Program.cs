@@ -113,6 +113,7 @@ var fishyStruct2 = fishyStruct1;
 
 fishyStruct2.Numbers.Clear(); // everything will be deleted from both structs because List<int> Numbers is point1 reference type
 
+// hash functionality
 var hash1 = 123.GetHashCode();
 var hash2 = "abc".GetHashCode();
 
@@ -120,8 +121,9 @@ Console.WriteLine($"{hash1}");
 Console.WriteLine($"{hash2}");
 
 var dictionary = new Dictionary<Point, string>();
-
 dictionary[new Point(10, 20)] = "abc";
+
+// GetHashCode default implementation
 
 Console.ReadKey();
 
