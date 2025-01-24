@@ -119,6 +119,10 @@ var hash2 = "abc".GetHashCode();
 Console.WriteLine($"{hash1}");
 Console.WriteLine($"{hash2}");
 
+var dictionary = new Dictionary<Point, string>();
+
+dictionary[new Point(10, 20)] = "abc";
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
