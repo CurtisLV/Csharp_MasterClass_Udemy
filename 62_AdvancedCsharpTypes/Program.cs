@@ -140,6 +140,9 @@ dictionary3[point11] = 99;
 var point12 = new Point(27, 1);
 Console.WriteLine(dictionary3[point12]);
 
+Console.WriteLine(point11.GetHashCode());
+Console.WriteLine(point12.GetHashCode());
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
