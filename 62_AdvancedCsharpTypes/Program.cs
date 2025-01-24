@@ -127,7 +127,9 @@ dictionary[new Point(10, 20)] = "abc";
 var dictionary2 = new Dictionary<Person, int>();
 var martin = new Person(6, "Martin");
 dictionary2[martin] = 5;
+var theSameAsMartin = new Person(6, "Martin");
 Console.WriteLine(dictionary2[martin]);
+Console.WriteLine(dictionary2[theSameAsMartin]);
 
 Console.ReadKey();
 
