@@ -129,7 +129,16 @@ var martin = new Person(6, "Martin");
 dictionary2[martin] = 5;
 var theSameAsMartin = new Person(6, "Martin");
 Console.WriteLine(dictionary2[martin]);
-Console.WriteLine(dictionary2[theSameAsMartin]);
+
+//Console.WriteLine(dictionary2[theSameAsMartin]);
+Console.WriteLine(martin.GetHashCode());
+Console.WriteLine(theSameAsMartin.GetHashCode());
+
+var dictionary3 = new Dictionary<Point, int>();
+var point11 = new Point(27, 1);
+dictionary3[point11] = 99;
+var point12 = new Point(27, 1);
+Console.WriteLine(dictionary3[point12]);
 
 Console.ReadKey();
 
