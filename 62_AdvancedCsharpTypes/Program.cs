@@ -124,6 +124,10 @@ var dictionary = new Dictionary<Point, string>();
 dictionary[new Point(10, 20)] = "abc";
 
 // GetHashCode default implementation
+var dictionary2 = new Dictionary<Person, int>();
+var martin = new Person(6, "Martin");
+dictionary2[martin] = 5;
+Console.WriteLine(dictionary2[martin]);
 
 Console.ReadKey();
 
