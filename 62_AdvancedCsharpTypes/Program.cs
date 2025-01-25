@@ -338,6 +338,11 @@ class Person
     {
         return obj is Person other && Id == other.Id; // Id should come from business requiremenets, like how can 2 people be compared
     }
+
+    public override int GetHashCode()
+    {
+        return Id;
+    }
 }
 
 // First exercise Attributes
