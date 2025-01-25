@@ -151,6 +151,16 @@ Console.WriteLine(point21.GetHashCode());
 Console.WriteLine(point22.GetHashCode());
 Console.WriteLine(point23.GetHashCode());
 
+Console.WriteLine();
+
+var person1 = new Person(6, "Martin");
+var person2 = new Person(6, "Martin");
+var person3 = new Person(7, "Bella");
+
+Console.WriteLine(person1.GetHashCode());
+Console.WriteLine(person2.GetHashCode());
+Console.WriteLine(person3.GetHashCode());
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
