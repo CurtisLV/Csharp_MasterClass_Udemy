@@ -143,6 +143,14 @@ Console.WriteLine(dictionary3[point12]);
 Console.WriteLine(point11.GetHashCode());
 Console.WriteLine(point12.GetHashCode());
 
+var point21 = new Point(27, 1);
+var point22 = new Point(27, 1);
+var point23 = new Point(6, -1);
+
+Console.WriteLine(point21.GetHashCode());
+Console.WriteLine(point22.GetHashCode());
+Console.WriteLine(point23.GetHashCode());
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
@@ -283,7 +291,7 @@ readonly struct Point : IEquatable<Point>
 
     public override int GetHashCode()
     {
-        //
+        return HashCode.Combine(X, Y);
     }
 
     public Point Add(Point point2) => new Point(X + point2.X, Y + point2.Y);
