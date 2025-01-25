@@ -402,7 +402,8 @@ public class FullName
     }
 }
 
-// Fourth exercise Operators overload - Time structs
+// Fourth exercise Operators override - Time structs
+// Fifth exercise GetHashCode override
 public struct Time
 {
     public int Hour { get; }
@@ -438,5 +439,10 @@ public struct Time
             minTotal -= 60;
         }
         return new Time(hourTotal % 24, minTotal);
+    }
+
+    public override bool Equals([NotNullWhen(true)] object? obj)
+    {
+        return base.Equals(obj);
     }
 }
