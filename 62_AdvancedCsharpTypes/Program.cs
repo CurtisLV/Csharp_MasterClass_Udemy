@@ -445,4 +445,9 @@ public struct Time
     {
         return base.Equals(obj);
     }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
 }
