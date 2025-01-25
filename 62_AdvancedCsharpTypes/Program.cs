@@ -281,6 +281,11 @@ readonly struct Point : IEquatable<Point>
         return X == other.X && Y == other.Y;
     }
 
+    public override int GetHashCode()
+    {
+        //
+    }
+
     public Point Add(Point point2) => new Point(X + point2.X, Y + point2.Y);
 
     public static Point operator +(Point a, Point b) => new Point(a.X + b.X, a.Y + b.Y);
