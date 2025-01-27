@@ -177,6 +177,8 @@ var number = tuple2.Item1;
 
 //tuple2.Item1 = 20; // does not compile as tuples are read-only
 
+var valueTypeTuple1 = new ValueTuple<int, string>(1, "bbb");
+var valueTypeTuple2 = (5, "ccc"); // much simpler way to create value tuples
 
 Console.ReadKey();
 
