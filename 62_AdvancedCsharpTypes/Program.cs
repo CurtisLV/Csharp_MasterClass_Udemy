@@ -165,6 +165,13 @@ Console.WriteLine(person3.GetHashCode());
 
 var tuple1 = new Tuple<string, bool>("aaa", false);
 var tuple2 = Tuple.Create(10, true); // dont need to state types as is infered from parameters
+var tuple3 = Tuple.Create(10, true);
+Console.WriteLine(tuple2 == tuple3);
+Console.WriteLine(tuple2.Equals(tuple3));
+
+var number = tuple2.Item1;
+
+//tuple2.Item1 = 20; // does not compile as tuples are read-only
 
 Console.ReadKey();
 
