@@ -448,6 +448,6 @@ public struct Time
 
     public override int GetHashCode()
     {
-        return Hour.GetHashCode() + Minute.GetHashCode();
+        return HashCode.Combine(Hour, Minute);
     }
 }
