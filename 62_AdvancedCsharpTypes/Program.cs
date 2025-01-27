@@ -161,6 +161,11 @@ Console.WriteLine(person1.GetHashCode());
 Console.WriteLine(person2.GetHashCode());
 Console.WriteLine(person3.GetHashCode());
 
+// Tuples
+
+var tuple1 = new Tuple<string, bool>("aaa", false);
+var tuple2 = Tuple.Create(10, true); // dont need to state types as is infered from parameters
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
