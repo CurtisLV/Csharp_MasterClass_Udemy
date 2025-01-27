@@ -163,7 +163,7 @@ Console.WriteLine(person3.GetHashCode());
 
 // Tuples
 
-var tuple1 = new Tuple<string, bool>("aaa", false);
+var tuple1 = new Tuple<string, bool>("aaa", false); // regular tuples are reference type, hash is also reference based not value
 var tuple2 = Tuple.Create(10, true); // dont need to state types as is infered from parameters
 var tuple3 = Tuple.Create(10, true);
 
@@ -177,8 +177,11 @@ var number = tuple2.Item1;
 
 //tuple2.Item1 = 20; // does not compile as tuples are read-only
 
-var valueTypeTuple1 = new ValueTuple<int, string>(1, "bbb");
-var valueTypeTuple2 = (5, "ccc"); // much simpler way to create value tuples
+var valueTypeTuple1 = new ValueTuple<int, string>(1, "bbb"); // ValueTuple struct is a more efficient and modern way to work with tuples
+var valueTypeTuple2 = (Number: 5, Name: "ccc"); // much simpler way to create value tuples, more than 8 items can be in value tuple
+
+valueTypeTuple1.Item1 = 20; // compiles because not read-only - also that Item1/Item2 can be used
+valueTypeTuple2.Name = "fff";
 
 Console.ReadKey();
 
