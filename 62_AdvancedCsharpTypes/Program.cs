@@ -441,13 +441,13 @@ public struct Time
         return new Time(hourTotal % 24, minTotal);
     }
 
-    public override bool Equals([NotNullWhen(true)] object? obj)
+    public override bool Equals(object? obj)
     {
-        return base.Equals(obj);
+        return obj is Time && Hour == ((Time)obj).Hour && Minute == ((Time)obj).Minute;
     }
 
     public override int GetHashCode()
     {
-        return base.GetHashCode();
+        return Hour.GetHashCode() + Minute.GetHashCode();
     }
 }
