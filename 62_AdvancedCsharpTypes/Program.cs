@@ -180,7 +180,7 @@ var number = tuple2.Item1;
 var valueTypeTuple1 = new ValueTuple<int, string>(1, "bbb"); // ValueTuple struct is a more efficient and modern way to work with tuples
 var valueTypeTuple2 = (Number: 5, Name: "ccc"); // much simpler way to create value tuples, more than 8 items can be in value tuple
 
-valueTypeTuple1.Item1 = 20; // compiles because not read-only - also that Item1/Item2 can be used
+valueTypeTuple1.Item1 = 20; // compiles because mutable - also that Item1/Item2 can be used
 valueTypeTuple2.Name = "fff";
 
 Console.ReadKey();
