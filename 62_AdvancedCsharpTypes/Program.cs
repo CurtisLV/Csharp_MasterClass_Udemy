@@ -357,6 +357,11 @@ public class WeatherData
         Temperature = temperature;
         Humidity = humidity;
     }
+
+    public override string ToString()
+    {
+        return $"Temperature: {Temperature}, Humidity %: {Humidity}";
+    }
 }
 
 class Person
