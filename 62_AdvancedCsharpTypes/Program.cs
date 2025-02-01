@@ -340,6 +340,20 @@ readonly struct Point : IEquatable<Point>
     }
 }
 
+// Records
+
+public class WeatherData
+{
+    public decimal Temperature { get; }
+    public int Humidity { get; }
+
+    public WeatherData(decimal temperature, int humidity)
+    {
+        Temperature = temperature;
+        Humidity = humidity;
+    }
+}
+
 class Person
 {
     public int Id { get; init; }
