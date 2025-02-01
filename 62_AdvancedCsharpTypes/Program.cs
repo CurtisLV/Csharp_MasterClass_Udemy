@@ -188,6 +188,12 @@ valueTypeTuple2.Name = "fff";
 var weatherData = new WeatherData(25.1m, 65);
 Console.WriteLine(weatherData);
 
+var warmerWeatherData = weatherData with { Temperature = 30 };
+
+// Record structs
+var rectangle = new Rectangle(10, 20);
+rectangle.A = 30;
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
@@ -347,6 +353,9 @@ readonly struct Point : IEquatable<Point>
 
 // Records
 public record WeatherData(decimal Temperature, int Humidity); // Positional record
+
+// Record structs - value types, mutable
+public record struct Rectangle(int A, int B);
 
 //public record WeatherData // non-positional recod, have to write constructor and attributes but can have methods etc
 //{
