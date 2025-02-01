@@ -347,7 +347,7 @@ readonly struct Point : IEquatable<Point>
 
 // Records
 
-public class WeatherData
+public class WeatherData : IEquatable<WeatherData?>
 {
     public decimal Temperature { get; }
     public int Humidity { get; }
@@ -361,6 +361,31 @@ public class WeatherData
     public override string ToString()
     {
         return $"Temperature: {Temperature}, Humidity %: {Humidity}";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as WeatherData);
+    }
+
+    public bool Equals(WeatherData? other)
+    {
+        return other is not null && Temperature == other.Temperature && Humidity == other.Humidity;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Temperature, Humidity);
+    }
+
+    public static bool operator ==(WeatherData? left, WeatherData? right)
+    {
+        return EqualityComparer<WeatherData>.Default.Equals(left, right);
+    }
+
+    public static bool operator !=(WeatherData? left, WeatherData? right)
+    {
+        return !(left == right);
     }
 }
 
