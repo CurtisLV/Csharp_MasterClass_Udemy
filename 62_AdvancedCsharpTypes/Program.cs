@@ -185,7 +185,7 @@ valueTypeTuple2.Name = "fff";
 
 // Records
 
-var weatherData = new WeatherData(25.1m, 65);
+var weatherData = new WeatherData2(25.1m, 65);
 Console.WriteLine(weatherData);
 
 Console.ReadKey();
@@ -347,12 +347,14 @@ readonly struct Point : IEquatable<Point>
 
 // Records
 
-public class WeatherData : IEquatable<WeatherData?>
+
+
+public class WeatherData2 : IEquatable<WeatherData2?> // not a Record
 {
     public decimal Temperature { get; }
     public int Humidity { get; }
 
-    public WeatherData(decimal temperature, int humidity)
+    public WeatherData2(decimal temperature, int humidity)
     {
         Temperature = temperature;
         Humidity = humidity;
@@ -365,10 +367,10 @@ public class WeatherData : IEquatable<WeatherData?>
 
     public override bool Equals(object? obj)
     {
-        return Equals(obj as WeatherData);
+        return Equals(obj as WeatherData2);
     }
 
-    public bool Equals(WeatherData? other)
+    public bool Equals(WeatherData2? other)
     {
         return other is not null && Temperature == other.Temperature && Humidity == other.Humidity;
     }
@@ -378,12 +380,12 @@ public class WeatherData : IEquatable<WeatherData?>
         return HashCode.Combine(Temperature, Humidity);
     }
 
-    public static bool operator ==(WeatherData? left, WeatherData? right)
+    public static bool operator ==(WeatherData2? left, WeatherData2? right)
     {
-        return EqualityComparer<WeatherData>.Default.Equals(left, right);
+        return EqualityComparer<WeatherData2>.Default.Equals(left, right);
     }
 
-    public static bool operator !=(WeatherData? left, WeatherData? right)
+    public static bool operator !=(WeatherData2? left, WeatherData2? right)
     {
         return !(left == right);
     }
