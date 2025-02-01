@@ -185,7 +185,7 @@ valueTypeTuple2.Name = "fff";
 
 // Records
 
-var weatherData = new WeatherData2(25.1m, 65);
+var weatherData = new WeatherData(25.1m, 65);
 Console.WriteLine(weatherData);
 
 Console.ReadKey();
@@ -346,8 +346,24 @@ readonly struct Point : IEquatable<Point>
 }
 
 // Records
+//public record WeatherData(decimal Temperature, int Humidity); // Positional record
 
+public record WeatherData
+{
+    public decimal Temperature { get; set; }
+    public int Humidity { get; }
 
+    public WeatherData(decimal temperature, int humidity)
+    {
+        Temperature = temperature;
+        Humidity = humidity;
+    }
+
+    public void SomeMethod()
+    {
+        //
+    }
+}
 
 public class WeatherData2 : IEquatable<WeatherData2?> // not a Record
 {
