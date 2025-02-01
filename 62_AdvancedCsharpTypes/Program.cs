@@ -549,3 +549,7 @@ public struct Time
         return HashCode.Combine(Hour, Minute);
     }
 }
+
+// Exercise 6 - Positional record
+
+public record GpsCoordinates(double Lattitude, double Longitude);
