@@ -183,6 +183,11 @@ var valueTypeTuple2 = (Number: 5, Name: "ccc"); // much simpler way to create va
 valueTypeTuple1.Item1 = 20; // compiles because mutable - also that Item1/Item2 can be used
 valueTypeTuple2.Name = "fff";
 
+// Records
+
+var weatherData = new WeatherData(25.1m, 65);
+Console.WriteLine(weatherData);
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
