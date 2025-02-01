@@ -346,24 +346,24 @@ readonly struct Point : IEquatable<Point>
 }
 
 // Records
-//public record WeatherData(decimal Temperature, int Humidity); // Positional record
+public record WeatherData(decimal Temperature, int Humidity); // Positional record
 
-public record WeatherData
-{
-    public decimal Temperature { get; set; }
-    public int Humidity { get; }
+//public record WeatherData // non-positional recod, have to write constructor and attributes but can have methods etc
+//{
+//    public decimal Temperature { get; set; }
+//    public int Humidity { get; }
 
-    public WeatherData(decimal temperature, int humidity)
-    {
-        Temperature = temperature;
-        Humidity = humidity;
-    }
+//    public WeatherData(decimal temperature, int humidity)
+//    {
+//        Temperature = temperature;
+//        Humidity = humidity;
+//    }
 
-    public void SomeMethod()
-    {
-        //
-    }
-}
+//    public void SomeMethod()
+//    {
+//        //
+//    }
+//}
 
 public class WeatherData2 : IEquatable<WeatherData2?> // not a Record
 {
