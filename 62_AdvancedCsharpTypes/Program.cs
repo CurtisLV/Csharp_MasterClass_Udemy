@@ -197,9 +197,15 @@ rectangle.A = 30;
 // nullable value types
 
 //int number = null; // cannot compile
-int? numberOrNull = null;
+int? numberOrNull = null; // basically Nullable<int> intOrNull
 string text = null;
 
+int nymber = numberOrNull.Value;
+
+if (numberOrNull.HasValue)
+{
+    Console.WriteLine("Not null");
+}
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
