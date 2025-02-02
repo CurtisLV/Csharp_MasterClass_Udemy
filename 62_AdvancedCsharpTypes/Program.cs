@@ -194,6 +194,12 @@ var warmerWeatherData = weatherData with { Temperature = 30 };
 var rectangle = new Rectangle(10, 20);
 rectangle.A = 30;
 
+// nullable value types
+
+//int number = null; // cannot compile
+int? numberOrNull = null;
+string text = null;
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
