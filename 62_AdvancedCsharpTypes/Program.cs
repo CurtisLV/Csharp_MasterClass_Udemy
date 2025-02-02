@@ -215,7 +215,9 @@ if (boolOrNull is not null)
     Console.WriteLine(someBool + ":< someBool value");
 }
 
-Console.ReadKey();
+var heights = new List<Nullable<int>>() { 160, null, 185, null, 170 };
+
+var averageHeight = heights.Where(height => height is not not null).Average();
 
 void SomeMethod<T>(T param)
     where T : struct // done so that this method now accepts only value types
