@@ -199,13 +199,19 @@ rectangle.A = 30;
 //int number = null; // cannot compile
 int? numberOrNull = null; // basically Nullable<int> intOrNull
 string text = null;
-
-int nymber = numberOrNull.Value;
+Nullable<bool> boolOrNull = null;
 
 if (numberOrNull.HasValue)
 {
+    int nymber = numberOrNull.Value;
     Console.WriteLine("Not null");
 }
+
+if (boolOrNull is not null)
+{
+    var someBool = boolOrNull.Value;
+}
+
 Console.ReadKey();
 
 void SomeMethod<T>(T param)
