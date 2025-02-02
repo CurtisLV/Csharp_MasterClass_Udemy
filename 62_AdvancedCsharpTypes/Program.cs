@@ -199,7 +199,9 @@ rectangle.A = 30;
 //int number = null; // cannot compile
 int? numberOrNull = null; // basically Nullable<int> intOrNull
 string text = null;
-Nullable<bool> boolOrNull = null;
+Nullable<bool> boolOrNull = true;
+
+//Nullable<string> stringOrNull = null;
 
 if (numberOrNull.HasValue)
 {
@@ -210,6 +212,7 @@ if (numberOrNull.HasValue)
 if (boolOrNull is not null)
 {
     var someBool = boolOrNull.Value;
+    Console.WriteLine(someBool + ":< someBool value");
 }
 
 Console.ReadKey();
