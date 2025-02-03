@@ -221,8 +221,22 @@ var averageHeight = heights.Average(); // not needed - Where(height => height is
 
 Console.WriteLine("Average height: " + averageHeight);
 
+#nullable disable
+string text2 = null;
+
+#nullable enable
+string? otherText = null;
+SomeMethod2(otherText);
+Console.ReadKey();
+
 void SomeMethod<T>(T param)
     where T : struct // done so that this method now accepts only value types
+{
+    //
+}
+
+void SomeMethod2<T>(T input)
+    where T : class
 {
     //
 }
@@ -230,7 +244,7 @@ void SomeMethod<T>(T param)
 void OddClassInit_ShallThrowExceptionWhenGivenNull()
 {
     // validate this line throws an exception
-    new OddClass().Init(null);
+    new OddClass().Init(null!);
 }
 
 // Attributes
