@@ -482,8 +482,10 @@ public class OddClass
     {
         if (!_isInitialized)
         {
-            //
+            throw new InvalidOperationException("The class is not initialized.");
         }
+
+        Console.WriteLine("The lenght of this text is: " + Text.Length);
     }
 }
 
