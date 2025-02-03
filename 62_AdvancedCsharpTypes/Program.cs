@@ -477,6 +477,14 @@ public class OddClass
         Text = text;
         _isInitialized = true;
     }
+
+    public void DoWork()
+    {
+        if (!_isInitialized)
+        {
+            //
+        }
+    }
 }
 
 // First exercise Attributes
