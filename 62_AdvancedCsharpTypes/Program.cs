@@ -469,11 +469,15 @@ class Person
 
 public class OddClass
 {
-    public string Text { get; private set; }
+    public string? Text { get; private set; }
     private bool _isInitialized;
 
     public void Init(string text)
     {
+        if (text is null)
+        {
+            throw new ArgumentNullException(nameof(text));
+        }
         Text = text;
         _isInitialized = true;
     }
@@ -485,7 +489,7 @@ public class OddClass
             throw new InvalidOperationException("The class is not initialized.");
         }
 
-        Console.WriteLine("The lenght of this text is: " + Text.Length);
+        Console.WriteLine("The lenght of this text is: " + Text!.Length);
     }
 }
 
