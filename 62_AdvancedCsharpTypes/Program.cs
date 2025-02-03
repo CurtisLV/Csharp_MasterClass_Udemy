@@ -227,6 +227,12 @@ void SomeMethod<T>(T param)
     //
 }
 
+void OddClassInit_ShallThrowExceptionWhenGivenNull()
+{
+    // validate this line throws an exception
+    new OddClass().Init(null);
+}
+
 // Attributes
 
 public class Dog
