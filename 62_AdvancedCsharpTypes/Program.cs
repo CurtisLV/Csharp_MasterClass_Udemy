@@ -217,7 +217,7 @@ if (boolOrNull is not null)
 
 var heights = new List<Nullable<int>>() { 160, null, 185, null, 170 };
 
-var averageHeight = heights.Where(height => height is not null).Average();
+var averageHeight = heights.Average(); // not needed - Where(height => height is not null)
 
 Console.WriteLine("Average height: " + averageHeight);
 
@@ -314,7 +314,6 @@ public class SomeAttribute : Attribute
 }
 
 // Structs
-
 struct FishyStruct
 {
     public List<int> Numbers { get; init; }
@@ -466,6 +465,12 @@ class Person
     {
         return Id;
     }
+}
+
+public class OddClass
+{
+    public string Text { get; private set; }
+    private bool _isInitialized;
 }
 
 // First exercise Attributes
