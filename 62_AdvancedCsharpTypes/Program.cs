@@ -471,6 +471,12 @@ public class OddClass
 {
     public string Text { get; private set; }
     private bool _isInitialized;
+
+    public void Init(string text)
+    {
+        Text = text;
+        _isInitialized = true;
+    }
 }
 
 // First exercise Attributes
