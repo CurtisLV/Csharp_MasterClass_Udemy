@@ -236,7 +236,7 @@ void SomeMethod<T>(T param)
 }
 
 void SomeMethod2<T>(T input)
-    where T : class
+    where T : class?
 {
     //
 }
@@ -246,6 +246,14 @@ void OddClassInit_ShallThrowExceptionWhenGivenNull()
     // validate this line throws an exception
     new OddClass().Init(null!);
 }
+
+// API CALL
+
+using var client = new HttpClient();
+
+//client.BaseAddress = new Uri("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
+client.BaseAddress = new Uri("https://datausa.io/api/");
+var response = client.GetAsync("data?drilldowns=Nation&measures=Population");
 
 // Attributes
 
