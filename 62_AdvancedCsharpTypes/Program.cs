@@ -256,7 +256,12 @@ var json = client.Read(baseAddress, requestUri);
 
 Console.ReadKey();
 
-public class ApiDataReader()
+public interface IApiDataReader
+{
+    Task<string> Read(string baseAddress, string requestUri);
+}
+
+public class ApiDataReader() : IApiDataReader
 {
     public async Task<string> Read(string baseAddress, string requestUri)
     {
