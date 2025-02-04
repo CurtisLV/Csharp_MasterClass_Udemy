@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 
 var validPerson = new PersonToBeValidated("John", 1989);
 var invalidDog = new Dog("F");
@@ -247,18 +248,28 @@ void OddClassInit_ShallThrowExceptionWhenGivenNull()
 }
 
 // API CALL
+var baseAddress = "https://datausa.io/api/";
+var requestUri = "data?drilldowns=Nation&measures=Population";
 
-using var client = new HttpClient();
-
-//client.BaseAddress = new Uri("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
-client.BaseAddress = new Uri("https://datausa.io/api/");
-HttpResponseMessage response = await client.GetAsync("data?drilldowns=Nation&measures=Population");
-
-response.EnsureSuccessStatusCode();
-
-string json = await response.Content.ReadAsStringAsync();
+var client = new ApiDataReader();
+var json = client.Read(baseAddress, requestUri);
 
 Console.ReadKey();
+
+public class ApiDataReader()
+{
+    public async Task<string> Read(string baseAddress, string requestUri)
+    {
+        using var client = new HttpClient();
+
+        client.BaseAddress = new Uri(baseAddress);
+        HttpResponseMessage response = await client.GetAsync(requestUri);
+
+        response.EnsureSuccessStatusCode();
+
+        return await response.Content.ReadAsStringAsync();
+    }
+}
 
 // Attributes
 
