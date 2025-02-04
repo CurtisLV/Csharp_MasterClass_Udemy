@@ -227,7 +227,6 @@ string text2 = null;
 #nullable enable
 string? otherText = null;
 SomeMethod2(otherText);
-Console.ReadKey();
 
 void SomeMethod<T>(T param)
     where T : struct // done so that this method now accepts only value types
@@ -253,7 +252,11 @@ using var client = new HttpClient();
 
 //client.BaseAddress = new Uri("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
 client.BaseAddress = new Uri("https://datausa.io/api/");
-var response = client.GetAsync("data?drilldowns=Nation&measures=Population");
+var response = await client.GetAsync("data?drilldowns=Nation&measures=Population");
+
+response.EnsureSuccessStatusCode();
+
+Console.ReadKey();
 
 // Attributes
 
