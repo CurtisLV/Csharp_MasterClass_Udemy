@@ -251,8 +251,8 @@ void OddClassInit_ShallThrowExceptionWhenGivenNull()
 var baseAddress = "https://datausa.io/api/";
 var requestUri = "data?drilldowns=Nation&measures=Population";
 
-var client = new ApiDataReader();
-var json = client.Read(baseAddress, requestUri);
+IApiDataReader apiDataReader = new ApiDataReader();
+var json = await apiDataReader.Read(baseAddress, requestUri);
 
 Console.ReadKey();
 
