@@ -258,6 +258,11 @@ var json = await apiDataReader.Read(baseAddress, requestUri);
 
 var root = JsonSerializer.Deserialize<Root>(json);
 
+foreach (var yearlyData in root.data)
+{
+    Console.WriteLine($"Year: {yearlyData.Year}, " + $"population: {yearlyData.Population}");
+}
+
 Console.ReadKey();
 
 public interface IApiDataReader
