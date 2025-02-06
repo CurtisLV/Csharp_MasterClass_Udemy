@@ -17,20 +17,9 @@ const int surfaceWaterWidth = 15;
 const int populationWidth = 15;
 
 // Print the header
-static string FormatValue(object value, int width)
+static string HandleUnknown(object value)
 {
-    // Check if value is null, "unknown", or empty string
-    if (
-        value == null
-        || value.ToString() == "unknown"
-        || string.IsNullOrWhiteSpace(value.ToString())
-    )
-    {
-        return new string(' ', width);
-    }
-
-    // Format the value with left alignment and specified width
-    return string.Format($"{{0, -{width}}}", value);
+    return value?.ToString() == "unknown" ? "" : value?.ToString();
 }
 
 // Print the header
@@ -45,10 +34,10 @@ Console.WriteLine(
 foreach (var planet in root.results)
 {
     Console.WriteLine(
-        $"{FormatValue(planet.name, nameWidth)} | "
-            + $"{FormatValue(planet.diameter, diameterWidth)} | "
-            + $"{FormatValue(planet.surface_water, surfaceWaterWidth)} | "
-            + $"{FormatValue(planet.population, populationWidth)}|"
+        $"{HandleUnknown(planet.name), -nameWidth} | "
+            + $"{HandleUnknown(planet.diameter), -diameterWidth} | "
+            + $"{HandleUnknown(planet.surface_water), -surfaceWaterWidth} | "
+            + $"{HandleUnknown(planet.population), -populationWidth}|"
     );
 }
 
