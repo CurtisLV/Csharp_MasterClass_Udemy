@@ -17,6 +17,23 @@ const int surfaceWaterWidth = 15;
 const int populationWidth = 15;
 
 // Print the header
+static string FormatValue(object value, int width)
+{
+    // Check if value is null, "unknown", or empty string
+    if (
+        value == null
+        || value.ToString() == "unknown"
+        || string.IsNullOrWhiteSpace(value.ToString())
+    )
+    {
+        return new string(' ', width);
+    }
+
+    // Format the value with left alignment and specified width
+    return string.Format($"{{0, -{width}}}", value);
+}
+
+// Print the header
 Console.WriteLine(
     $"{"Planet", -nameWidth} | {"Diameter", -diameterWidth} | {"Surfacewater", -surfaceWaterWidth} | {"Population", -populationWidth}"
 );
@@ -24,15 +41,14 @@ Console.WriteLine(
     new string('-', nameWidth + diameterWidth + surfaceWaterWidth + populationWidth + 9)
 );
 
-// TODO print empty cell when unknown
-
 // Print the data
 foreach (var planet in root.results)
 {
-    string surfaceWater = planet.surface_water == "unknown" ? "" : planet.surface_water;
-    string population = planet.population == "unknown" ? "" : planet.population;
     Console.WriteLine(
-        $"{planet.name, -nameWidth} | {planet.diameter, -diameterWidth} | {surfaceWater, -surfaceWaterWidth} | {population, -populationWidth}|"
+        $"{FormatValue(planet.name, nameWidth)} | "
+            + $"{FormatValue(planet.diameter, diameterWidth)} | "
+            + $"{FormatValue(planet.surface_water, surfaceWaterWidth)} | "
+            + $"{FormatValue(planet.population, populationWidth)}|"
     );
 }
 
