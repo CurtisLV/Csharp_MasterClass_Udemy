@@ -9,13 +9,7 @@ var json = await apiDataReader.Read(baseAddress, requestUri);
 
 var root = JsonSerializer.Deserialize<Root>(json);
 
-foreach (var planet in root.results)
-{
-    Console.WriteLine(
-        $"Planet: {planet.name}, Diameter: {planet.diameter}, Surfacewater: {planet.surface_water}, Population: {planet.population}"
-    );
-}
-
+// Print all results in console table
 // Define the column widths
 const int nameWidth = 20;
 const int diameterWidth = 10;
@@ -30,11 +24,15 @@ Console.WriteLine(
     new string('-', nameWidth + diameterWidth + surfaceWaterWidth + populationWidth + 9)
 );
 
+// TODO print empty cell when unknown
+
 // Print the data
 foreach (var planet in root.results)
 {
+    string surfaceWater = planet.surface_water == "unknown" ? "" : planet.surface_water;
+    string population = planet.population == "unknown" ? "" : planet.population;
     Console.WriteLine(
-        $"{planet.name, -nameWidth} | {planet.diameter, -diameterWidth} | {planet.surface_water, -surfaceWaterWidth} | {planet.population, -populationWidth}|"
+        $"{planet.name, -nameWidth} | {planet.diameter, -diameterWidth} | {surfaceWater, -surfaceWaterWidth} | {population, -populationWidth}|"
     );
 }
 
