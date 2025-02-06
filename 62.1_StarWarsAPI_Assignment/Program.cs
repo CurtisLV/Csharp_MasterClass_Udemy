@@ -41,4 +41,16 @@ foreach (var planet in root.results)
     );
 }
 
+Console.WriteLine("The statistics of which which propery you would like to see?");
+Console.WriteLine("population");
+Console.WriteLine("diameter");
+Console.WriteLine("surface water");
+var answer = Console.ReadLine();
+
+while (answer != null)
+{
+
+    if (answer == "population" 
+}
+Console.WriteLine("Press any key to close.");
 Console.ReadKey();
