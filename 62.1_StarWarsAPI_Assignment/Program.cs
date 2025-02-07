@@ -47,7 +47,8 @@ Console.WriteLine("diameter");
 Console.WriteLine("surface water");
 var input = Console.ReadLine().ToLower();
 
-while (true)
+bool shallStop = false;
+while (!shallStop)
 {
     DataType? selectedType = input switch
     {
