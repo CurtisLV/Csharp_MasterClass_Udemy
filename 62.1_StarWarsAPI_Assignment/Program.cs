@@ -45,22 +45,21 @@ Console.WriteLine("The statistics of which which propery you would like to see?"
 Console.WriteLine("population");
 Console.WriteLine("diameter");
 Console.WriteLine("surface water");
-var answer = Console.ReadLine().ToLower();
+var input = Console.ReadLine().ToLower();
 
 while (true)
 {
-    switch (answer)
+    DataType? selectedType = input switch
     {
-    case "population"
-        MinMax();
-
-        default:
-            break;
-    }
+        "population" => DataType.Population,
+        "diameter" => DataType.Diameter,
+        "surface water" => DataType.SurfaceWater,
+        _ => null
+    };
 }
+
 Console.WriteLine("Press any key to close.");
 Console.ReadKey();
-
 
 public enum DataType
 {
