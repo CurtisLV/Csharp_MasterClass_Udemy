@@ -3,6 +3,18 @@ using _62._1_StarWarsAPI_Assignment.DTOs;
 
 public class StarWarsPlanetsStatsApp
 {
+    private readonly IApiDataReader _apiDataReader;
+    private readonly IApiDataReader _secondaryApiDataReader;
+
+    public StarWarsPlanetsStatsApp(
+        IApiDataReader apiDataReader,
+        IApiDataReader secondaryApiDataReader
+    )
+    {
+        _apiDataReader = apiDataReader;
+        _secondaryApiDataReader = secondaryApiDataReader;
+    }
+
     public async Task Run()
     {
         string json = null;
@@ -11,7 +23,7 @@ public class StarWarsPlanetsStatsApp
 
         try
         {
-            IApiDataReader apiDataReader = new ApiDataReader();
+            IApiDataReader apiDataReader = _apiDataReader;
             json = await apiDataReader.Read(baseAddress, requestUri);
         }
         catch (HttpRequestException ex)
@@ -23,18 +35,11 @@ public class StarWarsPlanetsStatsApp
                     + ex.Message
             );
         }
-        catch (JsonException ex)
-        {
-            throw;
-        }
-        catch (Exception ex)
-        {
-            throw;
-        }
 
         if (json is null)
         {
-            IApiDataReader apiDataReader = new MockStarWarsApiDataReader();
+            //IApiDataReader apiDataReader = new MockStarWarsApiDataReader();
+            IApiDataReader apiDataReader = _secondaryApiDataReader;
             json = await apiDataReader.Read(baseAddress, requestUri);
         }
 

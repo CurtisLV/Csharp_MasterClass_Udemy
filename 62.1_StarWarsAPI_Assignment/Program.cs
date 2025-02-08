@@ -1,4 +1,11 @@
-﻿await new StarWarsPlanetsStatsApp().Run();
+﻿try
+{
+    await new StarWarsPlanetsStatsApp(new ApiDataReader(), new MockStarWarsApiDataReader()).Run();
+}
+catch (Exception ex)
+{
+    Console.WriteLine("An error occured. " + "Exception message: " + ex.Message);
+}
 
 // Print all results in console table
 // Define the column widths
