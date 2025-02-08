@@ -9,7 +9,20 @@ try
     IApiDataReader apiDataReader = new ApiDataReader();
     var json = await apiDataReader.Read(baseAddress, requestUri);
 }
-catch (Exception)
+catch (HttpRequestException ex)
+{
+    Console.WriteLine(
+        "API request was unnsucessful."
+            + "Switching to mock data."
+            + "Exception message: "
+            + ex.Message
+    );
+}
+catch (JsonException ex)
+{
+    throw;
+}
+catch (Exception ex)
 {
     throw;
 }
