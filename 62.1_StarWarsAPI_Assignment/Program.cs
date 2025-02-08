@@ -4,6 +4,8 @@ using _62._1_StarWarsAPI_Assignment.DTOs;
 var baseAddress = "https://swapi.dev";
 var requestUri = " /api/planets/";
 
+new StarWarsPlanetsStatsApp().Run();
+
 string json = null;
 
 try
@@ -31,7 +33,8 @@ catch (Exception ex)
 
 if (json is null)
 {
-    //
+    IApiDataReader apiDataReader = new MockStarWarsApiDataReader();
+    json = await apiDataReader.Read(baseAddress, requestUri);
 }
 
 var root = JsonSerializer.Deserialize<Root>(json);
