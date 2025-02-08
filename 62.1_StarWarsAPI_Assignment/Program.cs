@@ -4,8 +4,15 @@ using _62._1_StarWarsAPI_Assignment.DTOs;
 var baseAddress = "https://swapi.dev";
 var requestUri = " /api/planets/";
 
-IApiDataReader apiDataReader = new ApiDataReader();
-var json = await apiDataReader.Read(baseAddress, requestUri);
+try
+{
+    IApiDataReader apiDataReader = new ApiDataReader();
+    var json = await apiDataReader.Read(baseAddress, requestUri);
+}
+catch (Exception)
+{
+    throw;
+}
 
 var root = JsonSerializer.Deserialize<Root>(json);
 
