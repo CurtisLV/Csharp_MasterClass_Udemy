@@ -1,10 +1,4 @@
-﻿using System.Text.Json;
-using _62._1_StarWarsAPI_Assignment.DTOs;
-
-var baseAddress = "https://swapi.dev";
-var requestUri = " /api/planets/";
-
-new StarWarsPlanetsStatsApp().Run();
+﻿await new StarWarsPlanetsStatsApp().Run();
 
 // Print all results in console table
 // Define the column widths

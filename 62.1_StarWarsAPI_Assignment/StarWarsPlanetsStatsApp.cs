@@ -1,8 +1,9 @@
 ﻿using System.Text.Json;
+using _62._1_StarWarsAPI_Assignment.DTOs;
 
 public class StarWarsPlanetsStatsApp
 {
-    public async void Run()
+    public async Task Run()
     {
         string json = null;
         var baseAddress = "https://swapi.dev";
